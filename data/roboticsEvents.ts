@@ -63,7 +63,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹6,000",
       third: "₹4,000",
     },
-    image: "/minecraft/1.webp",
+    image: "/minecraft/deathrace.webp",
     description:
       "Death Race is a Racing event, using Manual Robotics. Teams compete with each other by making a racing bot either wired or wireless within the specified dimensions that can operated manually and can travel through all turns of the track. It should be able to withstand any obstacle-big or small in the least of time, including hurdles, checkpoints and tasks within the Track Obstacles. For the competition will include Switch Bridge, speed breakers, marble pit, slippery path, rotating disc, curve ramp down etc. The bot that will complete the specified task in least time will be the winner.",
     botSpecifications: [
@@ -90,7 +90,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/1.webp",
+        url: "/minecraft/deathrace.webp",
         caption: "Robo Race Championship Circuit Arena",
       },
     ],
@@ -124,7 +124,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹8,000",
       third: "₹5,000",
     },
-    image: "/minecraft/wallpaper.webp",
+    image: "/minecraft/robowar.webp",
     description:
       "Witness the thrilling battle of power, precision, and strategy in Robo War – Wedge, where two teams compete head-to-head with their custom-built combat robots. Teams manually control their bots using a wireless method, aiming to outmaneuver their opponents and dominate the arena with their wedge-shaped designs. Each robot must demonstrate strength, stability, and effective tactics to gain an advantage over the opponent. The team that dominates the battle and meets the competition’s winning criteria will emerge victorious. Get ready for an action-packed robotic showdown!",
     botSpecifications: [
@@ -155,7 +155,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/wallpaper.webp",
+        url: "/minecraft/robowar.webp",
         caption: "Robo War Bulletproof Combat Arena Cage",
       },
     ],
@@ -189,7 +189,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹6,000",
       third: "₹4,000",
     },
-    image: "/minecraft/minecraft_2.webp",
+    image: "/minecraft/robosumo.webp",
     description:
       "Robo Sumo is an intense engineering ring battle modeled on traditional Japanese Sumo. Two robots battle on an elevated circular ring (Dohyo). The objective is to use brute pushing force, custom silicon tire traction, and ultra-low metal plow scoops to push the opponent completely off the ring without falling off oneself.",
     botSpecifications: [
@@ -215,7 +215,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/minecraft_2.webp",
+        url: "/minecraft/robosumo.webp",
         caption: "Elevated Circular Dohyo Sumo Ring",
       },
     ],
@@ -249,7 +249,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹5,000",
       third: "₹3,000",
     },
-    image: "/minecraft/minecraft_natural.webp",
+    image: "/minecraft/robosoccer.webp",
     description:
       "Witness the excitement of Robo Soccer, where two teams battle head-to-head to score goals using customized soccer bots. Controlled manually through wired or wireless methods, these bots compete in an intense showdown of strategy, speed, precision, and strength. Teams must skillfully maneuver their robots, defend their goalposts, and attack their opponents to secure victory. The team that scores the highest number of goals within the given time wins the match. Get ready for an action-packed competition filled with thrilling moments, fierce rivalries, and robotic football excitement!",
     botSpecifications: [
@@ -277,7 +277,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/minecraft_natural.webp",
+        url: "/minecraft/robosoccer.webp",
         caption: "Robo Soccer Turf Pitch Arena",
       },
     ],
@@ -310,7 +310,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹5,000",
       third: "₹3,000",
     },
-    image: "/minecraft/schedulebg.webp",
+    image: "/minecraft/robolinefollow.webp",
     description:
       "The line follower robot is a mobile machine that can detect and follow the line drawn on the floor. Generally, the path is predefined and can be either visible, like a black line on a white surface with a high-contrast colour, or invisible, like a magnetic field. Therefore, this kind of robot should sense the line with its infrared ray (IR) sensors installed under the robot. After that, the data is transmitted to the processor by specific transition buses. Hence, the processor decides the proper commands and sends them to the driver, and thus the path is followed by the line follower robot.",
     botSpecifications: [
@@ -337,7 +337,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/schedulebg.webp",
+        url: "/minecraft/robolinefollow.webp",
         caption: "Autonomous PID High-Speed Line Tracking Course",
       },
     ],

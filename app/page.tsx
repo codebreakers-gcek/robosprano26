@@ -135,7 +135,7 @@ export default function HomePage() {
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/register"
+                href="/events"
                 className="w-full sm:w-auto h-14 px-10 bg-[#5B8731] hover:bg-[#689B37] text-white font-mono font-black text-base uppercase tracking-wider border-4 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[4px_4px_0px_#000] [text-shadow:_2px_2px_0_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Swords className="w-5 h-5 shrink-0" />

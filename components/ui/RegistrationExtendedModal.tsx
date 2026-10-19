@@ -139,7 +139,7 @@ export function RegistrationExtendedModal({
   const handleRegisterClick = useCallback(() => {
     playButtonClickSound(0.5);
     handleClose();
-    router.push("/register");
+    router.push("/events");
   }, [handleClose, router]);
 
   // Handle ESC key press

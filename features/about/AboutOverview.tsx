@@ -202,7 +202,7 @@ export function AboutOverview() {
           </Link>
 
           <Link
-            href="/register"
+            href="/events"
             className="inline-flex items-center justify-center gap-2 font-mono text-sm font-black uppercase px-6 py-3.5 bg-[#FFAA00] hover:bg-[#FFB726] text-black border-3 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] active:translate-y-0.5 transition-all text-center"
           >
             <span>REGISTER YOUR SQUAD</span>

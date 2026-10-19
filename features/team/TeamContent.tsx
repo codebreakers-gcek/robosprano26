@@ -342,7 +342,7 @@ export function TeamContent() {
                   <span>CONTACT CREW DIRECTLY</span>
                 </Link>
                 <Link
-                  href="/register"
+                  href="/events"
                   className="px-5 sm:px-6 py-3 bg-[#FFAA00] hover:bg-[#FFC040] text-black font-mono font-black text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] active:translate-y-1 transition-all flex items-center justify-center gap-2"
                 >
                   <span>REGISTER FOR HACKVERSE</span>
