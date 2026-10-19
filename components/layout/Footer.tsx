@@ -241,14 +241,41 @@ export function Footer() {
         </div>
 
         {/* Bottom Banner */}
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left font-mono text-[11px] sm:text-xs font-normal text-neutral-400">
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left font-mono text-[11px] sm:text-xs font-normal text-neutral-400">
           <div>
             © {new Date().getFullYear()} KILOBOTS GCEK. ALL RIGHTS RESERVED.
           </div>
+
+          {/* Developers Credit with Portfolio Links */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-neutral-300">
+            <span className="text-neutral-500">{"<dev>"}</span>
+            <span className="font-semibold text-neutral-400">DEVELOPED BY</span>
+            <a
+              href="https://priyam.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[#FFAA00] font-bold hover:text-white transition-colors underline underline-offset-4 decoration-[#FFAA00]/40 hover:decoration-white"
+            >
+              <span>GYANRANJAN</span>
+              <ExternalLink className="w-3 h-3 text-[#FFAA00]" />
+            </a>
+            <span className="text-neutral-500">&amp;</span>
+            <a
+              href="https://omprakashbehera.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[#55FFFF] font-bold hover:text-white transition-colors underline underline-offset-4 decoration-[#55FFFF]/40 hover:decoration-white"
+            >
+              <span>OMPRAKASH</span>
+              <ExternalLink className="w-3 h-3 text-[#55FFFF]" />
+            </a>
+            <span className="text-neutral-500">{"</dev>"}</span>
+          </div>
+
           <div className="flex items-center gap-1.5 justify-center">
             <span>ENGINEERED WITH</span>
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 inline" />
-            <span>BY KILOBOTS ROBOTICS COMMUNITY</span>
+            <span>BY KILOBOTS COMMUNITY</span>
           </div>
         </div>
       </div>
