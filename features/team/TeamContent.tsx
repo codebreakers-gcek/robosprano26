@@ -355,16 +355,18 @@ export function TeamContent() {
       </motion.div>
 
       {/* Marquee Banner */}
-      <div className="relative z-10">
+      <div className="relative z-10 py-6">
         <MarqueeBanner
           items={[
-            "CODEBREAKERS GCEK CREW",
-            "HACKVERSE '26 ARCHITECTS",
-            "STUDENT-LED INNOVATION",
-            "BHABANIPATNA ODISHA",
-            "BREAK CODE • FORGE REALITY",
+            "KILOBOTS GCEK ORGANIZING COMMITTEE",
+            "ROBOSPRANO '26 BATTLEFIELD CREW",
+            "STATE ROBOTICS CHAMPIONSHIP",
+            "GCEK BHAWANIPATNA",
+            "CODE • BUILD • DOMINATE THE ARENA",
           ]}
-          bg="secondary"
+          bg="orange"
+          glass={true}
+          angle="rotate-[1deg] sm:rotate-[0.85deg]"
         />
       </div>
     </div>

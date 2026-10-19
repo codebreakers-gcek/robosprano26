@@ -151,7 +151,7 @@ export function Navbar() {
               {[...HEADER_UPDATES, ...HEADER_UPDATES].map((item, idx) => (
                 <span key={idx} className="inline-flex items-center gap-6">
                   <span>{item}</span>
-                  <Sparkles className="w-3 h-3 text-[#55FF55] shrink-0" />
+                  <Sparkles className="w-3 h-3 text-[#FFAA00] shrink-0" />
                 </span>
               ))}
             </div>
@@ -167,9 +167,9 @@ export function Navbar() {
               className="flex justify-center items-center gap-2 sm:gap-3 group focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black shrink-0"
               aria-label="Kilobots Robosprano Home"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 rounded-xl shadow-neo-sm bg-white">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 rounded-xl shadow-neo-sm bg-black">
                 <Image
-                  src="/cbrobo.webp"
+                  src="/robosprano.webp"
                   alt="Kilobots Robotics"
                   width={36}
                   height={36}
@@ -226,7 +226,7 @@ export function Navbar() {
 
             <Link
               href="/register"
-              className="h-10 sm:h-11 px-4 sm:px-6 inline-flex items-center gap-2 bg-[#5B8731] hover:bg-[#689B37] text-white font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[3px_3px_0px_#000] active:translate-y-1 transition-all cursor-pointer [text-shadow:_1px_1px_0_#000]"
+              className="h-10 sm:h-11 px-5 sm:px-6 inline-flex items-center gap-2 bg-[#FF7700] hover:bg-[#FF881A] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#FFA755] border-l-[#FFA755] border-r-[#8F3B00] border-b-[#8F3B00] shadow-[3px_3px_0px_#000] active:translate-y-1 transition-all cursor-pointer [text-shadow:_1px_1px_0_#4D1E00] hover:shadow-[4px_4px_0px_#000]"
             >
               <span>REGISTER</span>
               <ArrowRight className="w-4 h-4 stroke-[3px]" />
@@ -282,7 +282,7 @@ export function Navbar() {
                     className={clsx(
                       "px-3.5 py-2.5 border-3 font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-between transition-all",
                       isActive
-                        ? "bg-[#5B8731] text-white border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]"
+                        ? "bg-[#FFAA00] text-black border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[3px_3px_0px_#000]"
                         : "bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[2px_2px_0px_#000]"
                     )}
                     aria-current={isActive ? "page" : undefined}
@@ -306,7 +306,7 @@ export function Navbar() {
                 <Link
                   href="/register"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full h-12 bg-[#5B8731] hover:bg-[#689B37] text-white font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 active:translate-y-1 transition-all [text-shadow:_1px_1px_0_#000]"
+                  className="w-full h-12 bg-[#FF7700] hover:bg-[#FF881A] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#FFA755] border-l-[#FFA755] border-r-[#8F3B00] border-b-[#8F3B00] shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 active:translate-y-1 transition-all [text-shadow:_1px_1px_0_#4D1E00]"
                 >
                   <span>REGISTER NOW</span>
                   <ArrowRight className="w-4 h-4 stroke-[3px]" />

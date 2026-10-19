@@ -106,8 +106,13 @@ export default function AboutPage() {
         <ClubMilestones />
       </div>
 
-      <div className="relative z-10">
-        <MarqueeBanner bg="secondary" speed="normal" />
+      <div className="relative z-10 py-6">
+        <MarqueeBanner
+          bg="orange"
+          glass={true}
+          speed="normal"
+          angle="rotate-[-1deg] sm:rotate-[-0.85deg]"
+        />
       </div>
     </div>
   );

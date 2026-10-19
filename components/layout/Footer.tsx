@@ -49,7 +49,7 @@ export function Footer() {
                   >
                     <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white/5 border border-white/15 rounded-md p-1.5 flex items-center justify-center shrink-0 group-hover:border-white/30 group-hover:bg-white/10 transition-colors">
                       <img
-                        src="/cbrobo.webp"
+                        src="/robosprano.webp"
                         alt="ROBOSPRANO '26 Main Logo"
                         width={44}
                         height={44}
@@ -76,7 +76,7 @@ export function Footer() {
                   >
                     <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white/5 border border-white/15 rounded-md p-1.5 flex items-center justify-center shrink-0 group-hover:border-white/30 group-hover:bg-white/10 transition-colors">
                       <img
-                        src="/cblogo.png"
+                        src="/kilobot.png"
                         alt="Kilobots GCEK Logo"
                         width={44}
                         height={44}

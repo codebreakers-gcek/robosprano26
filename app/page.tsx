@@ -38,8 +38,10 @@ export default function HomePage() {
           "KILOBOTS GCEK",
           "GCEK KALAHANDI",
         ]}
-        bg="secondary"
+        bg="orange"
+        glass={true}
         speed="normal"
+        angle="rotate-[1deg] sm:rotate-[0.85deg]"
       />
 
 
