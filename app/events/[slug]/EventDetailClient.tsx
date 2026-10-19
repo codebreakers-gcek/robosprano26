@@ -103,7 +103,7 @@ View Details: ${window.location.href}`;
           </div>
 
           {/* Top Navigation Pill Buttons */}
-          <div className="absolute top-8 left-8 right-8 flex justify-between z-10">
+          <div className="absolute top-4 left-4 right-4 sm:top-8 sm:left-8 sm:right-8 flex justify-between z-10">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -111,9 +111,9 @@ View Details: ${window.location.href}`;
             >
               <Link
                 href="/events"
-                className="inline-flex items-center bg-black/30 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/50 transition-colors text-sm font-medium"
+                className="inline-flex items-center bg-black/50 backdrop-blur-md text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-black/70 transition-colors text-xs sm:text-sm font-medium"
               >
-                <ArrowLeft className="w-5 h-5 mr-2" />
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
                 Back to Events
               </Link>
             </motion.div>
@@ -127,9 +127,9 @@ View Details: ${window.location.href}`;
               <button
                 type="button"
                 onClick={handleShare}
-                className="inline-flex items-center bg-black/30 backdrop-blur-sm text-white px-4 py-2 rounded-full hover:bg-black/50 transition-colors text-sm font-medium cursor-pointer"
+                className="inline-flex items-center bg-black/50 backdrop-blur-md text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-black/70 transition-colors text-xs sm:text-sm font-medium cursor-pointer"
               >
-                <Share2 className="w-5 h-5 mr-2" />
+                <Share2 className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
                 Share
               </button>
 
@@ -175,13 +175,13 @@ View Details: ${window.location.href}`;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="absolute bottom-0 left-0 right-0 p-8 md:p-16"
+            className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 md:p-16"
           >
             <div className="max-w-7xl mx-auto">
-              <span className="inline-block px-3 py-1 rounded-full text-sm bg-white/10 backdrop-blur-sm text-white mb-4 font-medium">
+              <span className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm bg-white/10 backdrop-blur-sm text-white mb-2 sm:mb-4 font-medium">
                 {event.badge || "Robosprano"}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
                 {event.title}
               </h1>
             </div>
@@ -191,7 +191,7 @@ View Details: ${window.location.href}`;
         {/* ========================================================================= */}
         {/* MAIN BODY GRID: 2 COLUMNS LEFT, 1 COLUMN SIDEBAR RIGHT                    */}
         {/* ========================================================================= */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* --------------------------------------------------------------------- */}
             {/* LEFT COLUMN: About, Bot Specs, Rules & Guidelines, Gallery            */}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { HeroSection } from "@/features/home/HeroSection";
 import { QuickStats } from "@/features/home/QuickStats";
+import { HomeEventsShowcase } from "@/features/home/HomeEventsShowcase";
 import { PrizePoolBanner } from "@/features/home/PrizePoolBanner";
 import { SponsorsTeaser } from "@/features/home/SponsorsTeaser";
 import { CodeBreakersSpotlight } from "@/features/home/CodeBreakersSpotlight";
@@ -17,9 +18,14 @@ export default function HomePage() {
       {/* 1. Hero Section (Includes integrated Minecraft wallpaper Marquee) */}
       <HeroSection />
 
-      {/* 2. Event High-Impact Numbers */}
+      {/* 2. Event High-Impact Numbers / Arena Telemetry */}
       <ScrollReveal>
         <QuickStats />
+      </ScrollReveal>
+
+      {/* 3. Featured Robotics Arenas / Events Cards */}
+      <ScrollReveal>
+        <HomeEventsShowcase />
       </ScrollReveal>
 
       {/* 4. Prize Pool Breakdown */}

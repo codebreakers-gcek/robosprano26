@@ -327,26 +327,6 @@ export default function EventsPage() {
                       {/* Vignette */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/60 pointer-events-none" />
 
-                      {/* Top Badges (High Readability Name Tag Style) */}
-                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none z-10">
-                        {/* Left Badge: ROBOSPRANO */}
-                        <div className="bg-[#100D09]/95 text-[#55FF55] font-mono font-black text-xs sm:text-sm uppercase px-3 py-1.5 border-2 border-t-[#3A2E44] border-l-[#3A2E44] border-r-[#000] border-b-[#000] shadow-[2px_2px_0px_#000] flex items-center gap-1.5 [text-shadow:_1px_1px_0_#000] tracking-wider">
-                          <Bot className="w-4 h-4 text-[#55FF55]" />
-                          <span>{event.badge}</span>
-                        </div>
-
-                        {/* Right Badge: DATE */}
-                        <div className="bg-[#100D09]/95 text-[#FFAA00] font-mono font-black text-xs sm:text-sm uppercase px-3 py-1.5 border-2 border-t-[#3A2E44] border-l-[#3A2E44] border-r-[#000] border-b-[#000] shadow-[2px_2px_0px_#000] flex items-center gap-1.5 [text-shadow:_1px_1px_0_#000] tracking-wider">
-                          <Calendar className="w-4 h-4 text-[#FFAA00]" />
-                          <span>{event.date}</span>
-                        </div>
-                      </div>
-
-                      {/* Minecraft Tooltip Loot Tag at Bottom Right - Crisp & Legible */}
-                      <div className="absolute bottom-3 right-3 bg-[#100010] border-2 border-black border-t-[#28007F] border-l-[#28007F] text-[#55FFFF] px-3.5 py-1.5 font-mono font-black text-xs sm:text-sm tracking-wide shadow-[3px_3px_0px_#000] flex items-center gap-2 z-10 [text-shadow:_1px_1px_0_#000]">
-                        <PixelDiamond size={16} />
-                        <span>BOUNTY: {event.prizePool}</span>
-                      </div>
                     </div>
 
                     {/* Centered 3D Minecraft Chest Iron Latch */}

@@ -107,7 +107,7 @@ export function ContactContent() {
       <div className="fixed inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <Image
           src="/minecraft/contactbg.webp"
-          alt="Hackverse Contact Background"
+          alt="Robosprano Contact Background"
           fill
           priority
           unoptimized
@@ -143,7 +143,7 @@ export function ContactContent() {
 
             <div className="bg-[#1B1B1B]/90 backdrop-blur-sm border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] px-4 sm:px-6 py-2.5 shadow-[4px_4px_0px_#000]">
               <p className="text-xs sm:text-sm md:text-base font-bold text-[#EAEAEA] font-mono leading-relaxed">
-                Connect directly with our Technical Developers, Management Organizers, and Institutional In-Charge for hackathon queries, registrations, travel, and sponsorships.
+                Connect directly with our Chief Coordinator, Student Coordinators, and Technical Leads for Robosprano &apos;26 registrations, bot specifications, arena logistics, and sponsorships.
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export function ContactContent() {
                     </button>
 
                     <a
-                      href={`mailto:${inbox.email}?subject=${encodeURIComponent("Inquiry regarding HACKVERSE '26")}`}
+                      href={`mailto:${inbox.email}?subject=${encodeURIComponent("Inquiry regarding ROBOSPRANO '26 - Kilobots GCEK")}`}
                       className="py-2 px-3 bg-[#5B8731] hover:bg-[#689B37] text-white border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] font-mono font-black text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 transition-all"
                     >
                       <Mail className="w-3.5 h-3.5 stroke-[2.5px]" />
@@ -252,8 +252,8 @@ export function ContactContent() {
             <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar w-full sm:w-auto select-none">
               {[
                 { id: "all", label: "ALL DESKS", count: ALL_CONTACTS.length },
-                { id: "technical", label: "TECHNICAL HEAD", count: TECHNICAL_TEAM.length },
-                { id: "management", label: "MANAGEMENT TEAM", count: MANAGEMENT_TEAM.length },
+                { id: "management", label: "COORDINATORS & CHIEF", count: MANAGEMENT_TEAM.length },
+                { id: "technical", label: "TECHNICAL & ARENA LEADS", count: TECHNICAL_TEAM.length },
               ].map((tab) => {
                 const isActive = selectedCategory === tab.id;
                 return (
@@ -365,21 +365,6 @@ export function ContactContent() {
                             {isPhoneCopied ? "COPIED!" : "COPY"}
                           </button>
                         </div>
-
-                        {/* Email */}
-                        <div className="flex items-center justify-between p-2 bg-[#8B8B8B] border-2 border-t-[#373737] border-l-[#373737] border-r-[#DBDBDB] border-b-[#DBDBDB] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.4)]">
-                          <div className="flex items-center gap-2 truncate">
-                            <Mail className="w-3.5 h-3.5 stroke-[2.5px] text-[#55FFFF] shrink-0" />
-                            <span className="font-bold text-white [text-shadow:_1px_1px_0_#000] truncate">{person.email}</span>
-                          </div>
-                          <a
-                            href={`mailto:${person.email}`}
-                            className="text-[10px] font-black uppercase px-1.5 py-0.5 bg-[#707070] hover:bg-[#808080] text-white border border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shrink-0 ml-2 shadow-[1px_1px_0px_#000] [text-shadow:_1px_1px_0_#000]"
-                            title="Send email"
-                          >
-                            MAIL
-                          </a>
-                        </div>
                       </div>
                     </div>
 
@@ -399,7 +384,7 @@ export function ContactContent() {
                         {person.whatsapp && (
                           <a
                             href={`https://wa.me/${person.whatsapp}?text=${encodeURIComponent(
-                              `Hi ${person.name}, I am reaching out regarding HACKVERSE '26 at GCEK.`
+                              `Hi ${person.name}, I am reaching out regarding ROBOSPRANO '26 at GCEK.`
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -549,7 +534,7 @@ export function ContactContent() {
                 </div>
 
                 <p className="font-mono text-xs font-bold text-[#CCCCCC] leading-relaxed">
-                  Have questions about squad eligibility, cash prizes, food &amp; accommodation passes, or problem statement specifications? Check our live FAQ database.
+                  Have questions about bot dimensions, voltage compliance, battle arena rules, food &amp; accommodation passes, or cash prizes? Check our live FAQ database.
                 </p>
 
                 <div className="space-y-2 pt-1 font-mono text-xs">
@@ -601,7 +586,7 @@ export function ContactContent() {
             "ROBOSPRANO '26 BATTLEFIELD COMMS",
             "KILOBOTS GCEK HELPDESK",
             "ROBOTICS CLUB GCEK KALAHANDI",
-            "ROBOSPRANO@GCEKBPATNA.AC.IN",
+            "KILOBOTS@GCEKBPATNA.AC.IN",
             "BHAWANIPATNA, ODISHA",
           ]}
           bg="orange"

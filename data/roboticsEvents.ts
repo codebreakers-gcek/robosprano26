@@ -51,7 +51,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     venue: "GCEK Ground Floor",
     location: "GCEK Ground Floor",
     teamSize: "2–4 participants",
-    fee: "Rs. 150 per Team",
+    fee: "Rs. 350 per Team",
     prizePool: "₹18,000",
     prizes: [
       "1st : ₹8,000 + Certificates",
@@ -94,7 +94,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
         caption: "Robo Race Championship Circuit Arena",
       },
     ],
-    enrollLink: "https://forms.google.com",
+    enrollLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdkIHqbEYyUMPzQfGYL34Z2-QM1YXeMYu_p4cspVoGHBgitYg/viewform",
     closed: false,
   },
   {
@@ -158,7 +159,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
         caption: "Robo War Bulletproof Combat Arena Cage",
       },
     ],
-    enrollLink: "https://forms.google.com",
+    enrollLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeoMUx4pcd93lkdYzxZfUvQ7IMjOYapdyvRS7ULAqjEr4y6Hg/viewform",
     closed: false,
   },
   {
@@ -175,7 +177,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     venue: "GCEK Indoor Arena",
     location: "GCEK Indoor Arena",
     teamSize: "2–4 participants",
-    fee: "Rs. 150 per head — access to all Robosprano events.",
+    fee: "Rs. 350 per team.",
     prizePool: "₹18,000",
     prizes: [
       "1st : ₹8,000 + Certificates",
@@ -217,7 +219,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
         caption: "Elevated Circular Dohyo Sumo Ring",
       },
     ],
-    enrollLink: "https://forms.google.com",
+    enrollLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSd-I1CxfOhXPzzwK44QOUlgqiVTy_unUe9GlDM6NFPwXsIF4A/viewform?pli=1",
     closed: false,
   },
   {
@@ -248,11 +251,11 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     },
     image: "/minecraft/minecraft_natural.webp",
     description:
-      "Robo Soccer pits precision robotic soccer machines in head-to-head competition on a miniaturized turf pitch. Teams construct agile, omnidirectional or tank-drive robots equipped with custom kickers and dribbler mechanisms to out-maneuver opponents and score goals into the net.",
+      "Witness the excitement of Robo Soccer, where two teams battle head-to-head to score goals using customized soccer bots. Controlled manually through wired or wireless methods, these bots compete in an intense showdown of strategy, speed, precision, and strength. Teams must skillfully maneuver their robots, defend their goalposts, and attack their opponents to secure victory. The team that scores the highest number of goals within the given time wins the match. Get ready for an action-packed competition filled with thrilling moments, fierce rivalries, and robotic football excitement!",
     botSpecifications: [
       "Maximum dimensions: 30 cm × 30 cm × 15 cm (L × B × H), with a tolerance of 1 cm.",
       "Maximum weight: 5 kg, with a tolerance of 200 g.",
-      "Maximum operating voltage: 12V DC.",
+      "Maximum operating voltage: 12 V DC.",
       "Robots may be wired or wireless and must be manually controlled.",
       "For wired robots, the connecting cable must be sufficiently long and remain slack throughout the match without restricting movement.",
       "LEGO components are not permitted.",
@@ -268,7 +271,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       "Deliberate grabbing, overturning, damaging, or unsafe interference with an opponent's robot is prohibited and may result in a penalty or disqualification.",
       "Participants must not touch, reposition, or interfere with their robots during a match unless permitted by the referee.",
       "The team scoring the highest number of goals within the allotted match time will be declared the winner. In case of a tie, an additional round or another tie-breaking procedure specified by the organizers will be conducted.",
-      "The referee may pause or restart a match due to technical issues, ball obstruction, or unsafe conditions. Teams must report promptly when called. The referee's decisions will be final, and the organizing committee reserves the right to amend the rules when necessary.",
+      "The referee may pause or restart a match due to technical issues, ball obstruction, or unsafe conditions. Teams must report promptly when called. The referee's decisions will be final.",
+      "The organizers reserve the right to amend the rules when necessary for safety or fair competition.",
     ],
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
@@ -277,7 +281,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
         caption: "Robo Soccer Turf Pitch Arena",
       },
     ],
-    enrollLink: "https://forms.google.com",
+    enrollLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeXhrM9VhJhrhvzbbdNShBgG5V2M5z5x4l-BzuVCCYx6FjkDA/viewform",
     closed: false,
   },
   {
@@ -336,7 +341,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
         caption: "Autonomous PID High-Speed Line Tracking Course",
       },
     ],
-    enrollLink: "https://forms.google.com",
+    enrollLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdVrMKQXV8W8hvFEynuVwxHeibnFQwIu4-8lwHU9sz7k0K2PQ/viewform",
     closed: false,
   },
 ];

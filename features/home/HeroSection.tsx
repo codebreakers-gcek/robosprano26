@@ -196,8 +196,8 @@ export function HeroSection() {
         {/* Top Identification Badge: Kilobots Robotics Club */}
         <motion.div variants={itemVariants} className="w-full flex items-center justify-center mb-5 sm:mb-6">
           <div className="inline-flex items-center justify-center">
-            <span className="inline-flex items-center gap-2.5 font-minecraft text-xs sm:text-sm uppercase px-4 py-2 bg-[#1B1422] text-white border-3 border-t-[#3A2A48] border-l-[#3A2A48] border-r-[#000000] border-b-[#000000] shadow-[3px_3px_0px_#000]">
-              <div className="w-6 h-6 sm:w-7 sm:h-7 p-0.5 flex items-center justify-center shrink-0">
+            <span className="inline-flex items-center gap-2 sm:gap-2.5 font-minecraft text-[10px] min-[360px]:text-xs sm:text-sm uppercase px-2.5 sm:px-4 py-1.5 sm:py-2 bg-[#1B1422] text-white border-3 border-t-[#3A2A48] border-l-[#3A2A48] border-r-[#000000] border-b-[#000000] shadow-[3px_3px_0px_#000]">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 p-0.5 flex items-center justify-center shrink-0">
                 <Image
                   src="/kilobot.png"
                   alt="Kilobots GCEK Logo"
@@ -220,33 +220,33 @@ export function HeroSection() {
         <motion.div variants={itemVariants} className="relative inline-flex flex-col items-center justify-center mb-4 sm:mb-5 max-w-full">
           <h1 className="sr-only">ROBOSPRANO &apos;26</h1>
 
-          <div className="relative inline-block select-none px-2">
+          <div className="relative inline-block select-none px-2 sm:px-4 max-w-full">
             {/* Massive 3D Minecraft Typography */}
-            <div className="font-minecraft text-5xl xs:text-6xl sm:text-8xl md:text-9xl lg:text-[6.5rem] tracking-widest uppercase leading-none font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5C0] via-[#FFAA00] to-[#C47300] [filter:drop-shadow(4px_4px_0_#000)_drop-shadow(-2px_-2px_0_#000)_drop-shadow(0_8px_0_#5A3500)] select-none">
+            <div className="font-minecraft text-3xl min-[360px]:text-[2.1rem] min-[400px]:text-4xl min-[480px]:text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] tracking-wider sm:tracking-widest uppercase leading-none font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5C0] via-[#FFAA00] to-[#C47300] [filter:drop-shadow(3px_3px_0_#000)_drop-shadow(-1px_-1px_0_#000)_drop-shadow(0_5px_0_#5A3500)] sm:[filter:drop-shadow(4px_4px_0_#000)_drop-shadow(-2px_-2px_0_#000)_drop-shadow(0_8px_0_#5A3500)] select-none whitespace-nowrap">
               ROBOSPRANO
             </div>
 
             {/* Floating '26 Badge */}
-            <div className="absolute right-0 sm:-right-4 bottom-0 translate-y-[20%] sm:translate-y-[25%] select-none z-10">
-              <span className="font-minecraft text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-bold bg-[#55FF55] text-black px-3 py-1 border-3 sm:border-4 border-t-[#9EFF9E] border-l-[#9EFF9E] border-r-[#1B801B] border-b-[#1B801B] shadow-[4px_4px_0px_#000] -rotate-6 inline-block [text-shadow:_1px_1px_0_#FFF]">
+            <div className="absolute -right-1 min-[360px]:-right-2 sm:-right-4 bottom-0 translate-y-[28%] sm:translate-y-[25%] select-none z-10">
+              <span className="font-minecraft text-xs min-[360px]:text-sm sm:text-5xl md:text-6xl font-bold bg-[#55FF55] text-black px-2 py-0.5 sm:px-3 sm:py-1 border-2 sm:border-4 border-t-[#9EFF9E] border-l-[#9EFF9E] border-r-[#1B801B] border-b-[#1B801B] shadow-[2px_2px_0px_#000] sm:shadow-[4px_4px_0px_#000] -rotate-6 inline-block [text-shadow:_1px_1px_0_#FFF]">
                 &apos;26
               </span>
             </div>
           </div>
 
           {/* Subtitle Badge */}
-          <div className="mt-3 sm:mt-4">
-            <span className="font-minecraft text-[11px] sm:text-xs md:text-sm font-bold text-[#55FFFF] bg-[#0E1E28] px-3.5 py-1 border-2 border-[#55FFFF]/60 shadow-[2px_2px_0px_#000] uppercase tracking-wider inline-flex items-center gap-1.5">
-              <PixelXPOrb size={14} />
-              <span>KILOBOTS STATE ROBOTICS CHAMPIONSHIP</span>
-              <PixelXPOrb size={14} />
+          <div className="mt-3.5 sm:mt-4 max-w-full">
+            <span className="font-minecraft text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm font-bold text-[#55FFFF] bg-[#0E1E28] px-2.5 min-[360px]:px-3.5 py-1 border-2 border-[#55FFFF]/60 shadow-[2px_2px_0px_#000] uppercase tracking-wider inline-flex items-center gap-1 sm:gap-1.5 max-w-full">
+              <PixelXPOrb size={12} />
+              <span className="truncate">KILOBOTS STATE ROBOTICS CHAMPIONSHIP</span>
+              <PixelXPOrb size={12} />
             </span>
           </div>
         </motion.div>
 
         {/* Tagline Banner */}
         <motion.div variants={itemVariants} className="max-w-2xl mx-auto my-2 px-2 flex flex-col items-center gap-2">
-          <div className="inline-block bg-[#FFAA00] text-black font-minecraft text-xs xs:text-sm sm:text-base md:text-lg uppercase px-4 py-1.5 border-3 border-black shadow-[3px_3px_0px_#000] -rotate-1">
+          <div className="inline-block bg-[#FFAA00] text-black font-minecraft text-xs sm:text-base md:text-lg uppercase px-3 sm:px-4 py-1.5 border-3 border-black shadow-[3px_3px_0px_#000] -rotate-1">
             &ldquo;{EVENT_DATA.tagline}&rdquo;
           </div>
         </motion.div>
@@ -257,7 +257,7 @@ export function HeroSection() {
             {ARENA_CHIPS.map((chip) => (
               <div
                 key={chip.name}
-                className={`${chip.bg} border-2 ${chip.border} p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center`}
+                className={`${chip.bg} border-2 ${chip.border} p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center last:col-span-2 sm:last:col-span-1`}
               >
                 <span className="text-white font-sans text-xs sm:text-sm font-black uppercase tracking-wider block drop-shadow-[1px_1px_0px_#000]">
                   {chip.name}

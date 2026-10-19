@@ -8,8 +8,8 @@ export const ENV = {
   COLLEGE_NAME: "Government College of Engineering Kalahandi, Bhawanipatna",
   OFFICIAL_CLUB_URL: "https://www.codebreakersgcek.tech",
   COLLEGE_URL: "https://www.gcekbpatna.ac.in",
-  CONTACT_EMAIL: "hackverse26@codebreakersgcek.tech",
-  SUPPORT_EMAIL: "cse.codebreaker@gcekbpatna.ac.in",
+  CONTACT_EMAIL: "kilobots@gcekbpatna.ac.in",
+  SUPPORT_EMAIL: "kilobots@gcekbpatna.ac.in",
 
   // Google Forms Registration Link
   GOOGLE_FORM_URL:

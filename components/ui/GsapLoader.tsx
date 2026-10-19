@@ -268,10 +268,10 @@ export function GsapLoader() {
             <div className="flex items-center justify-center gap-2 sm:gap-2.5 mb-2 sm:mb-3 select-none">
               <div className="w-5 h-5 sm:w-6 sm:h-6 p-0.5 shrink-0 flex items-center justify-center">
                 <Image
-                  src="/cblogo.webp"
+                  src="/robosprano-1.webp"
                   alt="CodeBreakers Logo"
-                  width={24}
-                  height={24}
+                  width={44}
+                  height={44}
                   unoptimized
                   className="w-full h-full object-contain"
                 />
@@ -280,7 +280,7 @@ export function GsapLoader() {
                 className="text-[12px] sm:text-sm md:text-lg text-white font-bold tracking-wider sm:tracking-widest uppercase [text-shadow:_1px_1px_0_#000]"
                 style={{ fontFamily: "'Minecraft', monospace" }}
               >
-                CODEBREAKERS PRESENTS
+                KILOBOTS PRESENTS
               </span>
             </div>
 
@@ -290,7 +290,7 @@ export function GsapLoader() {
               className="relative w-[88vw] max-w-[480px] sm:max-w-[620px] md:max-w-[740px] lg:max-w-[820px] will-change-transform drop-shadow-[0_18px_30px_rgba(0,0,0,0.95)]"
             >
               <Image
-                src="/minecraft_loader/robosprano-1.webp"
+                src="/minecraft_loader/robosprano.webp"
                 alt="HACKVERSE '26 - Flagship Hackathon"
                 width={900}
                 height={260}
