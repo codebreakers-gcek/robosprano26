@@ -242,7 +242,7 @@ export default function EventsPage() {
                 15 PODIUM TROPHIES
               </span>
               <span className="bg-[#5B8731] text-white px-3.5 py-1.5 border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-                OCTOBER 17 - 18, 2026
+                NOVEMBER 05 - 06, 2026
               </span>
             </div>
           </div>

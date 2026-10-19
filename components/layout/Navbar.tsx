@@ -4,12 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  X,
-  ArrowRight,
-  Sparkles,
-} from "lucide-react";
+import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import { HEADER_UPDATES } from "@/data/updates";
@@ -80,7 +75,9 @@ export function Navbar() {
         return;
       }
 
-      const footer = document.getElementById("main-footer") || document.querySelector("footer");
+      const footer =
+        document.getElementById("main-footer") ||
+        document.querySelector("footer");
       if (!footer || !headerRef.current) return;
 
       const footerRect = footer.getBoundingClientRect();
@@ -93,8 +90,12 @@ export function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleFooterIntersection, { passive: true });
-    window.addEventListener("resize", handleFooterIntersection, { passive: true });
+    window.addEventListener("scroll", handleFooterIntersection, {
+      passive: true,
+    });
+    window.addEventListener("resize", handleFooterIntersection, {
+      passive: true,
+    });
 
     if (typeof window !== "undefined" && (window as any).__lenis) {
       (window as any).__lenis.on("scroll", handleFooterIntersection);
@@ -133,13 +134,15 @@ export function Navbar() {
         ref={headerRef}
         className={clsx(
           "fixed top-0 left-0 right-0 z-50 w-full max-w-full border-b-4 border-b-[#555555] border-t-2 border-t-[#FFFFFF] shadow-[0_4px_0_#000] transition-all duration-300 ease-in-out bg-[#C6C6C6]",
-          hideOnMobile && !mobileMenuOpen && "-translate-y-full lg:translate-y-0 opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto"
+          hideOnMobile &&
+            !mobileMenuOpen &&
+            "-translate-y-full lg:translate-y-0 opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto",
         )}
       >
         {/* Top Header Marquee: Live Updates */}
         <div
           className={clsx(
-            "w-full max-w-full border-b-2 border-[#555555] flex items-center text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase overflow-hidden h-8 select-none transition-colors duration-300 bg-[#2A2A2A] text-white"
+            "w-full max-w-full border-b-2 border-[#555555] flex items-center text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase overflow-hidden h-8 select-none transition-colors duration-300 bg-[#2A2A2A] text-white",
           )}
         >
           <div className="shrink-0 bg-[#FFAA00] text-black px-2.5 sm:px-3 h-full flex items-center gap-1.5 font-black z-10 border-r-2 border-r-[#555555] border-b-2 border-b-[#8F5500] border-t-2 border-t-[#FFE285] shadow-[1px_1px_0px_#000] text-[10px] sm:text-xs">
@@ -169,7 +172,7 @@ export function Navbar() {
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 rounded-xl shadow-neo-sm bg-black">
                 <Image
-                  src="/robosprano.webp"
+                  src="/robosprano-1.webp"
                   alt="Kilobots Robotics"
                   width={36}
                   height={36}
@@ -204,7 +207,7 @@ export function Navbar() {
                     "px-2 xl:px-2.5 py-1.5 font-black text-[11px] xl:text-xs uppercase tracking-wider transition-colors duration-100 border-2 inline-flex items-center gap-1.5 whitespace-nowrap shrink-0",
                     isActive
                       ? "bg-neo-secondary border-black text-black shadow-neo-sm"
-                      : "border-transparent text-black hover:border-black hover:bg-white hover:shadow-neo-sm"
+                      : "border-transparent text-black hover:border-black hover:bg-white hover:shadow-neo-sm",
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -242,7 +245,9 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-nav-menu"
-              aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
+              aria-label={
+                mobileMenuOpen ? "Close menu" : "Open navigation menu"
+              }
               className="w-10 h-10 bg-[#DBDBDB] hover:bg-[#EAEAEA] border-3 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[3px_3px_0px_#000] flex items-center justify-center text-black active:translate-y-0.5 transition-all cursor-pointer"
             >
               {mobileMenuOpen ? (
@@ -283,7 +288,7 @@ export function Navbar() {
                       "px-3.5 py-2.5 border-3 font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-between transition-all",
                       isActive
                         ? "bg-[#FFAA00] text-black border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[3px_3px_0px_#000]"
-                        : "bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[2px_2px_0px_#000]"
+                        : "bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[2px_2px_0px_#000]",
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -318,7 +323,10 @@ export function Navbar() {
       </header>
 
       {/* Spacer so page content below fixed navbar starts at the exact correct vertical offset */}
-      <div className="h-[92px] sm:h-[100px] w-full shrink-0" aria-hidden="true" />
+      <div
+        className="h-[92px] sm:h-[100px] w-full shrink-0"
+        aria-hidden="true"
+      />
     </>
   );
 }

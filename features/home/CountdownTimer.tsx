@@ -125,10 +125,10 @@ export function CountdownTimer() {
       <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] xs:text-xs font-black uppercase tracking-wider mb-2">
         <span className="inline-flex items-center gap-1.5 bg-black text-[#55FF55] px-2.5 py-1 border-2 border-[#55FF55] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]">
           <span className="w-2 h-2 bg-[#55FF55] inline-block rounded-none animate-pulse" />
-          <span>HACKATHON KICKOFF IN:</span>
+          <span>ROBOSPRANO KICKOFF IN:</span>
         </span>
         <span className="inline-block bg-[#1B1B1B] text-[#FFAA00] px-2.5 py-1 border-2 border-[#FFAA00] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] font-black">
-          OCTOBER 8, 2026
+          NOVEMBER 05, 2026
         </span>
       </div>
 

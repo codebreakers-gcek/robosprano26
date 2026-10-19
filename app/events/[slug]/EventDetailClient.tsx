@@ -270,46 +270,6 @@ View Details: ${window.location.href}`;
                 </motion.div>
               )}
 
-              {/* Event Gallery */}
-              {event.gallery && event.gallery.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  className="pt-4"
-                >
-                  <div className="flex items-center gap-3 mb-8">
-                    <Camera className="w-6 h-6 text-white/50" />
-                    <h2 className="text-2xl font-semibold text-white">
-                      Event Gallery
-                    </h2>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {event.gallery.map((photo, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.9 + index * 0.1 }}
-                        className="relative group cursor-pointer"
-                        onClick={() => setSelectedImage(photo)}
-                      >
-                        <div className="aspect-video w-full border border-white/10 overflow-hidden rounded-xl group-hover:border-white/20 transition-all duration-500">
-                          <img
-                            src={photo.url}
-                            alt={photo.caption}
-                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                          />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <p className="absolute bottom-4 left-4 right-4 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
-                          {photo.caption}
-                        </p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
             </motion.div>
 
             {/* --------------------------------------------------------------------- */}
@@ -417,61 +377,6 @@ View Details: ${window.location.href}`;
                 </motion.div>
               </div>
 
-              {/* Card 2: Event Prizes */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="bg-neutral-900 rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-              >
-                <h3 className="text-xl font-semibold text-white mb-6">
-                  Event Prizes
-                </h3>
-                <div className="space-y-4">
-                  {event.prizes && event.prizes.length > 0 ? (
-                    event.prizes.map((prize, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start space-x-4 group"
-                      >
-                        <Trophy className="w-5 h-5 text-white/50 shrink-0 group-hover:text-white/70 transition-colors" />
-                        <div>
-                          <p className="text-white font-medium group-hover:text-white/90 transition-colors">
-                            {prize}
-                          </p>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="text-neutral-400">No prizes available</p>
-                  )}
-                </div>
-              </motion.div>
-
-              {/* Card 3: Event Timeline */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="bg-neutral-900 rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
-              >
-                <h3 className="text-xl font-semibold text-white mb-6">
-                  Event Timeline
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4 group">
-                    <Clock className="w-5 h-5 text-white/50 shrink-0 group-hover:text-white/70 transition-colors" />
-                    <div>
-                      <p className="text-white font-medium group-hover:text-white/90 transition-colors">
-                        Event Starts
-                      </p>
-                      <p className="text-neutral-400 group-hover:text-neutral-300 transition-colors">
-                        {event.time}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
 
               {/* Card 4: Contact */}
               {event.contact && (

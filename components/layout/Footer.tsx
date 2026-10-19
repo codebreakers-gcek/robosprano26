@@ -49,7 +49,7 @@ export function Footer() {
                   >
                     <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white/5 border border-white/15 rounded-md p-1.5 flex items-center justify-center shrink-0 group-hover:border-white/30 group-hover:bg-white/10 transition-colors">
                       <img
-                        src="/robosprano.webp"
+                        src="/robosprano-1.webp"
                         alt="ROBOSPRANO '26 Main Logo"
                         width={44}
                         height={44}
@@ -95,9 +95,9 @@ export function Footer() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-normal">
-                  The premier robotics and combat engineering society of Government College
-                  of Engineering Kalahandi. Fostering arena combat,
-                  bot fabrication, and robotics excellence.
+                  The premier robotics and combat engineering society of
+                  Government College of Engineering Kalahandi. Fostering arena
+                  combat, bot fabrication, and robotics excellence.
                 </p>
 
                 <div>
@@ -131,7 +131,9 @@ export function Footer() {
                         href={link.href}
                         className="hover:text-white transition-colors flex items-center gap-1.5 group"
                       >
-                        <span className="text-neutral-600 group-hover:text-amber-400 transition-colors text-[10px]">▸</span>
+                        <span className="text-neutral-600 group-hover:text-amber-400 transition-colors text-[10px]">
+                          ▸
+                        </span>
                         <span>{link.label}</span>
                       </Link>
                     </li>
@@ -275,7 +277,7 @@ export function Footer() {
           <div className="flex items-center gap-1.5 justify-center">
             <span>ENGINEERED WITH</span>
             <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 inline" />
-            <span>BY KILOBOTS COMMUNITY</span>
+            <span>BY <Link href="https://codebreakersgcek.tech">CODEBREAKERS COMMUNITY</Link></span>
           </div>
         </div>
       </div>

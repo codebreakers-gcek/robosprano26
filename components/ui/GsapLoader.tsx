@@ -290,7 +290,7 @@ export function GsapLoader() {
               className="relative w-[88vw] max-w-[480px] sm:max-w-[620px] md:max-w-[740px] lg:max-w-[820px] will-change-transform drop-shadow-[0_18px_30px_rgba(0,0,0,0.95)]"
             >
               <Image
-                src="/minecraft_loader/robosprano.webp"
+                src="/minecraft_loader/robosprano-1.webp"
                 alt="HACKVERSE '26 - Flagship Hackathon"
                 width={900}
                 height={260}
@@ -375,7 +375,7 @@ export function GsapLoader() {
             className="text-[10px] sm:text-xs text-neutral-300 font-bold [text-shadow:_1px_1px_0_#000]"
             style={{ fontFamily: "'Minecraft', monospace" }}
           >
-            October 08-10, 2026 // GCEK CAMPUS
+            November 05-06, 2026 // GCEK CAMPUS
           </div>
 
           <div

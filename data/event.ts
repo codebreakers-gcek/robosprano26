@@ -8,9 +8,9 @@ export const EVENT_DATA: EventInfo = {
     "The premier annual STATE robotics championship and combat tournament organized by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 cash bounties.",
   fullDescription:
     "ROBOSPRANO '26 brings together the sharpest robotics engineers, circuit builders, and combat bot pilots across Odisha. Organized by Kilobots—the premier robotics club of Government College of Engineering Kalahandi (GCEK)—this 3-day robotics festival features heavy metal arena combats, obstacle time attacks, autonomous sensor runs, and direct industry jury evaluations.",
-  startDate: "2026-10-08T09:00:00+05:30",
-  endDate: "2026-10-10T18:00:00+05:30",
-  displayDates: "OCTOBER 08 - 10, 2026",
+  startDate: "2026-11-05T09:00:00+05:30",
+  endDate: "2026-11-06T18:00:00+05:30",
+  displayDates: "NOVEMBER 05 - 06, 2026",
   location: {
     campus: "Combat Arena Ground",
     venue: "Government College of Engineering Kalahandi",
@@ -20,7 +20,7 @@ export const EVENT_DATA: EventInfo = {
     googleMapsUrl:
       "https://maps.google.com/?q=Government+College+of+Engineering+Kalahandi",
   },
-  registrationDeadline: "SEPTEMBER 28, 2026 // 02:00 PM IST",
+  registrationDeadline: "NOVEMBER 01, 2026 // 11:59 PM IST",
   totalPrizePool: "₹91K",
   organizer: {
     name: "Kilobots GCEK",
