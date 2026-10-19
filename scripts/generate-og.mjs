@@ -5,7 +5,7 @@ import path from "path";
 const fontPath = path.resolve("public/font/Thuast-Demo.otf");
 const fontBuffer = fs.readFileSync(fontPath);
 
-const logoPath = path.resolve("public/cblogo.png");
+const logoPath = path.resolve("public/kilobot.png");
 const logoBase64 = fs.readFileSync(logoPath).toString("base64");
 const logoDataUri = `data:image/png;base64,${logoBase64}`;
 

@@ -199,7 +199,7 @@ export function HeroSection() {
             <span className="inline-flex items-center gap-2.5 font-minecraft text-xs sm:text-sm uppercase px-4 py-2 bg-[#1B1422] text-white border-3 border-t-[#3A2A48] border-l-[#3A2A48] border-r-[#000000] border-b-[#000000] shadow-[3px_3px_0px_#000]">
               <div className="w-6 h-6 sm:w-7 sm:h-7 p-0.5 flex items-center justify-center shrink-0">
                 <Image
-                  src="/cblogo.png"
+                  src="/kilobot.png"
                   alt="Kilobots GCEK Logo"
                   width={28}
                   height={28}
@@ -313,7 +313,7 @@ export function HeroSection() {
             <Link
               href="/register"
               onClick={() => playButtonClickSound()}
-              className="w-full sm:w-auto h-13 sm:h-14 px-7 sm:px-9 bg-[#5B8731] hover:bg-[#689B37] text-white font-minecraft text-sm sm:text-base uppercase tracking-wider border-4 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] active:border-t-[#2C4813] active:border-l-[#2C4813] active:border-r-[#85B745] active:border-b-[#85B745] shadow-[4px_4px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center justify-center gap-2.5 transition-colors cursor-pointer"
+              className="w-full sm:w-auto h-13 sm:h-14 px-7 sm:px-9 bg-[#FF5500] hover:bg-[#FF6600] text-white font-minecraft text-sm sm:text-base uppercase tracking-wider border-4 border-t-[#FFAA00] border-l-[#FFAA00] border-r-[#992200] border-b-[#992200] active:border-t-[#992200] active:border-l-[#992200] active:border-r-[#FFAA00] active:border-b-[#FFAA00] shadow-[4px_4px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center justify-center gap-2.5 transition-colors cursor-pointer"
             >
               <Swords className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
               <span>REGISTER YOUR BOT</span>
@@ -340,7 +340,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Scrolling Ticker Marquee with Kilobots & Robotics Arena Keywords */}
-      <div className="w-full relative z-20 mt-8 overflow-hidden">
+      <div className="w-full relative z-20 mt-10 sm:mt-12 overflow-hidden">
         <MarqueeBanner
           items={[
             "ROBOSPRANO '26",
@@ -355,9 +355,10 @@ export function HeroSection() {
             "GCEK KALAHANDI",
             "CLAIM BOT REGISTRATION NOW",
           ]}
-          bg="secondary"
+          bg="orange"
+          glass={true}
           speed="normal"
-          bended
+          bended={true}
         />
       </div>
     </section>

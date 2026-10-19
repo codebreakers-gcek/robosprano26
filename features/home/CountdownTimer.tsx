@@ -91,19 +91,6 @@ export function CountdownTimer() {
               <span>🏆 VIEW ARENA BOUNTIES</span>
               <span>➔</span>
             </Link>
-            <button
-              type="button"
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(
-                    new CustomEvent("open-thankyou-modal", { detail: { step: "thank_you" } })
-                  );
-                }
-              }}
-              className="px-3.5 py-2 bg-[#707070] hover:bg-[#858585] text-white text-xs sm:text-sm font-black uppercase border-3 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#383838] border-b-[#383838] shadow-[3px_3px_0px_#000] active:translate-y-0.5 transition-all cursor-pointer inline-flex items-center gap-1.5"
-            >
-              <span>THANK NOTE &amp; 2.0</span>
-            </button>
           </div>
         </div>
       </div>

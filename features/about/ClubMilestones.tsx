@@ -51,7 +51,7 @@ export function ClubMilestones() {
               {/* Logo Frame (Dark Inset Slot) */}
               <div className="w-10 h-10 bg-[#2B2B2B] border-2 border-t-[#151515] border-l-[#151515] border-r-[#4F4F4F] border-b-[#4F4F4F] p-1 flex items-center justify-center shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)] overflow-hidden shrink-0">
                 <img
-                  src="/cblogo.png"
+                  src="/kilobot.png"
                   alt="CodeBreakers Logo"
                   width={32}
                   height={32}

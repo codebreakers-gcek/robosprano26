@@ -595,17 +595,18 @@ export function ContactContent() {
       </motion.div>
 
       {/* Marquee Banner */}
-      <div className="relative z-10">
+      <div className="relative z-10 py-6">
         <MarqueeBanner
           items={[
-            "HACKVERSE '26 CONTACT RADAR",
-            "24/7 SUPPORT AVAILABLE",
-            "CSE.CODEBREAKER@GCEKBPATNA.AC.IN",
-            "HACKVERSE26@CODEBREAKERSGCEK.TECH",
-            "HACKVERSE26@CBGCEK.DEV",
-            "GCEK BHAWANIPATNA",
+            "ROBOSPRANO '26 BATTLEFIELD COMMS",
+            "KILOBOTS GCEK HELPDESK",
+            "ROBOTICS CLUB GCEK KALAHANDI",
+            "ROBOSPRANO@GCEKBPATNA.AC.IN",
+            "BHAWANIPATNA, ODISHA",
           ]}
-          bg="accent"
+          bg="orange"
+          glass={true}
+          angle="rotate-[-1deg] sm:rotate-[-0.85deg]"
         />
       </div>
     </div>

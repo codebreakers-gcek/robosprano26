@@ -122,9 +122,11 @@ function MinecraftChestLatch() {
 }
 
 /* Category styling using Minecraft original formatting colors */
-function getCategoryBadge(category: string) {
-  const cat = category.toUpperCase();
-  if (cat.includes("COMBAT")) {
+function getCategoryBadge(category: string, eventId?: string) {
+  const cat = (category || "").toUpperCase();
+  const id = (eventId || "").toLowerCase();
+
+  if (cat.includes("COMBAT") || id.includes("war")) {
     return {
       bg: "bg-[#FF5555]",
       border: "border-t-[#FFAAAA] border-l-[#FFAAAA] border-r-[#AA0000] border-b-[#AA0000]",
@@ -132,7 +134,7 @@ function getCategoryBadge(category: string) {
       label: "COMBAT",
     };
   }
-  if (cat.includes("RACING")) {
+  if (cat.includes("RACING") || cat.includes("RACE") || id.includes("race")) {
     return {
       bg: "bg-[#FFAA00]",
       border: "border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500]",
@@ -140,7 +142,7 @@ function getCategoryBadge(category: string) {
       label: "RACING",
     };
   }
-  if (cat.includes("DOHYO")) {
+  if (cat.includes("DOHYO") || cat.includes("SUMO") || id.includes("sumo")) {
     return {
       bg: "bg-[#55FFFF]",
       border: "border-t-[#AAFFFF] border-l-[#AAFFFF] border-r-[#008888] border-b-[#008888]",
@@ -148,7 +150,7 @@ function getCategoryBadge(category: string) {
       label: "DOHYO",
     };
   }
-  if (cat.includes("AGILITY")) {
+  if (cat.includes("AGILITY") || cat.includes("SOCCER") || id.includes("soccer")) {
     return {
       bg: "bg-[#55FF55]",
       border: "border-t-[#AAFFAA] border-l-[#AAFFAA] border-r-[#008800] border-b-[#008800]",
@@ -171,18 +173,24 @@ export default function EventsPage() {
   const categories = ["ALL", "COMBAT", "RACING", "DOHYO", "AGILITY", "AUTONOMOUS"];
 
   const filteredEvents = ROBOTICS_EVENTS.filter((event) => {
+    const cat = event.category.toLowerCase();
+    const id = event.id.toLowerCase();
+
     const matchesCategory =
       selectedCategory === "ALL" ||
-      (selectedCategory === "COMBAT" && event.category.toLowerCase().includes("combat")) ||
-      (selectedCategory === "RACING" && event.category.toLowerCase().includes("racing")) ||
-      (selectedCategory === "DOHYO" && event.category.toLowerCase().includes("dohyo")) ||
-      (selectedCategory === "AGILITY" && event.category.toLowerCase().includes("agility")) ||
-      (selectedCategory === "AUTONOMOUS" && event.category.toLowerCase().includes("autonomous"));
+      (selectedCategory === "COMBAT" && (cat.includes("combat") || id.includes("war") || id.includes("sumo"))) ||
+      (selectedCategory === "RACING" && (cat.includes("racing") || id.includes("race"))) ||
+      (selectedCategory === "DOHYO" && (cat.includes("dohyo") || id.includes("sumo"))) ||
+      (selectedCategory === "AGILITY" && (cat.includes("agility") || id.includes("soccer"))) ||
+      (selectedCategory === "AUTONOMOUS" && (cat.includes("autonomous") || id.includes("line")));
 
+    const q = searchQuery.toLowerCase().trim();
     const matchesSearch =
-      event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      event.category.toLowerCase().includes(searchQuery.toLowerCase());
+      !q ||
+      event.title.toLowerCase().includes(q) ||
+      event.description.toLowerCase().includes(q) ||
+      event.category.toLowerCase().includes(q) ||
+      event.tagline.toLowerCase().includes(q);
 
     return matchesCategory && matchesSearch;
   });
@@ -282,7 +290,7 @@ export default function EventsPage() {
           {/* ========================================================================= */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
             {filteredEvents.map((event) => {
-              const badge = getCategoryBadge(event.category);
+              const badge = getCategoryBadge(event.category, event.id);
 
               return (
                 <div
