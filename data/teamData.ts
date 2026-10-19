@@ -33,7 +33,7 @@ export const officialIncharges: OfficialIncharge[] = [
 export const coreLeads: TeamMember[] = [];
 
 export const clubLeads: TeamMember[] = [
-    {
+  {
     image:
       "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1786779293/IMG_0230_2_vmnw90.jpg",
     title: "Gyanranjan Priyam",
@@ -50,7 +50,7 @@ export const clubLeads: TeamMember[] = [
       website: "https://priyam.tech/",
     },
   },
-    {
+  {
     image:
       "https://res.cloudinary.com/dw47ib0sh/image/upload/v1764687111/dcamoaxh8imtoetrydzn.jpg",
     title: "Smruti Ranjan Adhikari",
@@ -85,11 +85,11 @@ export const clubLeads: TeamMember[] = [
     },
   },
 
-    {
+  {
     image:
       "https://res.cloudinary.com/dw47ib0sh/image/upload/v1764686998/qqpuw8paqkzjx0iqv9vd.jpg",
     title: "Deepankar Sahoo",
-    subtitle:"Teachnical Lead",
+    subtitle: "Teachnical Lead",
     handle: "@codebydeepankar",
     borderColor: "#06B6D4",
     gradient: "linear-gradient(135deg, #06B6D4, #000)",

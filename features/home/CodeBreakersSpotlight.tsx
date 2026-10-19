@@ -49,7 +49,7 @@ export function CodeBreakersSpotlight() {
 
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs font-black uppercase px-3 py-1 bg-[#FFAA00] text-black border-2 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[2px_2px_0px_#000]">
-                ESTD. 2021
+                ESTD. 2019
               </span>
               <span className="font-mono text-xs font-black uppercase px-3 py-1 bg-[#55FF55] text-black border-2 border-t-[#9EFF9E] border-l-[#9EFF9E] border-r-[#1B801B] border-b-[#1B801B] shadow-[2px_2px_0px_#000]">
                 50+ BOT PILOTS
