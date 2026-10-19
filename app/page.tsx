@@ -1,0 +1,149 @@
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { HeroSection } from "@/features/home/HeroSection";
+import { QuickStats } from "@/features/home/QuickStats";
+import { PrizePoolBanner } from "@/features/home/PrizePoolBanner";
+import { SponsorsTeaser } from "@/features/home/SponsorsTeaser";
+import { CodeBreakersSpotlight } from "@/features/home/CodeBreakersSpotlight";
+import { MarqueeBanner } from "@/components/layout/MarqueeBanner";
+import { MinecraftBlockMarquee } from "@/components/layout/MinecraftBlockMarquee";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { ArrowRight, Terminal, Users } from "lucide-react";
+
+export default function HomePage() {
+  return (
+    <div className="flex flex-col">
+      {/* 1. Hero Section (Includes integrated Minecraft wallpaper Marquee) */}
+      <HeroSection />
+
+      {/* 2. Event High-Impact Numbers */}
+      <ScrollReveal>
+        <QuickStats />
+      </ScrollReveal>
+
+      {/* 4. Prize Pool Breakdown */}
+      <ScrollReveal>
+        <PrizePoolBanner />
+      </ScrollReveal>
+
+      {/* Marquee Separator between Prize Pool and Sponsors */}
+      <MarqueeBanner
+        items={[
+          "PATRON GUILD",
+          "OFFICIAL SPONSORS",
+          "POWERED BY INDUSTRY LEADERS",
+          "CLOUD COMPUTE PARTNERS",
+          "HACKVERSE '26",
+          "TOOLING GRANTS",
+          "GCEK KALAHANDI",
+        ]}
+        bg="secondary"
+        speed="normal"
+      />
+
+
+      {/* Minecraft Block Divider Marquee */}
+      <MinecraftBlockMarquee speed="normal" />
+
+      {/* 7. CodeBreakers Club & GCEK Spotlight */}
+      <ScrollReveal>
+        <CodeBreakersSpotlight />
+      </ScrollReveal>
+
+      {/* 8. Final Call to Action with Minecraft Character Art */}
+      <ScrollReveal>
+        <section className="py-20 bg-[#261727] border-b-4 border-black text-center relative overflow-hidden">
+          {/* Left Side Minecraft Coder at Desk */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[48%] pointer-events-none select-none z-0 overflow-hidden">
+            <Image
+              src="/minecraft/desk.webp"
+              alt="Minecraft Coder at Desk"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-left sm:object-left-center"
+            />
+            {/* Horizontal gradient fade: vibrant on left, seamlessly dissolving into desk room tones */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#261727]/60 to-[#261727] via-60%" />
+            {/* Subtle vertical fade for small mobile viewports */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#261727]/40 to-[#261727] sm:hidden" />
+          </div>
+
+          {/* Warm Ambient Lamp & Sunset Glow Accents */}
+          <div className="absolute -top-16 right-1/4 w-72 h-72 bg-[#FFAA00]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#FF6B6B]/15 rounded-full blur-3xl pointer-events-none" />
+
+          {/* Desktop Right Side Squad Mascot (Full Side Height) */}
+          <div className="hidden lg:block absolute inset-y-0 right-0 w-[380px] xl:w-[480px] 2xl:w-[540px] pointer-events-none select-none z-10 drop-shadow-[12px_12px_0px_#000]">
+            <div className="relative w-full h-full">
+              <Image
+                src="/minecraft/team_3.webp"
+                alt="Minecraft Squad Pass Mascot - Steve, Alex & Saddle Pig"
+                fill
+                className="object-contain object-bottom"
+                priority
+                sizes="(max-width: 1280px) 380px, 540px"
+              />
+              <div className="absolute top-6 xl:top-8 right-6 xl:right-10 bg-[#FFAA00] text-black border-3 border-black font-mono text-xs xl:text-sm font-black uppercase px-3.5 py-1 shadow-neo rotate-2 flex items-center gap-1.5">
+                <Users className="w-4 h-4" /> SQUAD ASSEMBLED
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+            {/* Mobile Mascot Badge */}
+            <div className="flex flex-col items-center gap-2 lg:hidden">
+              <div className="relative w-36 h-36 xs:w-44 xs:h-44 drop-shadow-[6px_6px_0px_#000]">
+                <Image
+                  src="/minecraft/team_3.webp"
+                  alt="Minecraft Squad Pass Mascot"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="font-mono text-xs font-black uppercase px-3 py-1 bg-[#FFAA00] text-black border-2 border-black shadow-neo-sm inline-flex items-center gap-1.5">
+                <Users className="w-3.5 h-3.5" /> 2-4 PLAYERS SQUAD
+              </span>
+            </div>
+
+            <span className="font-mono text-xs font-black uppercase px-3 py-1 bg-[#FFAA00] text-black border-2 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[2px_2px_0px_#000] inline-flex items-center gap-1.5 flex-wrap">
+              <span>★ HACKVERSE &apos;26 CONCLUDED</span>
+              <span>➔</span>
+              <span>HACKVERSE 2.0 COMING SOON // STAY TUNED</span>
+            </span>
+
+            <h2 className="font-black text-4xl sm:text-6xl text-white uppercase tracking-tight leading-tight [text-shadow:_3px_3px_0_#000]">
+              THE CODE CONTINUES. <br />
+              <span className="bg-[#FFAA00] text-black px-3.5 py-1 border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] inline-block rotate-[-1deg] mt-2">
+                LEVEL 2.0 UNLOCKED
+              </span>
+            </h2>
+
+            <p className="text-base sm:text-xl font-bold text-[#EADCE9] max-w-2xl mx-auto leading-relaxed [text-shadow:_1px_1px_0_#000]">
+              Heartfelt thanks to all 500+ participants, 60+ squads, mentors, and partners across Odisha. Get ready for an even bigger battlefield in HackVerse 2.0.
+            </p>
+
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/register"
+                className="w-full sm:w-auto h-14 px-10 bg-[#5B8731] hover:bg-[#689B37] text-white font-mono font-black text-base uppercase tracking-wider border-4 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[4px_4px_0px_#000] [text-shadow:_2px_2px_0_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>REGISTER YOUR SQUAD</span>
+                <ArrowRight className="w-5 h-5 stroke-[3px]" />
+              </Link>
+
+              <Link
+                href="/events"
+                className="w-full sm:w-auto h-14 px-8 bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black font-mono font-black text-base uppercase tracking-wider border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[4px_4px_0px_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Terminal className="w-5 h-5 stroke-[3px]" />
+                <span>EXPLORE ROBOTICS EVENTS</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+    </div>
+  );
+}
