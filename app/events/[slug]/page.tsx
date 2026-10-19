@@ -10,14 +10,21 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return ROBOTICS_EVENTS.map((event) => ({
+  const slugs = ROBOTICS_EVENTS.map((event) => ({
     slug: event.slug,
   }));
+  // Alias robo-race for death-race
+  if (!slugs.some((s) => s.slug === "robo-race")) {
+    slugs.push({ slug: "robo-race" });
+  }
+  return slugs;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const event = ROBOTICS_EVENTS.find((e) => e.slug === slug || e.id === slug);
+  const event = ROBOTICS_EVENTS.find(
+    (e) => e.slug === slug || e.id === slug || (slug === "robo-race" && e.slug === "death-race")
+  );
 
   if (!event) {
     return {
@@ -38,7 +45,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function EventDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const event = ROBOTICS_EVENTS.find((e) => e.slug === slug || e.id === slug);
+  const event = ROBOTICS_EVENTS.find(
+    (e) => e.slug === slug || e.id === slug || (slug === "robo-race" && e.slug === "death-race")
+  );
 
   if (!event) {
     notFound();
