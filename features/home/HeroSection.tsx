@@ -257,15 +257,15 @@ export function HeroSection() {
             {ARENA_CHIPS.map((chip) => (
               <div
                 key={chip.name}
-                className={`${chip.bg} border-2 ${chip.border} p-2 text-center shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center`}
+                className={`${chip.bg} border-2 ${chip.border} p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center`}
               >
-                <span className="text-white font-minecraft text-xs sm:text-sm font-bold block">
+                <span className="text-white font-sans text-xs sm:text-sm font-black uppercase tracking-wider block drop-shadow-[1px_1px_0px_#000]">
                   {chip.name}
                 </span>
-                <span className={`${chip.color} font-minecraft text-sm sm:text-base font-black`}>
+                <span className={`${chip.color} font-sans text-base sm:text-xl font-black tracking-tight block my-0.5 drop-shadow-[2px_2px_0px_#000]`}>
                   {chip.bounty}
                 </span>
-                <span className="font-mono text-[9px] text-neutral-400 uppercase mt-0.5">
+                <span className="font-sans text-[10px] sm:text-[11px] text-neutral-200 font-bold uppercase tracking-wider mt-0.5 block">
                   {chip.category}
                 </span>
               </div>
