@@ -27,12 +27,12 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://hackverse.codebreakersgcek.tech",
+    "https://hackverse.codebreakersgcek.tech",
   ),
   title: {
     default:
-      "HACKVERSE '26 | Flagship 24H State Tech Fest & Hackathon | CodeBreakers GCEK",
-    template: "%s | HACKVERSE '26 - CodeBreakers GCEK",
+      "ROBOSPRANO '26 | Flagship Event Of GCEK | CodeBreakers GCEK",
+    template: "%s | ROBOSPRANO '26 - CodeBreakers GCEK",
   },
   description:
     "Official State-Level Flagship 24-Hour Hackathon & Tech Fest organized by CODEBREAKERS, Government College of Engineering Kalahandi (GCEK). ₹35,000+ prize pool across AI/ML, Web3, Cyber Security, Cloud, IoT & Open Innovation tracks.",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "HACKVERSE Hackathon 2026",
     "HACKVERSE GCEK",
     "GCEK HACKATHON 26",
-    "HACKVERSE GCEK 2026",
+    "ROBOSPRANO GCEK 2026",
     "CodeBreakers GCEK",
     "CodeBreakers",
     "CodeBreakers Hackathon",

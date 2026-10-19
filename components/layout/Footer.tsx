@@ -45,12 +45,12 @@ export function Footer() {
                   <Link
                     href="/"
                     className="flex items-center gap-3.5 group focus:outline-none"
-                    aria-label="HACKVERSE '26 Home"
+                    aria-label="ROBOSPRANO '26 Home"
                   >
                     <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white/5 border border-white/15 rounded-md p-1.5 flex items-center justify-center shrink-0 group-hover:border-white/30 group-hover:bg-white/10 transition-colors">
                       <img
-                        src="/cbhack.webp"
-                        alt="HACKVERSE '26 Main Logo"
+                        src="/cbrobo.webp"
+                        alt="ROBOSPRANO '26 Main Logo"
                         width={44}
                         height={44}
                         className="w-full h-full object-contain"
@@ -58,10 +58,10 @@ export function Footer() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-black text-lg sm:text-xl md:text-2xl tracking-tight text-white leading-tight group-hover:text-amber-400 transition-colors">
-                        HACKVERSE &apos;26
+                        ROBOSPRANO &apos;26
                       </h3>
                       <p className="font-mono text-[10px] sm:text-xs font-semibold text-neutral-400 tracking-wide">
-                        FLAGSHIP TECH FEST &amp; HACKATHON
+                        FLAGSHIP TECH FEST &amp; ROBOSPRANO
                       </p>
                     </div>
                   </Link>

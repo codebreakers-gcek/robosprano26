@@ -169,7 +169,7 @@ export function Navbar() {
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 rounded-xl shadow-neo-sm bg-white">
                 <Image
-                  src="/cbhack.webp"
+                  src="/cbrobo.webp"
                   alt="Kilobots Robotics"
                   width={36}
                   height={36}
