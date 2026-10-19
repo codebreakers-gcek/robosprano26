@@ -177,13 +177,12 @@ function EventInfoPopup({
                 {event.prizes.map((prize, idx) => (
                   <div key={idx} className="font-minecraft text-xs text-neutral-200 [text-shadow:_1px_1px_0_#000] flex items-center gap-2">
                     <span
-                      className={`w-2 h-2 shrink-0 border border-black shadow-[1px_1px_0_#000] ${
-                        idx === 0
+                      className={`w-2 h-2 shrink-0 border border-black shadow-[1px_1px_0_#000] ${idx === 0
                           ? "bg-[#55FF55]"
                           : idx === 1
                             ? "bg-[#AAAAAA]"
                             : "bg-[#FFAA00]"
-                      }`}
+                        }`}
                     />
                     <span>{prize}</span>
                   </div>
@@ -214,7 +213,7 @@ function EventInfoPopup({
             </Link>
 
             <Link
-              href="/register"
+              href="/events"
               onClick={() => {
                 playButtonClickSound();
                 onClose();
@@ -422,7 +421,7 @@ export function HeroSection() {
                 >
                   {/* Primary CTA: Register Your Bot */}
                   <Link
-                    href="/register"
+                    href="/events"
                     onClick={() => playButtonClickSound()}
                     className="h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7700] hover:brightness-110 text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(255,85,0,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer whitespace-nowrap border-t border-orange-300/40"
                   >

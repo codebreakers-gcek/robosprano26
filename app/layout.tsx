@@ -359,7 +359,7 @@ const jsonLd = {
       },
       offers: {
         "@type": "Offer",
-        url: "https://hackverse.codebreakersgcek.tech/register",
+        url: "https://hackverse.codebreakersgcek.tech/events",
         price: "0",
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",

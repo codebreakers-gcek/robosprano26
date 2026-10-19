@@ -448,11 +448,10 @@ export function PrizePoolBanner() {
                     playButtonClickSound();
                     setMobileView("table");
                   }}
-                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${
-                    mobileView === "table"
+                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${mobileView === "table"
                       ? "bg-[#FFAA00] text-black font-bold border border-[#FFE285] shadow-[1px_1px_0px_#000]"
                       : "text-neutral-400 hover:text-white"
-                  }`}
+                    }`}
                 >
                   TABLE
                 </button>
@@ -462,11 +461,10 @@ export function PrizePoolBanner() {
                     playButtonClickSound();
                     setMobileView("cards");
                   }}
-                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${
-                    mobileView === "cards"
+                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${mobileView === "cards"
                       ? "bg-[#FFAA00] text-black font-bold border border-[#FFE285] shadow-[1px_1px_0px_#000]"
                       : "text-neutral-400 hover:text-white"
-                  }`}
+                    }`}
                 >
                   CARDS
                 </button>
@@ -481,9 +479,8 @@ export function PrizePoolBanner() {
 
           {/* 1. Responsive Obsidian Matrix Table (Default & Desktop View) */}
           <div
-            className={`overflow-x-auto -mx-1 sm:mx-0 scrollbar-thin scrollbar-thumb-[#FFAA00]/40 scrollbar-track-black/40 ${
-              mobileView === "cards" ? "hidden sm:block" : "block"
-            }`}
+            className={`overflow-x-auto -mx-1 sm:mx-0 scrollbar-thin scrollbar-thumb-[#FFAA00]/40 scrollbar-track-black/40 ${mobileView === "cards" ? "hidden sm:block" : "block"
+              }`}
           >
             <table className="w-full text-left border-collapse font-minecraft table-fixed sm:table-auto min-w-[300px]">
               <colgroup className="sm:hidden">
@@ -528,13 +525,12 @@ export function PrizePoolBanner() {
                     key={arena.id}
                     onMouseEnter={() => setHoveredArena(arena.id)}
                     onMouseLeave={() => setHoveredArena(null)}
-                    className={`transition-colors duration-150 ${
-                      arena.highlight
+                    className={`transition-colors duration-150 ${arena.highlight
                         ? "bg-[#2A1010]/90 hover:bg-[#381616]"
                         : hoveredArena === arena.id
-                        ? "bg-[#251A2C]"
-                        : "bg-[#140E18] hover:bg-[#1D1424]"
-                    }`}
+                          ? "bg-[#251A2C]"
+                          : "bg-[#140E18] hover:bg-[#1D1424]"
+                      }`}
                   >
                     {/* Event Name & Category */}
                     <td className="py-2 px-1.5 sm:py-3.5 sm:px-6 border-r border-neutral-900 sm:border-r-2">
@@ -625,11 +621,10 @@ export function PrizePoolBanner() {
             {ARENA_BOUNTIES.map((arena) => (
               <div
                 key={arena.id}
-                className={`p-3 border-2 ${
-                  arena.highlight
+                className={`p-3 border-2 ${arena.highlight
                     ? "bg-[#281010] border-[#FF5555] shadow-[0_0_12px_rgba(255,85,85,0.25)]"
                     : "bg-[#140E18] border-neutral-800"
-                }`}
+                  }`}
               >
                 {/* Card Header: Icon + Name + Category + Total */}
                 <div className="flex items-start justify-between gap-2 pb-2 border-b border-neutral-800">
@@ -739,7 +734,7 @@ export function PrizePoolBanner() {
           </div>
 
           <Link
-            href="/register"
+            href="/events"
             onClick={() => playButtonClickSound()}
             className="w-full lg:w-auto bg-[#FFAA00] hover:bg-[#FFB726] text-black font-minecraft text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] active:border-t-[#8F5500] active:border-l-[#8F5500] active:border-r-[#FFE285] active:border-b-[#FFE285] px-7 py-3.5 shadow-[4px_4px_0px_#000] transition-colors flex items-center justify-center gap-2 shrink-0 cursor-pointer active:translate-y-1 relative z-10"
           >
