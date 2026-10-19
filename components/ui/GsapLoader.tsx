@@ -290,7 +290,7 @@ export function GsapLoader() {
               className="relative w-[88vw] max-w-[480px] sm:max-w-[620px] md:max-w-[740px] lg:max-w-[820px] will-change-transform drop-shadow-[0_18px_30px_rgba(0,0,0,0.95)]"
             >
               <Image
-                src="/minecraft_loader/hackverse.webp"
+                src="/minecraft_loader/robosprano.webp"
                 alt="HACKVERSE '26 - Flagship Hackathon"
                 width={900}
                 height={260}
