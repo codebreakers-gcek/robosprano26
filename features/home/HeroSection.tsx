@@ -233,15 +233,6 @@ export function HeroSection() {
               </span>
             </div>
           </div>
-
-          {/* Subtitle Badge */}
-          <div className="mt-3.5 sm:mt-4 max-w-full">
-            <span className="font-minecraft text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm font-bold text-[#55FFFF] bg-[#0E1E28] px-2.5 min-[360px]:px-3.5 py-1 border-2 border-[#55FFFF]/60 shadow-[2px_2px_0px_#000] uppercase tracking-wider inline-flex items-center gap-1 sm:gap-1.5 max-w-full">
-              <PixelXPOrb size={12} />
-              <span className="truncate">KILOBOTS STATE ROBOTICS CHAMPIONSHIP</span>
-              <PixelXPOrb size={12} />
-            </span>
-          </div>
         </motion.div>
 
         {/* Tagline Banner */}
