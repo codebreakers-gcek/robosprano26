@@ -7,57 +7,104 @@ export interface AboutPillar {
   color: "accent" | "secondary" | "muted" | "white";
 }
 
-export interface ClubMilestone {
-  year: string;
-  event: string;
-  detail: string;
-}
-
 export const ABOUT_DATA = {
-  festOverview: {
-    title: "ABOUT ROBOSPRANO '26",
-    tagline: "WHERE KALAHANDI'S MECHANICAL ENERGY MEETS STATE-SCALE ROBOTICS COMBAT",
-    paragraphs: [
-      "ROBOSPRANO '26 is the signature STATE-level annual robotics championship and combat tournament organized by KILOBOTS at Government College of Engineering Kalahandi (GCEK), Bhawanipatna, Odisha.",
-      "Conceived as an intense proving ground for combat and autonomous robotics, the tournament provides ambitious student engineers an elite arena to battle custom combat bots across 5 high-voltage arenas.",
-      "Over 3 electrifying days, participants experience Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower, competing for ₹91,000 in cash bounties and state trophies.",
+  hero: {
+    badge: "10TH EDITION MILESTONE // EST. 2016 - 2026",
+    title: "ROBOSPRANO 2026",
+    edition: "THE 10TH EDITION",
+    tagline: "A Decade of Innovation. A Legacy of Robotics. A Future Built by Innovators.",
+    stats: [
+      { label: "MILESTONE", value: "10TH", sub: "Anniversary Edition" },
+      { label: "BATTLE ARENAS", value: "5", sub: "High-Voltage Tracks" },
+      { label: "PRIZE BOUNTY", value: "₹91,000", sub: "Cash & State Trophies" },
+      { label: "BUILDERS", value: "1,000+", sub: "Engineers & Bot Pilots" },
     ],
+  },
+  decadeLegacy: {
+    title: "A DECADE OF ROBOTICS INNOVATION",
+    subtitle: "TEN EDITIONS OF ENGINEERING EXCELLENCE & UNRELENTING PASSION",
+    paragraphs: [
+      "For ten incredible editions, ROBOSPRANO has been a celebration of engineering excellence, creativity, innovation, and the spirit of competition. It brings together passionate young innovators, aspiring engineers, robotics enthusiasts, and technology lovers on a common platform to transform bold ideas into real-world creations.",
+      "Over the years, ROBOSPRANO has witnessed remarkable robotic designs, intense challenges, thrilling competitions, outstanding victories, and unforgettable moments that inspire the next generation of engineers. Every edition has pushed boundaries, encouraged teamwork, and turned imagination into innovation.",
+      "Now, as we proudly step into our 10th Edition, ROBOSPRANO 2026, we are ready to celebrate this milestone with greater challenges, stronger competition, fresh ideas, and an experience bigger and better than ever before.",
+    ],
+    highlights: [
+      {
+        title: "DECADE OF EXCELLENCE",
+        desc: "10 editions of fostering high-caliber mechanical, electronics, and software craftsmanship.",
+        accent: "#FFAA00",
+      },
+      {
+        title: "UNCOMPROMISING ARENAS",
+        desc: "Custom-engineered battlegrounds from extreme off-road dirt tracks to steel hazard combat rings.",
+        accent: "#55FF55",
+      },
+      {
+        title: "PAN-STATE COMMUNITY",
+        desc: "Western Odisha's biggest convergence of collegiate robotics squads and bot enthusiasts.",
+        accent: "#55FFFF",
+      },
+    ],
+  },
+  whatsNew: {
+    tag: "FEATURED DEBUT",
+    title: "WHAT'S NEW THIS YEAR? // ROBO WAR DEBUT",
+    lead: "This year, get ready to experience robotics like never before! ROBOSPRANO 2026 introduces ROBO WAR, an exciting new addition that brings strategy, mechanical engineering, control systems, and robotic combat into one electrifying arena.",
+    body: "Prepare for intense robotic battles, powerful machines, smart strategies, and action-packed moments where precision, design, and innovation will determine who dominates the battlefield. Alongside this thrilling new event, participants can look forward to challenging competitions that test their technical knowledge, creativity, problem-solving abilities, and engineering skills.",
+    featuredEventSlug: "robo-war",
+    featuredEventName: "ROBO WAR COMBAT ARENA",
+    specs: [
+      "Weight Class: 15 kg Max Combat Bots",
+      "Steel Enclosed Arena with Pneumatic Hazards",
+      "Weapon Systems: Spinners, Lifters, Crushers & Wedges",
+      "₹25,000 Top Cash Bounty",
+    ],
+  },
+  callToAction: {
+    headline: "NOW IT'S YOUR TURN TO BE PART OF THE LEGACY!",
+    paragraphs: [
+      "The arena is ready. The challenges are waiting. The next chapter of robotics history is yours to create!",
+      "Bring your team, build your robot, sharpen your strategies, and prepare to compete with some of the brightest minds. Whether you are passionate about designing intelligent machines, solving complex engineering problems, experimenting with technology, or experiencing the thrill of competition, ROBOSPRANO 2026 is your opportunity to learn, innovate, compete, and make your mark.",
+      "Be part of a decade-long legacy. Turn your ideas into machines, your creativity into engineering, and your determination into victory.",
+    ],
+    motto: "KEEP HUSTLING. KEEP BUILDING. KEEP INNOVATING.",
+    subMotto: "ROBOSPRANO 2026 | The 10th Edition. One Legacy. Countless Possibilities.",
   },
   pillars: [
     {
       number: "01",
-      title: "INNOVATION OPPORTUNITIES",
-      subtitle: "BUILDING BEYOND THE CLASSROOM",
+      title: "COMBAT & MECHANICAL RIGOR",
+      subtitle: "ENGINEER FOR IMPACT",
       description:
-        "Tackle unvarnished problem statements formulated with industry leaders and government domain advisors. From decentralized logistics to local language AI engines, build projects that address genuine friction points in society.",
-      badge: "PROTOTYPING",
+        "Push mechanical design to the absolute limit. Fabricate hardened chassis, high-torque drivetrains, and dynamic weapon mechanisms capable of withstanding extreme arena impacts.",
+      badge: "FABRICATION",
       color: "accent",
     },
     {
       number: "02",
-      title: "LEARNING OPPORTUNITIES",
-      subtitle: "ACCELERATED COGNITIVE GROWTH",
+      title: "AUTONOMOUS & SENSOR CONTROL",
+      subtitle: "MICROSECOND PRECISION",
       description:
-        "Immerse yourself in real-time code reviews, architecture critiques, and direct masterclasses on containerization, neural models, cyber forensics, and edge computing led by senior engineers and alumni.",
-      badge: "MENTORSHIP",
+        "Calibrate infrared arrays, PID algorithms, and motor controllers for seamless trajectory tracking in Line Follower and high-speed autonomous navigation.",
+      badge: "ALGORITHMS",
       color: "secondary",
     },
     {
       number: "03",
-      title: "COLLABORATION ECOSYSTEM",
-      subtitle: "SYNERGY ACROSS DISCIPLINES",
+      title: "TACTICAL SQUAD PILOTING",
+      subtitle: "HIGH-STAKES MANEUVERS",
       description:
-        "Kilobots believes that true breakthrough engineering is forged when mechanical fabricators, electronics designers, and bot pilots connect. Network with top robotics teams from across India.",
-      badge: "COMMUNITY",
+        "Master low-latency RF wireless communication, pilot agility, and pit-crew turnarounds in Robo Soccer, Death Race, and Sumo wrestling circles.",
+      badge: "PILOTING",
       color: "muted",
     },
     {
       number: "04",
-      title: "PLACEMENT & INDUSTRY LAUNCHPAD",
-      subtitle: "DIRECT RECRUITER VISIBILITY",
+      title: "STATE TROPHIES & RECOGNITION",
+      subtitle: "₹91,000 CASH POOL",
       description:
-        "Top-performing teams and individual standouts receive direct referral opportunities, interview fast-tracks, and incubation mentorship for promising hardware and software ventures.",
-      badge: "CAREERS",
+        "Compete before veteran engineering faculty, industry adjudicators, and hundreds of spectators for prestigious state titles, cash prizes, and tech glory.",
+      badge: "AWARDS",
       color: "white",
     },
   ] as AboutPillar[],
@@ -65,41 +112,29 @@ export const ABOUT_DATA = {
     name: "Government College of Engineering Kalahandi (GCEK)",
     location: "Bhawanipatna, Kalahandi, Odisha - 766002",
     description:
-      "Established as a premier government technical institution in Western Odisha, GCEK is dedicated to nurturing technical talent, fostering scientific inquiry, and driving regional and STATE technological progress through robust engineering education.",
+      "Established as a premier government technical institution in Western Odisha, GCEK is dedicated to nurturing world-class engineering talent, fostering scientific inquiry, and driving regional and national technological progress through hands-on technical societies.",
     portalUrl: "https://www.gcekbpatna.ac.in",
   },
   club: {
     name: "KILOBOTS",
-    role: "The Premier Official Robotics & Combat Society of GCEK",
-    foundingYear: "2021",
-    activeMembers: "50+ Bot Pilots",
-    bio: "Kilobots is the official robotics and combat engineering society at GCEK. Designing battle bots, autonomous rovers, and sensor-driven machines, Kilobots leads Western Odisha's competitive robotics arena culture.",
-    officialWebsite: "https://www.gcekbpatna.ac.in",
-    milestones: [
+    role: "The Official Robotics & Combat Engineering Society of GCEK",
+    foundingYear: "2016",
+    activeMembers: "80+ Bot Pilots & Fabricators",
+    bio: "KILOBOTS is the vanguard robotics society at Government College of Engineering Kalahandi. Designing battle bots, autonomous rovers, and sensor-driven machines, KILOBOTS leads Western Odisha's competitive robotics arena culture.",
+    portalUrl: "https://www.gcekbpatna.ac.in",
+    amenities: [
       {
-        year: "2019",
-        event: "CLUB FOUNDING",
-        detail:
-          "Established by passionate computer science students to cultivate competitive programming & development culture in GCEK.",
+        title: "PIT STOP REPAIR ZONE",
+        desc: "Soldering benches, DC power hookups, battery charging stations, and basic hardware repair support.",
       },
       {
-        year: "2021",
-        event: "CAMPUS PLATFORM LAUNCH",
-        detail:
-          "Engineered and deployed the digital portal for college fests INSPRANO and UDAAN with 10,000+ hits.",
+        title: "OFFICIAL ARENA CALIBRATION",
+        desc: "Dedicated practice runs and sensor calibration windows before official bracket rounds commence.",
       },
       {
-        year: "2023",
-        event: "HACKVERSE'23 INCEPTION",
-        detail:
-          "Hosted the first edition of Hack Nova with 80+ participating teams and STATE recognition.",
+        title: "CREW ACCOMMODATION & SAFETY",
+        desc: "Secured bot impound area, mandatory safety goggles, and student hospitality support.",
       },
-      {
-        year: "2026",
-        event: "HACKVERSE '26 STATE FEST",
-        detail:
-          "Expanding to a full-scale 3-day multi-track STATE tech symposium with ₹35K+ prize pool.",
-      },
-    ] as ClubMilestone[],
+    ],
   },
 };

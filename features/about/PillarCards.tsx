@@ -65,8 +65,8 @@ export function PillarCards() {
               </div>
 
               <div className="pt-3 border-t-2 border-[#8B8B8B] font-mono text-[11px] font-black uppercase text-black/80 flex items-center justify-between">
-                <span>EXPLORE WITH CODEBREAKERS SQUAD</span>
-                <span className="text-[#5B8731] font-black">[ACTIVE]</span>
+                <span>COMPETE WITH KILOBOTS SQUAD</span>
+                <span className="text-[#5B8731] font-black">[ARENA READY]</span>
               </div>
             </div>
           );
