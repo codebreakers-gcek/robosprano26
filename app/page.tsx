@@ -33,26 +33,27 @@ export default function HomePage() {
         <PrizePoolBanner />
       </ScrollReveal>
 
-      {/* Marquee Separator between Prize Pool and Sponsors */}
-      <MarqueeBanner
-        items={[
-          "PATRON GUILD",
-          "OFFICIAL SPONSORS",
-          "POWERED BY INDUSTRY LEADERS",
-          "ROBOTICS HARDWARE PARTNERS",
-          "ROBOSPRANO '26",
-          "KILOBOTS GCEK",
-          "GCEK KALAHANDI",
-        ]}
-        bg="orange"
-        glass={true}
-        speed="normal"
-        angle="rotate-[1deg] sm:rotate-[0.85deg]"
-      />
+      {/* Marquee Separator between Prize Pool and Kilobots // GCEK Information */}
+      <div className="relative bg-[#0A0710] overflow-hidden py-2 border-y-4 border-black z-20">
+        <MarqueeBanner
+          items={[
+            "PATRON GUILD",
+            "OFFICIAL SPONSORS",
+            "POWERED BY INDUSTRY LEADERS",
+            "ROBOTICS HARDWARE PARTNERS",
+            "ROBOSPRANO '26",
+            "KILOBOTS GCEK",
+            "GCEK KALAHANDI",
+          ]}
+          bg="black"
+          glass={true}
+          speed="normal"
+          angle="rotate-[1deg] sm:rotate-[0.85deg]"
+        />
 
-
-      {/* Minecraft Block Divider Marquee */}
-      <MinecraftBlockMarquee speed="normal" />
+        {/* Minecraft Block Divider Marquee */}
+        <MinecraftBlockMarquee speed="normal" />
+      </div>
 
       {/* 7. CodeBreakers Club & GCEK Spotlight */}
       <ScrollReveal>

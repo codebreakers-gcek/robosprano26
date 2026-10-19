@@ -4,11 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { HEADER_UPDATES } from "@/data/updates";
 import { MinecraftNavbarMusicPlayer } from "@/components/ui/MinecraftNavbarMusicPlayer";
+import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -17,13 +17,21 @@ export function Navbar() {
   const headerRef = useRef<HTMLElement>(null);
   const [hideOnMobile, setHideOnMobile] = useState(false);
 
-  // Primary navigation links
-  const navLinks: Array<{ label: string; href: string; badge?: string }> = [
-    { label: "ABOUT", href: "/about" },
+  // Navigation links exactly matching the reference image
+  const navLinks = [
     { label: "EVENTS", href: "/events" },
+    { label: "ABOUT", href: "/about" },
     { label: "TEAM", href: "/team" },
     { label: "CONTACT", href: "/contact" },
   ];
+
+  // Helper to test if link is currently active
+  const isLinkActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   // Close menus on route change
   useEffect(() => {
@@ -53,7 +61,7 @@ export function Navbar() {
       if (typeof window !== "undefined" && (window as any).__lenis) {
         (window as any).__lenis.start();
       }
-      window.addEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     }
 
     return () => {
@@ -67,7 +75,7 @@ export function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  // Detect when footer reaches navbar position on mobile to hide the navbar smoothly
+  // Detect when footer reaches navbar position on mobile to hide smoothly
   useEffect(() => {
     const handleFooterIntersection = () => {
       if (typeof window === "undefined" || window.innerWidth >= 1024) {
@@ -81,7 +89,7 @@ export function Navbar() {
       if (!footer || !headerRef.current) return;
 
       const footerRect = footer.getBoundingClientRect();
-      const headerHeight = headerRef.current.offsetHeight || 92;
+      const headerHeight = headerRef.current.offsetHeight || 64;
 
       if (footerRect.top <= headerHeight + 5) {
         setHideOnMobile(true);
@@ -124,7 +132,7 @@ export function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={() => setMobileMenuOpen(false)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 lg:hidden"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 lg:hidden"
             aria-hidden="true"
           />
         )}
@@ -133,44 +141,24 @@ export function Navbar() {
       <header
         ref={headerRef}
         className={clsx(
-          "fixed top-0 left-0 right-0 z-50 w-full max-w-full border-b-4 border-b-[#555555] border-t-2 border-t-[#FFFFFF] shadow-[0_4px_0_#000] transition-all duration-300 ease-in-out bg-[#C6C6C6]",
+          "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out",
+          "bg-[#0A0B0E]/95 backdrop-blur-md border-t border-white/10 border-b border-[#1C1F2B] shadow-[0_4px_25px_rgba(0,0,0,0.6)]",
           hideOnMobile &&
-            !mobileMenuOpen &&
-            "-translate-y-full lg:translate-y-0 opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto",
+          !mobileMenuOpen &&
+          "-translate-y-full lg:translate-y-0 opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto"
         )}
       >
-        {/* Top Header Marquee: Live Updates */}
-        <div
-          className={clsx(
-            "w-full max-w-full border-b-2 border-[#555555] flex items-center text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase overflow-hidden h-8 select-none transition-colors duration-300 bg-[#2A2A2A] text-white",
-          )}
-        >
-          <div className="shrink-0 bg-[#FFAA00] text-black px-2.5 sm:px-3 h-full flex items-center gap-1.5 font-black z-10 border-r-2 border-r-[#555555] border-b-2 border-b-[#8F5500] border-t-2 border-t-[#FFE285] shadow-[1px_1px_0px_#000] text-[10px] sm:text-xs">
-            <span className="w-2 h-2 rounded-none bg-red-600 inline-block shadow-[1px_1px_0px_#000]" />
-            <span>LIVE UPDATES</span>
-          </div>
-          <div className="overflow-hidden whitespace-nowrap flex-1 min-w-0 flex items-center">
-            <div className="animate-marquee-header flex items-center gap-8">
-              {[...HEADER_UPDATES, ...HEADER_UPDATES].map((item, idx) => (
-                <span key={idx} className="inline-flex items-center gap-6">
-                  <span>{item}</span>
-                  <Sparkles className="w-3 h-3 text-[#FFAA00] shrink-0" />
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Main Navbar Bar */}
-        <div className="w-full px-3 sm:px-6 lg:px-8 xl:px-10 h-14 sm:h-16 flex items-center justify-between gap-3 lg:gap-4 xl:gap-8">
-          {/* Brand / Logo - Pinned Left */}
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-4">
+          {/* Brand / Logo - Pinned Left (Previous Styled Version) */}
           <div className="shrink-0 flex items-center">
             <Link
               href="/"
-              className="flex justify-center items-center gap-2 sm:gap-3 group focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black shrink-0"
+              onClick={() => playButtonClickSound(0.25)}
+              className="flex justify-center items-center gap-2 sm:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7700] shrink-0"
               aria-label="Kilobots Robosprano Home"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 rounded-xl shadow-neo-sm bg-black">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 border-white/30 rounded-xl shadow-neo-sm bg-black shrink-0">
                 <Image
                   src="/robosprano-1.webp"
                   alt="Kilobots Robotics"
@@ -181,79 +169,111 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-minecraftt text-lg sm:text-4xl tracking-wider text-black leading-none">
+                <span className="font-minecraftt text-lg sm:text-4xl tracking-wider text-white leading-none transition-colors group-hover:text-[#FFAA00]">
                   ROBOSPRANO
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Desktop Primary Navigation */}
+          {/* Desktop Primary Navigation - Center */}
           <nav
-            className="hidden lg:flex items-center justify-center gap-1 xl:gap-1.5 flex-1 mx-2 lg:mx-3 xl:mx-8 shrink-0"
+            className="hidden lg:flex items-center justify-center gap-6 xl:gap-9 flex-1 h-full relative"
             aria-label="Main Navigation"
           >
             {navLinks.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
+              const active = isLinkActive(link.href);
 
               return (
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={() => playButtonClickSound(0.25)}
                   className={clsx(
-                    "px-2 xl:px-2.5 py-1.5 font-black text-[11px] xl:text-xs uppercase tracking-wider transition-colors duration-100 border-2 inline-flex items-center gap-1.5 whitespace-nowrap shrink-0",
-                    isActive
-                      ? "bg-neo-secondary border-black text-black shadow-neo-sm"
-                      : "border-transparent text-black hover:border-black hover:bg-white hover:shadow-neo-sm",
+                    "relative h-full flex items-center px-2 py-1 font-sans font-black text-xs sm:text-[13px] tracking-[0.16em] uppercase transition-colors duration-200 select-none",
+                    active ? "text-white" : "text-zinc-400 hover:text-white"
                   )}
-                  aria-current={isActive ? "page" : undefined}
+                  aria-current={active ? "page" : undefined}
                 >
-                  <span className="whitespace-nowrap">{link.label}</span>
-                  {link.badge && (
-                    <span className="px-1.5 py-0.2 bg-amber-400 text-black border border-black font-mono text-[9px] font-black shadow-neo-xs animate-pulse whitespace-nowrap">
-                      {link.badge}
-                    </span>
+                  <span>{link.label}</span>
+
+                  {/* Active Orange Glowing Tab at the bottom edge */}
+                  {active && (
+                    <motion.div
+                      layoutId="activeNavTab"
+                      transition={{
+                        type: "spring",
+                        stiffness: 420,
+                        damping: 32,
+                      }}
+                      className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 pointer-events-none flex flex-col items-center z-10"
+                    >
+                      {/* Ambient Orange Underglow */}
+                      <div className="absolute -bottom-1 w-20 sm:w-24 h-4 bg-[#FF6600]/60 blur-md rounded-full pointer-events-none" />
+
+                      {/* Trapezoid Tab matching reference image */}
+                      <div
+                        className="w-16 sm:w-20 h-2 bg-gradient-to-r from-[#FF4400] via-[#FFAA00] to-[#FF4400] shadow-[0_2px_12px_#FF6600,0_0_20px_rgba(255,102,0,0.8)]"
+                        style={{
+                          clipPath:
+                            "polygon(0 0, 100% 0, calc(100% - 6px) 100%, 6px 100%)",
+                        }}
+                      />
+
+                      {/* Top Hot Center Highlight */}
+                      <div className="w-16 sm:w-20 h-[2px] bg-gradient-to-r from-transparent via-[#FFF0B3] to-transparent -mt-[8px]" />
+                    </motion.div>
                   )}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right side CTA & Music Player */}
+          {/* Right Side Actions: Music Player + Register Button */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            {/* Minecraft Navbar Music Player */}
+            {/* Music Player Button */}
             <MinecraftNavbarMusicPlayer />
 
+            {/* Register CTA Button */}
             <Link
               href="/register"
-              className="h-10 sm:h-11 px-5 sm:px-6 inline-flex items-center gap-2 bg-[#FF7700] hover:bg-[#FF881A] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#FFA755] border-l-[#FFA755] border-r-[#8F3B00] border-b-[#8F3B00] shadow-[3px_3px_0px_#000] active:translate-y-1 transition-all cursor-pointer [text-shadow:_1px_1px_0_#4D1E00] hover:shadow-[4px_4px_0px_#000]"
+              onClick={() => playButtonClickSound(0.4)}
+              className="h-10 px-5 rounded-md sm:rounded-lg inline-flex items-center gap-2 bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7B00] hover:from-[#FF6600] hover:to-[#FF8800] text-white font-minecraftt font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_2px_10px_rgba(255,85,0,0.4)] hover:shadow-[0_0_20px_rgba(255,102,0,0.7)] active:scale-[0.98] transition-all cursor-pointer border-t border-orange-300/40"
             >
-              <span>REGISTER</span>
+              <span className="tracking-[0.2em]">REGISTER</span>
               <ArrowRight className="w-4 h-4 stroke-[3px]" />
             </Link>
           </div>
 
-          {/* Mobile Right Controls: Music Player + Hamburger Button */}
+          {/* Mobile Right Controls: Music Player + Register + Hamburger */}
           <div className="flex lg:hidden items-center gap-2">
             <MinecraftNavbarMusicPlayer />
 
+            <Link
+              href="/register"
+              onClick={() => playButtonClickSound(0.4)}
+              className="h-9 px-3 rounded-md inline-flex items-center gap-1.5 bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white font-sans font-black text-xs uppercase tracking-wider shadow-[0_2px_8px_rgba(255,85,0,0.4)] border-t border-orange-300/40"
+            >
+              <span>REGISTER</span>
+            </Link>
+
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={() => {
+                playButtonClickSound(0.25);
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-nav-menu"
               aria-label={
-                mobileMenuOpen ? "Close menu" : "Open navigation menu"
+                mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
               }
-              className="w-10 h-10 bg-[#DBDBDB] hover:bg-[#EAEAEA] border-3 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[3px_3px_0px_#000] flex items-center justify-center text-black active:translate-y-0.5 transition-all cursor-pointer"
+              className="w-9 h-9 rounded-md bg-[#13151D] hover:bg-[#1C1F2B] border border-zinc-700/80 hover:border-zinc-500 flex items-center justify-center text-zinc-300 hover:text-white transition-all cursor-pointer"
             >
               {mobileMenuOpen ? (
-                <X className="w-5 h-5 stroke-[3px]" />
+                <X className="w-5 h-5" />
               ) : (
-                <Menu className="w-5 h-5 stroke-[3px]" />
+                <Menu className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -271,47 +291,47 @@ export function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as const }}
-              className="lg:hidden border-t-4 border-t-[#555555] bg-[#C6C6C6] px-4 sm:px-6 pt-5 pb-10 flex flex-col gap-2.5 shadow-[8px_8px_0px_#000] max-h-[calc(100dvh-105px)] overflow-y-auto overscroll-contain touch-pan-y text-black"
+              className="lg:hidden border-t border-zinc-800 bg-[#0B0D12]/98 backdrop-blur-xl px-4 sm:px-6 pt-4 pb-8 flex flex-col gap-2 shadow-[0_15px_40px_rgba(0,0,0,0.8)] max-h-[calc(100dvh-70px)] overflow-y-auto overscroll-contain text-white"
             >
               {navLinks.map((link, idx) => {
-                const isActive =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(link.href);
+                const active = isLinkActive(link.href);
 
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      playButtonClickSound(0.25);
+                      setMobileMenuOpen(false);
+                    }}
                     className={clsx(
-                      "px-3.5 py-2.5 border-3 font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-between transition-all",
-                      isActive
-                        ? "bg-[#FFAA00] text-black border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[3px_3px_0px_#000]"
-                        : "bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[2px_2px_0px_#000]",
+                      "px-4 py-3 rounded-md font-sans font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-between transition-all",
+                      active
+                        ? "bg-gradient-to-r from-[#FF5500]/25 to-transparent text-white border-l-3 border-[#FF7700] shadow-[inset_0_0_12px_rgba(255,102,0,0.15)]"
+                        : "bg-zinc-900/60 hover:bg-zinc-800/80 text-zinc-300 border border-zinc-800/80 hover:text-white"
                     )}
-                    aria-current={isActive ? "page" : undefined}
+                    aria-current={active ? "page" : undefined}
                   >
                     <div className="flex items-center gap-2">
-                      <span>{link.label}</span>
-                      {link.badge && (
-                        <span className="px-1.5 py-0.2 bg-[#FFAA00] text-black border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] font-mono text-[9px] font-black shadow-[1px_1px_0px_#000]">
-                          {link.badge}
-                        </span>
-                      )}
+                      <span className={active ? "text-[#FFAA00]" : ""}>
+                        {link.label}
+                      </span>
                     </div>
-                    <span className="font-mono text-xs font-black text-black/50">
+                    <span className="font-mono text-[11px] text-zinc-500 font-bold">
                       0{idx + 1}
                     </span>
                   </Link>
                 );
               })}
 
-              <div className="pt-2 border-t-2 border-[#555555]/30 mt-1">
+              <div className="pt-3 border-t border-zinc-800/80 mt-1">
                 <Link
                   href="/register"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="w-full h-12 bg-[#FF7700] hover:bg-[#FF881A] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider border-3 border-t-[#FFA755] border-l-[#FFA755] border-r-[#8F3B00] border-b-[#8F3B00] shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 active:translate-y-1 transition-all [text-shadow:_1px_1px_0_#4D1E00]"
+                  onClick={() => {
+                    playButtonClickSound(0.4);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full h-11 rounded-md bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7B00] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_4px_16px_rgba(255,85,0,0.4)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all border-t border-orange-300/40"
                 >
                   <span>REGISTER NOW</span>
                   <ArrowRight className="w-4 h-4 stroke-[3px]" />
@@ -323,10 +343,7 @@ export function Navbar() {
       </header>
 
       {/* Spacer so page content below fixed navbar starts at the exact correct vertical offset */}
-      <div
-        className="h-[92px] sm:h-[100px] w-full shrink-0"
-        aria-hidden="true"
-      />
+      <div className="h-16 sm:h-[68px] w-full shrink-0" aria-hidden="true" />
     </>
   );
 }

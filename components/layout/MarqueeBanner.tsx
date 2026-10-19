@@ -43,7 +43,7 @@ export function MarqueeBanner({
       ? "bg-gradient-to-r from-black/80 via-[#FF5500]/35 to-black/80 backdrop-blur-xl border-y-2 border-[#FF5500]/80 text-white shadow-[0_4px_30px_rgba(255,85,0,0.35)]"
       : "bg-[#FF5555] text-white border-y-4 border-black",
     muted: "bg-[#A8E6CF] text-black border-y-4 border-black",
-    black: "bg-black/85 backdrop-blur-xl text-white border-y-2 border-[#FF7700]/50",
+    black: "bg-black/90 backdrop-blur-xl text-white border-y-2 border-white/10 shadow-[0_4px_25px_rgba(0,0,0,0.85)]",
     white: "bg-white/90 backdrop-blur-xl text-black border-y-2 border-black/20",
   };
 

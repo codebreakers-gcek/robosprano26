@@ -161,7 +161,7 @@ export function MinecraftNavbarMusicPlayer() {
 
   return (
     <div className="relative font-mono select-none" ref={containerRef}>
-      {/* ── Compact Minecraft Music Icon Trigger Button ── */}
+      {/* ── Sleek Cyber Music Trigger Button (Matches Reference Image) ── */}
       <button
         type="button"
         onClick={() => {
@@ -169,43 +169,29 @@ export function MinecraftNavbarMusicPlayer() {
           setIsOpen(!isOpen);
         }}
         className={clsx(
-          "relative h-9 px-2 sm:h-10 sm:px-2.5 border-2 sm:border-3 flex items-center justify-center gap-1.5 cursor-pointer transition-all active:translate-y-0.5 shadow-[2px_2px_0px_#000] font-sans font-black text-xs uppercase tracking-wider",
-          isOpen
-            ? "bg-[#2A180E] text-[#FFAA00] border-t-[#663300] border-l-[#663300] border-r-[#FFAA00] border-b-[#FFAA00]"
-            : isPlaying
-            ? "bg-[#251508] hover:bg-[#341D0C] text-[#FFAA00] border-t-[#FFAA00] border-l-[#FFAA00] border-r-[#733500] border-b-[#733500]"
-            : "bg-[#1E1724] hover:bg-[#2B2133] text-neutral-300 border-t-[#4E3960] border-l-[#4E3960] border-r-[#100A15] border-b-[#100A15]"
+          "relative w-9 h-9 sm:w-10 sm:h-10 rounded-md sm:rounded-lg flex items-center justify-center transition-all cursor-pointer select-none",
+          "bg-[#13151D] hover:bg-[#1C1F2B] border border-zinc-700/80 hover:border-zinc-500",
+          isPlaying && "border-[#FF6600]/70 shadow-[0_0_12px_rgba(255,102,0,0.35)]",
+          isOpen && "border-[#FF7700] ring-1 ring-[#FF7700]/50"
         )}
-        title={isPlaying ? "Minecraft Music: Playing (Click for Controls)" : "Minecraft Music: Paused (Click to Play)"}
-        aria-label="Minecraft Music Player"
+        title={isPlaying ? "Music: Playing (Click for Controls)" : "Music: Paused (Click to Play)"}
+        aria-label="Music Player"
         aria-expanded={isOpen}
       >
-        {/* Animated Disc / Music Note Icon */}
-        {isPlaying ? (
-          <Disc
-            className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#FFAA00] animate-spin"
-            style={{ animationDuration: "3s" }}
-          />
-        ) : (
-          <Music className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-neutral-300" />
-        )}
-
-        <span className="hidden sm:inline font-mono text-[10px] font-bold text-[#FFAA00] leading-none">
-          {isPlaying ? "OST" : "MUTE"}
-        </span>
-
-        {/* Mini Amber / Redstone Status Indicator Dot at Top Right */}
-        <span
+        <Music
           className={clsx(
-            "absolute -top-1 -right-1 w-2.5 h-2.5 border border-black shadow-[1px_1px_0px_#000]",
-            isPlaying
-              ? "bg-[#FFAA00] shadow-[0_0_6px_#FFAA00] animate-pulse"
-              : "bg-[#FF5555]"
+            "w-4 h-4 sm:w-4.5 sm:h-4.5 transition-colors",
+            isPlaying ? "text-[#FF8800]" : "text-zinc-200"
           )}
         />
+
+        {/* Status Indicator Dot at Top Right */}
+        {isPlaying && (
+          <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-[#FF7700] shadow-[0_0_6px_#FF7700] animate-pulse" />
+        )}
       </button>
 
-      {/* ── Dropdown Menu (Minecraft Stone HUD) ── */}
+      {/* ── Dropdown Menu (Sleek Dark Cyber HUD) ── */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -213,10 +199,10 @@ export function MinecraftNavbarMusicPlayer() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 mt-2 w-68 sm:w-72 bg-[#C6C6C6] border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[8px_8px_0px_#000] z-50 text-black overflow-hidden"
+            className="absolute right-0 mt-2 w-68 sm:w-72 bg-[#0D0F14]/98 backdrop-blur-xl border border-zinc-700/80 rounded-lg shadow-[0_12px_40px_rgba(0,0,0,0.8)] z-50 text-white overflow-hidden"
           >
             {/* Header */}
-            <div className="p-3 bg-[#DBDBDB] border-b-3 border-[#555555] flex items-center justify-between">
+            <div className="p-3 bg-[#141720] border-b border-zinc-800 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Disc
                   className={clsx(
@@ -226,10 +212,10 @@ export function MinecraftNavbarMusicPlayer() {
                   style={{ animationDuration: "3s" }}
                 />
                 <div className="flex flex-col text-left">
-                  <span className="font-black text-xs uppercase text-black leading-tight">
-                    MINECRAFT JUKEBOX
+                  <span className="font-bold text-xs uppercase text-white tracking-wider">
+                    SOUNDTRACK
                   </span>
-                  <span className="font-mono text-[10px] text-black/70 leading-none">
+                  <span className="font-mono text-[10px] text-zinc-400 leading-none">
                     C418 - SWEDEN (OST)
                   </span>
                 </div>
@@ -241,31 +227,31 @@ export function MinecraftNavbarMusicPlayer() {
                   playButtonClickSound(0.4);
                   setIsOpen(false);
                 }}
-                className="w-5 h-5 flex items-center justify-center bg-[#8B8B8B] hover:bg-[#FF5555] hover:text-white text-black border border-black cursor-pointer shadow-[1px_1px_0px_#000] text-xs font-black"
+                className="w-6 h-6 flex items-center justify-center rounded bg-zinc-800/80 hover:bg-[#FF4400] text-zinc-400 hover:text-white border border-zinc-700/60 cursor-pointer text-xs transition-colors"
                 title="Close"
               >
-                <X className="w-3 h-3 stroke-[3px]" />
+                <X className="w-3.5 h-3.5" />
               </button>
             </div>
 
             {/* Body Controls */}
-            <div className="p-3 space-y-3 bg-[#C6C6C6]">
+            <div className="p-3.5 space-y-3 bg-[#0D0F14]">
               {/* Playback Status Badge */}
-              <div className="p-2 bg-[#8B8B8B] border-2 border-t-[#373737] border-l-[#373737] border-r-[#DBDBDB] border-b-[#DBDBDB] flex items-center justify-between text-[11px] text-white font-black shadow-[inset_1px_1px_1px_rgba(0,0,0,0.5)]">
-                <span className="flex items-center gap-1.5 [text-shadow:_1px_1px_0_#000]">
+              <div className="p-2 bg-black/60 rounded border border-zinc-800 flex items-center justify-between text-[11px] font-mono">
+                <span className="flex items-center gap-1.5">
                   {isPlaying ? (
                     <>
-                      <span className="w-2 h-2 bg-[#FFAA00] border border-black shadow-[0_0_4px_#FFAA00] animate-pulse" />
-                      <span className="text-[#FFE285]">NOW PLAYING</span>
+                      <span className="w-2 h-2 rounded-full bg-[#FF7700] shadow-[0_0_6px_#FF7700] animate-pulse" />
+                      <span className="text-[#FFAA00] font-bold">PLAYING</span>
                     </>
                   ) : (
                     <>
-                      <span className="w-2 h-2 bg-[#FF5555] border border-black" />
-                      <span>PAUSED</span>
+                      <span className="w-2 h-2 rounded-full bg-zinc-600" />
+                      <span className="text-zinc-400">PAUSED</span>
                     </>
                   )}
                 </span>
-                <span className="text-[#FFE285] [text-shadow:_1px_1px_0_#000]">
+                <span className="text-zinc-300">
                   VOL: {isMuted ? "0%" : `${Math.round(volume * 100)}%`}
                 </span>
               </div>
@@ -277,21 +263,21 @@ export function MinecraftNavbarMusicPlayer() {
                   type="button"
                   onClick={togglePlay}
                   className={clsx(
-                    "flex-1 h-9 px-3 border-3 font-black text-xs uppercase flex items-center justify-center gap-1.5 shadow-[2px_2px_0px_#000] cursor-pointer active:translate-y-0.5 transition-all [text-shadow:_1px_1px_0_#000]",
+                    "flex-1 h-9 px-3 rounded font-black text-xs uppercase flex items-center justify-center gap-1.5 cursor-pointer active:scale-[0.98] transition-all tracking-wider",
                     isPlaying
-                      ? "bg-[#FF7700] hover:bg-[#FF881A] text-white border-t-[#FFA755] border-l-[#FFA755] border-r-[#8F3B00] border-b-[#8F3B00] [text-shadow:_1px_1px_0_#4D1E00]"
-                      : "bg-[#707070] hover:bg-[#808080] text-white border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838]"
+                      ? "bg-gradient-to-r from-[#FF5500] to-[#FF7700] hover:brightness-110 text-white shadow-[0_0_12px_rgba(255,102,0,0.4)]"
+                      : "bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700"
                   )}
                 >
                   {isPlaying ? (
                     <>
                       <Pause className="w-3.5 h-3.5 fill-current" />
-                      <span>PAUSE TRACK</span>
+                      <span>PAUSE</span>
                     </>
                   ) : (
                     <>
                       <Play className="w-3.5 h-3.5 fill-current" />
-                      <span>PLAY TRACK</span>
+                      <span>PLAY</span>
                     </>
                   )}
                 </button>
@@ -300,21 +286,21 @@ export function MinecraftNavbarMusicPlayer() {
                 <button
                   type="button"
                   onClick={toggleMute}
-                  className="w-9 h-9 flex items-center justify-center bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black border-3 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[2px_2px_0px_#000] cursor-pointer active:translate-y-0.5"
+                  className="w-9 h-9 rounded flex items-center justify-center bg-zinc-800/80 hover:bg-zinc-700 text-white border border-zinc-700/80 cursor-pointer active:scale-[0.98] transition-all"
                   title={isMuted ? "Unmute" : "Mute"}
                 >
                   {isMuted ? (
-                    <VolumeX className="w-4 h-4 text-[#FF5555] stroke-[2.5px]" />
+                    <VolumeX className="w-4 h-4 text-[#FF5555]" />
                   ) : (
-                    <Volume2 className="w-4 h-4 text-[#FFAA00] stroke-[2.5px]" />
+                    <Volume2 className="w-4 h-4 text-[#FFAA00]" />
                   )}
                 </button>
               </div>
 
               {/* Volume Slider Section */}
               <div className="space-y-1 pt-1">
-                <div className="flex items-center justify-between text-[10px] font-black uppercase text-black/80">
-                  <span>VOLUME SLIDER</span>
+                <div className="flex items-center justify-between text-[10px] font-bold uppercase text-zinc-400 tracking-wider">
+                  <span>VOLUME</span>
                   <span>{isMuted ? "MUTED" : `${Math.round(volume * 100)}%`}</span>
                 </div>
                 <input
@@ -324,7 +310,7 @@ export function MinecraftNavbarMusicPlayer() {
                   step="0.05"
                   value={isMuted ? 0 : volume}
                   onChange={handleVolumeChange}
-                  className="w-full h-2 bg-[#8B8B8B] rounded-none accent-[#FF7700] cursor-pointer border-2 border-black"
+                  className="w-full h-1.5 bg-zinc-800 rounded accent-[#FF7700] cursor-pointer"
                   aria-label="Volume slider"
                 />
               </div>
