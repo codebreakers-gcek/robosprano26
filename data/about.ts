@@ -54,10 +54,10 @@ export const ABOUT_DATA = {
     featuredEventSlug: "robo-war",
     featuredEventName: "ROBO WAR COMBAT ARENA",
     specs: [
-      "Weight Class: 15 kg Max Combat Bots",
-      "Steel Enclosed Arena with Pneumatic Hazards",
-      "Weapon Systems: Spinners, Lifters, Crushers & Wedges",
-      "₹25,000 Top Cash Bounty",
+      "Weight Class: 8 kg Max (100g tolerance)",
+      "Dimensions: Within 40 × 40 × 40 cm",
+      "Fixed, Non-Moving Passive Wedges Only",
+      "₹25,000 Cash Prize Pool",
     ],
   },
   callToAction: {
@@ -67,7 +67,7 @@ export const ABOUT_DATA = {
       "Bring your team, build your robot, sharpen your strategies, and prepare to compete with some of the brightest minds. Whether you are passionate about designing intelligent machines, solving complex engineering problems, experimenting with technology, or experiencing the thrill of competition, ROBOSPRANO 2026 is your opportunity to learn, innovate, compete, and make your mark.",
       "Be part of a decade-long legacy. Turn your ideas into machines, your creativity into engineering, and your determination into victory.",
     ],
-    motto: "KEEP HUSTLING. KEEP BUILDING. KEEP INNOVATING.",
+    motto: "KEEP HUSTLING. KEEP BUILDING.",
     subMotto: "ROBOSPRANO 2026 | The 10th Edition. One Legacy. Countless Possibilities.",
   },
   pillars: [

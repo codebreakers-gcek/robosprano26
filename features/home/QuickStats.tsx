@@ -48,7 +48,7 @@ export function QuickStats() {
       badgeClass: "bg-[#FF5555]/20 text-[#FF5555] border-[#FF5555] shadow-[2px_2px_0px_#000]",
       icon: Swords,
       subtext: "STEEL HAZARDS & TRAPS",
-      tags: ["Robo War", "Death Race", "Sumo", "Soccer"],
+      tags: ["Robo War", "Death Race", "Sumo", "Soccer", "Line Follower"],
       meterLabel: "ARENA HAZARD INDEX",
       meterPercent: 100,
       meterColor: "bg-[#FF5555]",
@@ -86,7 +86,7 @@ export function QuickStats() {
       badgeClass: "bg-[#55FF55]/20 text-[#55FF55] border-[#55FF55] shadow-[2px_2px_0px_#000]",
       icon: Bot,
       subtext: "REGISTERED WAR MACHINES",
-      tags: ["15kg Combat Class", "Autonomous", "Pilots"],
+      tags: ["8KG Combat Class", "Autonomous", "Pilots"],
       meterLabel: "FLEET READINESS",
       meterPercent: 95,
       meterColor: "bg-[#55FF55]",
@@ -118,10 +118,10 @@ export function QuickStats() {
 
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <h2 className="font-minecraft text-base sm:text-xl lg:text-2xl text-white uppercase tracking-wider [text-shadow:_2px_2px_0_#000]">
+                <h2 className="font-sans sm:font-minecraft font-black sm:font-normal text-base sm:text-xl lg:text-2xl text-white uppercase tracking-wider sm:[text-shadow:_2px_2px_0_#000]">
                   ARENA TELEMETRY &amp; COMBAT SPECS
                 </h2>
-                <span className="font-minecraft text-[10px] sm:text-xs text-[#FFAA00] bg-black px-2 py-0.5 border border-[#FFAA00] shadow-[1px_1px_0px_#000]">
+                <span className="font-mono sm:font-minecraft font-bold text-[10px] sm:text-xs text-[#FFAA00] bg-black px-2 py-0.5 border border-[#FFAA00] shadow-[1px_1px_0px_#000]">
                   EDITION X
                 </span>
               </div>
@@ -197,7 +197,7 @@ export function QuickStats() {
 
                     <div className="min-w-0">
                       <div
-                        className="font-minecraft text-2xl xs:text-3xl sm:text-3xl lg:text-4xl tracking-tight leading-none [text-shadow:_2px_2px_0_#000]"
+                        className="font-mono sm:font-minecraft font-black sm:font-normal text-2xl xs:text-3xl sm:text-3xl lg:text-4xl tracking-tight leading-none sm:[text-shadow:_2px_2px_0_#000]"
                         style={{ color: config.accentColor }}
                       >
                         {config.value}
@@ -209,7 +209,7 @@ export function QuickStats() {
                   </div>
 
                   {/* Primary Label */}
-                  <div className="font-minecraft text-xs sm:text-sm uppercase tracking-wide text-white mt-3 [text-shadow:_1px_1px_0_#000]">
+                  <div className="font-sans sm:font-minecraft font-bold sm:font-normal text-xs sm:text-sm uppercase tracking-wide text-white mt-3 sm:[text-shadow:_1px_1px_0_#000]">
                     {config.label}
                   </div>
 

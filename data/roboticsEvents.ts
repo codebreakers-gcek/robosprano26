@@ -26,6 +26,7 @@ export interface RoboticsEvent {
   contact?: Record<string, string>;
   gallery?: Array<{ url: string; caption: string }>;
   enrollLink?: string;
+  rulebookLink?: string;
   closed?: boolean;
 }
 
@@ -96,6 +97,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     ],
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdkIHqbEYyUMPzQfGYL34Z2-QM1YXeMYu_p4cspVoGHBgitYg/viewform",
+    rulebookLink:
+      "https://drive.google.com/file/d/1_DNeLOhgv_WeAL_lRfmZ9-gHQLQEfEc9/view?usp=drive_link",
     closed: false,
   },
   {
@@ -128,13 +131,14 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     description:
       "Witness the thrilling battle of power, precision, and strategy in Robo War – Wedge, where two teams compete head-to-head with their custom-built combat robots. Teams manually control their bots using a wireless method, aiming to outmaneuver their opponents and dominate the arena with their wedge-shaped designs. Each robot must demonstrate strength, stability, and effective tactics to gain an advantage over the opponent. The team that dominates the battle and meets the competition’s winning criteria will emerge victorious. Get ready for an action-packed robotic showdown!",
     botSpecifications: [
-      "Maximum robot weight: 8 kg, including batteries and all onboard components.",
-      "Only wedge-type robots with fixed, passive wedges are permitted. Active weapon systems are strictly prohibited.",
-      "Robots must be wirelessly controlled. Wired control systems are not permitted.",
-      "Maximum battery voltage: 16.8 V (4-cell battery configuration).",
-      "All batteries and electrical components must be securely mounted, with exposed connections properly insulated.",
-      "Robots must have a failsafe mechanism to stop the drive motors in case of loss of control signal.",
-      "IC engines, pyrotechnics, and hazardous materials are prohibited.",
+      "The robot must not weigh more than 8 kg, including the battery and all onboard components. A weight tolerance of up to 100 g is allowed.",
+      "The robot must fit within 40 cm × 40 cm × 40 cm (Length × Width × Height).",
+      "Only wedge-type robots with fixed, non-moving wedges are allowed. Active weapons or weapon systems are strictly prohibited.",
+      "All robots must be operated wirelessly. Wired control systems are not allowed.",
+      "The maximum permitted battery voltage is 16.8 V, using a 4-cell battery configuration.",
+      "All batteries and electrical components must be securely fitted inside the robot, with exposed connections properly insulated.",
+      "Every robot must have a failsafe system that automatically stops the drive motors if the control signal is lost.",
+      "Internal combustion engines, pyrotechnics, and hazardous materials are strictly prohibited.",
     ],
     rules: [
       "Each team must consist of 2–5 participants. Students from different institutions may form a team. All participants must carry valid institutional ID cards.",
@@ -161,6 +165,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     ],
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeoMUx4pcd93lkdYzxZfUvQ7IMjOYapdyvRS7ULAqjEr4y6Hg/viewform",
+    rulebookLink:
+      "https://drive.google.com/file/d/1sWoyAjd07I1xehwY7btkiMenfIwPJLOQ/view?usp=drive_link",
     closed: false,
   },
   {
@@ -221,6 +227,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     ],
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSd-I1CxfOhXPzzwK44QOUlgqiVTy_unUe9GlDM6NFPwXsIF4A/viewform?pli=1",
+    rulebookLink:
+      "https://drive.google.com/file/d/10Kqmce2RujmoarFWeAzi6ozfG8sUxs3I/view?usp=drive_link",
     closed: false,
   },
   {
@@ -283,6 +291,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     ],
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeXhrM9VhJhrhvzbbdNShBgG5V2M5z5x4l-BzuVCCYx6FjkDA/viewform",
+    rulebookLink:
+      "https://drive.google.com/file/d/1YNEOn_6B_fKO2H0EzC7BiUadAnvNiQv2/view?usp=drive_link",
     closed: false,
   },
   {
@@ -343,6 +353,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     ],
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdVrMKQXV8W8hvFEynuVwxHeibnFQwIu4-8lwHU9sz7k0K2PQ/viewform",
+    rulebookLink:
+      "https://drive.google.com/file/d/1t708JdtaIpauDPU89-3fahkwPTH42jn5/view?usp=drive_link",
     closed: false,
   },
 ];

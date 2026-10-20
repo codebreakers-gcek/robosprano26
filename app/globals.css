@@ -249,11 +249,19 @@ main {
 
 /* Neo-Brutalist Texture & Pattern Utilities */
 .font-minecraft {
-  font-family: 'Minecraft', monospace;
+  font-family: 'Minecraft', 'IBM Plex Mono', 'Space Grotesk', monospace;
+  text-rendering: optimizeLegibility;
 }
 
 .font-minecraftt {
-  font-family: 'Minecraftt', monospace;
+  font-family: 'Minecraftt', 'Minecraft', 'Space Grotesk', monospace;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 640px) {
+  .font-minecraft {
+    letter-spacing: 0.02em;
+  }
 }
 
 .font-thuast {

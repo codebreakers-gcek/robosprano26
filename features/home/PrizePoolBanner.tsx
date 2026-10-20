@@ -370,7 +370,7 @@ export function PrizePoolBanner() {
         {/* ========================================================================= */}
         <div className="flex flex-col items-center text-center space-y-4">
           {/* Minecraft Boss Tag */}
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 font-minecraft text-[10px] sm:text-sm uppercase px-2.5 sm:px-4 py-1 sm:py-1.5 bg-[#18111B] text-[#FFAA00] border-2 border-[#FFAA00] shadow-[2px_2px_0px_#000] sm:shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 font-mono sm:font-minecraft font-bold sm:font-normal text-[11px] sm:text-sm uppercase px-2.5 sm:px-4 py-1 sm:py-1.5 bg-[#18111B] text-[#FFAA00] border-2 border-[#FFAA00] shadow-[2px_2px_0px_#000] sm:shadow-[3px_3px_0px_#000] sm:[text-shadow:_1px_1px_0_#000]">
             <PixelXPOrb size={14} />
             <span>ROBOSPRANO &apos;26 // CHAMPIONSHIP BOUNTIES</span>
             <PixelXPOrb size={14} />
@@ -386,11 +386,11 @@ export function PrizePoolBanner() {
 
           {/* Minecraft Experience Bar: ₹91,000 with Level 91 Number */}
           <div className="w-full max-w-md pt-1 flex flex-col items-center gap-1.5">
-            <div className="flex items-center justify-between w-full px-1 font-minecraft text-[10px] sm:text-xs">
-              <span className="text-[#55FF55] [text-shadow:_1px_1px_0_#000]">
+            <div className="flex items-center justify-between w-full px-1 font-mono sm:font-minecraft font-bold sm:font-normal text-[11px] sm:text-xs">
+              <span className="text-[#55FF55] sm:[text-shadow:_1px_1px_0_#000]">
                 LEVEL 91 UNLOCKED
               </span>
-              <span className="text-[#FFAA00] [text-shadow:_1px_1px_0_#000]">
+              <span className="text-[#FFAA00] sm:[text-shadow:_1px_1px_0_#000]">
                 ₹91,000 TOTAL REWARDS
               </span>
             </div>
@@ -430,10 +430,10 @@ export function PrizePoolBanner() {
                 <PixelChest size={20} />
               </div>
               <div>
-                <h3 className="font-minecraft text-xs sm:text-base text-white uppercase tracking-wider">
+                <h3 className="font-sans sm:font-minecraft font-black sm:font-normal text-xs sm:text-base text-white uppercase tracking-wider">
                   ARENA CASH MATRIX // PODIUM PAYOUTS
                 </h3>
-                <span className="font-mono text-[9px] sm:text-[10px] text-neutral-400 block">
+                <span className="font-mono text-[9px] sm:text-[10px] text-neutral-400 block font-medium">
                   Distributed immediately to 15 squads at the Robosprano &apos;26 Grand Finale
                 </span>
               </div>
@@ -448,8 +448,8 @@ export function PrizePoolBanner() {
                     playButtonClickSound();
                     setMobileView("table");
                   }}
-                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${mobileView === "table"
-                      ? "bg-[#FFAA00] text-black font-bold border border-[#FFE285] shadow-[1px_1px_0px_#000]"
+                  className={`px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wider transition-all ${mobileView === "table"
+                      ? "bg-[#FFAA00] text-black border border-[#FFE285] shadow-[1px_1px_0px_#000]"
                       : "text-neutral-400 hover:text-white"
                     }`}
                 >
@@ -461,8 +461,8 @@ export function PrizePoolBanner() {
                     playButtonClickSound();
                     setMobileView("cards");
                   }}
-                  className={`px-2.5 py-1 font-minecraft text-[10px] uppercase transition-all ${mobileView === "cards"
-                      ? "bg-[#FFAA00] text-black font-bold border border-[#FFE285] shadow-[1px_1px_0px_#000]"
+                  className={`px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wider transition-all ${mobileView === "cards"
+                      ? "bg-[#FFAA00] text-black border border-[#FFE285] shadow-[1px_1px_0px_#000]"
                       : "text-neutral-400 hover:text-white"
                     }`}
                 >
@@ -470,7 +470,7 @@ export function PrizePoolBanner() {
                 </button>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 bg-black/60 border border-[#55FF55]/40 text-[#55FF55] font-minecraft text-[10px] sm:text-xs shrink-0">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 bg-black/60 border border-[#55FF55]/40 text-[#55FF55] font-mono sm:font-minecraft font-bold text-[11px] sm:text-xs shrink-0">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#55FF55] rotate-45" />
                 <span>TOTAL: ₹91,000</span>
               </div>
@@ -482,7 +482,7 @@ export function PrizePoolBanner() {
             className={`overflow-x-auto -mx-1 sm:mx-0 scrollbar-thin scrollbar-thumb-[#FFAA00]/40 scrollbar-track-black/40 ${mobileView === "cards" ? "hidden sm:block" : "block"
               }`}
           >
-            <table className="w-full text-left border-collapse font-minecraft table-fixed sm:table-auto min-w-[300px]">
+            <table className="w-full text-left border-collapse font-sans sm:font-minecraft table-fixed sm:table-auto min-w-[300px]">
               <colgroup className="sm:hidden">
                 <col className="w-[30%]" />
                 <col className="w-[17%]" />
@@ -491,7 +491,7 @@ export function PrizePoolBanner() {
                 <col className="w-[19%]" />
               </colgroup>
               <thead>
-                <tr className="bg-[#0E0A12] text-white border-b-2 sm:border-b-3 border-black text-[10px] sm:text-sm uppercase tracking-wider">
+                <tr className="bg-[#0E0A12] text-white border-b-2 sm:border-b-3 border-black font-sans sm:font-minecraft font-black sm:font-normal text-[11px] sm:text-sm uppercase tracking-wider">
                   <th className="py-2.5 px-2 sm:py-3 sm:px-6 border-r border-neutral-800 sm:border-r-2 text-left">
                     EVENT
                   </th>
@@ -535,10 +535,10 @@ export function PrizePoolBanner() {
                     {/* Event Name & Category */}
                     <td className="py-2 px-1.5 sm:py-3.5 sm:px-6 border-r border-neutral-900 sm:border-r-2">
                       <div className="min-w-0">
-                        <span className="font-minecraft text-[11px] xs:text-xs sm:text-lg text-white uppercase tracking-tight block leading-tight truncate sm:whitespace-normal">
+                        <span className="font-sans sm:font-minecraft font-black sm:font-normal text-xs sm:text-lg text-white uppercase tracking-tight block leading-tight truncate sm:whitespace-normal">
                           {arena.name}
                         </span>
-                        <span className="font-mono text-[8px] xs:text-[9px] sm:text-[10px] text-neutral-400 block truncate leading-tight mt-0.5">
+                        <span className="font-mono font-medium text-[8px] xs:text-[9px] sm:text-[10px] text-neutral-400 block truncate leading-tight mt-0.5">
                           {arena.category}
                         </span>
                       </div>
@@ -546,28 +546,28 @@ export function PrizePoolBanner() {
 
                     {/* 1st Prize */}
                     <td className="py-2 px-0.5 sm:py-3.5 sm:px-6 border-r border-neutral-900 sm:border-r-2 text-center">
-                      <span className="inline-block px-1 py-0.5 sm:px-3 sm:py-1 bg-black text-[#55FFFF] font-bold text-[11px] xs:text-xs sm:text-base border border-t-[#55FFFF] border-l-[#55FFFF] border-r-[#008888] border-b-[#008888] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] whitespace-nowrap">
+                      <span className="inline-block px-1.5 py-0.5 sm:px-3 sm:py-1 bg-black text-[#55FFFF] font-mono sm:font-minecraft font-black text-xs sm:text-base border border-t-[#55FFFF] border-l-[#55FFFF] border-r-[#008888] border-b-[#008888] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] sm:[text-shadow:_1px_1px_0_#000] whitespace-nowrap">
                         {arena.first}
                       </span>
                     </td>
 
                     {/* 2nd Prize */}
                     <td className="py-2 px-0.5 sm:py-3.5 sm:px-6 border-r border-neutral-900 sm:border-r-2 text-center">
-                      <span className="inline-block px-1 py-0.5 sm:px-3 sm:py-1 bg-black text-[#FFAA00] font-bold text-[11px] xs:text-xs sm:text-base border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] whitespace-nowrap">
+                      <span className="inline-block px-1.5 py-0.5 sm:px-3 sm:py-1 bg-black text-[#FFAA00] font-mono sm:font-minecraft font-black text-xs sm:text-base border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] sm:[text-shadow:_1px_1px_0_#000] whitespace-nowrap">
                         {arena.second}
                       </span>
                     </td>
 
                     {/* 3rd Prize */}
                     <td className="py-2 px-0.5 sm:py-3.5 sm:px-6 border-r border-neutral-900 sm:border-r-2 text-center">
-                      <span className="inline-block px-1 py-0.5 sm:px-3 sm:py-1 bg-black text-[#E0E0E0] font-bold text-[11px] xs:text-xs sm:text-base border border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#666666] border-b-[#666666] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] whitespace-nowrap">
+                      <span className="inline-block px-1.5 py-0.5 sm:px-3 sm:py-1 bg-black text-[#E0E0E0] font-mono sm:font-minecraft font-black text-xs sm:text-base border border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#666666] border-b-[#666666] sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] sm:[text-shadow:_1px_1px_0_#000] whitespace-nowrap">
                         {arena.third}
                       </span>
                     </td>
 
                     {/* Total */}
                     <td className="py-2 px-1 sm:py-3.5 sm:px-6 text-right">
-                      <span className="font-minecraft text-[10px] xs:text-xs sm:text-base text-[#55FF55] bg-black px-1 py-0.5 sm:px-3 sm:py-1 border border-[#55FF55]/60 sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] inline-block font-bold whitespace-nowrap">
+                      <span className="font-mono sm:font-minecraft font-black text-xs sm:text-base text-[#55FF55] bg-black px-1.5 py-0.5 sm:px-3 sm:py-1 border border-[#55FF55]/60 sm:border-2 shadow-[1px_1px_0px_#000] sm:shadow-[2px_2px_0px_#000] inline-block whitespace-nowrap">
                         <span className="xs:hidden">{arena.total.replace(",000", "k")}</span>
                         <span className="hidden xs:inline">{arena.total}</span>
                       </span>
@@ -579,10 +579,10 @@ export function PrizePoolBanner() {
               {/* Master Summary Footer */}
               <tfoot>
                 {/* Mobile tfoot */}
-                <tr className="bg-[#0A070D] text-white border-t-2 border-black font-minecraft sm:hidden">
+                <tr className="bg-[#0A070D] text-white border-t-2 border-black sm:hidden">
                   <td
                     colSpan={3}
-                    className="py-2.5 px-2 font-bold text-[10px] uppercase tracking-wider text-[#FFAA00]"
+                    className="py-2.5 px-2 font-sans font-black text-xs uppercase tracking-wider text-[#FFAA00]"
                   >
                     <div className="flex items-center gap-1.5">
                       <PixelXPOrb size={13} />
@@ -591,7 +591,7 @@ export function PrizePoolBanner() {
                   </td>
                   <td
                     colSpan={2}
-                    className="py-2.5 px-1.5 text-right font-bold text-xs text-[#55FF55] [text-shadow:_1px_1px_0_#000] whitespace-nowrap"
+                    className="py-2.5 px-1.5 text-right font-mono font-black text-sm text-[#55FF55] whitespace-nowrap"
                   >
                     ₹91,000
                   </td>
@@ -633,17 +633,17 @@ export function PrizePoolBanner() {
                       {arena.icon}
                     </div>
                     <div>
-                      <h4 className="font-minecraft text-sm text-white uppercase tracking-tight">
+                      <h4 className="font-sans sm:font-minecraft font-black sm:font-normal text-sm text-white uppercase tracking-tight">
                         {arena.name}
                       </h4>
-                      <span className="font-mono text-[9px] text-neutral-400 block">
+                      <span className="font-mono text-[9px] text-neutral-400 block font-medium">
                         {arena.category}
                       </span>
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="font-mono text-[8px] text-neutral-400 block uppercase">ARENA POOL</span>
-                    <span className="font-minecraft text-xs text-[#55FF55] bg-black px-2 py-0.5 border border-[#55FF55]/60 inline-block font-bold">
+                    <span className="font-mono text-[8px] text-neutral-400 block uppercase font-bold">ARENA POOL</span>
+                    <span className="font-mono sm:font-minecraft text-xs text-[#55FF55] bg-black px-2 py-0.5 border border-[#55FF55]/60 inline-block font-black">
                       {arena.total}
                     </span>
                   </div>
@@ -657,31 +657,31 @@ export function PrizePoolBanner() {
                 {/* Podium Grid (1st, 2nd, 3rd) */}
                 <div className="grid grid-cols-3 gap-1.5 pt-1">
                   <div className="bg-black/70 border border-t-[#55FFFF] border-l-[#55FFFF] border-r-[#008888] border-b-[#008888] p-1.5 text-center shadow-[1px_1px_0px_#000]">
-                    <div className="inline-flex items-center justify-center gap-1 text-[#55FFFF] text-[10px] font-minecraft">
+                    <div className="inline-flex items-center justify-center gap-1 text-[#55FFFF] text-[10px] font-sans sm:font-minecraft font-bold">
                       <PixelDiamond size={12} />
                       <span>1ST</span>
                     </div>
-                    <div className="font-minecraft text-xs font-bold text-[#55FFFF] mt-0.5">
+                    <div className="font-mono sm:font-minecraft text-xs font-black text-[#55FFFF] mt-0.5">
                       {arena.first}
                     </div>
                   </div>
 
                   <div className="bg-black/70 border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] p-1.5 text-center shadow-[1px_1px_0px_#000]">
-                    <div className="inline-flex items-center justify-center gap-1 text-[#FFAA00] text-[10px] font-minecraft">
+                    <div className="inline-flex items-center justify-center gap-1 text-[#FFAA00] text-[10px] font-sans sm:font-minecraft font-bold">
                       <PixelGoldIngot size={12} />
                       <span>2ND</span>
                     </div>
-                    <div className="font-minecraft text-xs font-bold text-[#FFAA00] mt-0.5">
+                    <div className="font-mono sm:font-minecraft text-xs font-black text-[#FFAA00] mt-0.5">
                       {arena.second}
                     </div>
                   </div>
 
                   <div className="bg-black/70 border border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#666666] border-b-[#666666] p-1.5 text-center shadow-[1px_1px_0px_#000]">
-                    <div className="inline-flex items-center justify-center gap-1 text-[#E0E0E0] text-[10px] font-minecraft">
+                    <div className="inline-flex items-center justify-center gap-1 text-[#E0E0E0] text-[10px] font-sans sm:font-minecraft font-bold">
                       <PixelIronIngot size={12} />
                       <span>3RD</span>
                     </div>
-                    <div className="font-minecraft text-xs font-bold text-[#E0E0E0] mt-0.5">
+                    <div className="font-mono sm:font-minecraft text-xs font-black text-[#E0E0E0] mt-0.5">
                       {arena.third}
                     </div>
                   </div>
@@ -691,11 +691,11 @@ export function PrizePoolBanner() {
 
             {/* Cumulative Total Card Footer */}
             <div className="bg-[#0A070D] border-2 border-black p-2.5 flex items-center justify-between shadow-[2px_2px_0px_#000]">
-              <div className="flex items-center gap-1.5 font-minecraft text-xs text-[#FFAA00]">
+              <div className="flex items-center gap-1.5 font-sans sm:font-minecraft font-bold text-xs text-[#FFAA00]">
                 <PixelXPOrb size={14} />
                 <span>TOTAL REWARDS POOL:</span>
               </div>
-              <span className="font-minecraft font-bold text-sm text-[#55FF55]">
+              <span className="font-mono sm:font-minecraft font-black text-sm text-[#55FF55]">
                 ₹91,000
               </span>
             </div>
@@ -720,11 +720,11 @@ export function PrizePoolBanner() {
             </div>
 
             <div className="text-center sm:text-left">
-              <div className="inline-flex items-center gap-1.5 text-[#55FF55] font-minecraft text-xs uppercase mb-1">
+              <div className="inline-flex items-center gap-1.5 text-[#55FF55] font-sans sm:font-minecraft font-bold text-xs uppercase mb-1">
                 <ShieldCheck className="w-4 h-4" />
                 <span>UNIVERSAL PARTICIPANT REWARDS</span>
               </div>
-              <h3 className="font-minecraft text-xl sm:text-2xl text-white uppercase tracking-tight">
+              <h3 className="font-sans sm:font-minecraft font-black sm:font-normal text-xl sm:text-2xl text-white uppercase tracking-tight">
                 CERTIFICATES, SWAG KITS &amp; MENTORSHIP
               </h3>
               <p className="font-mono text-xs sm:text-sm text-neutral-300 mt-1 max-w-2xl leading-relaxed">
@@ -736,7 +736,7 @@ export function PrizePoolBanner() {
           <Link
             href="/events"
             onClick={() => playButtonClickSound()}
-            className="w-full lg:w-auto bg-[#FFAA00] hover:bg-[#FFB726] text-black font-minecraft text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] active:border-t-[#8F5500] active:border-l-[#8F5500] active:border-r-[#FFE285] active:border-b-[#FFE285] px-7 py-3.5 shadow-[4px_4px_0px_#000] transition-colors flex items-center justify-center gap-2 shrink-0 cursor-pointer active:translate-y-1 relative z-10"
+            className="w-full lg:w-auto bg-[#FFAA00] hover:bg-[#FFB726] text-black font-sans sm:font-minecraft font-black sm:font-normal text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] active:border-t-[#8F5500] active:border-l-[#8F5500] active:border-r-[#FFE285] active:border-b-[#FFE285] px-7 py-3.5 shadow-[4px_4px_0px_#000] transition-colors flex items-center justify-center gap-2 shrink-0 cursor-pointer active:translate-y-1 relative z-10"
           >
             <span>CLAIM YOUR BOT SLOT</span>
             <ArrowRight className="w-4 h-4 stroke-[3px]" />

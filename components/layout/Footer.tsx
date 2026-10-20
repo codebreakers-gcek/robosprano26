@@ -181,15 +181,6 @@ export function Footer() {
 
                 <div className="flex flex-wrap gap-2 pt-1">
                   <a
-                    href={EVENT_DATA.organizer.socials.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Kilobots GitHub"
-                    className="w-8 h-8 rounded bg-white/5 hover:bg-white/15 border border-white/10 hover:border-white/30 text-neutral-300 hover:text-white transition-all flex items-center justify-center"
-                  >
-                    <GithubIcon className="w-4 h-4" />
-                  </a>
-                  <a
                     href={EVENT_DATA.organizer.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"

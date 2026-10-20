@@ -32,7 +32,7 @@ export const EVENT_DATA: EventInfo = {
     socials: {
       github: "https://github.com/kilobots-gcek",
       linkedin: "https://www.linkedin.com/company/kilobots-gcek",
-      instagram: "https://www.instagram.com/kilobots.gcek",
+      instagram: "https://www.instagram.com/gcek.kilobots",
       twitter: "https://twitter.com/kilobots_gcek",
     },
   },

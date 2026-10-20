@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import React, { useState } from "react";
@@ -98,7 +99,7 @@ export function CodeBreakersSpotlight() {
       borderActive: "border-t-[#FF5555] border-l-[#FF5555]",
       icon: Flame,
       summary: "Steel chassis fabrication, weapon gearing & high-torque drive kinematics.",
-      stats: "8KG–15KG COMBAT CLASS",
+      stats: "8KG COMBAT CLASS",
     },
     {
       id: "autonomous",
