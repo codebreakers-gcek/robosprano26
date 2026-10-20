@@ -56,7 +56,7 @@ export function AmbientCodeShapes() {
       >
         <div className="font-mono text-xs bg-neo-secondary/20 p-3 rounded-xl border border-black/10 text-neutral-900">
           <div className="font-bold">&#123; arena: &quot;24h-sprint&quot;,</div>
-          <div className="font-bold pl-4">bountyPool: 35K &#125;</div>
+          <div className="font-bold pl-4">bountyPool: 91K &#125;</div>
         </div>
       </motion.div>
 

@@ -241,7 +241,7 @@ export interface MinecraftMarqueeItem {
 const DEFAULT_MINECRAFT_ITEMS: MinecraftMarqueeItem[] = [
   {
     text: "DIAMOND REWARDS",
-    highlight: "₹35K+ CASH",
+    highlight: "₹91K+ CASH",
     color: "#55FFFF",
     BlockComponent: DiamondBlock,
   },
