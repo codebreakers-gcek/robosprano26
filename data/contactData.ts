@@ -133,7 +133,7 @@ export const ALL_CONTACTS: ContactPerson[] = [
 export const VENUE_DETAILS: VenueInfo = {
   institution: "Government College of Engineering Kalahandi (GCEK)",
   department: "Kilobots Robotics Club // GCEK Robotics Arena",
-  campus: "Central Robotics Arena & Indoor Sports Complex",
+  campus: "GCEK",
   address: "Kandha Bando Pala, Po: Risigaon, Bhawanipatna",
   city: "Bhawanipatna",
   state: "Odisha",

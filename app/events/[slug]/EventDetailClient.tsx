@@ -314,13 +314,13 @@ View Details: ${window.location.href}`;
 
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 relative z-10 space-y-4 sm:space-y-8">
         {/* ========================================================================= */}
-        {/* DESKTOP NAVIGATION CONTROLS: MOVED OUTSIDE AND ABOVE THE IMAGE           */}
+        {/* NAVIGATION CONTROLS: OUTSIDE AND ABOVE THE BANNER IMAGE (MOBILE & DESKTOP) */}
         {/* ========================================================================= */}
-        <div className="hidden md:flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-2 sm:mb-4">
           <Link
             href="/events"
             onClick={() => playButtonClickSound()}
-            className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-4 py-2 border-2 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 sm:gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] sm:shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
             <span>Back to Arenas</span>
@@ -330,7 +330,7 @@ View Details: ${window.location.href}`;
             <button
               type="button"
               onClick={handleShare}
-              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-4 py-2 border-2 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 sm:gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] sm:shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
             >
               <Share2 className="w-4 h-4 stroke-[2.5]" />
               <span>Share</span>
@@ -397,65 +397,6 @@ View Details: ${window.location.href}`;
             />
             {/* Soft dark gradient at bottom only to make title text pop */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent md:from-black/60 md:via-transparent" />
-          </div>
-
-          {/* Mobile Only Navigation Controls (Inside Image - untouched for mobile) */}
-          <div className="md:hidden absolute top-3 left-3 right-3 sm:top-5 sm:left-6 sm:right-6 flex items-center justify-between z-30">
-            <Link
-              href="/events"
-              onClick={() => playButtonClickSound()}
-              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
-            >
-              <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
-              <span>Back to Arenas</span>
-            </Link>
-
-            <div className="relative">
-              <button
-                type="button"
-                onClick={handleShare}
-                className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
-              >
-                <Share2 className="w-4 h-4 stroke-[2.5]" />
-                <span>Share</span>
-              </button>
-
-              {/* Minecraft GUI Share Dropdown */}
-              <AnimatePresence>
-                {isShareMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: -5 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: -5 }}
-                    className="absolute right-0 mt-2 w-72 bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-3 z-40 text-black"
-                  >
-                    <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b-2 border-black/20">
-                      <PixelCompass size={16} />
-                      <span className="text-xs font-black text-black uppercase tracking-wider">
-                        Share Arena Details
-                      </span>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={copyAllToClipboard}
-                      className="w-full flex items-center justify-between px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-black text-xs font-bold border border-black transition-colors cursor-pointer"
-                    >
-                      <span className="truncate mr-2">
-                        {copied && copiedItem === "all"
-                          ? "Copied to Clipboard!"
-                          : "Copy Event Brief"}
-                      </span>
-                      {copied && copiedItem === "all" ? (
-                        <Check className="w-4 h-4 text-[#15803D] shrink-0" />
-                      ) : (
-                        <Copy className="w-4 h-4 text-slate-500 shrink-0" />
-                      )}
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
           </div>
 
           {/* Bottom Hero Overlay: Title, Tagline, Boss Tag */}
