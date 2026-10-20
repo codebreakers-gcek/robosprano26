@@ -279,12 +279,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/cbhack.png", type: "image/png" },
-      { url: "/cbhack.png", sizes: "192x192", type: "image/png" },
-      { url: "/cbhack.png", sizes: "512x512", type: "image/png" },
+      { url: "/robosprano-1.webp", type: "image/png" },
+      { url: "/robosprano-1.webp", sizes: "192x192", type: "image/png" },
+      { url: "/robosprano-1.webp", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/cbhack.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/cbhack.png"],
+    apple: [{ url: "/robosprano-1.webp", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/robosprano-1.webp"],
   },
   openGraph: {
     type: "website",
