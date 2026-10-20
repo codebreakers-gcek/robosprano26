@@ -101,8 +101,7 @@ export function QuickStats() {
           {/* Left Title */}
           <div className="flex items-center gap-3.5">
             <div className="w-11 h-11 bg-[#5DB329] border-2 border-black flex items-center justify-center shrink-0 shadow-[2px_2px_0px_#000] relative">
-              <Radio className="w-5 h-5 text-white animate-pulse" />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#16A34A] animate-ping" />
+              <Radio className="w-5 h-5 text-white" />
             </div>
 
             <div>

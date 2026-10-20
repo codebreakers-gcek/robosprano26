@@ -87,8 +87,6 @@ export function IgitBanNotice({
           <div className="relative shrink-0">
             <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#EF4444] border-3 border-black flex items-center justify-center shadow-[3px_3px_0px_#000] relative">
               <Ban className="w-6 h-6 sm:w-7 sm:h-7 text-white stroke-[2.8]" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-[#DC2626] animate-ping" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-[#DC2626]" />
             </div>
           </div>
 
