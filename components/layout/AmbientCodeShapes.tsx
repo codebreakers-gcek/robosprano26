@@ -104,7 +104,7 @@ export function AmbientCodeShapes() {
         <div className="font-mono text-[11px] bg-neo-accent/15 p-2.5 rounded-lg border border-black/10 tracking-widest text-neutral-900 font-bold">
           01000011 01000010
           <br />
-          // CODEBREAKERS_GCEK
+          // KILOBOTS_GCEK
         </div>
       </motion.div>
 

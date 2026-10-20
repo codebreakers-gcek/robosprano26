@@ -16,7 +16,7 @@ export const ABOUT_DATA = {
     stats: [
       { label: "MILESTONE", value: "10TH", sub: "Anniversary Edition" },
       { label: "BATTLE ARENAS", value: "5", sub: "High-Voltage Tracks" },
-      { label: "PRIZE BOUNTY", value: "₹91,000", sub: "Cash & State Trophies" },
+      { label: "PRIZE BOUNTY", value: "₹91,000", sub: "Cash & Championship Trophies" },
       { label: "BUILDERS", value: "1,000+", sub: "Engineers & Bot Pilots" },
     ],
   },
@@ -40,7 +40,7 @@ export const ABOUT_DATA = {
         accent: "#55FF55",
       },
       {
-        title: "PAN-STATE COMMUNITY",
+        title: "ROBOTICS COMMUNITY",
         desc: "Western Odisha's biggest convergence of collegiate robotics squads and bot enthusiasts.",
         accent: "#55FFFF",
       },
@@ -100,10 +100,10 @@ export const ABOUT_DATA = {
     },
     {
       number: "04",
-      title: "STATE TROPHIES & RECOGNITION",
+      title: "CHAMPIONSHIP TROPHIES & RECOGNITION",
       subtitle: "₹91,000 CASH POOL",
       description:
-        "Compete before veteran engineering faculty, industry adjudicators, and hundreds of spectators for prestigious state titles, cash prizes, and tech glory.",
+        "Compete before veteran engineering faculty, industry adjudicators, and hundreds of spectators for prestigious championship titles, cash prizes, and tech glory.",
       badge: "AWARDS",
       color: "white",
     },

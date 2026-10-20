@@ -8,7 +8,7 @@ import { AmbientCodeShapes } from "@/components/layout/AmbientCodeShapes";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { GsapLoader } from "@/components/ui/GsapLoader";
 import { MinecraftSoundEffects } from "@/components/ui/MinecraftSoundEffects";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const thuast = localFont({
   src: "../public/font/Thuast-Demo.otf",
@@ -25,16 +25,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://robosprano.gcekbpatna.ac.in",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://robosprano.gcekbpatna.ac.in",
   ),
   title: {
-    default:
-      "ROBOSPRANO '26 | State Robotics Championship | Kilobots GCEK",
+    default: "ROBOSPRANO '26 | Robotics Championship | Kilobots GCEK",
     template: "%s | ROBOSPRANO '26 - Kilobots GCEK",
   },
   description:
-    "Official State-Level Robotics Championship & Tech Fest organized by Kilobots Robotics Society, Government College of Engineering Kalahandi (GCEK). ₹91,000+ prize pool across Robo War, Robo Race, Robo Sumo, Robo Soccer & Line Follower arenas.",
+    "Official Robotics Championship & Tech Fest organized by Kilobots Robotics Society, Government College of Engineering Kalahandi (GCEK). ₹91,000+ prize pool across Robo War, DEATH RACE, Robo Sumo, Robo Soccer & Line Follower arenas.",
   keywords: [
     "ROBOSPRANO 2026",
     "ROBOSPRANO '26",
@@ -64,9 +62,6 @@ export const metadata: Metadata = {
     "hackathon in Odisha 2026",
     "best hackathon in Odisha",
     "top hackathon in Odisha",
-    "state level hackathon Odisha",
-    "state level hackathon 2026",
-    "Odisha state level hackathon",
     "Odisha hackathon 2026",
     "student hackathon Odisha",
     "college hackathon Odisha",
@@ -108,7 +103,6 @@ export const metadata: Metadata = {
     "ROBOSPRANO robotics registration",
     "robotics registration Odisha",
     "online robotics registration",
-    "state level robotics registration",
     "college robotics registration",
     "student robotics registration",
     "robotics competition application 2026",
@@ -291,16 +285,16 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://robosprano.gcekbpatna.ac.in",
     siteName: "ROBOSPRANO '26 // Kilobots GCEK",
-    title: "ROBOSPRANO '26 | State Robotics Championship | Kilobots GCEK",
+    title: "ROBOSPRANO '26 | Robotics Championship | Kilobots GCEK",
     description:
-      "Join Odisha's premier State Robotics Championship at GCEK Kalahandi. ₹91,000+ prize pool across 5 arenas: Robo War, Robo Race, Robo Sumo, Robo Soccer & Line Follower.",
+      "Join Odisha's premier Robotics Championship at GCEK Kalahandi. ₹91,000+ prize pool across 5 arenas: Robo War, DEATH RACE, Robo Sumo, Robo Soccer & Line Follower.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "ROBOSPRANO '26 - State Robotics Championship // Kilobots GCEK",
+        alt: "ROBOSPRANO '26 - Robotics Championship // Kilobots GCEK",
       },
     ],
   },
@@ -308,9 +302,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@kilobots_gcek",
     creator: "@kilobots_gcek",
-    title: "ROBOSPRANO '26 | State Robotics Championship | Kilobots GCEK",
+    title: "ROBOSPRANO '26 | Robotics Championship | Kilobots GCEK",
     description:
-      "State Robotics Championship at GCEK Kalahandi. ₹91,000+ in prizes. Register your bot squad now!",
+      "Robotics Championship at GCEK Kalahandi. ₹91,000+ in prizes. Register your bot squad now!",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -330,9 +324,9 @@ const jsonLd = {
     {
       "@type": "Event",
       "@id": "https://robosprano.gcekbpatna.ac.in/#event",
-      name: "ROBOSPRANO '26 - State Robotics Championship",
+      name: "ROBOSPRANO '26 - Robotics Championship",
       description:
-        "Official State-Level Robotics Championship & Tech Fest organized by Kilobots Robotics Society at Government College of Engineering Kalahandi. 5 high-voltage arenas: Robo War, Robo Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 cash bounties.",
+        "Official Robotics Championship & Tech Fest organized by Kilobots Robotics Society at Government College of Engineering Kalahandi. 5 high-voltage arenas: Robo War, DEATH RACE, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 cash bounties.",
       url: "https://robosprano.gcekbpatna.ac.in",
       image: "https://robosprano.gcekbpatna.ac.in/og-image.png",
       startDate: "2026-11-05T09:00:00+05:30",

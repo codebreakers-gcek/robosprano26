@@ -17,9 +17,11 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
+  Ban,
 } from "lucide-react";
 import type { RoboticsEvent } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
+import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 Crisp SVGs)                        */
@@ -91,7 +93,8 @@ function getCategoryBadge(category: string, eventId?: string) {
   if (cat.includes("COMBAT") || id.includes("war")) {
     return {
       bg: "bg-[#FF5555]",
-      border: "border-t-[#FFAAAA] border-l-[#FFAAAA] border-r-[#AA0000] border-b-[#AA0000]",
+      border:
+        "border-t-[#FFAAAA] border-l-[#FFAAAA] border-r-[#AA0000] border-b-[#AA0000]",
       text: "text-black",
       label: "COMBAT",
     };
@@ -99,7 +102,8 @@ function getCategoryBadge(category: string, eventId?: string) {
   if (cat.includes("RACING") || cat.includes("RACE") || id.includes("race")) {
     return {
       bg: "bg-[#FFAA00]",
-      border: "border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500]",
+      border:
+        "border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500]",
       text: "text-black",
       label: "RACING",
     };
@@ -107,22 +111,29 @@ function getCategoryBadge(category: string, eventId?: string) {
   if (cat.includes("DOHYO") || cat.includes("SUMO") || id.includes("sumo")) {
     return {
       bg: "bg-[#55FFFF]",
-      border: "border-t-[#AAFFFF] border-l-[#AAFFFF] border-r-[#008888] border-b-[#008888]",
+      border:
+        "border-t-[#AAFFFF] border-l-[#AAFFFF] border-r-[#008888] border-b-[#008888]",
       text: "text-black",
       label: "DOHYO",
     };
   }
-  if (cat.includes("SOCCER") || cat.includes("AGILITY") || id.includes("soccer")) {
+  if (
+    cat.includes("SOCCER") ||
+    cat.includes("AGILITY") ||
+    id.includes("soccer")
+  ) {
     return {
       bg: "bg-[#55FF55]",
-      border: "border-t-[#AAFFAA] border-l-[#AAFFAA] border-r-[#00AA00] border-b-[#00AA00]",
+      border:
+        "border-t-[#AAFFAA] border-l-[#AAFFAA] border-r-[#00AA00] border-b-[#00AA00]",
       text: "text-black",
       label: "SOCCER",
     };
   }
   return {
     bg: "bg-[#AA00AA]",
-    border: "border-t-[#FF55FF] border-l-[#FF55FF] border-r-[#550055] border-b-[#550055]",
+    border:
+      "border-t-[#FF55FF] border-l-[#FF55FF] border-r-[#550055] border-b-[#550055]",
     text: "text-white",
     label: "AUTONOMOUS",
   };
@@ -139,7 +150,7 @@ export function RegisterClient({ events }: RegisterClientProps) {
   const categories = [
     { id: "ALL", label: "ALL ARENAS" },
     { id: "combat", label: "ROBO WAR" },
-    { id: "racing", label: "ROBO RACE" },
+    { id: "racing", label: "DEATH RACE" },
     { id: "dohyo", label: "ROBO SUMO" },
     { id: "agility", label: "ROBO SOCCER" },
     { id: "autonomous", label: "LINE FOLLOWER" },
@@ -197,27 +208,93 @@ export function RegisterClient({ events }: RegisterClientProps) {
           </h1>
 
           <p className="font-mono text-xs sm:text-sm md:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Choose your combat division, register your roster via the official Google Form, or view event specifications for arena dimensions and rules.
+            Choose your combat division, register your roster via the official
+            Google Form, or view event specifications for arena dimensions and
+            rules.
           </p>
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-2 max-w-3xl mx-auto">
             <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">Total Bounty</span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#FFAA00] font-bold">₹91,000</span>
+              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+                Total Bounty
+              </span>
+              <span className="block font-minecraft text-sm sm:text-lg text-[#FFAA00] font-bold">
+                ₹91,000
+              </span>
             </div>
             <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">Arena Events</span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#55FFFF] font-bold">5 DIVISIONS</span>
+              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+                Arena Events
+              </span>
+              <span className="block font-minecraft text-sm sm:text-lg text-[#55FFFF] font-bold">
+                5 DIVISIONS
+              </span>
             </div>
             <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">Tournament Dates</span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#55FF55] font-bold">NOV 05–06</span>
+              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+                Tournament Dates
+              </span>
+              <span className="block font-minecraft text-sm sm:text-lg text-[#55FF55] font-bold">
+                NOV 05–06
+              </span>
             </div>
             <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">Host Venue</span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#FF5555] font-bold">GCEK KALAHANDI</span>
+              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+                Host Venue
+              </span>
+              <span className="block font-minecraft text-sm sm:text-lg text-[#FF5555] font-bold">
+                GCEK KALAHANDI
+              </span>
             </div>
+          </div>
+        </div>
+
+        {/* Prominent IGIT Sarang Ban Notice */}
+        <div className="mb-6 sm:mb-8">
+          <IgitBanNotice variant="banner" />
+        </div>
+
+        {/* Tournament 2-Day Match Schedule & Venue Briefing */}
+        <div className="mb-8 bg-[#160E1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black p-4 sm:p-5 shadow-[4px_4px_0px_#000]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-2 mb-3">
+            <span className="font-sans text-xs sm:text-sm text-[#FFAA00] font-black uppercase tracking-wider flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-[#FFAA00]" />
+              TOURNAMENT 2-DAY SCHEDULE &amp; VENUES
+            </span>
+            <span className="font-mono text-[10px] text-neutral-400">
+              GCE Kalahandi Campus Arenas
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-mono text-xs">
+            <div className="p-3 bg-[#1F1629] border border-white/5 space-y-1">
+              <div className="flex items-center justify-between">
+                <span className="font-sans font-black text-xs sm:text-sm text-[#FFAA00]">DAY 1 (NOV 05):</span>
+                <span className="text-[10px] bg-[#FFAA00]/20 text-[#FFAA00] px-1.5 py-0.5 border border-[#FFAA00]/40 font-bold">QUALIFIERS</span>
+              </div>
+              <p className="text-neutral-300">
+                Qualifying matches for Death Race, Sumo, Soccer &amp; Line Follower.
+              </p>
+              <p className="text-[#FF7777] text-[11px] font-bold">
+                ⛔ No Robo War matches on Day 1.
+              </p>
+            </div>
+
+            <div className="p-3 bg-[#1F1629] border border-white/5 space-y-1">
+              <div className="flex items-center justify-between">
+                <span className="font-sans font-black text-xs sm:text-sm text-[#55FFFF]">DAY 2 (NOV 06):</span>
+                <span className="text-[10px] bg-[#55FFFF]/20 text-[#55FFFF] px-1.5 py-0.5 border border-[#55FFFF]/40 font-bold">FINALS &amp; ROBO WAR</span>
+              </div>
+              <p className="text-neutral-300">
+                All Arena Final Matches + Full ROBO WAR Combat Arena (Prelims to Finals).
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-3 pt-2 border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-neutral-300">
+            <span>📍 <strong className="text-white">Line Follower:</strong> Seminar Hall, GCE Kalahandi</span>
+            <span>📍 <strong className="text-white">Robo War, Race, Sumo &amp; Soccer:</strong> Open Air Theatre, GCE Kalahandi</span>
           </div>
         </div>
 
@@ -358,7 +435,8 @@ export function RegisterClient({ events }: RegisterClientProps) {
                           Date &amp; Time
                         </span>
                         <span className="font-mono text-[11px] font-semibold text-neutral-200 block mt-0.5 truncate">
-                          {event.time} • {event.date.split(",")[1]?.trim() || "Nov 2026"}
+                          {event.time} •{" "}
+                          {event.date.split(",")[1]?.trim() || "Nov 2026"}
                         </span>
                       </div>
 
@@ -419,9 +497,12 @@ export function RegisterClient({ events }: RegisterClientProps) {
         {filteredEvents.length === 0 && (
           <div className="py-16 text-center space-y-3 bg-[#170F1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black p-8 shadow-[6px_6px_0px_#000] text-white max-w-xl mx-auto">
             <Bot className="w-10 h-10 text-neutral-500 mx-auto" />
-            <h4 className="font-minecraft text-lg text-[#FFAA00]">NO MATCHING ARENAS</h4>
+            <h4 className="font-minecraft text-lg text-[#FFAA00]">
+              NO MATCHING ARENAS
+            </h4>
             <p className="font-mono text-xs text-neutral-400">
-              No tournament division matched your query. Clear your search or reset the category filter.
+              No tournament division matched your query. Clear your search or
+              reset the category filter.
             </p>
             <button
               type="button"
@@ -450,7 +531,8 @@ export function RegisterClient({ events }: RegisterClientProps) {
                   REGISTRATION INSTRUCTIONS &amp; PROTOCOL
                 </h3>
                 <p className="font-mono text-xs text-neutral-400">
-                  Quick rules for all team captains submitting official entry forms.
+                  Quick rules for all team captains submitting official entry
+                  forms.
                 </p>
               </div>
             </div>
@@ -465,26 +547,44 @@ export function RegisterClient({ events }: RegisterClientProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-neutral-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono text-neutral-300">
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">Inter-College Teams:</span>
-                Students from different colleges or semesters may form combined rosters.
+                <span className="font-bold text-white block">
+                  Inter-College Teams:
+                </span>
+                Students from different colleges or semesters may form combined
+                rosters.
               </div>
             </div>
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">ID Verification:</span>
-                Every registered member must bring valid institutional photo ID cards on event day.
+                <span className="font-bold text-white block">
+                  ID Verification:
+                </span>
+                Every registered member must bring valid institutional photo ID
+                cards on event day.
               </div>
             </div>
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">Pit Confirmation:</span>
-                Slot allocations and technical inspection schedule will be sent via WhatsApp.
+                <span className="font-bold text-white block">
+                  Pit Confirmation:
+                </span>
+                Slot allocations and technical inspection schedule will be sent
+                via WhatsApp.
+              </div>
+            </div>
+            <div className="flex items-start gap-2.5 bg-[#25070B] border border-[#FF3333] p-2.5">
+              <Ban className="w-4 h-4 text-[#FF3333] shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold text-[#FF5555] block">
+                  IGIT Sarang Debarred:
+                </span>
+                IGIT Sarang students &amp; teams are strictly NOT permitted to participate.
               </div>
             </div>
           </div>

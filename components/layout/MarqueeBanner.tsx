@@ -29,7 +29,7 @@ export function MarqueeBanner({
     "LINE FOLLOWER (₹15K)",
         "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
     "KILOBOTS GCEK",
-    "STATE ROBOTICS CHAMPIONSHIP",
+    "ROBOTICS CHAMPIONSHIP",
   ],
   bg = "orange",
   glass = true,

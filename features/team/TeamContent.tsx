@@ -107,7 +107,7 @@ export function TeamContent() {
         <motion.div variants={itemVariants} className="w-full max-w-full flex justify-center">
           <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 max-w-3xl">
             <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-3.5 py-1 bg-black text-[#55FF55] border-2 border-[#55FF55] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-              <Users className="w-3.5 h-3.5" /> THE CREW // CODEBREAKERS GCEK
+              <Users className="w-3.5 h-3.5" /> THE CREW // KILOBOTS GCEK
             </span>
 
             <h1 className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tight leading-tight [text-shadow:_3px_3px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000]">
@@ -327,7 +327,7 @@ export function TeamContent() {
                   [COMMUNITY &amp; COLLABORATION]
                 </span>
                 <h3 className="font-mono font-black text-2xl sm:text-3xl text-white uppercase tracking-tight [text-shadow:_2px_2px_0_#000]">
-                  WANT TO COLLABORATE WITH CODEBREAKERS?
+                  WANT TO COLLABORATE WITH KILOBOTS?
                 </h3>
                 <p className="font-mono text-xs sm:text-sm font-bold text-[#CCCCCC] max-w-xl leading-relaxed">
                   Whether you are looking to sponsor ROBOSPRANO &apos;26, deliver a technical workshop, or connect with our student robotics community, reach out to our team desks.
@@ -361,7 +361,7 @@ export function TeamContent() {
           items={[
             "KILOBOTS GCEK ORGANIZING COMMITTEE",
             "ROBOSPRANO '26 BATTLEFIELD CREW",
-            "STATE ROBOTICS CHAMPIONSHIP",
+            "ROBOTICS CHAMPIONSHIP",
             "GCEK BHAWANIPATNA",
             "CODE • BUILD • DOMINATE THE ARENA",
           ]}

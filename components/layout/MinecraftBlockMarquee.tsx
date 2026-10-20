@@ -269,7 +269,7 @@ const DEFAULT_MINECRAFT_ITEMS: MinecraftMarqueeItem[] = [
   },
   {
     text: "UNSEAL LOOT CHEST",
-    highlight: "SWAG & STATE CERTS",
+    highlight: "SWAG & OFFICIAL CERTS",
     color: "#55FFFF",
     BlockComponent: LootChest,
   },
@@ -281,7 +281,7 @@ const DEFAULT_MINECRAFT_ITEMS: MinecraftMarqueeItem[] = [
   },
   {
     text: "KILOBOTS GUILD",
-    highlight: "ODISHA STATE STAGE",
+    highlight: "ODISHA GRAND STAGE",
     color: "#55FF55",
     BlockComponent: EmeraldBlock,
   },

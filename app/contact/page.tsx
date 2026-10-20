@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     "robotics fest transport helpdesk",
     "Odisha robotics championship support team",
     "Bhawanipatna robotics fest inquiry",
-    "state level robotics tournament contact",
+    "robotics tournament contact",
     "student bot builder helpdesk Odisha",
     "bot registration help",
     "bot dimension inspection assistance",

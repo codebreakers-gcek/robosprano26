@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "GCEK alumni mentors",
     "tech fest organizers Odisha",
     "college tech fest team Odisha",
-    "state level robotics coordinators",
+    "robotics coordinators",
     "combat robotics mentors Odisha",
     "embedded systems mentors Odisha",
     "IoT mentors Kalahandi",

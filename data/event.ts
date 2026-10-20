@@ -2,12 +2,12 @@ import { EventInfo } from "@/types/event";
 
 export const EVENT_DATA: EventInfo = {
   name: "ROBOSPRANO '26",
-  edition: "State Level Robotics Championship 2026",
+  edition: "Robotics Championship 2026",
   tagline: "STEEL • SPEED • DESTRUCTION • GLORY",
   shortDescription:
-    "The premier annual STATE robotics championship and combat tournament organized by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 cash bounties.",
+    "The premier annual robotics championship and combat tournament organized by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 cash bounties.",
   fullDescription:
-    "ROBOSPRANO '26 brings together the sharpest robotics engineers, circuit builders, and combat bot pilots across Odisha. Organized by Kilobots—the premier robotics club of Government College of Engineering Kalahandi (GCEK)—this 3-day robotics festival features heavy metal arena combats, obstacle time attacks, autonomous sensor runs, and direct industry jury evaluations.",
+    "ROBOSPRANO '26 brings together the sharpest robotics engineers, circuit builders, and combat bot pilots across Odisha. Organized by Kilobots—the premier robotics club of Government College of Engineering Kalahandi (GCEK)—this 2-day robotics festival features heavy metal arena combats, obstacle time attacks, autonomous sensor runs, and direct industry jury evaluations.",
   startDate: "2026-11-05T09:00:00+05:30",
   endDate: "2026-11-06T18:00:00+05:30",
   displayDates: "NOVEMBER 05 - 06, 2026",
@@ -40,14 +40,14 @@ export const EVENT_DATA: EventInfo = {
     { label: "PRIZE POOL", value: "₹91K+", change: "CASH REWARDS" },
     { label: "COMBAT ARENAS", value: "5 ARENAS", change: "OFFICIAL" },
     { label: "PODIUM WINNERS", value: "15 SQUADS", change: "GUARANTEED" },
-    { label: "STATE ROBOTICS", value: "50+ BOTS", change: "COMPETITORS" },
+    { label: "COMBAT ROBOTICS", value: "50+ BOTS", change: "COMPETITORS" },
   ],
   tracks: [
     {
       id: "hackathons",
       code: "TRK-01",
       name: "HACK NOVA (HACKATHON)",
-      tagline: "24-Hour STATE Software & Hardware Sprint",
+      tagline: "24-Hour Software & Hardware Sprint",
       description:
         "Engineers and builders collaborate under pressure to solve real-world industry and societal problem statements.",
       highlights: [

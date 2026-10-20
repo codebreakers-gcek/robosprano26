@@ -408,7 +408,7 @@ export function PrizePoolBanner() {
             </div>
 
             <p className="font-mono text-xs sm:text-sm font-bold text-[#CCCCCC] max-w-xl [text-shadow:_1px_1px_0_#000] leading-relaxed pt-1 px-1">
-              Construct, wire, and deploy your combat bots across 5 high-voltage arenas. Win direct cash bounties, championship trophies, and verified state credentials.
+              Construct, wire, and deploy your combat bots across 5 high-voltage arenas. Win direct cash bounties, championship trophies, and verified credentials.
             </p>
           </div>
         </div>
@@ -728,7 +728,7 @@ export function PrizePoolBanner() {
                 CERTIFICATES, SWAG KITS &amp; MENTORSHIP
               </h3>
               <p className="font-mono text-xs sm:text-sm text-neutral-300 mt-1 max-w-2xl leading-relaxed">
-                Every team deploying a bot in the arenas receives state-certified participation credentials, official Robosprano kit badges, and direct technical jury feedback.
+                Every team deploying a bot in the arenas receives certified participation credentials, official Robosprano kit badges, and direct technical jury feedback.
               </p>
             </div>
           </div>

@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Trophy,
   Swords,
-  DollarSign,
+IndianRupee,
   Users,
   Calendar,
   X,
@@ -40,7 +40,7 @@ const ARENA_EVENTS = [
 
 const STATS_BAR = [
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     value: "₹91,000",
     label: "TOTAL CASH POOL",
   },
@@ -392,7 +392,7 @@ export function HeroSection() {
                 {/* Subtitle */}
                 <motion.div variants={itemVariants} className="mb-4 sm:mb-5">
                   <span className="font-minecraft text-xs sm:text-sm md:text-base tracking-[0.25em] uppercase text-neutral-300 [text-shadow:_1px_1px_0_#000]">
-                    STATE ROBOTICS CHAMPIONSHIP
+                    ROBOTICS CHAMPIONSHIP
                   </span>
                 </motion.div>
 
@@ -582,7 +582,7 @@ export function HeroSection() {
                   "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "LINE FOLLOWER (₹15K)",
                   "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
-              "STATE ROBOTICS CHAMPIONSHIP",
+              "ROBOTICS CHAMPIONSHIP",
                   "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "GCEK KALAHANDI",
               "CLAIM BOT REGISTRATION NOW",

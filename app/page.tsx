@@ -130,7 +130,7 @@ export default function HomePage() {
             </h2>
 
             <p className="text-base sm:text-xl font-bold text-[#EADCE9] max-w-2xl mx-auto leading-relaxed [text-shadow:_1px_1px_0_#000]">
-              Odisha&apos;s premier state-level robotics championship hosted by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 in cash prizes. Build, clash, and dominate the combat ground.
+              Odisha&apos;s premier robotics championship hosted by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 in cash prizes. Build, clash, and dominate the combat ground.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">

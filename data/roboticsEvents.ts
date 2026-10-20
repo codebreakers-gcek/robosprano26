@@ -28,6 +28,11 @@ export interface RoboticsEvent {
   enrollLink?: string;
   rulebookLink?: string;
   closed?: boolean;
+  scheduleDetails?: {
+    day1: string;
+    day2: string;
+    stageNote?: string;
+  };
 }
 
 export const ROBOSPRANO_COORDINATORS = {
@@ -42,15 +47,20 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
   {
     id: "death-race",
     slug: "death-race",
-    title: "Robo Race",
+    title: "DEATH RACE",
     category: "racing",
     tagline: "High-octane obstacle circuit, loops, ramps, and time attacks.",
     badge: "Robosprano",
     datetime: "2026-11-05T10:00:00+05:30",
-    date: "Thursday, November 05, 2026",
-    time: "10:00 AM",
-    venue: "GCEK Ground Floor",
-    location: "GCEK Ground Floor",
+    date: "Day 1 (Qualifiers) & Day 2 (Finals), Nov 05–06, 2026",
+    time: "Day 1: Qualifiers • Day 2: Finals",
+    venue: "Open Air Theatre, GCE Kalahandi",
+    location: "Open Air Theatre, GCE Kalahandi",
+    scheduleDetails: {
+      day1: "Day 1 (Nov 05): Qualifying Time Attack Runs",
+      day2: "Day 2 (Nov 06): Final Matches & Podium Decider",
+      stageNote: "Qualifiers on Day 1; Top bots advance to Day 2 Finals",
+    },
     teamSize: "2–4 participants",
     fee: "Rs. 350 per Team",
     prizePool: "₹18,000",
@@ -64,7 +74,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹6,000",
       third: "₹4,000",
     },
-    image: "/minecraft/deathrace.webp",
+    image: "/events/death-race.webp",
     description:
       "Death Race is a Racing event, using Manual Robotics. Teams compete with each other by making a racing bot either wired or wireless within the specified dimensions that can operated manually and can travel through all turns of the track. It should be able to withstand any obstacle-big or small in the least of time, including hurdles, checkpoints and tasks within the Track Obstacles. For the competition will include Switch Bridge, speed breakers, marble pit, slippery path, rotating disc, curve ramp down etc. The bot that will complete the specified task in least time will be the winner.",
     botSpecifications: [
@@ -91,8 +101,8 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/deathrace.webp",
-        caption: "Robo Race Championship Circuit Arena",
+        url: "/events/death-race.webp",
+        caption: "DEATH RACE Championship Circuit Arena",
       },
     ],
     enrollLink:
@@ -109,11 +119,16 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     tagline:
       "High-torque wedge battle of power, precision, and arena domination.",
     badge: "Robosprano",
-    datetime: "2026-11-05T13:00:00+05:30",
-    date: "Thursday, November 05, 2026",
-    time: "01:00 PM",
-    venue: "GCEK Combat Cage Arena",
-    location: "GCEK Combat Cage Arena",
+    datetime: "2026-11-06T10:00:00+05:30",
+    date: "Day 2 (Full Tournament), Nov 06, 2026",
+    time: "10:00 AM onwards (Prelims to Grand Finals)",
+    venue: "Open Air Theatre, GCE Kalahandi",
+    location: "Open Air Theatre, GCE Kalahandi",
+    scheduleDetails: {
+      day1: "Day 1 (Nov 05): No Matches Scheduled (Day 2 Exclusive)",
+      day2: "Day 2 (Nov 06): Full Tournament — Prelims, Semis & Grand Finals",
+      stageNote: "All Robo War combat battles take place exclusively on Day 2",
+    },
     teamSize: "2–5 participants",
     fee: "Rs. 500 per team",
     prizePool: "₹25,000",
@@ -127,7 +142,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹8,000",
       third: "₹5,000",
     },
-    image: "/minecraft/robowar.webp",
+    image: "/events/robo-war.webp",
     description:
       "Witness the thrilling battle of power, precision, and strategy in Robo War – Wedge, where two teams compete head-to-head with their custom-built combat robots. Teams manually control their bots using a wireless method, aiming to outmaneuver their opponents and dominate the arena with their wedge-shaped designs. Each robot must demonstrate strength, stability, and effective tactics to gain an advantage over the opponent. The team that dominates the battle and meets the competition’s winning criteria will emerge victorious. Get ready for an action-packed robotic showdown!",
     botSpecifications: [
@@ -159,7 +174,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/robowar.webp",
+        url: "/events/robo-war.webp",
         caption: "Robo War Bulletproof Combat Arena Cage",
       },
     ],
@@ -177,11 +192,16 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     tagline:
       "Wrestle and push opponent bots off the elevated ring in high-torque duels.",
     badge: "Robosprano",
-    datetime: "2026-11-05T15:30:00+05:30",
-    date: "Thursday, November 05, 2026",
-    time: "03:30 PM",
-    venue: "GCEK Indoor Arena",
-    location: "GCEK Indoor Arena",
+    datetime: "2026-11-05T10:00:00+05:30",
+    date: "Day 1 (Qualifiers) & Day 2 (Finals), Nov 05–06, 2026",
+    time: "Day 1: Qualifiers • Day 2: Finals",
+    venue: "Open Air Theatre, GCE Kalahandi",
+    location: "Open Air Theatre, GCE Kalahandi",
+    scheduleDetails: {
+      day1: "Day 1 (Nov 05): Qualifying Ring Duels",
+      day2: "Day 2 (Nov 06): Final Championship Rounds",
+      stageNote: "Qualifiers on Day 1; Top bots advance to Day 2 Finals",
+    },
     teamSize: "2–4 participants",
     fee: "Rs. 350 per team.",
     prizePool: "₹18,000",
@@ -195,7 +215,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹6,000",
       third: "₹4,000",
     },
-    image: "/minecraft/robosumo.webp",
+    image: "/events/robo-sumo.webp",
     description:
       "Robo Sumo is an intense engineering ring battle modeled on traditional Japanese Sumo. Two robots battle on an elevated circular ring (Dohyo). The objective is to use brute pushing force, custom silicon tire traction, and ultra-low metal plow scoops to push the opponent completely off the ring without falling off oneself.",
     botSpecifications: [
@@ -221,7 +241,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/robosumo.webp",
+        url: "/events/robo-sumo.webp",
         caption: "Elevated Circular Dohyo Sumo Ring",
       },
     ],
@@ -239,11 +259,16 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     tagline:
       "Fast-paced robotic soccer championship with high-mobility RC strikers.",
     badge: "Robosprano",
-    datetime: "2026-11-06T10:00:00+05:30",
-    date: "Friday, November 06, 2026",
-    time: "10:00 AM",
-    venue: "GCEK Sports Pitch",
-    location: "GCEK Sports Pitch",
+    datetime: "2026-11-05T10:00:00+05:30",
+    date: "Day 1 (Qualifiers) & Day 2 (Finals), Nov 05–06, 2026",
+    time: "Day 1: Qualifiers • Day 2: Finals",
+    venue: "Open Air Theatre, GCE Kalahandi",
+    location: "Open Air Theatre, GCE Kalahandi",
+    scheduleDetails: {
+      day1: "Day 1 (Nov 05): Qualifying Matches",
+      day2: "Day 2 (Nov 06): Final Matches & Cup Decider",
+      stageNote: "Qualifiers on Day 1; Top bots advance to Day 2 Finals",
+    },
     teamSize: "2–4 participants",
     fee: "Rs. 300 per team",
     prizePool: "₹15,000",
@@ -257,7 +282,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹5,000",
       third: "₹3,000",
     },
-    image: "/minecraft/robosoccer.webp",
+    image: "/events/robo-soccer.webp",
     description:
       "Witness the excitement of Robo Soccer, where two teams battle head-to-head to score goals using customized soccer bots. Controlled manually through wired or wireless methods, these bots compete in an intense showdown of strategy, speed, precision, and strength. Teams must skillfully maneuver their robots, defend their goalposts, and attack their opponents to secure victory. The team that scores the highest number of goals within the given time wins the match. Get ready for an action-packed competition filled with thrilling moments, fierce rivalries, and robotic football excitement!",
     botSpecifications: [
@@ -285,7 +310,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/robosoccer.webp",
+        url: "/events/robo-soccer.webp",
         caption: "Robo Soccer Turf Pitch Arena",
       },
     ],
@@ -302,11 +327,16 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     category: "autonomous",
     tagline: "Autonomous high-speed IR sensor black-line trajectory tracking.",
     badge: "Robosprano",
-    datetime: "2026-11-06T14:00:00+05:30",
-    date: "Friday, November 06, 2026",
-    time: "02:00 PM",
-    venue: "GCEK Central Hall",
-    location: "GCEK Central Hall",
+    datetime: "2026-11-05T10:00:00+05:30",
+    date: "Day 1 (Qualifiers) & Day 2 (Finals), Nov 05–06, 2026",
+    time: "Day 1: Qualifiers • Day 2: Finals",
+    venue: "Seminar Hall, GCE Kalahandi",
+    location: "Seminar Hall, GCE Kalahandi",
+    scheduleDetails: {
+      day1: "Day 1 (Nov 05): Qualifying Sensor Time Trials",
+      day2: "Day 2 (Nov 06): Final Track Runs & Championship Decider",
+      stageNote: "Qualifiers on Day 1; Top bots advance to Day 2 Finals",
+    },
     teamSize: "2–4 participants",
     fee: "Rs. 350 per team",
     prizePool: "₹15,000",
@@ -320,7 +350,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       second: "₹5,000",
       third: "₹3,000",
     },
-    image: "/minecraft/robolinefollow.webp",
+    image: "/events/line-follower.webp",
     description:
       "The line follower robot is a mobile machine that can detect and follow the line drawn on the floor. Generally, the path is predefined and can be either visible, like a black line on a white surface with a high-contrast colour, or invisible, like a magnetic field. Therefore, this kind of robot should sense the line with its infrared ray (IR) sensors installed under the robot. After that, the data is transmitted to the processor by specific transition buses. Hence, the processor decides the proper commands and sends them to the driver, and thus the path is followed by the line follower robot.",
     botSpecifications: [
@@ -347,7 +377,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     contact: ROBOSPRANO_COORDINATORS,
     gallery: [
       {
-        url: "/minecraft/robolinefollow.webp",
+        url: "/events/line-follower.webp",
         caption: "Autonomous PID High-Speed Line Tracking Course",
       },
     ],

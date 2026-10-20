@@ -7,6 +7,7 @@ import {
   ArrowLeft,
   Users,
   Calendar,
+  Clock,
   MapPin,
   ExternalLink,
   Share2,
@@ -22,6 +23,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { RoboticsEvent } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
+import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 SVGs)                              */
@@ -168,7 +170,10 @@ function PixelCompass({ size = 18 }: { size?: number }) {
 }
 
 /* Accent color mapping for arena theme */
-const ARENA_THEME_COLORS: Record<string, { border: string; glow: string; text: string; bg: string }> = {
+const ARENA_THEME_COLORS: Record<
+  string,
+  { border: string; glow: string; text: string; bg: string }
+> = {
   "robo-war": {
     border: "border-[#FF5555]",
     glow: "rgba(255,85,85,0.3)",
@@ -202,11 +207,16 @@ const ARENA_THEME_COLORS: Record<string, { border: string; glow: string; text: s
 };
 
 const RULEBOOK_LINKS: Record<string, string> = {
-  "robo-war": "https://drive.google.com/file/d/1sWoyAjd07I1xehwY7btkiMenfIwPJLOQ/view?usp=drive_link",
-  "robo-soccer": "https://drive.google.com/file/d/1YNEOn_6B_fKO2H0EzC7BiUadAnvNiQv2/view?usp=drive_link",
-  "line-follower": "https://drive.google.com/file/d/1t708JdtaIpauDPU89-3fahkwPTH42jn5/view?usp=drive_link",
-  "death-race": "https://drive.google.com/file/d/1_DNeLOhgv_WeAL_lRfmZ9-gHQLQEfEc9/view?usp=drive_link",
-  "robo-sumo": "https://drive.google.com/file/d/10Kqmce2RujmoarFWeAzi6ozfG8sUxs3I/view?usp=drive_link",
+  "robo-war":
+    "https://drive.google.com/file/d/1sWoyAjd07I1xehwY7btkiMenfIwPJLOQ/view?usp=drive_link",
+  "robo-soccer":
+    "https://drive.google.com/file/d/1YNEOn_6B_fKO2H0EzC7BiUadAnvNiQv2/view?usp=drive_link",
+  "line-follower":
+    "https://drive.google.com/file/d/1t708JdtaIpauDPU89-3fahkwPTH42jn5/view?usp=drive_link",
+  "death-race":
+    "https://drive.google.com/file/d/1_DNeLOhgv_WeAL_lRfmZ9-gHQLQEfEc9/view?usp=drive_link",
+  "robo-sumo":
+    "https://drive.google.com/file/d/10Kqmce2RujmoarFWeAzi6ozfG8sUxs3I/view?usp=drive_link",
 };
 
 interface EventDetailClientProps {
@@ -223,14 +233,17 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
   const [copiedItem, setCopiedItem] = useState("");
 
   const rulebookUrl =
-    event.rulebookLink || RULEBOOK_LINKS[event.slug] || RULEBOOK_LINKS[event.id];
+    event.rulebookLink ||
+    RULEBOOK_LINKS[event.slug] ||
+    RULEBOOK_LINKS[event.id];
 
-  const theme = ARENA_THEME_COLORS[event.slug] || ARENA_THEME_COLORS[event.id] || {
-    border: "border-[#FFAA00]",
-    glow: "rgba(255,170,0,0.3)",
-    text: "text-[#FFAA00]",
-    bg: "bg-[#FFAA00]",
-  };
+  const theme = ARENA_THEME_COLORS[event.slug] ||
+    ARENA_THEME_COLORS[event.id] || {
+      border: "border-[#FFAA00]",
+      glow: "rgba(255,170,0,0.3)",
+      text: "text-[#FFAA00]",
+      bg: "bg-[#FFAA00]",
+    };
 
   const handleShare = () => {
     playButtonClickSound();
@@ -420,10 +433,12 @@ View Details: ${window.location.href}`;
           </div>
         </motion.div>
 
-
         {/* ========================================================================= */}
         {/* 2. MAIN CONTENT GRID: 2 COLUMNS LEFT, 1 COLUMN SIDEBAR RIGHT              */}
         {/* ========================================================================= */}
+        {/* Prominent IGIT Sarang Ban Notice */}
+        <IgitBanNotice variant="banner" className="mb-6 sm:mb-8" />
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
           {/* ----------------------------------------------------------------------- */}
           {/* LEFT COLUMN: About, Bot Specs, Rules & Guidelines, Gallery              */}
@@ -546,9 +561,7 @@ View Details: ${window.location.href}`;
                 </div>
               </motion.div>
             )}
-
           </div>
-
 
           {/* ----------------------------------------------------------------------- */}
           {/* RIGHT SIDEBAR: Loot Chest, Details, Podiums, Contact, Register CTA       */}
@@ -586,7 +599,7 @@ View Details: ${window.location.href}`;
                   </div>
                   <div className="min-w-0">
                     <span className="text-[10px] text-neutral-400 uppercase font-semibold block">
-                      Date &amp; Time
+                      Date &amp; Schedule
                     </span>
                     <span className="text-xs sm:text-sm text-white font-bold block truncate">
                       {event.date}
@@ -596,6 +609,46 @@ View Details: ${window.location.href}`;
                     </span>
                   </div>
                 </div>
+
+                {/* 2-Day Match Progression Box */}
+                {event.scheduleDetails && (
+                  <div className="p-3 bg-black/70 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black space-y-2">
+                    <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-1.5">
+                      <span className="text-[11px] text-[#FFAA00] uppercase font-bold tracking-wider font-sans flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-[#FFAA00]" />
+                        2-DAY MATCH SCHEDULE
+                      </span>
+                      <span className="font-mono text-[9px] bg-[#FFAA00]/20 text-[#FFAA00] px-1.5 py-0.5 border border-[#FFAA00]/50 font-black">
+                        {event.id === "robo-war" ? "DAY 2 ONLY" : "DAY 1 & 2"}
+                      </span>
+                    </div>
+
+                    <div className="space-y-1.5 font-mono text-[11px]">
+                      <div className="flex items-start justify-between gap-2 p-1.5 bg-[#140E1B] border border-white/5">
+                        <span className="text-[#FFAA00] font-bold shrink-0">
+                          DAY 1 (NOV 05):
+                        </span>
+                        <span className="text-right text-neutral-200 font-medium">
+                          {event.scheduleDetails.day1}
+                        </span>
+                      </div>
+                      <div className="flex items-start justify-between gap-2 p-1.5 bg-[#140E1B] border border-white/5">
+                        <span className="text-[#55FF55] font-bold shrink-0">
+                          DAY 2 (NOV 06):
+                        </span>
+                        <span className="text-right text-[#55FF55] font-bold">
+                          {event.scheduleDetails.day2}
+                        </span>
+                      </div>
+                    </div>
+
+                    {event.scheduleDetails.stageNote && (
+                      <p className="text-[10px] font-mono text-neutral-400 italic pt-0.5">
+                        • {event.scheduleDetails.stageNote}
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 {/* Venue */}
                 <div className="flex items-center gap-3 p-2 bg-black/50 border border-neutral-800">
@@ -741,6 +794,9 @@ View Details: ${window.location.href}`;
                     <ExternalLink className="w-4 h-4 stroke-[2.5]" />
                   </a>
                 )}
+
+                {/* IGIT Sarang Ban Notice for Registration */}
+                <IgitBanNotice variant="sidebar" className="mt-4" />
               </div>
             </motion.div>
 

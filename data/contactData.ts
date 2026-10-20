@@ -113,7 +113,7 @@ export const TECHNICAL_TEAM: ContactPerson[] = [
     role: "Systems & Web Platform Lead",
     category: "technical",
     categoryLabel: "Platform Lead",
-    department: "CodeBreakers Society // GCEK",
+    department: "KILOBOTS Society // GCEK",
     phone: "+918895220675",
     displayPhone: "+91 88952 20675",
     email: "kilobots@gcekbpatna.ac.in",

@@ -156,7 +156,7 @@ export const SPONSORS_DATA = {
       accentBg: "bg-[#FFAA00] text-black",
       borderClass: "border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500]",
       badgeClass: "bg-[#FFAA00] text-black border-black",
-      description: "Full-scale statewide campus branding, certificate logo placement, mentorship keynote, and VIP award ceremony honours.",
+      description: "Full-scale campus branding, certificate logo placement, mentorship keynote, and VIP award ceremony honours.",
       features: [
         "Campus-wide Posters & Special Mention in Every Program",
         "Logos on All Participant & Winner Certificates",

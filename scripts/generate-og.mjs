@@ -31,7 +31,7 @@ const svg = `
     <!-- Sprint Box -->
     <rect x="0" y="0" width="380" height="50" fill="#FF6B6B" stroke="#000000" stroke-width="4" />
     <text x="190" y="33" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="19" text-anchor="middle" letter-spacing="1">
-      ⚡ 24-HOUR STATE HACKATHON
+      ⚡ 24-HOUR HACKATHON
     </text>
   </g>
 
@@ -53,10 +53,10 @@ const svg = `
   <!-- Subtitle -->
   <g transform="translate(60, 310)">
     <text x="0" y="0" fill="#1A1A1A" font-family="Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.5">
-      State Robotics Championship &amp; Tech Fest • GCEK Bhawanipatna
+      Robotics Championship &amp; Tech Fest • GCEK Bhawanipatna
     </text>
     <text x="0" y="38" fill="#222222" font-family="Arial, sans-serif" font-weight="700" font-size="20">
-      Robo War • Robo Race • Robo Sumo • Robo Soccer • Line Follower
+      Robo War • DEATH RACE • Robo Sumo • Robo Soccer • Line Follower
     </text>
   </g>
 
@@ -74,7 +74,7 @@ const svg = `
     <!-- Arena 2 -->
     <g transform="translate(155, 0)">
       <rect x="0" y="0" width="140" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
-      <text x="70" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">ROBO RACE</text>
+      <text x="70" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">DEATH RACE</text>
     </g>
 
     <!-- Arena 3 -->

@@ -3,9 +3,9 @@ import { ROBOTICS_EVENTS } from "@/data/roboticsEvents";
 import { RegisterClient } from "./RegisterClient";
 
 export const metadata: Metadata = {
-  title: "Arena Registration | Robosprano '26 - State Robotics Championship",
+  title: "Arena Registration | Robosprano '26 - Robotics Championship",
   description:
-    "Direct registration portal for all official tournament arenas at Robosprano '26, GCEK Kalahandi. Secure your team slot for Robo War, Robo Race, Robo Sumo, Robo Soccer, and Line Follower Robot.",
+    "Direct registration portal for all official tournament arenas at Robosprano '26, GCEK Kalahandi. Secure your team slot for Robo War, DEATH RACE, Robo Sumo, Robo Soccer, and Line Follower Robot.",
   openGraph: {
     title: "Arena Registration | Robosprano '26",
     description:

@@ -10,9 +10,13 @@ import {
   Sparkles,
   ChevronRight,
   ShieldCheck,
+  MapPin,
+  Clock,
+  Trophy,
 } from "lucide-react";
 import { ROBOTICS_EVENTS } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
+import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 Crisp SVGs)                        */
@@ -230,7 +234,7 @@ export default function EventsPage() {
             </h1>
 
             <p className="font-mono text-xs sm:text-base font-bold text-[#FFFFFF] max-w-2xl mx-auto leading-relaxed [text-shadow:_1px_1px_2px_#000]">
-              Unlock all 5 state-level combat and autonomous arenas at Robosprano &apos;26. Inspect arena dimensions, rulebooks, prize pools, and claim your team registration.
+              Unlock all 5 combat and autonomous arenas at Robosprano &apos;26. Inspect arena dimensions, rulebooks, prize pools, and claim your team registration.
             </p>
 
             {/* Quick Stats Pill Strip */}
@@ -250,6 +254,114 @@ export default function EventsPage() {
 
         {/* Main Content Area: Search & Filters */}
         <section className="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+          {/* Prominent IGIT Sarang Ban Notice */}
+          <IgitBanNotice variant="banner" />
+
+          {/* Tournament 2-Day Match Schedule & Official Venue Roster Guide */}
+          <div className="bg-[#140D1B] border-4 border-t-[#3C2D4F] border-l-[#3C2D4F] border-r-black border-b-black p-4 sm:p-6 shadow-[6px_6px_0px_#000]">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 border-b-2 border-white/10 pb-3 mb-4">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 bg-black border-2 border-[#FFAA00] flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4 text-[#FFAA00]" />
+                </div>
+                <div>
+                  <h3 className="font-sans font-black text-sm sm:text-base text-white uppercase tracking-wider">
+                    TOURNAMENT MATCH PROGRESSION &amp; OFFICIAL VENUES
+                  </h3>
+                  <p className="font-mono text-[11px] text-neutral-400">
+                    Official 2-Day Stage Schedule // GCE Kalahandi Campus
+                  </p>
+                </div>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-black border border-[#55FFFF] font-mono text-xs text-[#55FFFF] shadow-[2px_2px_0px_#000]">
+                <span>2-DAY CHAMPIONSHIP</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+              {/* Day 1 Schedule */}
+              <div className="bg-[#1C1426] border-2 border-t-[#5A3C15] border-l-[#5A3C15] border-r-black border-b-black p-3.5 space-y-2">
+                <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
+                  <span className="font-sans text-xs sm:text-sm text-[#FFAA00] font-black uppercase tracking-wide">
+                    ⚡ DAY 1 // NOV 05, 2026
+                  </span>
+                  <span className="bg-[#FFAA00]/20 text-[#FFAA00] px-2 py-0.5 text-[10px] font-black border border-[#FFAA00]/40">
+                    QUALIFYING STAGE
+                  </span>
+                </div>
+                <p className="text-white font-bold">
+                  Qualifying rounds take place for every arena:
+                </p>
+                <ul className="space-y-1 text-neutral-300">
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-[#55FF55]">✔</span> Death Race (Qualifiers)
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-[#55FF55]">✔</span> Robo Sumo (Qualifiers)
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-[#55FF55]">✔</span> Robo Soccer (Qualifiers)
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-[#55FF55]">✔</span> Line Follower (Qualifiers)
+                  </li>
+                </ul>
+                <div className="p-2 bg-black/60 border border-[#FF5555]/50 text-[#FF8585] text-[11px] font-bold">
+                  ⚠️ ROBO WAR EXCEPTION: No Robo War matches on Day 1.
+                </div>
+              </div>
+
+              {/* Day 2 Schedule */}
+              <div className="bg-[#1C1426] border-2 border-t-[#183B52] border-l-[#183B52] border-r-black border-b-black p-3.5 space-y-2">
+                <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
+                  <span className="font-sans text-xs sm:text-sm text-[#55FFFF] font-black uppercase tracking-wide">
+                    🏆 DAY 2 // NOV 06, 2026
+                  </span>
+                  <span className="bg-[#55FFFF]/20 text-[#55FFFF] px-2 py-0.5 text-[10px] font-black border border-[#55FFFF]/40">
+                    FINALS &amp; ROBO WAR
+                  </span>
+                </div>
+                <p className="text-white font-bold">
+                  All championship finals &amp; full Robo War showdown:
+                </p>
+                <ul className="space-y-1 text-neutral-300">
+                  <li className="flex items-center gap-1.5">
+                    <span className="text-[#55FFFF]">★</span> All Arena Final Matches (Death Race, Sumo, Soccer, Line Follower)
+                  </li>
+                  <li className="flex items-center gap-1.5 text-white font-black bg-black/50 p-1 border border-[#FFAA00]/40">
+                    <span className="text-[#FFAA00]">⚔️</span> ROBO WAR (Prelims, Semis &amp; Grand Finals)
+                  </li>
+                  <li className="flex items-center gap-1.5 text-[#55FF55]">
+                    <span>🎖️</span> Grand Award Ceremony &amp; ₹91,000 Cash Distribution
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Official Venues Bar */}
+            <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+              <div className="flex items-center gap-2.5 p-2.5 bg-black/70 border border-white/10">
+                <MapPin className="w-4 h-4 text-[#FFAA00] shrink-0" />
+                <div>
+                  <span className="text-[10px] text-neutral-400 block uppercase font-bold">
+                    Line Follower Arena Venue:
+                  </span>
+                  <span className="text-white font-bold">Seminar Hall, GCE Kalahandi</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2.5 p-2.5 bg-black/70 border border-white/10">
+                <MapPin className="w-4 h-4 text-[#FF5555] shrink-0" />
+                <div>
+                  <span className="text-[10px] text-neutral-400 block uppercase font-bold">
+                    Robo War, Race, Sumo &amp; Soccer Venue:
+                  </span>
+                  <span className="text-white font-bold">Open Air Theatre, GCE Kalahandi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b-3 border-black pb-6 bg-[#C6C6C6]/95 border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] p-3 sm:p-4 shadow-[4px_4px_0px_#000]">
             {/* Category Filter Tabs */}
             <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
@@ -361,6 +473,18 @@ export default function EventsPage() {
                       <p className="text-sm sm:text-base font-sans text-neutral-900 leading-relaxed font-bold line-clamp-3">
                         {event.description}
                       </p>
+
+                      {/* Venue & Schedule Chips */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs font-bold pt-1">
+                        <div className="flex items-center gap-1.5 p-2 bg-[#E2E2E2] border border-[#999999] text-neutral-900 truncate">
+                          <MapPin className="w-3.5 h-3.5 text-[#C00000] shrink-0" />
+                          <span className="truncate">{event.venue}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5 p-2 bg-[#E2E2E2] border border-[#999999] text-neutral-900 truncate">
+                          <Clock className="w-3.5 h-3.5 text-[#006600] shrink-0" />
+                          <span className="truncate">{event.time}</span>
+                        </div>
+                      </div>
                     </div>
 
                     {/* 4. LOOT PRIZE PODIUM STRIP (High-Contrast Tooltip Style) */}
