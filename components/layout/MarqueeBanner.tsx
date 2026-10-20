@@ -49,7 +49,7 @@ export function MarqueeBanner({
       ? "bg-gradient-to-r from-black/80 via-[#FF5500]/35 to-black/80 backdrop-blur-xl border-y-2 border-[#FF5500]/80 text-white shadow-[0_4px_30px_rgba(255,85,0,0.35)]"
       : "bg-[#FF5555] text-white border-y-4 border-black",
     muted: "bg-[#A8E6CF] text-black border-y-4 border-black",
-    black: "bg-black/90 backdrop-blur-xl text-white border-y-2 border-white/10 shadow-[0_4px_25px_rgba(0,0,0,0.85)]",
+    black: "bg-white/95 backdrop-blur-xl text-black border-y-2 border-black shadow-[0_4px_16px_rgba(0,0,0,0.06)]",
     white: "bg-white/90 backdrop-blur-xl text-black border-y-2 border-black/20",
   };
 
@@ -77,7 +77,7 @@ export function MarqueeBanner({
         {[...items, ...items, ...items, ...items].map((text, i) => (
           <div
             key={i}
-            className="inline-flex items-center gap-6 font-sans font-black text-sm sm:text-base tracking-widest uppercase text-white [text-shadow:_0_0_12px_rgba(255,140,0,0.85),_0_0_2px_#ffffff,_1px_1px_2px_#000]"
+            className="inline-flex items-center gap-6 font-sans font-black text-sm sm:text-base tracking-widest uppercase text-black"
           >
             <span>{text}</span>
             <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FF7700] text-[#FFAA00] drop-shadow-[0_0_10px_#FF7700] shrink-0 inline-block" />

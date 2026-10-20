@@ -128,54 +128,33 @@ export function CodeBreakersSpotlight() {
   ];
 
   return (
-    <section className="relative py-16 sm:py-24 border-b-4 border-black overflow-hidden bg-[#0A0710] text-white select-none">
-      {/* Background Ambience: Nether Embers & Subtle Grid */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <Image
-          src="/minecraft/sponsor_bg.png"
-          alt="Kilobots Foundry Background"
-          fill
-          unoptimized
-          sizes="100vw"
-          className="object-cover object-center opacity-25 mix-blend-luminosity"
-        />
-
-        <div
-          className="absolute inset-0 opacity-15"
-          style={{
-            backgroundImage: `linear-gradient(#472754 1px, transparent 1px), linear-gradient(90deg, #472754 1px, transparent 1px)`,
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
-
-      {/* Ambient Glow Orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#55FF55]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#FFAA00]/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative py-16 sm:py-24 border-b-4 border-black overflow-hidden bg-[#F0F8FF] text-black select-none">
+      {/* Background Ambience: Subtle Daylight Grid */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-30 bg-[radial-gradient(#3898EC_1px,transparent_1px)] [background-size:24px_24px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
         {/* ========================================================================= */}
         {/* 1. TOP MINECRAFT BOSS TAG & COMMAND DECK HEADER                           */}
         {/* ========================================================================= */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 border-b-2 border-white/10 pb-4 sm:pb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 border-b-2 border-black/20 pb-4 sm:pb-6">
           <div className="flex items-center gap-2.5 sm:gap-3">
-            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#55FF55] border border-black animate-pulse shadow-[0_0_10px_#55FF55] shrink-0" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#15803D] border border-black shrink-0" />
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-              <span className="font-mono text-[11px] sm:text-xs font-black uppercase text-[#55FF55] tracking-wider [text-shadow:_1px_1px_0_#000]">
+              <span className="font-mono text-[11px] sm:text-xs font-black uppercase text-[#15803D] tracking-wider">
                 COMMAND DECK // KILOBOTS ROBOTICS SOCIETY
               </span>
-              <span className="hidden sm:inline text-neutral-600">/</span>
-              <span className="font-mono text-[11px] sm:text-xs font-bold text-neutral-400 uppercase hidden sm:inline">
+              <span className="hidden sm:inline text-slate-400">/</span>
+              <span className="font-mono text-[11px] sm:text-xs font-bold text-slate-600 uppercase hidden sm:inline">
                 ESTD. 2019
               </span>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-[10px] sm:text-[11px] font-black uppercase px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#FFAA00]/20 text-[#FFAA00] border-2 border-[#FFAA00] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-              ★ STATE ACCREDITED
+            <span className="font-mono text-[10px] sm:text-[11px] font-black uppercase px-2.5 sm:px-3 py-0.5 sm:py-1 bg-[#FEF3C7] text-[#B45309] border-2 border-black shadow-[2px_2px_0px_#000]">
+              ★ PREMIER ACCREDITED
             </span>
-            <span className="font-mono text-[10px] sm:text-[11px] font-black uppercase px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#55FF55]/20 text-[#55FF55] border-2 border-[#55FF55] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]">
+            <span className="font-mono text-[10px] sm:text-[11px] font-black uppercase px-2.5 sm:px-3 py-0.5 sm:py-1 bg-[#DCFCE7] text-[#15803D] border-2 border-black shadow-[2px_2px_0px_#000]">
               50+ ACTIVE COMBAT PILOTS
             </span>
           </div>
@@ -188,49 +167,49 @@ export function CodeBreakersSpotlight() {
           {/* ======================================================================= */}
           {/* LEFT WING: KILOBOTS ROBOTICS FOUNDRY (8 COLS)                          */}
           {/* ======================================================================= */}
-          <div className="lg:col-span-8 bg-[#140E1E] border-4 border-t-[#3E2954] border-l-[#3E2954] border-r-[#07050A] border-b-[#07050A] shadow-[6px_6px_0px_#000] sm:shadow-[8px_8px_0px_#000] p-4 xs:p-6 sm:p-8 flex flex-col justify-between space-y-6 sm:space-y-8 relative overflow-hidden">
+          <div className="lg:col-span-8 bg-white border-4 border-black shadow-[6px_6px_0px_#000] sm:shadow-[8px_8px_0px_#000] p-4 xs:p-6 sm:p-8 flex flex-col justify-between space-y-6 sm:space-y-8 relative overflow-hidden">
             {/* Top Glowing Edge Line */}
-            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#55FF55] via-[#FFAA00] to-[#55FFFF]" />
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#5DB329] via-[#FFAA00] to-[#3898EC]" />
 
             <div className="space-y-5 sm:space-y-6">
               {/* Kilobots Club Title Block with Mascot Insignia */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-5">
                 <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                  <div className="relative w-14 h-14 sm:w-20 sm:h-20 bg-[#1D142C] border-3 border-t-[#5B3E7A] border-l-[#5B3E7A] border-r-[#07050A] border-b-[#07050A] p-2 shrink-0 shadow-[4px_4px_0px_#000] flex items-center justify-center">
+                  <div className="relative w-14 h-14 sm:w-20 sm:h-20 bg-[#F8FAFC] border-3 border-black p-2 shrink-0 shadow-[4px_4px_0px_#000] flex items-center justify-center">
                     <Image
                       src="/kilobot.png"
                       alt="Kilobots Robotics Club Logo"
                       width={64}
                       height={64}
                       priority
-                      className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(85,255,85,0.5)]"
+                      className="w-full h-full object-contain"
                     />
-                    <div className="absolute -bottom-1 -right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 bg-[#55FF55] border border-black shadow-[1px_1px_0px_#000]" />
+                    <div className="absolute -bottom-1 -right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 bg-[#5DB329] border border-black shadow-[1px_1px_0px_#000]" />
                   </div>
 
                   <div className="min-w-0">
-                    <div className="inline-flex items-center gap-1.5 font-mono text-[9px] xs:text-[10px] sm:text-xs font-black uppercase text-[#FFAA00] [text-shadow:_1px_1px_0_#000]">
+                    <div className="inline-flex items-center gap-1.5 font-mono text-[9px] xs:text-[10px] sm:text-xs font-black uppercase text-[#B45309]">
                       <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
                       OFFICIAL HOST ROBOTICS SOCIETY
                     </div>
-                    <h3 className="font-black text-xl xs:text-2xl sm:text-4xl text-white uppercase tracking-tight leading-tight [text-shadow:_2px_2px_0_#000] break-words">
-                      KILOBOTS <span className="text-[#55FF55]">//</span> GCEK
+                    <h3 className="font-black text-xl xs:text-2xl sm:text-4xl text-black uppercase tracking-tight leading-tight break-words">
+                      KILOBOTS <span className="text-[#15803D]">//</span> GCEK
                     </h3>
-                    <p className="font-mono text-[10px] xs:text-xs text-neutral-400 font-bold uppercase tracking-wider truncate">
+                    <p className="font-mono text-[10px] xs:text-xs text-slate-600 font-bold uppercase tracking-wider truncate">
                       Government College of Engineering Kalahandi
                     </p>
                   </div>
                 </div>
 
                 <div className="hidden sm:flex flex-col items-end gap-1">
-                  <span className="font-mono text-[10px] uppercase text-neutral-500 font-bold">
+                  <span className="font-mono text-[10px] uppercase text-slate-500 font-bold">
                     FOUNDRY REPOSITORY
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-black text-[#55FFFF] px-2 py-0.5 bg-black/60 border border-[#55FFFF]/40">
+                    <span className="font-mono text-xs font-black text-[#0284C7] px-2 py-0.5 bg-[#E0F2FE] border border-black shadow-[1px_1px_0px_#000]">
                       5 COMBAT ARENAS
                     </span>
-                    <span className="font-mono text-xs font-black text-[#FFAA00] px-2 py-0.5 bg-black/60 border border-[#FFAA00]/40">
+                    <span className="font-mono text-xs font-black text-[#B45309] px-2 py-0.5 bg-[#FEF3C7] border border-black shadow-[1px_1px_0px_#000]">
                       ₹91,000 BOUNTY
                     </span>
                   </div>
@@ -238,13 +217,13 @@ export function CodeBreakersSpotlight() {
               </div>
 
               {/* Bold Manifesto */}
-              <div className="bg-[#1C132B] border-3 border-t-[#302148] border-l-[#302148] border-r-[#0A070F] border-b-[#0A070F] p-4 sm:p-5 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.6)] space-y-2">
-                <h4 className="font-black text-base sm:text-lg text-white uppercase tracking-tight flex items-center gap-2">
-                  <Swords className="w-4 h-4 text-[#FF5555] shrink-0" />
-                  <span>FORGING WESTERN ODISHA&apos;S COMPETITIVE ROBOTICS CULTURE</span>
+              <div className="bg-[#F0FDF4] border-2 border-black p-4 sm:p-5 shadow-[2px_2px_0px_#000] space-y-2">
+                <h4 className="font-black text-base sm:text-lg text-black uppercase tracking-tight flex items-center gap-2">
+                  <Swords className="w-4 h-4 text-[#DC2626] shrink-0" />
+                  <span>FORGING PREMIER COMPETITIVE ROBOTICS CULTURE</span>
                 </h4>
-                <p className="font-mono text-xs sm:text-sm font-bold text-[#D0C4DC] leading-relaxed">
-                  Kilobots is the premier student-led robotics and hardware combat society of Government College of Engineering Kalahandi. As engineers who mill steel frames, wire custom H-bridge circuits, and tune PID algorithms for high-stakes battlegrounds, we created <span className="text-[#FFAA00] font-black">ROBOSPRANO &apos;26</span> to give robotics pilots nationwide a premier tournament battleground.
+                <p className="font-mono text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+                  Kilobots is the premier student-led robotics and hardware combat society of Government College of Engineering Kalahandi. As engineers who mill steel frames, wire custom H-bridge circuits, and tune PID algorithms for high-stakes battlegrounds, we created <span className="text-[#B45309] font-black">ROBOSPRANO &apos;26</span> to give robotics pilots nationwide a premier tournament battleground.
                 </p>
               </div>
 
@@ -260,43 +239,41 @@ export function CodeBreakersSpotlight() {
                         playButtonClickSound();
                         setActiveTab(idx);
                       }}
-                      className={`bg-[#181126] border-3 p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-between space-y-3 cursor-pointer transition-all duration-200 relative group overflow-hidden ${
-                        pillar.glow
-                      } ${
+                      className={`border-2 border-black p-4 shadow-[4px_4px_0px_#000] flex flex-col justify-between space-y-3 cursor-pointer transition-all duration-200 relative group overflow-hidden ${
                         isActive
-                          ? `${pillar.borderActive} bg-[#211636] -translate-y-1`
-                          : "border-t-[#3E2954] border-l-[#3E2954] border-r-[#07050A] border-b-[#07050A] hover:-translate-y-0.5"
+                          ? "bg-[#FEFCE8] -translate-y-1"
+                          : "bg-[#F8FAFC] hover:bg-slate-100 hover:-translate-y-0.5"
                       }`}
                     >
                       {/* Top Accent Strip */}
                       <div
-                        className="h-1 w-full absolute top-0 inset-x-0"
-                        style={{ backgroundColor: pillar.accentColor }}
+                        className="h-1.5 w-full absolute top-0 inset-x-0"
+                        style={{ backgroundColor: pillar.accentColor === "#55FFFF" ? "#0284C7" : pillar.accentColor === "#FF5555" ? "#DC2626" : "#15803D" }}
                       />
 
                       <div className="space-y-2 pt-1">
                         <div className="flex items-center justify-between">
                           <Icon
                             className="w-5 h-5 stroke-[2.5px]"
-                            style={{ color: pillar.accentColor }}
+                            style={{ color: pillar.accentColor === "#55FFFF" ? "#0284C7" : pillar.accentColor === "#FF5555" ? "#DC2626" : "#15803D" }}
                           />
                           <span
-                            className={`font-mono text-[9px] font-black uppercase px-2 py-0.5 border shadow-[1px_1px_0px_#000] ${pillar.badgeColor}`}
+                            className="font-mono text-[9px] font-black uppercase px-2 py-0.5 border border-black bg-white text-slate-800 shadow-[1px_1px_0px_#000]"
                           >
                             {pillar.badge}
                           </span>
                         </div>
 
-                        <div className="font-black text-sm uppercase text-white tracking-tight">
+                        <div className="font-black text-sm uppercase text-black tracking-tight">
                           {pillar.title}
                         </div>
 
-                        <p className="font-mono text-[11px] font-bold text-[#B3A4C5] leading-relaxed">
+                        <p className="font-mono text-[11px] font-semibold text-slate-600 leading-relaxed">
                           {pillar.summary}
                         </p>
                       </div>
 
-                      <div className="pt-2 border-t border-white/10 font-mono text-[10px] font-black uppercase text-[#E0E0E0] flex items-center justify-between">
+                      <div className="pt-2 border-t border-black/20 font-mono text-[10px] font-black uppercase text-slate-700 flex items-center justify-between">
                         <span>{pillar.stats}</span>
                         <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -307,13 +284,13 @@ export function CodeBreakersSpotlight() {
             </div>
 
             {/* Bottom Status Ribbon */}
-            <div className="pt-4 border-t-2 border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono">
+            <div className="pt-4 border-t-2 border-black/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="font-black text-[#55FF55] flex items-center gap-1 shrink-0">
+                <span className="font-black text-[#15803D] flex items-center gap-1 shrink-0">
                   <Zap className="w-3.5 h-3.5 fill-current shrink-0" />
                   KILOBOTS FLEET:
                 </span>
-                <span className="text-[#CCCCCC] font-bold text-[11px] xs:text-xs">
+                <span className="text-slate-700 font-bold text-[11px] xs:text-xs">
                   Robo War • Death Race • Robo Sumo • Robo Soccer • Line Follower
                 </span>
               </div>
@@ -321,7 +298,7 @@ export function CodeBreakersSpotlight() {
               <Link
                 href="/events"
                 onClick={() => playButtonClickSound()}
-                className="font-black text-xs text-[#FFAA00] hover:text-[#FFE285] inline-flex items-center gap-1 uppercase tracking-wider underline cursor-pointer shrink-0"
+                className="font-black text-xs text-[#B45309] hover:text-[#92400E] inline-flex items-center gap-1 uppercase tracking-wider underline cursor-pointer shrink-0"
               >
                 <span>VIEW ARENA SPECIFICATIONS</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -332,14 +309,14 @@ export function CodeBreakersSpotlight() {
           {/* ======================================================================= */}
           {/* RIGHT WING: GCEK HOST CITADEL & CAMPUS TERMINAL (4 COLS)               */}
           {/* ======================================================================= */}
-          <div className="lg:col-span-4 bg-[#1B1428] border-4 border-t-[#6D491F] border-l-[#6D491F] border-r-[#07050A] border-b-[#07050A] shadow-[6px_6px_0px_#000] sm:shadow-[8px_8px_0px_#000] p-4 xs:p-6 sm:p-7 flex flex-col justify-between space-y-6 relative overflow-hidden">
-            {/* Top Golden Brass Ingot Rail */}
-            <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#FFE285] via-[#FFAA00] to-[#8F5500]" />
+          <div className="lg:col-span-4 bg-white border-4 border-black shadow-[6px_6px_0px_#000] sm:shadow-[8px_8px_0px_#000] p-4 xs:p-6 sm:p-7 flex flex-col justify-between space-y-6 relative overflow-hidden">
+            {/* Top Golden Rail */}
+            <div className="absolute top-0 inset-x-0 h-1.5 bg-[#FFAA00]" />
 
             <div className="space-y-4 sm:space-y-5">
               {/* Header Badge */}
               <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-1.5 font-mono text-[9px] xs:text-[10px] font-black uppercase px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#FFAA00] text-black border-2 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[2px_2px_0px_#000]">
+                <div className="inline-flex items-center gap-1.5 font-mono text-[9px] xs:text-[10px] font-black uppercase px-2.5 sm:px-3 py-1 bg-[#FFAA00] text-black border-2 border-black shadow-[2px_2px_0px_#000]">
                   <Building2 className="w-3.5 h-3.5" />
                   HOST CAMPUS &amp; VENUE
                 </div>
@@ -348,53 +325,53 @@ export function CodeBreakersSpotlight() {
 
               {/* Institution Title */}
               <div className="space-y-1">
-                <h4 className="font-black text-lg xs:text-xl sm:text-2xl text-white uppercase leading-snug tracking-tight [text-shadow:_2px_2px_0_#000] break-words">
+                <h4 className="font-black text-lg xs:text-xl sm:text-2xl text-black uppercase leading-snug tracking-tight break-words">
                   GOVERNMENT COLLEGE OF ENGINEERING KALAHANDI
                 </h4>
-                <div className="inline-block font-mono text-[11px] xs:text-xs font-black text-[#FFAA00] tracking-wide">
-                  STATE GOVERNMENT PREMIER TECH INSTITUTION
+                <div className="inline-block font-mono text-[11px] xs:text-xs font-black text-[#B45309] tracking-wide">
+                  GOVERNMENT PREMIER TECH INSTITUTION
                 </div>
               </div>
 
               {/* Campus Address & Specs Matrix */}
               <div className="space-y-2.5 font-mono text-xs">
                 {/* Location */}
-                <div className="p-3 bg-[#130E1C] border border-t-[#2C1D3B] border-l-[#2C1D3B] border-r-[#07050A] border-b-[#07050A] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5)] space-y-1">
-                  <div className="flex items-center gap-1.5 text-[#55FF55] font-black uppercase text-[11px]">
+                <div className="p-3 bg-[#F8FAFC] border-2 border-black shadow-[2px_2px_0px_#000] space-y-1">
+                  <div className="flex items-center gap-1.5 text-[#15803D] font-black uppercase text-[11px]">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>CAMPUS GROUND:</span>
                   </div>
-                  <p className="text-[#CCCCCC] font-bold leading-relaxed text-[11px]">
+                  <p className="text-slate-800 font-bold leading-relaxed text-[11px]">
                     Kandha Bando Pala, Po: Risigaon, Bhawanipatna, Kalahandi, Odisha - 766003
                   </p>
                 </div>
 
                 {/* Facilities Matrix */}
                 <div className="space-y-1.5 text-[11px]">
-                  <div className="p-2 bg-[#130E1C] border border-t-[#2C1D3B] border-l-[#2C1D3B] border-r-[#07050A] border-b-[#07050A] flex items-center justify-between shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5)]">
-                    <span className="text-[#AAAAAA] font-bold">MAIN ARENA:</span>
-                    <span className="font-black text-white">CENTRAL COMBAT CAGE</span>
+                  <div className="p-2 bg-[#F8FAFC] border border-black flex items-center justify-between">
+                    <span className="text-slate-600 font-bold">MAIN ARENA:</span>
+                    <span className="font-black text-black">CENTRAL COMBAT CAGE</span>
                   </div>
 
-                  <div className="p-2 bg-[#130E1C] border border-t-[#2C1D3B] border-l-[#2C1D3B] border-r-[#07050A] border-b-[#07050A] flex items-center justify-between shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5)]">
-                    <span className="text-[#AAAAAA] font-bold">TRANSIT:</span>
-                    <span className="font-black text-[#55FFFF]">KESINGA (35KM) / SHUTTLES</span>
+                  <div className="p-2 bg-[#F8FAFC] border border-black flex items-center justify-between">
+                    <span className="text-slate-600 font-bold">TRANSIT:</span>
+                    <span className="font-black text-[#0284C7]">KESINGA (35KM) / SHUTTLES</span>
                   </div>
 
-                  <div className="p-2 bg-[#130E1C] border border-t-[#2C1D3B] border-l-[#2C1D3B] border-r-[#07050A] border-b-[#07050A] flex items-center justify-between shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5)]">
-                    <span className="text-[#AAAAAA] font-bold">HOSPITALITY:</span>
-                    <span className="font-black text-[#FFAA00]">STUDENT HOSTELS &amp; MESS</span>
+                  <div className="p-2 bg-[#F8FAFC] border border-black flex items-center justify-between">
+                    <span className="text-slate-600 font-bold">HOSPITALITY:</span>
+                    <span className="font-black text-[#B45309]">STUDENT HOSTELS &amp; MESS</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* 3D Action Buttons */}
+            {/* Action Buttons */}
             <div className="space-y-3 pt-2">
               <Link
                 href="/about"
                 onClick={() => playButtonClickSound()}
-                className="w-full h-12 bg-[#5B8731] hover:bg-[#689B37] text-white font-mono font-black text-xs uppercase tracking-wider border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="w-full h-12 bg-[#5DB329] hover:bg-[#4EA022] text-white font-mono font-black text-xs uppercase tracking-wider border-3 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 <span>EXPLORE KILOBOTS ODYSSEY</span>
                 <ArrowRight className="w-4 h-4 stroke-[3px]" />
@@ -403,9 +380,9 @@ export function CodeBreakersSpotlight() {
               <Link
                 href="/contact"
                 onClick={() => playButtonClickSound()}
-                className="w-full h-11 bg-[#2C1F3D] hover:bg-[#3B2A52] text-white font-mono font-black text-xs uppercase tracking-wider border-3 border-t-[#533B73] border-l-[#533B73] border-r-[#100B17] border-b-[#100B17] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                className="w-full h-11 bg-white hover:bg-slate-100 text-black font-mono font-black text-xs uppercase tracking-wider border-3 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
-                <MapPin className="w-3.5 h-3.5 text-[#55FFFF]" />
+                <MapPin className="w-3.5 h-3.5 text-[#0284C7]" />
                 <span>VENUE &amp; REACHING GCEK</span>
               </Link>
             </div>

@@ -236,21 +236,20 @@ export function RegistrationExtendedModal({
           >
             <button
               onClick={handleOpen}
-              className="group relative flex items-center gap-2.5 px-3 py-2 bg-[#212121] hover:bg-[#2C2C2C] text-white border-3 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer"
+              className="group relative flex items-center gap-2.5 px-3 py-2 bg-white hover:bg-slate-100 text-black border-3 border-black shadow-[4px_4px_0px_#000] active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] transition-all cursor-pointer"
               title="Open Extended Registration Notice"
             >
-
               <div className="flex flex-col text-left">
-                <span className="text-[11px] sm:text-xs font-black uppercase text-[#FFAA00] tracking-wider flex items-center gap-1">
+                <span className="text-[11px] sm:text-xs font-black uppercase text-[#B45309] tracking-wider flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-[#FFAA00]" />
                   REGISTRATION EXTENDED!
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-bold text-[#55FFFF] tracking-tight flex items-center gap-1 flex-wrap">
-                  <span className="line-through text-[#FF8585] decoration-[#FF5555]">{previousDeadline.toUpperCase()}</span>
-                  <span className="text-white">➔</span>
-                  <span className="text-[#FFFF55]">{newDeadline.toUpperCase()}</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-slate-800 tracking-tight flex items-center gap-1 flex-wrap">
+                  <span className="line-through text-[#DC2626] decoration-[#DC2626]">{previousDeadline.toUpperCase()}</span>
+                  <span className="text-black font-black">➔</span>
+                  <span className="text-[#16A34A] font-black">{newDeadline.toUpperCase()}</span>
                   <span>•</span>
-                  <span>
+                  <span className="text-slate-600">
                     {timeRemaining.isExpired
                       ? "CLOSED"
                       : `${timeRemaining.days}D ${timeRemaining.hours}H ${timeRemaining.minutes}M LEFT`}
@@ -258,7 +257,7 @@ export function RegistrationExtendedModal({
                 </span>
               </div>
 
-              <div className="ml-1 bg-[#707070] hover:bg-[#8B8B8B] text-[#FFFF55] font-black text-[10px] px-2 py-1 border-2 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#383838] border-b-[#383838] shadow-[1px_1px_0px_#000] uppercase hidden xs:inline-block">
+              <div className="ml-1 bg-[#5DB329] hover:bg-[#689B37] text-white font-black text-[10px] px-2.5 py-1 border-2 border-black shadow-[1px_1px_0px_#000] uppercase hidden xs:inline-block">
                 OPEN
               </div>
             </button>
@@ -275,18 +274,18 @@ export function RegistrationExtendedModal({
             data-lenis-prevent-touch="true"
             className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto overflow-x-hidden font-sans overscroll-contain"
           >
-            {/* Dark Nether Atmospheric Backdrop */}
+            {/* Soft Atmospheric Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={handleClose}
-              className="fixed inset-0 bg-black/80 backdrop-blur-xs cursor-pointer"
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs cursor-pointer"
               aria-hidden="true"
             />
 
-            {/* Authentic Minecraft GUI Window */}
+            {/* Authentic Daylight Minecraft GUI Window */}
             <motion.div
               role="dialog"
               aria-modal="true"
@@ -314,16 +313,16 @@ export function RegistrationExtendedModal({
                 damping: 26,
                 stiffness: 350,
               }}
-              className="relative w-full max-w-lg bg-[#C6C6C6] border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[8px_8px_0px_#000000] z-50 my-auto overflow-hidden select-none"
+              className="relative w-full max-w-lg bg-white border-4 border-black shadow-[8px_8px_0px_#000000] z-50 my-auto overflow-hidden select-none"
             >
               {/* ── 1. Minecraft GUI Window Header ── */}
-              <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#2A2A2A] border-b-3 border-b-[#555555] border-t-2 border-t-[#3A3A3A] font-mono">
+              <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#F8FAFC] border-b-3 border-black font-mono">
                 {/* Left Title with Gold Star */}
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 bg-[#FFAA00] border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] flex items-center justify-center text-black font-black text-xs shadow-[1px_1px_0px_#000]">
+                  <div className="w-5 h-5 bg-[#FFAA00] border border-black flex items-center justify-center text-black font-black text-xs shadow-[1px_1px_0px_#000]">
                     ★
                   </div>
-                  <span className="text-xs sm:text-sm font-black uppercase text-[#FFAA00] tracking-wider [text-shadow:_1px_1px_0_#000]">
+                  <span className="text-xs sm:text-sm font-black uppercase text-black tracking-wider">
                     NOTICE // REGISTRATION DEADLINE
                   </span>
                 </div>
@@ -333,38 +332,38 @@ export function RegistrationExtendedModal({
                   type="button"
                   onClick={handleClose}
                   aria-label="Close dialog"
-                  className="w-7 h-7 bg-[#707070] hover:bg-[#FF5555] text-white border-2 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#383838] border-b-[#383838] active:border-t-[#383838] active:border-l-[#383838] active:border-r-[#FFFFFF] active:border-b-[#FFFFFF] active:bg-[#555555] shadow-[1px_1px_0px_#000] flex items-center justify-center cursor-pointer transition-colors"
+                  className="w-7 h-7 bg-white hover:bg-[#DC2626] hover:text-white text-black border-2 border-black active:bg-slate-200 shadow-[1px_1px_0px_#000] flex items-center justify-center cursor-pointer transition-colors"
                 >
                   <X className="w-4 h-4 stroke-[3px]" />
                 </button>
               </div>
 
-              {/* ── 2. GUI Inner Body (Recessed Stone GUI Canvas) ── */}
+              {/* ── 2. GUI Inner Body (Recessed Light GUI Canvas) ── */}
               <div className="p-4 sm:p-5 space-y-4">
                 {/* Main Headline & Description */}
                 <div className="text-center space-y-2 py-0.5">
                   <h2
                     id="minecraft-reg-dialog-title"
-                    className="font-black text-xl sm:text-2xl text-[#1E1B24] tracking-tight uppercase leading-snug"
+                    className="font-black text-xl sm:text-2xl text-black tracking-tight uppercase leading-snug"
                   >
                     REGISTRATION DEADLINE EXTENDED!
                   </h2>
 
-                  <div className="text-sm text-black/80 font-bold leading-relaxed max-w-md mx-auto space-y-1.5">
+                  <div className="text-sm text-slate-800 font-bold leading-relaxed max-w-md mx-auto space-y-1.5">
                     <p>
                       Missed the deadline?{" "}
-                      <span className="inline-block px-2 py-0.5 bg-[#2E1065] text-[#E9D5FF] font-black border border-t-[#C084FC] border-l-[#C084FC] border-r-[#1E0B36] border-b-[#1E0B36] shadow-[1px_1px_0px_#000] uppercase text-xs sm:text-sm">
+                      <span className="inline-block px-2 py-0.5 bg-[#5DB329] text-white font-black border-2 border-black shadow-[1px_1px_0px_#000] uppercase text-xs sm:text-sm">
                         WE’VE GOT YOU COVERED!
                       </span>
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-1.5 pt-0.5">
                       <span>Due to overwhelming demand, registration is open until</span>
                       <div className="inline-flex items-center gap-1.5">
-                        <span className="inline-block px-1.5 py-0.5 bg-[#4A1515] text-[#FFAAAA] line-through decoration-[#FF5555] decoration-2 font-mono font-bold text-xs sm:text-sm border border-black shadow-[1px_1px_0px_#000]">
+                        <span className="inline-block px-1.5 py-0.5 bg-[#FEE2E2] text-[#DC2626] line-through decoration-[#DC2626] decoration-2 font-mono font-bold text-xs sm:text-sm border border-black shadow-[1px_1px_0px_#000]">
                           {previousDeadline}
                         </span>
                         <span className="font-black text-black text-sm">➔</span>
-                        <span className="inline-block px-2 py-0.5 bg-[#14532D] text-[#86EFAC] font-black border border-t-[#4ADE80] border-l-[#4ADE80] border-r-[#052E16] border-b-[#052E16] shadow-[1px_1px_0px_#000] uppercase text-xs sm:text-sm">
+                        <span className="inline-block px-2 py-0.5 bg-[#DCFCE7] text-[#16A34A] font-black border border-black shadow-[1px_1px_0px_#000] uppercase text-xs sm:text-sm">
                           {newDeadline} (2:00 PM)
                         </span>
                       </div>
@@ -373,95 +372,95 @@ export function RegistrationExtendedModal({
                 </div>
 
                 {/* ── 3. Official Deadline Item Tooltip Card ── */}
-                <div className="p-3 sm:p-4 bg-[#100C1C] border-3 border-t-[#7E22CE] border-l-[#7E22CE] border-r-[#2E1065] border-b-[#2E1065] shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center gap-1.5 text-center">
-                  <div className="flex items-center gap-1.5 font-mono text-[11px] sm:text-xs font-black uppercase text-[#55FF55] tracking-wider mb-0.5 [text-shadow:_1px_1px_0_#000]">
-                    <CheckCircle2 className="w-4 h-4 text-[#55FF55] stroke-[2.5px]" />
+                <div className="p-3 sm:p-4 bg-[#FEF3C7] border-3 border-black shadow-[3px_3px_0px_#000] flex flex-col items-center justify-center gap-1.5 text-center">
+                  <div className="flex items-center gap-1.5 font-mono text-[11px] sm:text-xs font-black uppercase text-[#16A34A] tracking-wider mb-0.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#16A34A] stroke-[2.5px]" />
                     <span>OFFICIAL REGISTRATION DEADLINE (EXTENDED)</span>
                   </div>
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-mono">
-                    <span className="text-base sm:text-xl font-bold text-[#FF7777] line-through decoration-[#FF5555] decoration-2 [text-shadow:_1px_1px_0_#000]">
+                    <span className="text-base sm:text-xl font-bold text-[#DC2626] line-through decoration-[#DC2626] decoration-2">
                       {previousDeadline}
                     </span>
-                    <span className="text-2xl sm:text-3xl font-black text-[#FFFF55] tracking-tight [text-shadow:_1px_1px_0_#000]">
+                    <span className="text-2xl sm:text-3xl font-black text-[#B45309] tracking-tight">
                       {newDeadline}
                     </span>
                   </div>
                 </div>
 
                 {/* ── 4. Minecraft Inventory Recessed Item Slots (Countdown) ── */}
-                <div className="p-3 bg-[#8B8B8B] border-3 border-t-[#373737] border-l-[#373737] border-r-[#FFFFFF] border-b-[#FFFFFF] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5)] space-y-2 font-mono">
+                <div className="p-3 bg-[#F1F5F9] border-3 border-black shadow-[inset_1px_1px_3px_rgba(0,0,0,0.06)] space-y-2 font-mono">
                   <div className="flex items-center justify-between text-[11px] sm:text-xs font-black uppercase tracking-wider">
-                    <span className="text-[#55FFFF] flex items-center gap-1.5 [text-shadow:_1px_1px_0_#000]">
-                      <span className="w-2 h-2 bg-[#55FFFF] border border-black inline-block animate-pulse" />
+                    <span className="text-[#0284C7] flex items-center gap-1.5">
+                      <span className="w-2 h-2 bg-[#0284C7] border border-black inline-block animate-pulse" />
                       TIME REMAINING:
                     </span>
-                    <span className="text-[#FFAA00] [text-shadow:_1px_1px_0_#000]">
+                    <span className="text-[#B45309]">
                       {timeRemaining.isExpired ? "CLOSED" : "LIVE TICKER"}
                     </span>
                   </div>
 
                   {/* 4 Inset Item Slots */}
                   <div className="grid grid-cols-4 gap-2 text-center">
-                    {/* DAYS Slot (Gold) */}
-                    <div className="p-2 bg-[#2B2B2B] border-2 border-t-[#181818] border-l-[#181818] border-r-[#FFFFFF] border-b-[#FFFFFF] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                      <div className="text-2xl sm:text-3xl font-black text-[#FFAA00] leading-none [text-shadow:_1px_1px_0_#000]">
+                    {/* DAYS Slot */}
+                    <div className="p-2 bg-white border-2 border-black shadow-[2px_2px_0px_#000]">
+                      <div className="text-2xl sm:text-3xl font-black text-[#B45309] leading-none">
                         {String(timeRemaining.days).padStart(2, "0")}
                       </div>
-                      <div className="text-[10px] font-bold text-[#E0E0E0] uppercase mt-1">
+                      <div className="text-[10px] font-bold text-slate-600 uppercase mt-1">
                         DAYS
                       </div>
                     </div>
 
-                    {/* HOURS Slot (Iron) */}
-                    <div className="p-2 bg-[#2B2B2B] border-2 border-t-[#181818] border-l-[#181818] border-r-[#FFFFFF] border-b-[#FFFFFF] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                      <div className="text-2xl sm:text-3xl font-black text-[#FFFFFF] leading-none [text-shadow:_1px_1px_0_#000]">
+                    {/* HOURS Slot */}
+                    <div className="p-2 bg-white border-2 border-black shadow-[2px_2px_0px_#000]">
+                      <div className="text-2xl sm:text-3xl font-black text-[#0284C7] leading-none">
                         {String(timeRemaining.hours).padStart(2, "0")}
                       </div>
-                      <div className="text-[10px] font-bold text-[#E0E0E0] uppercase mt-1">
+                      <div className="text-[10px] font-bold text-slate-600 uppercase mt-1">
                         HOURS
                       </div>
                     </div>
 
-                    {/* MINS Slot (Diamond) */}
-                    <div className="p-2 bg-[#2B2B2B] border-2 border-t-[#181818] border-l-[#181818] border-r-[#FFFFFF] border-b-[#FFFFFF] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                      <div className="text-2xl sm:text-3xl font-black text-[#55FFFF] leading-none [text-shadow:_1px_1px_0_#000]">
+                    {/* MINS Slot */}
+                    <div className="p-2 bg-white border-2 border-black shadow-[2px_2px_0px_#000]">
+                      <div className="text-2xl sm:text-3xl font-black text-[#16A34A] leading-none">
                         {String(timeRemaining.minutes).padStart(2, "0")}
                       </div>
-                      <div className="text-[10px] font-bold text-[#E0E0E0] uppercase mt-1">
+                      <div className="text-[10px] font-bold text-slate-600 uppercase mt-1">
                         MINS
                       </div>
                     </div>
 
-                    {/* SECS Slot (Redstone) */}
-                    <div className="p-2 bg-[#2B2B2B] border-2 border-t-[#181818] border-l-[#181818] border-r-[#FFFFFF] border-b-[#FFFFFF] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                      <div className="text-2xl sm:text-3xl font-black text-[#FF5555] leading-none [text-shadow:_1px_1px_0_#000]">
+                    {/* SECS Slot */}
+                    <div className="p-2 bg-white border-2 border-black shadow-[2px_2px_0px_#000]">
+                      <div className="text-2xl sm:text-3xl font-black text-[#DC2626] leading-none">
                         {String(timeRemaining.seconds).padStart(2, "0")}
                       </div>
-                      <div className="text-[10px] font-bold text-[#E0E0E0] uppercase mt-1">
+                      <div className="text-[10px] font-bold text-slate-600 uppercase mt-1">
                         SECS
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* ── 5. Action Buttons (Enchanted Primary & Stone Secondary) ── */}
+                {/* ── 5. Action Buttons ── */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-1 font-mono">
-                  {/* Primary CTA: Enchanted Button */}
+                  {/* Primary CTA */}
                   <button
                     type="button"
                     onClick={handleRegisterClick}
-                    className="flex-1 h-12 px-5 bg-[#6B21A8] hover:bg-[#7E22CE] text-[#FFFF55] font-black text-sm sm:text-base uppercase tracking-wider border-3 border-t-[#C084FC] border-l-[#C084FC] border-r-[#3B0764] border-b-[#3B0764] active:border-t-[#3B0764] active:border-l-[#3B0764] active:border-r-[#C084FC] active:border-b-[#C084FC] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center justify-center gap-2 cursor-pointer transition-colors"
+                    className="flex-1 h-12 px-5 bg-[#5DB329] hover:bg-[#689B37] text-white font-black text-sm sm:text-base uppercase tracking-wider border-3 border-black shadow-[3px_3px_0px_#000] flex items-center justify-center gap-2 cursor-pointer transition-colors"
                   >
-                    <Rocket className="w-5 h-5 stroke-[2.5px] text-[#FFFF55]" />
+                    <Rocket className="w-5 h-5 stroke-[2.5px] text-white" />
                     <span>REGISTER YOUR TEAM NOW</span>
                     <span className="text-base">→</span>
                   </button>
 
-                  {/* Secondary Dismiss Button: Stone Button */}
+                  {/* Secondary Dismiss Button */}
                   <button
                     type="button"
                     onClick={handleClose}
-                    className="sm:w-28 h-12 px-4 bg-[#707070] hover:bg-[#858585] text-white hover:text-[#FFFF55] font-black text-sm uppercase tracking-wider border-3 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#383838] border-b-[#383838] active:border-t-[#383838] active:border-l-[#383838] active:border-r-[#FFFFFF] active:border-b-[#FFFFFF] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center justify-center cursor-pointer transition-colors"
+                    className="sm:w-28 h-12 px-4 bg-white hover:bg-slate-100 text-black font-black text-sm uppercase tracking-wider border-3 border-black shadow-[3px_3px_0px_#000] flex items-center justify-center cursor-pointer transition-colors"
                   >
                     GOT IT
                   </button>

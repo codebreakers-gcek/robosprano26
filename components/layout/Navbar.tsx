@@ -141,7 +141,7 @@ export function Navbar() {
         ref={headerRef}
         className={clsx(
           "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out",
-          "bg-[#0A0B0E]/95 backdrop-blur-md border-t border-white/10 border-b border-[#1C1F2B] shadow-[0_4px_25px_rgba(0,0,0,0.6)]",
+          "bg-white/95 backdrop-blur-md border-b-2 border-black shadow-[0_4px_16px_rgba(0,0,0,0.08)]",
           hideOnMobile &&
           !mobileMenuOpen &&
           "-translate-y-full lg:translate-y-0 opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto"
@@ -149,15 +149,15 @@ export function Navbar() {
       >
         {/* Main Navbar Bar */}
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-4">
-          {/* Brand / Logo - Pinned Left (Previous Styled Version) */}
+          {/* Brand / Logo - Pinned Left */}
           <div className="shrink-0 flex items-center">
             <Link
               href="/"
               onClick={() => playButtonClickSound(0.25)}
-              className="flex justify-center items-center gap-2 sm:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7700] shrink-0"
+              className="flex justify-center items-center gap-2 sm:gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0084FF] shrink-0"
               aria-label="Kilobots Robosprano Home"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 border-white/30 rounded-xl shadow-neo-sm bg-black shrink-0">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border-2 border-black rounded-xl shadow-[2px_2px_0px_#000] bg-[#0084FF] shrink-0">
                 <Image
                   src="/robosprano-1.webp"
                   alt="Kilobots Robotics"
@@ -168,7 +168,7 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-minecraftt text-lg sm:text-4xl tracking-wider text-white leading-none transition-colors group-hover:text-[#FFAA00]">
+                <span className="font-minecraftt text-lg sm:text-4xl tracking-wider text-black leading-none transition-colors group-hover:text-[#0084FF]">
                   ROBOSPRANO
                 </span>
               </div>
@@ -190,13 +190,13 @@ export function Navbar() {
                   onClick={() => playButtonClickSound(0.25)}
                   className={clsx(
                     "relative h-full flex items-center px-2 py-1 font-sans font-black text-xs sm:text-[13px] tracking-[0.16em] uppercase transition-colors duration-200 select-none",
-                    active ? "text-white" : "text-zinc-400 hover:text-white"
+                    active ? "text-[#0084FF]" : "text-zinc-700 hover:text-black"
                   )}
                   aria-current={active ? "page" : undefined}
                 >
                   <span>{link.label}</span>
 
-                  {/* Active Orange Glowing Tab at the bottom edge */}
+                  {/* Active Blue Glowing Tab at the bottom edge */}
                   {active && (
                     <motion.div
                       layoutId="activeNavTab"
@@ -205,22 +205,19 @@ export function Navbar() {
                         stiffness: 420,
                         damping: 32,
                       }}
-                      className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 pointer-events-none flex flex-col items-center z-10"
+                      className="absolute -bottom-[2px] left-1/2 -translate-x-1/2 pointer-events-none flex flex-col items-center z-10"
                     >
-                      {/* Ambient Orange Underglow */}
-                      <div className="absolute -bottom-1 w-20 sm:w-24 h-4 bg-[#FF6600]/60 blur-md rounded-full pointer-events-none" />
+                      {/* Ambient Blue Underglow */}
+                      <div className="absolute -bottom-1 w-20 sm:w-24 h-4 bg-[#0084FF]/40 blur-md rounded-full pointer-events-none" />
 
-                      {/* Trapezoid Tab matching reference image */}
+                      {/* Trapezoid Tab matching Minecraft light theme */}
                       <div
-                        className="w-16 sm:w-20 h-2 bg-gradient-to-r from-[#FF4400] via-[#FFAA00] to-[#FF4400] shadow-[0_2px_12px_#FF6600,0_0_20px_rgba(255,102,0,0.8)]"
+                        className="w-16 sm:w-20 h-2 bg-gradient-to-r from-[#0084FF] via-[#3898EC] to-[#0084FF] shadow-[0_2px_8px_#0084FF]"
                         style={{
                           clipPath:
                             "polygon(0 0, 100% 0, calc(100% - 6px) 100%, 6px 100%)",
                         }}
                       />
-
-                      {/* Top Hot Center Highlight */}
-                      <div className="w-16 sm:w-20 h-[2px] bg-gradient-to-r from-transparent via-[#FFF0B3] to-transparent -mt-[8px]" />
                     </motion.div>
                   )}
                 </Link>
@@ -234,7 +231,7 @@ export function Navbar() {
             <Link
               href="/register"
               onClick={() => playButtonClickSound(0.4)}
-              className="h-10 px-5 rounded-md sm:rounded-lg inline-flex items-center gap-2 bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7B00] hover:from-[#FF6600] hover:to-[#FF8800] text-white font-minecraftt font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_2px_10px_rgba(255,85,0,0.4)] hover:shadow-[0_0_20px_rgba(255,102,0,0.7)] active:scale-[0.98] transition-all cursor-pointer border-t border-orange-300/40"
+              className="h-10 px-5 rounded-md sm:rounded-lg inline-flex items-center gap-2 bg-[#5DB329] hover:bg-[#6CBF35] text-white font-black text-xs sm:text-sm uppercase tracking-wider shadow-[2px_2px_0px_#000] border-2 border-t-[#8CE249] border-l-[#8CE249] border-r-[#337A17] border-b-[#337A17] active:scale-[0.98] transition-all cursor-pointer [text-shadow:_1px_1px_0_#275A0E]"
             >
               <span className="tracking-[0.2em]">REGISTER</span>
               <ArrowRight className="w-4 h-4 stroke-[3px]" />
@@ -246,7 +243,7 @@ export function Navbar() {
             <Link
               href="/register"
               onClick={() => playButtonClickSound(0.4)}
-              className="h-9 px-3 rounded-md inline-flex items-center gap-1.5 bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white font-sans font-black text-xs uppercase tracking-wider shadow-[0_2px_8px_rgba(255,85,0,0.4)] border-t border-orange-300/40"
+              className="h-9 px-3 rounded-md inline-flex items-center gap-1.5 bg-[#5DB329] text-white font-sans font-black text-xs uppercase tracking-wider shadow-[2px_2px_0px_#000] border border-t-[#8CE249] border-l-[#8CE249] border-r-[#337A17] border-b-[#337A17]"
             >
               <span>REGISTER</span>
             </Link>
@@ -262,7 +259,7 @@ export function Navbar() {
               aria-label={
                 mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
               }
-              className="w-9 h-9 rounded-md bg-[#13151D] hover:bg-[#1C1F2B] border border-zinc-700/80 hover:border-zinc-500 flex items-center justify-center text-zinc-300 hover:text-white transition-all cursor-pointer"
+              className="w-9 h-9 rounded-md bg-white hover:bg-slate-100 border-2 border-black flex items-center justify-center text-black shadow-[2px_2px_0px_#000] transition-all cursor-pointer"
             >
               {mobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -285,7 +282,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as const }}
-              className="lg:hidden border-t border-zinc-800 bg-[#0B0D12]/98 backdrop-blur-xl px-4 sm:px-6 pt-4 pb-8 flex flex-col gap-2 shadow-[0_15px_40px_rgba(0,0,0,0.8)] max-h-[calc(100dvh-70px)] overflow-y-auto overscroll-contain text-white"
+              className="lg:hidden border-t-2 border-black bg-white/98 backdrop-blur-xl px-4 sm:px-6 pt-4 pb-8 flex flex-col gap-2 shadow-[0_15px_40px_rgba(0,0,0,0.15)] max-h-[calc(100dvh-70px)] overflow-y-auto overscroll-contain text-black"
             >
               {navLinks.map((link, idx) => {
                 const active = isLinkActive(link.href);
@@ -301,13 +298,13 @@ export function Navbar() {
                     className={clsx(
                       "px-4 py-3 rounded-md font-sans font-black text-xs sm:text-sm uppercase tracking-wider flex items-center justify-between transition-all",
                       active
-                        ? "bg-gradient-to-r from-[#FF5500]/25 to-transparent text-white border-l-3 border-[#FF7700] shadow-[inset_0_0_12px_rgba(255,102,0,0.15)]"
-                        : "bg-zinc-900/60 hover:bg-zinc-800/80 text-zinc-300 border border-zinc-800/80 hover:text-white"
+                        ? "bg-[#E0F2FE] text-[#0284C7] border-l-4 border-[#0284C7] shadow-[inset_0_0_12px_rgba(2,132,199,0.1)]"
+                        : "bg-slate-50 hover:bg-slate-100 text-zinc-800 border border-slate-200"
                     )}
                     aria-current={active ? "page" : undefined}
                   >
                     <div className="flex items-center gap-2">
-                      <span className={active ? "text-[#FFAA00]" : ""}>
+                      <span className={active ? "text-[#0284C7]" : ""}>
                         {link.label}
                       </span>
                     </div>
@@ -318,14 +315,14 @@ export function Navbar() {
                 );
               })}
 
-              <div className="pt-3 border-t border-zinc-800/80 mt-1">
+              <div className="pt-3 border-t border-slate-200 mt-1">
                 <Link
                   href="/register"
                   onClick={() => {
                     playButtonClickSound(0.4);
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full h-11 rounded-md bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7B00] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_4px_16px_rgba(255,85,0,0.4)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all border-t border-orange-300/40"
+                  className="w-full h-11 rounded-md bg-[#5DB329] hover:bg-[#6CBF35] text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider shadow-[2px_2px_0px_#000] flex items-center justify-center gap-2 active:scale-[0.98] transition-all border-2 border-t-[#8CE249] border-l-[#8CE249] border-r-[#337A17] border-b-[#337A17]"
                 >
                   <span>REGISTER NOW</span>
                   <ArrowRight className="w-4 h-4 stroke-[3px]" />

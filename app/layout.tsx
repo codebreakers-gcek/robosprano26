@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   description:
     "Official Robotics Championship & Tech Fest organized by Kilobots Robotics Society, Government College of Engineering Kalahandi (GCEK). ₹91,000+ prize pool across Robo War, DEATH RACE, Robo Sumo, Robo Soccer & Line Follower arenas.",
   keywords: [
-    "ROBOSPRANO 2026",
+    "ROBOSPRANO 2K26",
     "ROBOSPRANO '26",
     "ROBOSPRANO 26",
     "ROBOSPRANO Robotics",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     "Odisha robotics registration",
     "ROBOSPRANO registration",
     "ROBOSPRANO registration 2026",
-    "ROBOSPRANO 2026 registration",
+    "ROBOSPRANO 2K26 registration",
     "ROBOSPRANO robotics registration",
     "robotics registration Odisha",
     "online robotics registration",

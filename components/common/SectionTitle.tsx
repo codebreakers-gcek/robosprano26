@@ -32,12 +32,12 @@ export function SectionTitle({
   return (
     <div className={clsx("flex flex-col mb-6 sm:mb-10 w-full max-w-full overflow-hidden space-y-3", alignStyles[align], className)}>
       {tag && (
-        <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-3.5 py-1 bg-black text-[#55FF55] border-2 border-[#55FF55] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
+        <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-3.5 py-1 bg-[#5DB329] text-white border-2 border-[#2C4813] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
           <Sparkles className="w-3.5 h-3.5 stroke-[2.5px]" />
           <span>{tag}</span>
         </span>
       )}
-      <h2 className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tight leading-tight [text-shadow:_3px_3px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000] break-words max-w-full">
+      <h2 className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-black uppercase tracking-tight leading-tight [text-shadow:_2px_2px_0_#E2E8F0] break-words max-w-full">
         <span className={titleClassName}>{title}</span>{" "}
         {highlightText && (
           <span className="inline-block bg-[#FFAA00] text-black px-2.5 sm:px-3 py-0.5 border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] -rotate-1 [text-shadow:none]">
@@ -46,8 +46,8 @@ export function SectionTitle({
         )}
       </h2>
       {subtitle && (
-        <div className="bg-[#1B1B1B]/90 backdrop-blur-sm border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] px-4 sm:px-6 py-2.5 shadow-[4px_4px_0px_#000] max-w-3xl">
-          <p className={clsx("text-xs sm:text-sm md:text-base font-bold text-[#EAEAEA] font-mono leading-relaxed break-words", subtitleClassName)}>
+        <div className="bg-white/95 border-3 border-black px-4 sm:px-6 py-2.5 shadow-[4px_4px_0px_#000] max-w-3xl">
+          <p className={clsx("text-xs sm:text-sm md:text-base font-bold text-neutral-800 font-mono leading-relaxed break-words", subtitleClassName)}>
             {subtitle}
           </p>
         </div>

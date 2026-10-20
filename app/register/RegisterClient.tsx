@@ -176,9 +176,9 @@ export function RegisterClient({ events }: RegisterClientProps) {
   }, [events, selectedCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#0C0810] text-white pt-24 pb-20 relative selection:bg-[#FFAA00] selection:text-black">
+    <div className="min-h-screen bg-[#F0F8FF] text-black pt-24 pb-20 relative selection:bg-[#5DB329] selection:text-white">
       {/* Minecraft Arena Background Layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+      <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden opacity-25">
         <Image
           src="/minecraft/1.webp"
           alt="Arena Background"
@@ -186,7 +186,7 @@ export function RegisterClient({ events }: RegisterClientProps) {
           priority
           unoptimized
           sizes="100vw"
-          className="object-cover object-center opacity-20 mix-blend-luminosity"
+          className="object-cover object-center"
         />
       </div>
 
@@ -196,18 +196,18 @@ export function RegisterClient({ events }: RegisterClientProps) {
         {/* ========================================================================= */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-4">
           {/* Top Pill Badge */}
-          <div className="inline-flex items-center gap-2 font-minecraft text-[11px] sm:text-xs uppercase px-3.5 py-1.5 bg-[#1B1422] text-[#55FF55] border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black shadow-[2px_2px_0px_#000]">
+          <div className="inline-flex items-center gap-2 font-minecraft text-[11px] sm:text-xs uppercase px-3.5 py-1.5 bg-white text-[#B45309] border-2 border-black shadow-[2px_2px_0px_#000]">
             <PixelXPOrb size={14} />
             <span>OFFICIAL ENTRY PORTAL // ROBOSPRANO &apos;26</span>
             <PixelXPOrb size={14} />
           </div>
 
-          {/* Massive 3D Title */}
-          <h1 className="font-minecraft text-3xl min-[360px]:text-4xl sm:text-6xl md:text-7xl uppercase tracking-wider font-black text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5C0] via-[#FFAA00] to-[#C47300] [filter:drop-shadow(3px_3px_0_#000)_drop-shadow(-1px_-1px_0_#000)_drop-shadow(0_5px_0_#5A3500)] select-none leading-none">
+          {/* 3D Title */}
+          <h1 className="font-minecraft text-3xl min-[360px]:text-4xl sm:text-6xl md:text-7xl uppercase tracking-wider font-black text-black select-none leading-none">
             ARENA REGISTRATION
           </h1>
 
-          <p className="font-mono text-xs sm:text-sm md:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-mono text-xs sm:text-sm md:text-base text-slate-700 max-w-2xl mx-auto leading-relaxed font-semibold">
             Choose your combat division, register your roster via the official
             Google Form, or view event specifications for arena dimensions and
             rules.
@@ -215,35 +215,35 @@ export function RegisterClient({ events }: RegisterClientProps) {
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-2 max-w-3xl mx-auto">
-            <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+            <div className="bg-white border-2 border-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
+              <span className="block text-[10px] sm:text-xs font-mono text-slate-500 uppercase font-bold">
                 Total Bounty
               </span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#FFAA00] font-bold">
+              <span className="block font-minecraft text-sm sm:text-lg text-[#B45309] font-bold">
                 ₹91,000
               </span>
             </div>
-            <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+            <div className="bg-white border-2 border-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
+              <span className="block text-[10px] sm:text-xs font-mono text-slate-500 uppercase font-bold">
                 Arena Events
               </span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#55FFFF] font-bold">
+              <span className="block font-minecraft text-sm sm:text-lg text-[#0284C7] font-bold">
                 5 DIVISIONS
               </span>
             </div>
-            <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+            <div className="bg-white border-2 border-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
+              <span className="block text-[10px] sm:text-xs font-mono text-slate-500 uppercase font-bold">
                 Tournament Dates
               </span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#55FF55] font-bold">
+              <span className="block font-minecraft text-sm sm:text-lg text-[#15803D] font-bold">
                 NOV 05–06
               </span>
             </div>
-            <div className="bg-[#1B1422]/90 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
-              <span className="block text-[10px] sm:text-xs font-mono text-neutral-400 uppercase">
+            <div className="bg-white border-2 border-black p-2.5 sm:p-3 text-center shadow-[3px_3px_0px_#000]">
+              <span className="block text-[10px] sm:text-xs font-mono text-slate-500 uppercase font-bold">
                 Host Venue
               </span>
-              <span className="block font-minecraft text-sm sm:text-lg text-[#FF5555] font-bold">
+              <span className="block font-minecraft text-sm sm:text-lg text-[#DC2626] font-bold">
                 GCEK KALAHANDI
               </span>
             </div>
@@ -256,45 +256,45 @@ export function RegisterClient({ events }: RegisterClientProps) {
         </div>
 
         {/* Tournament 2-Day Match Schedule & Venue Briefing */}
-        <div className="mb-8 bg-[#160E1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black p-4 sm:p-5 shadow-[4px_4px_0px_#000]">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-2 mb-3">
-            <span className="font-sans text-xs sm:text-sm text-[#FFAA00] font-black uppercase tracking-wider flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#FFAA00]" />
+        <div className="mb-8 bg-white border-3 border-black p-4 sm:p-5 shadow-[4px_4px_0px_#000]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-black/20 pb-2 mb-3">
+            <span className="font-sans text-xs sm:text-sm text-[#B45309] font-black uppercase tracking-wider flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-[#B45309]" />
               TOURNAMENT 2-DAY SCHEDULE &amp; VENUES
             </span>
-            <span className="font-mono text-[10px] text-neutral-400">
+            <span className="font-mono text-[10px] text-slate-600 font-bold">
               GCE Kalahandi Campus Arenas
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-mono text-xs">
-            <div className="p-3 bg-[#1F1629] border border-white/5 space-y-1">
+            <div className="p-3 bg-[#FEFCE8] border-2 border-black space-y-1">
               <div className="flex items-center justify-between">
-                <span className="font-sans font-black text-xs sm:text-sm text-[#FFAA00]">DAY 1 (NOV 05):</span>
-                <span className="text-[10px] bg-[#FFAA00]/20 text-[#FFAA00] px-1.5 py-0.5 border border-[#FFAA00]/40 font-bold">QUALIFIERS</span>
+                <span className="font-sans font-black text-xs sm:text-sm text-[#B45309]">DAY 1 (NOV 05):</span>
+                <span className="text-[10px] bg-white text-[#B45309] px-1.5 py-0.5 border border-black font-bold">QUALIFIERS</span>
               </div>
-              <p className="text-neutral-300">
+              <p className="text-slate-800 font-semibold">
                 Qualifying matches for Death Race, Sumo, Soccer &amp; Line Follower.
               </p>
-              <p className="text-[#FF7777] text-[11px] font-bold">
+              <p className="text-[#DC2626] text-[11px] font-black">
                 ⛔ No Robo War matches on Day 1.
               </p>
             </div>
 
-            <div className="p-3 bg-[#1F1629] border border-white/5 space-y-1">
+            <div className="p-3 bg-[#F0FDF4] border-2 border-black space-y-1">
               <div className="flex items-center justify-between">
-                <span className="font-sans font-black text-xs sm:text-sm text-[#55FFFF]">DAY 2 (NOV 06):</span>
-                <span className="text-[10px] bg-[#55FFFF]/20 text-[#55FFFF] px-1.5 py-0.5 border border-[#55FFFF]/40 font-bold">FINALS &amp; ROBO WAR</span>
+                <span className="font-sans font-black text-xs sm:text-sm text-[#0284C7]">DAY 2 (NOV 06):</span>
+                <span className="text-[10px] bg-white text-[#15803D] px-1.5 py-0.5 border border-black font-bold">FINALS &amp; ROBO WAR</span>
               </div>
-              <p className="text-neutral-300">
+              <p className="text-slate-800 font-semibold">
                 All Arena Final Matches + Full ROBO WAR Combat Arena (Prelims to Finals).
               </p>
             </div>
           </div>
 
-          <div className="mt-3 pt-2 border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-neutral-300">
-            <span>📍 <strong className="text-white">Line Follower:</strong> Seminar Hall, GCE Kalahandi</span>
-            <span>📍 <strong className="text-white">Robo War, Race, Sumo &amp; Soccer:</strong> Open Air Theatre, GCE Kalahandi</span>
+          <div className="mt-3 pt-2 border-t border-black/20 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-700">
+            <span>📍 <strong className="text-black">Line Follower:</strong> Seminar Hall, GCE Kalahandi</span>
+            <span>📍 <strong className="text-black">Robo War, Race, Sumo &amp; Soccer:</strong> Open Air Theatre, GCE Kalahandi</span>
           </div>
         </div>
 
@@ -315,10 +315,10 @@ export function RegisterClient({ events }: RegisterClientProps) {
                       playButtonClickSound(0.2);
                       setSelectedCategory(cat.id);
                     }}
-                    className={`px-3 py-2 text-[11px] sm:text-xs font-minecraft uppercase whitespace-nowrap cursor-pointer transition-all border-2 shadow-[2px_2px_0px_#000] active:translate-y-0.5 ${
+                    className={`px-3 py-2 text-[11px] sm:text-xs font-minecraft uppercase whitespace-nowrap cursor-pointer transition-all border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 ${
                       isActive
-                        ? "bg-[#FFAA00] text-black border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] font-black"
-                        : "bg-[#1B1422] text-neutral-300 hover:text-white border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black hover:bg-[#2A1F36]"
+                        ? "bg-[#FFAA00] text-black font-black"
+                        : "bg-white text-slate-700 hover:text-black hover:bg-slate-100 font-bold"
                     }`}
                   >
                     {cat.label}
@@ -329,13 +329,13 @@ export function RegisterClient({ events }: RegisterClientProps) {
 
             {/* Instant Search Bar */}
             <div className="relative w-full md:w-72 shrink-0">
-              <Search className="w-4 h-4 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 placeholder="SEARCH ARENA..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 bg-[#1B1422] border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black text-xs font-mono text-white placeholder:text-neutral-500 shadow-[inset_1px_1px_3px_rgba(0,0,0,0.5)] focus:outline-none focus:border-[#FFAA00] uppercase"
+                className="w-full pl-9 pr-3 py-2 bg-white border-2 border-black text-xs font-mono text-black placeholder:text-slate-500 shadow-[inset_1px_1px_3px_rgba(0,0,0,0.1)] focus:outline-none focus:border-[#FFAA00] uppercase font-bold"
               />
             </div>
           </div>
@@ -351,19 +351,15 @@ export function RegisterClient({ events }: RegisterClientProps) {
             return (
               <div
                 key={event.id}
-                className="bg-[#170F1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black shadow-[6px_6px_0px_#000] flex flex-col justify-between hover:-translate-y-1.5 hover:shadow-[8px_8px_0px_#000] transition-all duration-200 relative group"
+                className="bg-white border-3 border-black shadow-[6px_6px_0px_#000] flex flex-col justify-between hover:-translate-y-1.5 hover:shadow-[8px_8px_0px_#000] transition-all duration-200 relative group text-black"
               >
                 {/* 4 Corner Rivets */}
-                <div className="absolute top-1 left-1 w-2.5 h-2.5 bg-[#3A3A3A] border border-black z-20 flex items-center justify-center">
-                  <div className="w-1 h-1 bg-[#888888]" />
-                </div>
-                <div className="absolute top-1 right-1 w-2.5 h-2.5 bg-[#3A3A3A] border border-black z-20 flex items-center justify-center">
-                  <div className="w-1 h-1 bg-[#888888]" />
-                </div>
+                <div className="absolute top-1 left-1 w-2.5 h-2.5 bg-[#FFAA00] border border-black z-20" />
+                <div className="absolute top-1 right-1 w-2.5 h-2.5 bg-[#FFAA00] border border-black z-20" />
 
                 <div>
                   {/* Banner Image Preview */}
-                  <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-black border-b-2 border-black">
+                  <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-slate-100 border-b-2 border-black">
                     <Image
                       src={event.image}
                       alt={event.title}
@@ -371,21 +367,21 @@ export function RegisterClient({ events }: RegisterClientProps) {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#170F1E] via-black/40 to-black/20 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
                     {/* Top Category Badge */}
                     <div className="absolute top-3 left-3 z-10">
                       <span
-                        className={`font-mono text-[10px] sm:text-xs uppercase px-2.5 py-0.5 border-2 shadow-[2px_2px_0px_#000] font-black tracking-wider ${badge.bg} ${badge.border} ${badge.text}`}
+                        className={`font-mono text-[10px] sm:text-xs uppercase px-2.5 py-0.5 border-2 border-black shadow-[2px_2px_0px_#000] font-black tracking-wider ${badge.bg} ${badge.text}`}
                       >
                         {badge.label}
                       </span>
                     </div>
 
                     {/* Bounty Ribbon */}
-                    <div className="absolute bottom-2.5 right-3 z-10 flex items-center gap-1.5 bg-black/85 backdrop-blur-xs px-2.5 py-1 border border-[#FFAA00]/50 shadow-[2px_2px_0px_#000]">
+                    <div className="absolute bottom-2.5 right-3 z-10 flex items-center gap-1.5 bg-white px-2.5 py-1 border-2 border-black shadow-[2px_2px_0px_#000]">
                       <PixelDiamond size={15} />
-                      <span className="font-minecraft text-xs text-[#55FFFF] font-bold">
+                      <span className="font-minecraft text-xs text-[#0284C7] font-black">
                         {event.prizePool} BOUNTY
                       </span>
                     </div>
@@ -395,58 +391,58 @@ export function RegisterClient({ events }: RegisterClientProps) {
                   <div className="p-4 sm:p-5 space-y-3.5">
                     {/* Event Title */}
                     <div>
-                      <h3 className="font-minecraft text-xl sm:text-2xl text-white font-black uppercase tracking-wide group-hover:text-[#FFAA00] transition-colors leading-tight">
+                      <h3 className="font-minecraft text-xl sm:text-2xl text-black font-black uppercase tracking-wide group-hover:text-[#B45309] transition-colors leading-tight">
                         {event.title}
                       </h3>
-                      {/* One-Liner Tagline (Concise pitch, NOT detailed rules/specs) */}
-                      <p className="font-mono text-xs text-neutral-300 mt-1.5 leading-relaxed line-clamp-2">
+                      {/* One-Liner Tagline */}
+                      <p className="font-mono text-xs text-slate-700 mt-1.5 leading-relaxed line-clamp-2 font-semibold">
                         {event.tagline}
                       </p>
                     </div>
 
                     {/* Clean Spec Grid: Essential Registration Information */}
-                    <div className="grid grid-cols-2 gap-2 pt-1 border-t border-white/10">
+                    <div className="grid grid-cols-2 gap-2 pt-1 border-t border-black/10">
                       {/* Registration Fee */}
-                      <div className="bg-[#100916] p-2 border border-white/5">
-                        <span className="text-[10px] font-mono text-neutral-400 block uppercase flex items-center gap-1">
-                          <Coins className="w-3 h-3 text-[#FFAA00]" />
+                      <div className="bg-[#F8FAFC] p-2 border border-black/20">
+                        <span className="text-[10px] font-mono text-slate-500 block uppercase font-bold flex items-center gap-1">
+                          <Coins className="w-3 h-3 text-[#B45309]" />
                           Entry Fee
                         </span>
-                        <span className="font-mono text-xs sm:text-sm font-bold text-white block mt-0.5">
+                        <span className="font-mono text-xs sm:text-sm font-black text-black block mt-0.5">
                           {event.fee}
                         </span>
                       </div>
 
                       {/* Team Size */}
-                      <div className="bg-[#100916] p-2 border border-white/5">
-                        <span className="text-[10px] font-mono text-neutral-400 block uppercase flex items-center gap-1">
-                          <Users className="w-3 h-3 text-[#55FF55]" />
+                      <div className="bg-[#F8FAFC] p-2 border border-black/20">
+                        <span className="text-[10px] font-mono text-slate-500 block uppercase font-bold flex items-center gap-1">
+                          <Users className="w-3 h-3 text-[#15803D]" />
                           Team Size
                         </span>
-                        <span className="font-mono text-xs sm:text-sm font-bold text-white block mt-0.5">
+                        <span className="font-mono text-xs sm:text-sm font-black text-black block mt-0.5">
                           {event.teamSize}
                         </span>
                       </div>
 
                       {/* Tournament Date */}
-                      <div className="bg-[#100916] p-2 border border-white/5">
-                        <span className="text-[10px] font-mono text-neutral-400 block uppercase flex items-center gap-1">
-                          <Calendar className="w-3 h-3 text-[#55FFFF]" />
+                      <div className="bg-[#F8FAFC] p-2 border border-black/20">
+                        <span className="text-[10px] font-mono text-slate-500 block uppercase font-bold flex items-center gap-1">
+                          <Calendar className="w-3 h-3 text-[#0284C7]" />
                           Date &amp; Time
                         </span>
-                        <span className="font-mono text-[11px] font-semibold text-neutral-200 block mt-0.5 truncate">
+                        <span className="font-mono text-[11px] font-bold text-slate-800 block mt-0.5 truncate">
                           {event.time} •{" "}
                           {event.date.split(",")[1]?.trim() || "Nov 2026"}
                         </span>
                       </div>
 
                       {/* Venue */}
-                      <div className="bg-[#100916] p-2 border border-white/5">
-                        <span className="text-[10px] font-mono text-neutral-400 block uppercase flex items-center gap-1">
-                          <MapPin className="w-3 h-3 text-[#FF5555]" />
+                      <div className="bg-[#F8FAFC] p-2 border border-black/20">
+                        <span className="text-[10px] font-mono text-slate-500 block uppercase font-bold flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-[#DC2626]" />
                           Arena Venue
                         </span>
-                        <span className="font-mono text-[11px] font-semibold text-neutral-200 block mt-0.5 truncate">
+                        <span className="font-mono text-[11px] font-bold text-slate-800 block mt-0.5 truncate">
                           {event.venue}
                         </span>
                       </div>
@@ -456,12 +452,12 @@ export function RegisterClient({ events }: RegisterClientProps) {
 
                 {/* Dual Action CTA Buttons (Fixed to Bottom) */}
                 <div className="p-4 sm:p-5 pt-0 space-y-2">
-                  {/* Primary CTA: Register Now (Direct Google Form Link) */}
+                  {/* Primary CTA: Register Now */}
                   {event.closed ? (
                     <button
                       type="button"
                       disabled
-                      className="w-full h-11 bg-neutral-800 text-neutral-500 font-minecraft text-xs uppercase tracking-wider border-2 border-neutral-700 flex items-center justify-center gap-2 cursor-not-allowed select-none"
+                      className="w-full h-11 bg-slate-200 text-slate-500 font-minecraft text-xs uppercase tracking-wider border-2 border-slate-400 flex items-center justify-center gap-2 cursor-not-allowed select-none"
                     >
                       <span>REGISTRATIONS CLOSED</span>
                     </button>
@@ -471,21 +467,21 @@ export function RegisterClient({ events }: RegisterClientProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => playButtonClickSound(0.4)}
-                      className="w-full h-11 bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7700] hover:brightness-110 text-white font-minecraft text-xs uppercase tracking-wider border-2 border-t-[#FFA066] border-l-[#FFA066] border-r-[#8F2F00] border-b-[#8F2F00] shadow-[3px_3px_0px_#000] active:translate-y-0.5 active:shadow-none flex items-center justify-center gap-2 cursor-pointer transition-all font-black"
+                      className="w-full h-11 bg-[#5DB329] hover:bg-[#4EA022] text-white font-minecraft text-xs uppercase tracking-wider border-2 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 active:shadow-none flex items-center justify-center gap-2 cursor-pointer transition-all font-black"
                     >
                       <span>REGISTER NOW</span>
                       <ExternalLink className="w-4 h-4 stroke-[2.5px]" />
                     </a>
                   )}
 
-                  {/* Secondary CTA: View Details (Redirects to /events/[slug]) */}
+                  {/* Secondary CTA: View Details */}
                   <Link
                     href={`/events/${event.slug}`}
                     onClick={() => playButtonClickSound(0.25)}
-                    className="w-full h-9 bg-[#24172E] hover:bg-[#322040] text-neutral-200 hover:text-white font-minecraft text-[11px] uppercase tracking-wider border-2 border-t-[#452D59] border-l-[#452D59] border-r-black border-b-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                    className="w-full h-9 bg-white hover:bg-slate-100 text-black font-minecraft text-[11px] uppercase tracking-wider border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 flex items-center justify-center gap-1.5 cursor-pointer transition-colors font-bold"
                   >
                     <span>VIEW EVENT DETAILS</span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#FFAA00]" />
+                    <ChevronRight className="w-3.5 h-3.5 text-[#B45309]" />
                   </Link>
                 </div>
               </div>
@@ -495,12 +491,12 @@ export function RegisterClient({ events }: RegisterClientProps) {
 
         {/* Empty State */}
         {filteredEvents.length === 0 && (
-          <div className="py-16 text-center space-y-3 bg-[#170F1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black p-8 shadow-[6px_6px_0px_#000] text-white max-w-xl mx-auto">
-            <Bot className="w-10 h-10 text-neutral-500 mx-auto" />
-            <h4 className="font-minecraft text-lg text-[#FFAA00]">
+          <div className="py-16 text-center space-y-3 bg-white border-3 border-black p-8 shadow-[6px_6px_0px_#000] text-black max-w-xl mx-auto">
+            <Bot className="w-10 h-10 text-slate-400 mx-auto" />
+            <h4 className="font-minecraft text-lg text-[#B45309]">
               NO MATCHING ARENAS
             </h4>
-            <p className="font-mono text-xs text-neutral-400">
+            <p className="font-mono text-xs text-slate-600">
               No tournament division matched your query. Clear your search or
               reset the category filter.
             </p>
@@ -510,7 +506,7 @@ export function RegisterClient({ events }: RegisterClientProps) {
                 setSelectedCategory("ALL");
                 setSearchQuery("");
               }}
-              className="mt-2 px-4 py-2 bg-[#FFAA00] text-black font-minecraft text-xs uppercase font-bold"
+              className="mt-2 px-4 py-2 bg-[#FFAA00] text-black font-minecraft text-xs uppercase font-bold border-2 border-black shadow-[2px_2px_0px_#000]"
             >
               SHOW ALL ARENAS
             </button>
@@ -520,17 +516,17 @@ export function RegisterClient({ events }: RegisterClientProps) {
         {/* ========================================================================= */}
         {/* REGISTRATION GUIDELINES & DISPATCH BRIEFING                               */}
         {/* ========================================================================= */}
-        <div className="mt-14 sm:mt-18 bg-[#170F1E] border-3 border-t-[#3E2B4B] border-l-[#3E2B4B] border-r-black border-b-black p-5 sm:p-7 shadow-[6px_6px_0px_#000]">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
+        <div className="mt-14 sm:mt-18 bg-white border-3 border-black p-5 sm:p-7 shadow-[6px_6px_0px_#000] text-black">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b-2 border-black/20 pb-4 mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-[#2A1F36] border-2 border-[#FFAA00] flex items-center justify-center shrink-0">
-                <ShieldCheck className="w-5 h-5 text-[#FFAA00]" />
+              <div className="w-9 h-9 bg-[#FEF3C7] border-2 border-black flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-5 h-5 text-[#B45309]" />
               </div>
               <div>
-                <h3 className="font-minecraft text-base sm:text-lg text-white uppercase">
+                <h3 className="font-minecraft text-base sm:text-lg text-black uppercase">
                   REGISTRATION INSTRUCTIONS &amp; PROTOCOL
                 </h3>
-                <p className="font-mono text-xs text-neutral-400">
+                <p className="font-mono text-xs text-slate-600 font-bold">
                   Quick rules for all team captains submitting official entry
                   forms.
                 </p>
@@ -540,18 +536,18 @@ export function RegisterClient({ events }: RegisterClientProps) {
             <Link
               href="/contact"
               onClick={() => playButtonClickSound(0.25)}
-              className="inline-flex items-center gap-2 font-mono text-xs text-[#55FFFF] hover:underline"
+              className="inline-flex items-center gap-2 font-mono text-xs text-[#0284C7] hover:underline font-bold"
             >
               <span>Need help? Contact Coordinators</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono text-neutral-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono text-slate-700">
             <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">
+                <span className="font-bold text-black block">
                   Inter-College Teams:
                 </span>
                 Students from different colleges or semesters may form combined
@@ -559,9 +555,9 @@ export function RegisterClient({ events }: RegisterClientProps) {
               </div>
             </div>
             <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">
+                <span className="font-bold text-black block">
                   ID Verification:
                 </span>
                 Every registered member must bring valid institutional photo ID
@@ -569,19 +565,19 @@ export function RegisterClient({ events }: RegisterClientProps) {
               </div>
             </div>
             <div className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-[#55FF55] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-[#15803D] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-white block">
+                <span className="font-bold text-black block">
                   Pit Confirmation:
                 </span>
                 Slot allocations and technical inspection schedule will be sent
                 via WhatsApp.
               </div>
             </div>
-            <div className="flex items-start gap-2.5 bg-[#25070B] border border-[#FF3333] p-2.5">
-              <Ban className="w-4 h-4 text-[#FF3333] shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2.5 bg-[#FEF2F2] border-2 border-[#DC2626] p-2.5">
+              <Ban className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
               <div>
-                <span className="font-bold text-[#FF5555] block">
+                <span className="font-black text-[#DC2626] block">
                   IGIT Sarang Debarred:
                 </span>
                 IGIT Sarang students &amp; teams are strictly NOT permitted to participate.

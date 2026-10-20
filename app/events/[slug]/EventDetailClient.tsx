@@ -252,7 +252,7 @@ export default function EventDetailClient({ event }: EventDetailClientProps) {
 
   const copyAllToClipboard = async () => {
     try {
-      const shareText = `${event.title} | Robosprano 2026
+      const shareText = `${event.title} | ROBOSPRANO 2K26
 ${event.description}
 ${event.date} at ${event.time}
 Venue: ${event.venue || event.location}
@@ -283,7 +283,7 @@ View Details: ${window.location.href}`;
       if (isMobile && navigator.share) {
         try {
           await navigator.share({
-            title: `${event.title} | Robosprano 2026`,
+            title: `${event.title} | ROBOSPRANO 2K26`,
             text: shareText,
           });
         } catch {
@@ -296,9 +296,9 @@ View Details: ${window.location.href}`;
   };
 
   return (
-    <div className="min-h-screen bg-[#0C0812] text-white pt-20 sm:pt-24 pb-16 relative overflow-hidden">
+    <div className="min-h-screen bg-[#F0F8FF] text-black pt-20 sm:pt-24 pb-16 relative overflow-hidden">
       {/* Full-Height Atmospheric Minecraft Background Layer */}
-      <div className="fixed inset-0 z-0 pointer-events-none select-none overflow-hidden">
+      <div className="fixed inset-0 z-0 pointer-events-none select-none overflow-hidden opacity-25">
         <Image
           src="/minecraft/1.webp"
           alt="Robosprano Arena World Background"
@@ -308,52 +308,103 @@ View Details: ${window.location.href}`;
           sizes="100vw"
           className="object-cover object-center"
         />
-        {/* Atmospheric Minecraft Dark Tint & Vignette Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0C0812]/90 via-[#0C0812]/60 to-[#0C0812]/95" />
-        {/* Subtle Minecraft Block Grid */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
-          }}
-        />
+        {/* Daylight Sky Tint Overlay */}
+        <div className="absolute inset-0 bg-[#F0F8FF]/30" />
       </div>
 
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 relative z-10 space-y-4 sm:space-y-8">
+        {/* ========================================================================= */}
+        {/* DESKTOP NAVIGATION CONTROLS: MOVED OUTSIDE AND ABOVE THE IMAGE           */}
+        {/* ========================================================================= */}
+        <div className="hidden md:flex items-center justify-between mb-4">
+          <Link
+            href="/events"
+            onClick={() => playButtonClickSound()}
+            className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-4 py-2 border-2 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
+          >
+            <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
+            <span>Back to Arenas</span>
+          </Link>
+
+          <div className="relative">
+            <button
+              type="button"
+              onClick={handleShare}
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-4 py-2 border-2 border-black shadow-[3px_3px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              <Share2 className="w-4 h-4 stroke-[2.5]" />
+              <span>Share</span>
+            </button>
+
+            {/* Minecraft GUI Share Dropdown */}
+            <AnimatePresence>
+              {isShareMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: -5 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: -5 }}
+                  className="absolute right-0 mt-2 w-72 bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-3 z-50 text-black"
+                >
+                  <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b-2 border-black/20">
+                    <PixelCompass size={16} />
+                    <span className="text-xs font-black text-black uppercase tracking-wider">
+                      Share Arena Details
+                    </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={copyAllToClipboard}
+                    className="w-full flex items-center justify-between px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-black text-xs font-bold border border-black transition-colors cursor-pointer"
+                  >
+                    <span className="truncate mr-2">
+                      {copied && copiedItem === "all"
+                        ? "Copied to Clipboard!"
+                        : "Copy Event Brief"}
+                    </span>
+                    {copied && copiedItem === "all" ? (
+                      <Check className="w-4 h-4 text-[#15803D] shrink-0" />
+                    ) : (
+                      <Copy className="w-4 h-4 text-slate-500 shrink-0" />
+                    )}
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+
         {/* ========================================================================= */}
         {/* 1. HERO BANNER: MINECRAFT PICTURE FRAME VIEWPORT                          */}
         {/* ========================================================================= */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="relative border-4 border-black shadow-[6px_6px_0px_#000] bg-[#140E18] overflow-hidden"
+          className="relative border-4 border-black shadow-[6px_6px_0px_#000] bg-white overflow-hidden"
         >
           {/* Decorative Corner Pixel Blocks */}
-          <div className="absolute top-0 left-0 w-3 h-3 bg-[#FFAA00] z-20" />
-          <div className="absolute top-0 right-0 w-3 h-3 bg-[#FFAA00] z-20" />
-          <div className="absolute bottom-0 left-0 w-3 h-3 bg-[#FFAA00] z-20" />
-          <div className="absolute bottom-0 right-0 w-3 h-3 bg-[#FFAA00] z-20" />
+          <div className="absolute top-0 left-0 w-3.5 h-3.5 bg-[#FFAA00] border border-black z-20" />
+          <div className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#FFAA00] border border-black z-20" />
+          <div className="absolute bottom-0 left-0 w-3.5 h-3.5 bg-[#FFAA00] border border-black z-20" />
+          <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#FFAA00] border border-black z-20" />
 
-          {/* Banner Image Container */}
-          <div className="relative h-[48vh] sm:h-[55vh] md:h-[60vh] w-full bg-[#18111B]">
+          {/* Banner Image Container: On mobile kept untouched, on desktop exact 16:9 full fit */}
+          <div className="relative h-[48vh] sm:h-[55vh] md:h-auto md:aspect-[16/9] w-full bg-slate-100 overflow-hidden">
             <img
               src={event.image}
               alt={event.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:aspect-[16/9]"
             />
-            {/* Minecraft Obsidian Vignette Gradient */}
-
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0C0812]/80 via-transparent to-[#0C0812]/80" />
+            {/* Soft dark gradient at bottom only to make title text pop */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent md:from-black/60 md:via-transparent" />
           </div>
 
-          {/* Top Minecraft GUI Navigation Controls */}
-          <div className="absolute top-3 left-3 right-3 sm:top-5 sm:left-6 sm:right-6 flex items-center justify-between z-30">
+          {/* Mobile Only Navigation Controls (Inside Image - untouched for mobile) */}
+          <div className="md:hidden absolute top-3 left-3 right-3 sm:top-5 sm:left-6 sm:right-6 flex items-center justify-between z-30">
             <Link
               href="/events"
               onClick={() => playButtonClickSound()}
-              className="inline-flex items-center gap-2 bg-[#201628] hover:bg-[#2C1F38] text-white px-3 sm:px-4 py-2 border-2 border-t-[#4E3760] border-l-[#4E3760] border-r-black border-b-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4 stroke-[2.5]" />
               <span>Back to Arenas</span>
@@ -363,7 +414,7 @@ View Details: ${window.location.href}`;
               <button
                 type="button"
                 onClick={handleShare}
-                className="inline-flex items-center gap-2 bg-[#201628] hover:bg-[#2C1F38] text-white px-3 sm:px-4 py-2 border-2 border-t-[#4E3760] border-l-[#4E3760] border-r-black border-b-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-black px-3 sm:px-4 py-2 border-2 border-black shadow-[2px_2px_0px_#000] active:translate-y-0.5 text-xs sm:text-sm font-black uppercase tracking-wider transition-colors cursor-pointer"
               >
                 <Share2 className="w-4 h-4 stroke-[2.5]" />
                 <span>Share</span>
@@ -376,11 +427,11 @@ View Details: ${window.location.href}`;
                     initial={{ opacity: 0, scale: 0.95, y: -5 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95, y: -5 }}
-                    className="absolute right-0 mt-2 w-72 bg-[#1B1222] border-3 border-black shadow-[4px_4px_0px_#000] p-3 z-40"
+                    className="absolute right-0 mt-2 w-72 bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-3 z-40 text-black"
                   >
-                    <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-neutral-800">
+                    <div className="flex items-center gap-2 pb-2.5 mb-2.5 border-b-2 border-black/20">
                       <PixelCompass size={16} />
-                      <span className="text-xs font-bold text-white uppercase tracking-wider">
+                      <span className="text-xs font-black text-black uppercase tracking-wider">
                         Share Arena Details
                       </span>
                     </div>
@@ -388,7 +439,7 @@ View Details: ${window.location.href}`;
                     <button
                       type="button"
                       onClick={copyAllToClipboard}
-                      className="w-full flex items-center justify-between px-3 py-2.5 bg-black/60 hover:bg-black text-white text-xs font-semibold border border-neutral-700 transition-colors cursor-pointer"
+                      className="w-full flex items-center justify-between px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-black text-xs font-bold border border-black transition-colors cursor-pointer"
                     >
                       <span className="truncate mr-2">
                         {copied && copiedItem === "all"
@@ -396,9 +447,9 @@ View Details: ${window.location.href}`;
                           : "Copy Event Brief"}
                       </span>
                       {copied && copiedItem === "all" ? (
-                        <Check className="w-4 h-4 text-[#55FF55] shrink-0" />
+                        <Check className="w-4 h-4 text-[#15803D] shrink-0" />
                       ) : (
-                        <Copy className="w-4 h-4 text-neutral-400 shrink-0" />
+                        <Copy className="w-4 h-4 text-slate-500 shrink-0" />
                       )}
                     </button>
                   </motion.div>
@@ -411,21 +462,21 @@ View Details: ${window.location.href}`;
           <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-7 md:p-10 z-20">
             <div className="space-y-2 sm:space-y-3">
               {/* Boss / Arena Level Tag */}
-              <div className="inline-flex items-center gap-2 bg-[#120A17] border-2 border-[#FFAA00] text-[#FFAA00] px-3 py-1 shadow-[2px_2px_0px_#000] text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 bg-white border-2 border-black text-[#B45309] px-3 py-1 shadow-[2px_2px_0px_#000] text-xs font-black uppercase tracking-wider">
                 <PixelXPOrb size={13} />
                 <span>{event.badge || "ROBOSPRANO '26 ARENA"}</span>
-                <span className="text-neutral-500">•</span>
-                <span className="text-white/80">{event.category}</span>
+                <span className="text-slate-400">•</span>
+                <span className="text-slate-800">{event.category}</span>
               </div>
 
-              {/* Title (Preserved fonts) */}
+              {/* Title */}
               <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-[2px_2px_0px_#000]">
                 {event.title}
               </h1>
 
               {/* Tagline */}
               {event.tagline && (
-                <p className="text-neutral-300 text-sm sm:text-base max-w-3xl leading-relaxed font-medium">
+                <p className="text-slate-200 text-sm sm:text-base max-w-3xl leading-relaxed font-semibold drop-shadow-[1px_1px_0px_#000]">
                   {event.tagline}
                 </p>
               )}
@@ -449,27 +500,27 @@ View Details: ${window.location.href}`;
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="bg-[#160E1C] border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative"
+              className="bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative text-black"
             >
               {/* Corner Pixel Block */}
-              <div className="absolute top-0 left-0 w-2 h-2 bg-[#FFAA00]" />
-              <div className="absolute bottom-0 right-0 w-2 h-2 bg-[#FFAA00]" />
+              <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-[#FFAA00] border border-black" />
+              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#FFAA00] border border-black" />
 
-              <div className="flex items-center gap-3 pb-3 mb-4 border-b-2 border-neutral-800">
-                <div className="w-8 h-8 bg-black border-2 border-[#FFAA00] flex items-center justify-center shrink-0">
-                  <BookOpen className="w-4 h-4 text-[#FFAA00]" />
+              <div className="flex items-center gap-3 pb-3 mb-4 border-b-2 border-black/20">
+                <div className="w-8 h-8 bg-[#FEF3C7] border-2 border-black flex items-center justify-center shrink-0">
+                  <BookOpen className="w-4 h-4 text-[#B45309]" />
                 </div>
                 <div>
-                  <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                  <h2 className="text-lg sm:text-xl font-bold text-black tracking-tight">
                     About the Event
                   </h2>
-                  <span className="text-[10px] text-neutral-400 uppercase font-semibold">
+                  <span className="text-[10px] text-slate-600 uppercase font-bold">
                     Championship Directive &amp; Objective
                   </span>
                 </div>
               </div>
 
-              <p className="text-neutral-300 text-sm sm:text-base leading-relaxed font-normal">
+              <p className="text-slate-800 text-sm sm:text-base leading-relaxed font-semibold">
                 {event.description}
               </p>
             </motion.div>
@@ -480,20 +531,20 @@ View Details: ${window.location.href}`;
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#160E1C] border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative"
+                className="bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative text-black"
               >
-                <div className="absolute top-0 left-0 w-2 h-2 bg-[#55FFFF]" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 bg-[#55FFFF]" />
+                <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-[#3898EC] border border-black" />
+                <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#3898EC] border border-black" />
 
-                <div className="flex items-center gap-3 pb-3 mb-5 border-b-2 border-neutral-800">
-                  <div className="w-8 h-8 bg-black border-2 border-[#55FFFF] flex items-center justify-center shrink-0">
-                    <Wrench className="w-4 h-4 text-[#55FFFF]" />
+                <div className="flex items-center gap-3 pb-3 mb-5 border-b-2 border-black/20">
+                  <div className="w-8 h-8 bg-[#E0F2FE] border-2 border-black flex items-center justify-center shrink-0">
+                    <Wrench className="w-4 h-4 text-[#0284C7]" />
                   </div>
                   <div>
-                    <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                    <h2 className="text-lg sm:text-xl font-bold text-black tracking-tight">
                       Bot Specifications
                     </h2>
-                    <span className="text-[10px] text-[#55FFFF] uppercase font-semibold">
+                    <span className="text-[10px] text-[#0284C7] uppercase font-bold">
                       Engineering, Dimensions &amp; Voltage Limits
                     </span>
                   </div>
@@ -503,13 +554,13 @@ View Details: ${window.location.href}`;
                   {event.botSpecifications.map((specification, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-3 bg-black/40 border border-neutral-800 p-3 hover:border-[#55FFFF]/40 transition-colors"
+                      className="flex items-start gap-3 bg-[#F8FAFC] border border-black p-3 hover:bg-[#EBF5FF] transition-colors"
                     >
                       {/* Minecraft Pixel Bullet */}
-                      <div className="w-5 h-5 bg-black border border-[#55FFFF] flex items-center justify-center shrink-0 mt-0.5 shadow-[1px_1px_0px_#000]">
-                        <span className="w-1.5 h-1.5 bg-[#55FFFF] rotate-45" />
+                      <div className="w-5 h-5 bg-[#E0F2FE] border border-black flex items-center justify-center shrink-0 mt-0.5 shadow-[1px_1px_0px_#000]">
+                        <span className="w-1.5 h-1.5 bg-[#0284C7] rotate-45" />
                       </div>
-                      <span className="text-neutral-200 text-xs sm:text-sm leading-relaxed font-medium">
+                      <span className="text-slate-800 text-xs sm:text-sm leading-relaxed font-bold">
                         {specification}
                       </span>
                     </div>
@@ -524,20 +575,20 @@ View Details: ${window.location.href}`;
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
-                className="bg-[#160E1C] border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative"
+                className="bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-7 relative text-black"
               >
-                <div className="absolute top-0 left-0 w-2 h-2 bg-[#FF5555]" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 bg-[#FF5555]" />
+                <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-[#DC2626] border border-black" />
+                <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#DC2626] border border-black" />
 
-                <div className="flex items-center gap-3 pb-3 mb-5 border-b-2 border-neutral-800">
-                  <div className="w-8 h-8 bg-black border-2 border-[#FF5555] flex items-center justify-center shrink-0">
-                    <ShieldAlert className="w-4 h-4 text-[#FF5555]" />
+                <div className="flex items-center gap-3 pb-3 mb-5 border-b-2 border-black/20">
+                  <div className="w-8 h-8 bg-[#FEE2E2] border-2 border-black flex items-center justify-center shrink-0">
+                    <ShieldAlert className="w-4 h-4 text-[#DC2626]" />
                   </div>
                   <div>
-                    <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                    <h2 className="text-lg sm:text-xl font-bold text-black tracking-tight">
                       Rules &amp; Guidelines
                     </h2>
-                    <span className="text-[10px] text-[#FF5555] uppercase font-semibold">
+                    <span className="text-[10px] text-[#DC2626] uppercase font-bold">
                       Official Tournament Protocol &amp; Referee Regulations
                     </span>
                   </div>
@@ -547,13 +598,13 @@ View Details: ${window.location.href}`;
                   {event.rules.map((rule, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-3 bg-black/40 border border-neutral-800 p-3 hover:border-[#FF5555]/40 transition-colors"
+                      className="flex items-start gap-3 bg-[#F8FAFC] border border-black p-3 hover:bg-[#FEFCE8] transition-colors"
                     >
                       {/* Minecraft Pixel Bullet */}
-                      <div className="w-5 h-5 bg-black border border-[#FFAA00] flex items-center justify-center shrink-0 mt-0.5 shadow-[1px_1px_0px_#000]">
-                        <span className="w-1.5 h-1.5 bg-[#FFAA00] rotate-45" />
+                      <div className="w-5 h-5 bg-[#FEF3C7] border border-black flex items-center justify-center shrink-0 mt-0.5 shadow-[1px_1px_0px_#000]">
+                        <span className="w-1.5 h-1.5 bg-[#B45309] rotate-45" />
                       </div>
-                      <span className="text-neutral-300 text-xs sm:text-sm leading-relaxed font-normal">
+                      <span className="text-slate-800 text-xs sm:text-sm leading-relaxed font-semibold">
                         {rule}
                       </span>
                     </div>
@@ -572,19 +623,19 @@ View Details: ${window.location.href}`;
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="bg-[#160E1C] border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-6 relative"
+              className="bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-6 relative text-black"
             >
               {/* Corner Accents */}
-              <div className="absolute top-0 left-0 w-2 h-2 bg-[#FFAA00]" />
-              <div className="absolute top-0 right-0 w-2 h-2 bg-[#FFAA00]" />
+              <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-[#FFAA00] border border-black" />
+              <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-[#FFAA00] border border-black" />
 
-              <div className="flex items-center gap-2.5 pb-3 mb-5 border-b-2 border-neutral-800">
+              <div className="flex items-center gap-2.5 pb-3 mb-5 border-b-2 border-black/20">
                 <PixelChest size={22} />
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                  <h3 className="text-base sm:text-lg font-bold text-black tracking-tight">
                     Arena Telemetry &amp; Info
                   </h3>
-                  <span className="text-[10px] text-[#FFAA00] uppercase font-semibold">
+                  <span className="text-[10px] text-[#B45309] uppercase font-bold">
                     Schedule &amp; Entry Spec
                   </span>
                 </div>
@@ -593,18 +644,18 @@ View Details: ${window.location.href}`;
               {/* Inventory Slots List */}
               <div className="space-y-3.5">
                 {/* Date & Time */}
-                <div className="flex items-center gap-3 p-2 bg-black/50 border border-neutral-800">
-                  <div className="w-10 h-10 bg-black border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black flex items-center justify-center shrink-0 shadow-[inset_1px_1px_2px_#000]">
-                    <Calendar className="w-4 h-4 text-[#FFAA00]" />
+                <div className="flex items-center gap-3 p-2 bg-[#F8FAFC] border border-black">
+                  <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                    <Calendar className="w-4 h-4 text-[#B45309]" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] text-neutral-400 uppercase font-semibold block">
+                    <span className="text-[10px] text-slate-500 uppercase font-bold block">
                       Date &amp; Schedule
                     </span>
-                    <span className="text-xs sm:text-sm text-white font-bold block truncate">
+                    <span className="text-xs sm:text-sm text-black font-black block truncate">
                       {event.date}
                     </span>
-                    <span className="text-[11px] text-neutral-400 font-medium block">
+                    <span className="text-[11px] text-slate-600 font-bold block">
                       {event.time}
                     </span>
                   </div>
@@ -612,38 +663,38 @@ View Details: ${window.location.href}`;
 
                 {/* 2-Day Match Progression Box */}
                 {event.scheduleDetails && (
-                  <div className="p-3 bg-black/70 border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black space-y-2">
-                    <div className="flex items-center justify-between gap-2 border-b border-white/10 pb-1.5">
-                      <span className="text-[11px] text-[#FFAA00] uppercase font-bold tracking-wider font-sans flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-[#FFAA00]" />
+                  <div className="p-3 bg-[#FEFCE8] border-2 border-black space-y-2 shadow-[2px_2px_0px_#000]">
+                    <div className="flex items-center justify-between gap-2 border-b border-black/10 pb-1.5">
+                      <span className="text-[11px] text-[#B45309] uppercase font-bold tracking-wider font-sans flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-[#B45309]" />
                         2-DAY MATCH SCHEDULE
                       </span>
-                      <span className="font-mono text-[9px] bg-[#FFAA00]/20 text-[#FFAA00] px-1.5 py-0.5 border border-[#FFAA00]/50 font-black">
+                      <span className="font-mono text-[9px] bg-white text-[#B45309] px-1.5 py-0.5 border border-black font-black">
                         {event.id === "robo-war" ? "DAY 2 ONLY" : "DAY 1 & 2"}
                       </span>
                     </div>
 
                     <div className="space-y-1.5 font-mono text-[11px]">
-                      <div className="flex items-start justify-between gap-2 p-1.5 bg-[#140E1B] border border-white/5">
-                        <span className="text-[#FFAA00] font-bold shrink-0">
+                      <div className="flex items-start justify-between gap-2 p-1.5 bg-white border border-black/20">
+                        <span className="text-[#B45309] font-bold shrink-0">
                           DAY 1 (NOV 05):
                         </span>
-                        <span className="text-right text-neutral-200 font-medium">
+                        <span className="text-right text-slate-700 font-semibold">
                           {event.scheduleDetails.day1}
                         </span>
                       </div>
-                      <div className="flex items-start justify-between gap-2 p-1.5 bg-[#140E1B] border border-white/5">
-                        <span className="text-[#55FF55] font-bold shrink-0">
+                      <div className="flex items-start justify-between gap-2 p-1.5 bg-white border border-black/20">
+                        <span className="text-[#15803D] font-bold shrink-0">
                           DAY 2 (NOV 06):
                         </span>
-                        <span className="text-right text-[#55FF55] font-bold">
+                        <span className="text-right text-[#15803D] font-black">
                           {event.scheduleDetails.day2}
                         </span>
                       </div>
                     </div>
 
                     {event.scheduleDetails.stageNote && (
-                      <p className="text-[10px] font-mono text-neutral-400 italic pt-0.5">
+                      <p className="text-[10px] font-mono text-slate-600 italic pt-0.5 font-medium">
                         • {event.scheduleDetails.stageNote}
                       </p>
                     )}
@@ -651,30 +702,30 @@ View Details: ${window.location.href}`;
                 )}
 
                 {/* Venue */}
-                <div className="flex items-center gap-3 p-2 bg-black/50 border border-neutral-800">
-                  <div className="w-10 h-10 bg-black border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black flex items-center justify-center shrink-0 shadow-[inset_1px_1px_2px_#000]">
-                    <MapPin className="w-4 h-4 text-[#FF5555]" />
+                <div className="flex items-center gap-3 p-2 bg-[#F8FAFC] border border-black">
+                  <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                    <MapPin className="w-4 h-4 text-[#DC2626]" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] text-neutral-400 uppercase font-semibold block">
+                    <span className="text-[10px] text-slate-500 uppercase font-bold block">
                       Battlefield Venue
                     </span>
-                    <span className="text-xs sm:text-sm text-white font-bold block truncate">
+                    <span className="text-xs sm:text-sm text-black font-black block truncate">
                       {event.venue || event.location}
                     </span>
                   </div>
                 </div>
 
                 {/* Team Size */}
-                <div className="flex items-center gap-3 p-2 bg-black/50 border border-neutral-800">
-                  <div className="w-10 h-10 bg-black border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black flex items-center justify-center shrink-0 shadow-[inset_1px_1px_2px_#000]">
-                    <Users className="w-4 h-4 text-[#55FFFF]" />
+                <div className="flex items-center gap-3 p-2 bg-[#F8FAFC] border border-black">
+                  <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                    <Users className="w-4 h-4 text-[#0284C7]" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] text-neutral-400 uppercase font-semibold block">
+                    <span className="text-[10px] text-slate-500 uppercase font-bold block">
                       Squad Size
                     </span>
-                    <span className="text-xs sm:text-sm text-white font-bold block">
+                    <span className="text-xs sm:text-sm text-black font-black block">
                       {event.teamSize}
                     </span>
                   </div>
@@ -682,15 +733,15 @@ View Details: ${window.location.href}`;
 
                 {/* Registration Fee */}
                 {event.fee && (
-                  <div className="flex items-center gap-3 p-2 bg-black/50 border border-neutral-800">
-                    <div className="w-10 h-10 bg-black border-2 border-t-[#3A2A48] border-l-[#3A2A48] border-r-black border-b-black flex items-center justify-center shrink-0 shadow-[inset_1px_1px_2px_#000]">
-                      <IndianRupee className="w-4 h-4 text-[#55FF55]" />
+                  <div className="flex items-center gap-3 p-2 bg-[#F8FAFC] border border-black">
+                    <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                      <IndianRupee className="w-4 h-4 text-[#15803D]" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] text-neutral-400 uppercase font-semibold block">
+                      <span className="text-[10px] text-slate-500 uppercase font-bold block">
                         Team Registration Fee
                       </span>
-                      <span className="text-xs sm:text-sm text-[#55FF55] font-bold block">
+                      <span className="text-xs sm:text-sm text-[#15803D] font-black block">
                         {event.fee}
                       </span>
                     </div>
@@ -699,15 +750,15 @@ View Details: ${window.location.href}`;
 
                 {/* Prize Pool */}
                 {event.prizePool && (
-                  <div className="flex items-center gap-3 p-2 bg-black/70 border-2 border-[#FFAA00]/40 shadow-[0_0_12px_rgba(255,170,0,0.15)]">
-                    <div className="w-10 h-10 bg-black border-2 border-[#FFAA00] flex items-center justify-center shrink-0 shadow-[inset_1px_1px_2px_#000]">
-                      <Trophy className="w-4 h-4 text-[#FFAA00]" />
+                  <div className="flex items-center gap-3 p-2 bg-[#DCFCE7] border-2 border-black shadow-[2px_2px_0px_#000]">
+                    <div className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center shrink-0 shadow-[1px_1px_0px_#000]">
+                      <Trophy className="w-4 h-4 text-[#15803D]" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] text-[#FFAA00] uppercase font-bold block">
+                      <span className="text-[10px] text-[#15803D] uppercase font-black block">
                         Total Arena Cash Pool
                       </span>
-                      <span className="text-base sm:text-lg text-white font-black block">
+                      <span className="text-base sm:text-lg text-black font-black block">
                         {event.prizePool}
                       </span>
                     </div>
@@ -717,40 +768,40 @@ View Details: ${window.location.href}`;
 
               {/* Bounty Breakdown / Podium Payout Slots (if present) */}
               {event.bountyBreakdown && (
-                <div className="mt-5 pt-4 border-t border-neutral-800 space-y-2.5">
-                  <span className="text-[10px] text-neutral-400 uppercase font-bold tracking-wider block">
+                <div className="mt-5 pt-4 border-t border-black/20 space-y-2.5">
+                  <span className="text-[10px] text-slate-600 uppercase font-bold tracking-wider block">
                     Podium Loot Breakdown:
                   </span>
                   <div className="grid grid-cols-3 gap-2 text-center">
                     {/* 1st Place */}
-                    <div className="bg-black/80 border border-t-[#55FFFF] border-l-[#55FFFF] border-r-[#008888] border-b-[#008888] p-2 shadow-[1px_1px_0px_#000]">
-                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#55FFFF]">
+                    <div className="bg-[#E0F2FE] border-2 border-black p-2 shadow-[1px_1px_0px_#000]">
+                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#0284C7]">
                         <PixelDiamond size={13} />
                         <span>1ST</span>
                       </div>
-                      <span className="text-xs font-black text-[#55FFFF] block mt-1">
+                      <span className="text-xs font-black text-[#0284C7] block mt-1">
                         {event.bountyBreakdown.first}
                       </span>
                     </div>
 
                     {/* 2nd Place */}
-                    <div className="bg-black/80 border border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] p-2 shadow-[1px_1px_0px_#000]">
-                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#FFAA00]">
+                    <div className="bg-[#FEF3C7] border-2 border-black p-2 shadow-[1px_1px_0px_#000]">
+                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#B45309]">
                         <PixelGoldIngot size={13} />
                         <span>2ND</span>
                       </div>
-                      <span className="text-xs font-black text-[#FFAA00] block mt-1">
+                      <span className="text-xs font-black text-[#B45309] block mt-1">
                         {event.bountyBreakdown.second}
                       </span>
                     </div>
 
                     {/* 3rd Place */}
-                    <div className="bg-black/80 border border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#666666] border-b-[#666666] p-2 shadow-[1px_1px_0px_#000]">
-                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#E0E0E0]">
+                    <div className="bg-[#F1F5F9] border-2 border-black p-2 shadow-[1px_1px_0px_#000]">
+                      <div className="flex items-center justify-center gap-1 text-[10px] font-bold text-[#334155]">
                         <PixelIronIngot size={13} />
                         <span>3RD</span>
                       </div>
-                      <span className="text-xs font-black text-[#E0E0E0] block mt-1">
+                      <span className="text-xs font-black text-[#334155] block mt-1">
                         {event.bountyBreakdown.third}
                       </span>
                     </div>
@@ -766,11 +817,11 @@ View Details: ${window.location.href}`;
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => playButtonClickSound()}
-                    className="w-full bg-[#1F1827] hover:bg-[#2C2238] active:bg-[#160F1E] text-white hover:text-[#55FFFF] font-bold uppercase tracking-wider border-3 border-t-[#4E3963] border-l-[#4E3963] border-r-black border-b-black active:border-t-black active:border-l-black active:border-r-[#4E3963] active:border-b-[#4E3963] py-3.5 px-4 shadow-[3px_3px_0px_#000] flex items-center justify-center gap-2 active:translate-y-0.5 transition-all text-xs sm:text-sm cursor-pointer group"
+                    className="w-full bg-white hover:bg-slate-100 text-black font-bold uppercase tracking-wider border-3 border-black py-3.5 px-4 shadow-[3px_3px_0px_#000] flex items-center justify-center gap-2 active:translate-y-0.5 transition-all text-xs sm:text-sm cursor-pointer group"
                   >
-                    <BookOpen className="w-4 h-4 text-[#55FFFF] group-hover:scale-110 transition-transform" />
+                    <BookOpen className="w-4 h-4 text-[#0284C7] group-hover:scale-110 transition-transform" />
                     <span>Official Rulebook</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#55FFFF] ml-0.5" />
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-black ml-0.5" />
                   </a>
                 )}
 
@@ -778,7 +829,7 @@ View Details: ${window.location.href}`;
                   <button
                     type="button"
                     disabled
-                    className="w-full bg-[#2A2332] text-neutral-500 py-3.5 px-4 border-2 border-neutral-700 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 cursor-not-allowed select-none"
+                    className="w-full bg-slate-200 text-slate-500 py-3.5 px-4 border-2 border-slate-400 font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 cursor-not-allowed select-none"
                   >
                     Registrations Closed
                   </button>
@@ -788,7 +839,7 @@ View Details: ${window.location.href}`;
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => playButtonClickSound()}
-                    className="w-full bg-[#FFAA00] hover:bg-[#FFB726] active:bg-[#D98E00] text-black font-black uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] active:border-t-[#8F5500] active:border-l-[#8F5500] active:border-r-[#FFE285] active:border-b-[#FFE285] py-3.5 px-4 shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 active:translate-y-0.5 transition-all text-xs sm:text-sm cursor-pointer"
+                    className="w-full bg-[#5DB329] hover:bg-[#4EA022] text-white font-black uppercase tracking-wider border-4 border-black py-3.5 px-4 shadow-[4px_4px_0px_#000] flex items-center justify-center gap-2 active:translate-y-0.5 transition-all text-xs sm:text-sm cursor-pointer"
                   >
                     <span>Deploy Bot &amp; Register</span>
                     <ExternalLink className="w-4 h-4 stroke-[2.5]" />
@@ -806,20 +857,20 @@ View Details: ${window.location.href}`;
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#160E1C] border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-6 relative"
+                className="bg-white border-3 border-black shadow-[4px_4px_0px_#000] p-5 sm:p-6 relative text-black"
               >
-                <div className="absolute top-0 left-0 w-2 h-2 bg-[#55FFFF]" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-[#55FFFF]" />
+                <div className="absolute top-0 left-0 w-2.5 h-2.5 bg-[#0284C7] border border-black" />
+                <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-[#0284C7] border border-black" />
 
-                <div className="flex items-center gap-2.5 pb-3 mb-4 border-b-2 border-neutral-800">
-                  <div className="w-7 h-7 bg-black border border-[#55FFFF] flex items-center justify-center shrink-0">
-                    <Phone className="w-3.5 h-3.5 text-[#55FFFF]" />
+                <div className="flex items-center gap-2.5 pb-3 mb-4 border-b-2 border-black/20">
+                  <div className="w-7 h-7 bg-[#E0F2FE] border border-black flex items-center justify-center shrink-0">
+                    <Phone className="w-3.5 h-3.5 text-[#0284C7]" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-white tracking-tight">
+                    <h3 className="text-base font-bold text-black tracking-tight">
                       Coordinators
                     </h3>
-                    <span className="text-[10px] text-[#55FFFF] uppercase font-semibold">
+                    <span className="text-[10px] text-[#0284C7] uppercase font-bold">
                       Official Tournament Contacts
                     </span>
                   </div>
@@ -829,14 +880,14 @@ View Details: ${window.location.href}`;
                   {Object.entries(event.contact).map(([name, phone]) => (
                     <div
                       key={name}
-                      className="p-2.5 bg-black/50 border border-neutral-800 hover:border-neutral-700 transition-colors"
+                      className="p-2.5 bg-[#F8FAFC] border border-black hover:bg-slate-100 transition-colors"
                     >
-                      <span className="text-xs text-white font-semibold block leading-tight">
+                      <span className="text-xs text-black font-bold block leading-tight">
                         {name}
                       </span>
                       <a
                         href={`tel:${phone}`}
-                        className="text-[11px] text-[#FFAA00] font-bold hover:underline inline-block mt-0.5"
+                        className="text-[11px] text-[#B45309] font-black hover:underline inline-block mt-0.5"
                       >
                         {phone}
                       </a>

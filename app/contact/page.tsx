@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Official contact directory for ROBOSPRANO '26 at Government College of Engineering Kalahandi. Reach Chief Coordinator Nukesh Kumar Sahu, Kilobots student coordinators, and arena leads.",
   keywords: [
     "ROBOSPRANO contact",
-    "ROBOSPRANO 2026 contact number",
+    "ROBOSPRANO 2K26 contact number",
     "Kilobots GCEK contact",
     "Nukesh Kumar Sahu GCEK",
     "Government College of Engineering Kalahandi address",
@@ -71,7 +71,15 @@ export const metadata: Metadata = {
     description:
       "Have queries regarding bot participation, arena rules, lodging, or sponsorship? Contact the Kilobots GCEK team.",
     url: "https://robosprano.codebreakersgcek.tech/contact",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, type: "image/png", alt: "ROBOSPRANO '26 Contact" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "ROBOSPRANO '26 Contact",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

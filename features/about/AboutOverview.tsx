@@ -20,76 +20,76 @@ export function AboutOverview() {
     <div className="space-y-12 sm:space-y-16">
       {/* 1. Header Banner & Title */}
       <div className="flex flex-col items-center text-center space-y-4 max-w-4xl mx-auto px-2">
-        <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-3.5 py-1.5 bg-black text-[#55FF55] border-2 border-[#55FF55] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-          <Compass className="w-4 h-4 text-[#55FF55]" /> {hero.badge}
+        <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-3.5 py-1.5 bg-[#5DB329] text-white border-2 border-black shadow-[3px_3px_0px_#000]">
+          <Compass className="w-4 h-4 text-white" /> {hero.badge}
         </span>
 
-        <h1 className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tight leading-tight [text-shadow:_3px_3px_0_#000,_-2px_-2px_0_#000,_2px_-2px_0_#000,_-2px_2px_0_#000]">
+        <h1 className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-black uppercase tracking-tight leading-tight">
           {hero.title} //{" "}
-          <span className="inline-block bg-[#FFAA00] text-black px-3 py-0.5 border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] -rotate-1 [text-shadow:none]">
+          <span className="inline-block bg-[#FFAA00] text-black px-3 py-0.5 border-4 border-black shadow-[4px_4px_0px_#000] -rotate-1">
             {hero.edition}
           </span>
         </h1>
 
-        <div className="bg-[#1B1B1B]/95 backdrop-blur-md border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] px-5 sm:px-8 py-3 shadow-[5px_5px_0px_#000]">
-          <p className="text-sm sm:text-base md:text-lg font-black text-[#55FFFF] font-mono [text-shadow:_1px_1px_0_#000]">
+        <div className="bg-white border-3 border-black px-5 sm:px-8 py-3.5 shadow-[5px_5px_0px_#000]">
+          <p className="text-sm sm:text-base md:text-lg font-black text-black font-mono">
             {hero.tagline}
           </p>
         </div>
       </div>
 
-      {/* 2. Key Metric Blocks (Minecraft Stone Insets) */}
+      {/* 2. Key Metric Blocks (Minecraft Light Stone Insets) */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {hero.stats.map((stat, i) => (
           <div
             key={i}
-            className="bg-[#2B2B2B]/95 backdrop-blur-sm border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] p-4 sm:p-5 shadow-[4px_4px_0px_#000] flex flex-col justify-between"
+            className="bg-white border-3 border-black p-4 sm:p-5 shadow-[4px_4px_0px_#000] flex flex-col justify-between"
           >
-            <div className="font-mono text-[10px] sm:text-xs font-black uppercase text-[#FFAA00] tracking-wider [text-shadow:_1px_1px_0_#000]">
+            <div className="font-mono text-[10px] sm:text-xs font-black uppercase text-[#B45309] tracking-wider">
               {stat.label}
             </div>
-            <div className="font-mono text-2xl sm:text-3xl md:text-4xl font-black text-white my-1 [text-shadow:_2px_2px_0_#000]">
+            <div className="font-mono text-2xl sm:text-3xl md:text-4xl font-black text-black my-1">
               {stat.value}
             </div>
-            <div className="font-mono text-[11px] sm:text-xs font-bold text-[#AAAAAA]">
+            <div className="font-mono text-[11px] sm:text-xs font-bold text-slate-600">
               {stat.sub}
             </div>
           </div>
         ))}
       </div>
 
-      {/* 3. The 10-Edition Decade Legacy (Minecraft Stone GUI Slab) */}
-      <div className="bg-[#C6C6C6] border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[8px_8px_0px_#000] p-6 sm:p-10 space-y-6">
-        <div className="border-b-3 border-[#8B8B8B] pb-4 flex flex-wrap items-center justify-between gap-3">
-          <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase bg-[#5B8731] text-white px-3.5 py-1.5 border-2 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-            <Trophy className="w-4 h-4 text-[#FFAA00]" /> A DECADE OF INNOVATION
+      {/* 3. The 10-Edition Decade Legacy (Minecraft Light Stone Slab) */}
+      <div className="bg-white border-4 border-black shadow-[6px_6px_0px_#000] p-6 sm:p-10 space-y-6">
+        <div className="border-b-3 border-slate-200 pb-4 flex flex-wrap items-center justify-between gap-3">
+          <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-black uppercase bg-[#5DB329] text-white px-3.5 py-1.5 border-2 border-black shadow-[2px_2px_0px_#000]">
+            <Trophy className="w-4 h-4 text-white" /> A DECADE OF INNOVATION
           </span>
-          <span className="font-mono text-xs font-black text-[#2A2A2A] uppercase tracking-wide">
+          <span className="font-mono text-xs font-black text-slate-700 uppercase tracking-wide">
             OFFICIAL KILOBOTS RETROSPECTIVE
           </span>
         </div>
 
-        <div className="space-y-4 text-sm sm:text-base font-mono font-bold text-[#141414] leading-relaxed">
+        <div className="space-y-4 text-sm sm:text-base font-mono font-bold text-slate-800 leading-relaxed">
           {decadeLegacy.paragraphs.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
         </div>
 
         {/* Highlights Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t-3 border-[#8B8B8B]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t-3 border-slate-200">
           {decadeLegacy.highlights.map((h, idx) => (
             <div
               key={idx}
-              className="bg-[#8B8B8B] border-3 border-t-[#373737] border-l-[#373737] border-r-[#DBDBDB] border-b-[#DBDBDB] p-5 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.5)] flex flex-col justify-between"
+              className="bg-[#F1F5F9] border-2 border-black p-5 shadow-[inset_1px_1px_3px_rgba(0,0,0,0.08)] flex flex-col justify-between"
             >
               <div>
                 <div
-                  className="font-mono font-black text-sm sm:text-base uppercase mb-2 [text-shadow:_1px_1px_0_#000]"
-                  style={{ color: h.accent }}
+                  className="font-mono font-black text-sm sm:text-base uppercase mb-2"
+                  style={{ color: "#0F172A" }}
                 >
                   {h.title}
                 </div>
-                <p className="font-mono text-xs font-bold text-white leading-relaxed [text-shadow:_1px_1px_0_#000]">
+                <p className="font-mono text-xs font-bold text-slate-700 leading-relaxed">
                   {h.desc}
                 </p>
               </div>
@@ -98,25 +98,22 @@ export function AboutOverview() {
         </div>
       </div>
 
-      {/* 4. WHAT'S NEW THIS YEAR? — ROBO WAR DEBUT (Obsidian / Redstone Battle Slab) */}
-      <div className="relative bg-[#1A1110] border-4 border-t-[#FF5555] border-l-[#FF5555] border-r-[#550000] border-b-[#550000] shadow-[8px_8px_0px_#000] p-6 sm:p-10 space-y-6 overflow-hidden">
-        {/* Decorative corner glow */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-[#FF5555]/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b-2 border-[#552222] pb-4">
+      {/* 4. WHAT'S NEW THIS YEAR? — ROBO WAR DEBUT (Daylight Redstone TNT Slab) */}
+      <div className="relative bg-[#FEF2F2] border-4 border-black shadow-[6px_6px_0px_#000] p-6 sm:p-10 space-y-6 overflow-hidden">
+        <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b-2 border-red-200 pb-4">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs font-black uppercase bg-[#FF5555] text-white px-3 py-1 border-2 border-t-[#FFA6A6] border-l-[#FFA6A6] border-r-[#8B0000] border-b-[#8B0000] shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center gap-1.5">
+            <span className="font-mono text-xs font-black uppercase bg-[#DC2626] text-white px-3 py-1 border-2 border-black shadow-[2px_2px_0px_#000] flex items-center gap-1.5">
               <Flame className="w-3.5 h-3.5 text-yellow-300 fill-yellow-300" />
               {whatsNew.tag}
             </span>
-            <span className="font-mono text-xs font-bold text-[#FFAA00] [text-shadow:_1px_1px_0_#000] hidden sm:inline">
+            <span className="font-mono text-xs font-bold text-[#DC2626] hidden sm:inline">
               // 10TH EDITION EXCLUSIVE
             </span>
           </div>
 
           <Link
             href={`/events/${whatsNew.featuredEventSlug}`}
-            className="inline-flex items-center gap-1.5 font-mono text-xs font-black uppercase text-[#55FFFF] hover:underline [text-shadow:_1px_1px_0_#000]"
+            className="inline-flex items-center gap-1.5 font-mono text-xs font-black uppercase text-[#0284C7] hover:underline"
           >
             <span>ARENA PROTOCOL</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -124,16 +121,16 @@ export function AboutOverview() {
         </div>
 
         <div className="relative z-10 space-y-4">
-          <h2 className="font-black text-2xl xs:text-3xl sm:text-4xl text-white uppercase tracking-tight leading-tight [text-shadow:_2px_2px_0_#000]">
+          <h2 className="font-black text-2xl xs:text-3xl sm:text-4xl text-black uppercase tracking-tight leading-tight">
             WHAT&apos;S NEW THIS YEAR?{" "}
-            <span className="text-[#FF5555]">[ROBO WAR]</span>
+            <span className="text-[#DC2626]">[ROBO WAR]</span>
           </h2>
 
-          <div className="bg-[#2B1515] border-3 border-t-[#180A0A] border-l-[#180A0A] border-r-[#552525] border-b-[#552525] p-5 shadow-[inset_2px_2px_6px_rgba(0,0,0,0.8)] space-y-3">
-            <p className="font-mono text-sm sm:text-base font-bold text-[#FFAA00] leading-relaxed [text-shadow:_1px_1px_0_#000]">
+          <div className="bg-white border-3 border-black p-5 shadow-[inset_1px_1px_3px_rgba(0,0,0,0.06)] space-y-3">
+            <p className="font-mono text-sm sm:text-base font-bold text-[#B45309] leading-relaxed">
               {whatsNew.lead}
             </p>
-            <p className="font-mono text-xs sm:text-sm font-bold text-[#EAEAEA] leading-relaxed">
+            <p className="font-mono text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
               {whatsNew.body}
             </p>
           </div>
@@ -143,10 +140,10 @@ export function AboutOverview() {
             {whatsNew.specs.map((spec, idx) => (
               <div
                 key={idx}
-                className="bg-[#261515] border-2 border-t-[#4A2020] border-l-[#4A2020] border-r-[#150A0A] border-b-[#150A0A] px-4 py-3 flex items-center gap-3"
+                className="bg-white border-2 border-black px-4 py-3 flex items-center gap-3 shadow-[2px_2px_0px_#000]"
               >
-                <Swords className="w-4 h-4 text-[#FF5555] shrink-0" />
-                <span className="font-mono text-xs sm:text-sm font-bold text-white [text-shadow:_1px_1px_0_#000]">
+                <Swords className="w-4 h-4 text-[#DC2626] shrink-0" />
+                <span className="font-mono text-xs sm:text-sm font-bold text-black">
                   {spec}
                 </span>
               </div>
@@ -156,7 +153,7 @@ export function AboutOverview() {
           <div className="pt-3">
             <Link
               href={`/events/${whatsNew.featuredEventSlug}`}
-              className="inline-flex items-center justify-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-6 py-3 bg-[#FF5555] hover:bg-[#FF6E6E] text-white border-3 border-t-[#FFA6A6] border-l-[#FFA6A6] border-r-[#8B0000] border-b-[#8B0000] shadow-[4px_4px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 transition-all"
+              className="inline-flex items-center justify-center gap-2 font-mono text-xs sm:text-sm font-black uppercase px-6 py-3 bg-[#DC2626] hover:bg-[#B91C1C] text-white border-3 border-black shadow-[4px_4px_0px_#000] active:translate-y-0.5 transition-all"
             >
               <Swords className="w-4 h-4" />
               <span>EXPLORE ROBO WAR ARENA DETAILS &amp; RULES</span>
@@ -167,26 +164,26 @@ export function AboutOverview() {
       </div>
 
       {/* 5. NOW IT'S YOUR TURN TO BE PART OF THE LEGACY! (Call to Action Arena) */}
-      <div className="bg-[#C6C6C6] border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[8px_8px_0px_#000] p-6 sm:p-10 space-y-6">
-        <div className="border-b-3 border-[#8B8B8B] pb-3 flex items-center gap-2">
+      <div className="bg-white border-4 border-black shadow-[6px_6px_0px_#000] p-6 sm:p-10 space-y-6">
+        <div className="border-b-3 border-slate-200 pb-3 flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-[#FFAA00]" />
           <h3 className="font-mono font-black text-xl sm:text-2xl text-black uppercase tracking-tight">
             {callToAction.headline}
           </h3>
         </div>
 
-        <div className="space-y-4 text-sm sm:text-base font-mono font-bold text-[#141414] leading-relaxed">
+        <div className="space-y-4 text-sm sm:text-base font-mono font-bold text-slate-800 leading-relaxed">
           {callToAction.paragraphs.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
         </div>
 
         {/* Minecraft Legendary Motto Block */}
-        <div className="bg-[#1B1B1B] border-4 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] p-6 sm:p-8 text-center space-y-3 shadow-[6px_6px_0px_#000]">
-          <div className="font-mono font-black text-lg xs:text-xl sm:text-2xl md:text-3xl text-[#55FF55] tracking-wider uppercase [text-shadow:_2px_2px_0_#000]">
+        <div className="bg-[#F0FDF4] border-3 border-black p-6 sm:p-8 text-center space-y-3 shadow-[4px_4px_0px_#000]">
+          <div className="font-mono font-black text-lg xs:text-xl sm:text-2xl md:text-3xl text-[#16A34A] tracking-wider uppercase">
             {callToAction.motto}
           </div>
-          <p className="font-mono text-xs sm:text-sm font-bold text-[#FFAA00] [text-shadow:_1px_1px_0_#000]">
+          <p className="font-mono text-xs sm:text-sm font-bold text-[#B45309]">
             {callToAction.subMotto}
           </p>
         </div>
@@ -195,7 +192,7 @@ export function AboutOverview() {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-2">
           <Link
             href="/events"
-            className="inline-flex items-center justify-center gap-2 font-mono text-sm font-black uppercase px-6 py-3.5 bg-[#5B8731] hover:bg-[#689B37] text-white border-3 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[4px_4px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 transition-all text-center"
+            className="inline-flex items-center justify-center gap-2 font-mono text-sm font-black uppercase px-6 py-3.5 bg-[#5DB329] hover:bg-[#689B37] text-white border-3 border-black shadow-[4px_4px_0px_#000] active:translate-y-0.5 transition-all text-center"
           >
             <span>VIEW ALL 5 BATTLE ARENAS</span>
             <ArrowRight className="w-4 h-4" />
@@ -203,7 +200,7 @@ export function AboutOverview() {
 
           <Link
             href="/events"
-            className="inline-flex items-center justify-center gap-2 font-mono text-sm font-black uppercase px-6 py-3.5 bg-[#FFAA00] hover:bg-[#FFB726] text-black border-3 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] active:translate-y-0.5 transition-all text-center"
+            className="inline-flex items-center justify-center gap-2 font-mono text-sm font-black uppercase px-6 py-3.5 bg-[#FFAA00] hover:bg-[#FFB726] text-black border-3 border-black shadow-[4px_4px_0px_#000] active:translate-y-0.5 transition-all text-center"
           >
             <span>REGISTER YOUR SQUAD</span>
             <ArrowRight className="w-4 h-4 text-black" />

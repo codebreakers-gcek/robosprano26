@@ -311,8 +311,8 @@ export function MinecraftBlockMarquee({
   const marqueeContent = (
     <div
       className={clsx(
-        "relative w-full max-w-full overflow-hidden py-3.5 sm:py-4 select-none flex items-center bg-[#111111] border-y-4 border-black shadow-[0_4px_10px_rgba(0,0,0,0.8)] z-20",
-        bended && "rotate-[-1.5deg] scale-[1.02] shadow-[0_8px_20px_rgba(0,0,0,1)]",
+        "relative w-full max-w-full overflow-hidden py-3.5 sm:py-4 select-none flex items-center bg-[#E2E8F0] border-y-4 border-black shadow-[0_4px_10px_rgba(0,0,0,0.1)] z-20",
+        bended && "rotate-[-1.5deg] scale-[1.02] shadow-[0_8px_20px_rgba(0,0,0,0.15)]",
         className
       )}
     >
@@ -322,14 +322,14 @@ export function MinecraftBlockMarquee({
           return (
             <div
               key={idx}
-              className="inline-flex items-center gap-3 font-mono font-black text-xs sm:text-sm md:text-base tracking-widest uppercase [text-shadow:_2px_2px_0_#000]"
+              className="inline-flex items-center gap-3 font-mono font-black text-xs sm:text-sm md:text-base tracking-widest uppercase"
             >
               <Block size={26} />
-              <span className="text-white">{item.text}</span>
+              <span className="text-neutral-900">{item.text}</span>
               {item.highlight && (
                 <span
-                  style={{ color: item.color || "#FFAA00" }}
-                  className="bg-black/90 px-2 py-0.5 border border-[#333333] shadow-[1px_1px_0_#000]"
+                  style={{ color: item.color || "#B45309" }}
+                  className="bg-white px-2 py-0.5 border border-black shadow-[1px_1px_0_#000]"
                 >
                   {item.highlight}
                 </span>

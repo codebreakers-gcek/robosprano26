@@ -63,7 +63,7 @@ export function ContactContent() {
     }
   };
 
-  // Role-based Neutral Palette Generator (Lead = Warm Oak/Amber Gold, Tech = Iron Cyan Slate, Management = Moss Forest Deepslate)
+  // Role-based Light Daylight Palette Generator
   const getRoleTheme = (person: (typeof ALL_CONTACTS)[number]) => {
     const isChiefOrFeaturedLead =
       person.featured ||
@@ -71,169 +71,122 @@ export function ContactContent() {
       person.role.toLowerCase().includes("lead");
 
     if (isChiefOrFeaturedLead && person.category === "management") {
-      // Chief / Festival Leads: Warm Roasted Oak & Amber-Gold Neutral
+      // Chief / Festival Leads: Amber Gold Accented Light Stone Card
       return {
-        cardBg: "bg-[#29221B]/95",
-        borderBevel:
-          "border-t-[#A5783A] border-l-[#A5783A] border-r-[#15110C] border-b-[#15110C]",
-        hoverStyle:
-          "hover:border-t-[#FBBF24] hover:border-l-[#FBBF24] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(245,158,11,0.25)]",
-        titleColor: "text-[#FDF5DE]",
-        roleColor: "text-[#FBBF24]",
-        deptColor: "text-[#D2BEA0]",
-        categoryBadge:
-          "bg-[#1B1510] text-[#FCD34D] border-2 border-t-[#5C3F1B] border-l-[#5C3F1B] border-r-[#0F0C08] border-b-[#0F0C08]",
-        leadBadge:
-          "bg-[#B45309] text-[#FEF3C7] border-2 border-t-[#FBBF24] border-l-[#FBBF24] border-r-[#6B2807] border-b-[#6B2807]",
-        slotBg:
-          "bg-[#1B1510] border-2 border-t-[#0F0C08] border-l-[#0F0C08] border-r-[#423120] border-b-[#423120]",
-        slotText: "text-[#FDE68A]",
-        bioText: "text-[#E6DCCF]",
-        phoneIcon: "text-[#FBBF24]",
-        copyBtn:
-          "bg-[#382F25] hover:bg-[#483B2E] active:bg-[#2A231A] text-[#FDF5DE] border border-t-[#63513C] border-l-[#63513C] border-r-[#17130D] border-b-[#17130D]",
-        callBtn:
-          "bg-[#3D3125] hover:bg-[#4E3F2E] active:bg-[#2A2117] text-[#FDF5DE] border-2 border-t-[#785E40] border-l-[#785E40] border-r-[#1C160E] border-b-[#1C160E]",
-        whatsappBtn:
-          "bg-[#2F4D28] hover:bg-[#3B6133] active:bg-[#22391D] text-[#EAF7E6] border-2 border-t-[#568E48] border-l-[#568E48] border-r-[#142311] border-b-[#142311]",
-        socialBtn:
-          "bg-[#382F25] hover:bg-[#483B2E] text-[#FDF5DE] border-2 border-t-[#63513C] border-l-[#63513C] border-r-[#17130D] border-b-[#17130D]",
-        divider: "border-[#3D3125]",
+        cardBg: "bg-white",
+        borderBevel: "border-black",
+        hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+        titleColor: "text-black",
+        roleColor: "text-[#B45309]",
+        deptColor: "text-slate-600",
+        categoryBadge: "bg-[#FEF3C7] text-black border border-black",
+        leadBadge: "bg-[#FFAA00] text-black border border-black",
+        slotBg: "bg-[#F1F5F9] border-2 border-black",
+        slotText: "text-slate-900",
+        bioText: "text-slate-700",
+        phoneIcon: "text-[#B45309]",
+        copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border border-black",
+        callBtn: "bg-[#FFAA00] hover:bg-[#FFC040] text-black border-2 border-black",
+        whatsappBtn: "bg-[#16A34A] hover:bg-[#15803D] text-white border-2 border-black",
+        socialBtn: "bg-white hover:bg-slate-100 text-black border-2 border-black",
+        divider: "border-slate-200",
       };
     }
 
     if (person.category === "technical") {
-      // Technical & Arena Leads / Systems: Deep Slate & Iron Cyan Neutral
-      const isTechLead = person.featured || person.role.toLowerCase().includes("lead");
+      // Technical & Arena Leads / Systems: Sky Blue Accented Light Stone Card
       return {
-        cardBg: "bg-[#1D252E]/95",
-        borderBevel: isTechLead
-          ? "border-t-[#4E7E98] border-l-[#4E7E98] border-r-[#0D1318] border-b-[#0D1318]"
-          : "border-t-[#3E5C70] border-l-[#3E5C70] border-r-[#0D1318] border-b-[#0D1318]",
-        hoverStyle:
-          "hover:border-t-[#38BDF8] hover:border-l-[#38BDF8] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(56,189,248,0.25)]",
-        titleColor: "text-[#EEF5FA]",
-        roleColor: "text-[#38BDF8]",
-        deptColor: "text-[#ADC2D1]",
-        categoryBadge:
-          "bg-[#121A20] text-[#7DD3FC] border-2 border-t-[#27485E] border-l-[#27485E] border-r-[#090E12] border-b-[#090E12]",
-        leadBadge:
-          "bg-[#0369A1] text-[#E0F2FE] border-2 border-t-[#38BDF8] border-l-[#38BDF8] border-r-[#083344] border-b-[#083344]",
-        slotBg:
-          "bg-[#131B22] border-2 border-t-[#0A0E13] border-l-[#0A0E13] border-r-[#2A3E4E] border-b-[#2A3E4E]",
-        slotText: "text-[#BAE6FD]",
-        bioText: "text-[#D9E4EC]",
-        phoneIcon: "text-[#38BDF8]",
-        copyBtn:
-          "bg-[#283542] hover:bg-[#344557] active:bg-[#1D2731] text-[#EEF5FA] border border-t-[#475E74] border-l-[#475E74] border-r-[#10171D] border-b-[#10171D]",
-        callBtn:
-          "bg-[#2B3947] hover:bg-[#37495B] active:bg-[#1E2833] text-[#EEF5FA] border-2 border-t-[#516C85] border-l-[#516C85] border-r-[#11171E] border-b-[#11171E]",
-        whatsappBtn:
-          "bg-[#284C38] hover:bg-[#336147] active:bg-[#1C3627] text-[#E5F7ED] border-2 border-t-[#468A64] border-l-[#468A64] border-r-[#102218] border-b-[#102218]",
-        socialBtn:
-          "bg-[#283542] hover:bg-[#344557] text-[#EEF5FA] border-2 border-t-[#475E74] border-l-[#475E74] border-r-[#10171D] border-b-[#10171D]",
-        divider: "border-[#2D3C4B]",
+        cardBg: "bg-white",
+        borderBevel: "border-black",
+        hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+        titleColor: "text-black",
+        roleColor: "text-[#0284C7]",
+        deptColor: "text-slate-600",
+        categoryBadge: "bg-[#E0F2FE] text-[#0284C7] border border-black",
+        leadBadge: "bg-[#0284C7] text-white border border-black",
+        slotBg: "bg-[#F1F5F9] border-2 border-black",
+        slotText: "text-slate-900",
+        bioText: "text-slate-700",
+        phoneIcon: "text-[#0284C7]",
+        copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border border-black",
+        callBtn: "bg-[#0284C7] hover:bg-[#0369A1] text-white border-2 border-black",
+        whatsappBtn: "bg-[#16A34A] hover:bg-[#15803D] text-white border-2 border-black",
+        socialBtn: "bg-white hover:bg-slate-100 text-black border-2 border-black",
+        divider: "border-slate-200",
       };
     }
 
-    // Management & Student Coordinators: Moss Stone & Forest Cobble Neutral
+    // Management & Student Coordinators: Emerald Grass Accented Light Stone Card
     return {
-      cardBg: "bg-[#1E2721]/95",
-      borderBevel:
-        "border-t-[#4C7555] border-l-[#4C7555] border-r-[#0E1510] border-b-[#0E1510]",
-      hoverStyle:
-        "hover:border-t-[#34D399] hover:border-l-[#34D399] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(52,211,153,0.25)]",
-      titleColor: "text-[#EEF6F1]",
-      roleColor: "text-[#34D399]",
-      deptColor: "text-[#AFC5B4]",
-      categoryBadge:
-        "bg-[#131A15] text-[#6EE7B7] border-2 border-t-[#2A4E34] border-l-[#2A4E34] border-r-[#090E0B] border-b-[#090E0B]",
-      leadBadge:
-        "bg-[#047857] text-[#D1FAE5] border-2 border-t-[#34D399] border-l-[#34D399] border-r-[#064E3B] border-b-[#064E3B]",
-      slotBg:
-        "bg-[#131A15] border-2 border-t-[#090F0B] border-l-[#090F0B] border-r-[#263D2E] border-b-[#263D2E]",
-      slotText: "text-[#A7F3D0]",
-      bioText: "text-[#D8E6DC]",
-      phoneIcon: "text-[#34D399]",
-      copyBtn:
-        "bg-[#29372D] hover:bg-[#36473B] active:bg-[#1D2720] text-[#EEF6F1] border border-t-[#4A6250] border-l-[#4A6250] border-r-[#101712] border-b-[#101712]",
-      callBtn:
-        "bg-[#2C3B30] hover:bg-[#394C3F] active:bg-[#1F2A22] text-[#EEF6F1] border-2 border-t-[#506D57] border-l-[#506D57] border-r-[#111712] border-b-[#111712]",
-      whatsappBtn:
-        "bg-[#265335] hover:bg-[#306843] active:bg-[#1B3C26] text-[#E4F8EC] border-2 border-t-[#45965E] border-l-[#45965E] border-r-[#102417] border-b-[#102417]",
-      socialBtn:
-        "bg-[#29372D] hover:bg-[#36473B] text-[#EEF6F1] border-2 border-t-[#4A6250] border-l-[#4A6250] border-r-[#101712] border-b-[#101712]",
-      divider: "border-[#2B3B30]",
+      cardBg: "bg-white",
+      borderBevel: "border-black",
+      hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+      titleColor: "text-black",
+      roleColor: "text-[#16A34A]",
+      deptColor: "text-slate-600",
+      categoryBadge: "bg-[#DCFCE7] text-[#16A34A] border border-black",
+      leadBadge: "bg-[#5DB329] text-white border border-black",
+      slotBg: "bg-[#F1F5F9] border-2 border-black",
+      slotText: "text-slate-900",
+      bioText: "text-slate-700",
+      phoneIcon: "text-[#16A34A]",
+      copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border border-black",
+      callBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+      whatsappBtn: "bg-[#16A34A] hover:bg-[#15803D] text-white border-2 border-black",
+      socialBtn: "bg-white hover:bg-slate-100 text-black border-2 border-black",
+      divider: "border-slate-200",
     };
   };
 
-  // Official Email Card Themes (Neutral with Role Tints)
+  // Official Email Card Themes (Light Daylight Palettes)
   const getEmailTheme = (inboxId: string) => {
     if (inboxId === "email-robosprano-hq") {
-      // Fest Headquarters -> Warm Amber Gold Neutral
+      // Fest Headquarters -> Amber Gold Accented
       return {
-        cardBg: "bg-[#29221B]/95",
-        borderBevel:
-          "border-t-[#A5783A] border-l-[#A5783A] border-r-[#15110C] border-b-[#15110C]",
-        hoverStyle:
-          "hover:border-t-[#FBBF24] hover:border-l-[#FBBF24] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(245,158,11,0.25)]",
-        titleColor: "text-[#FDF5DE]",
-        badgeStyle:
-          "bg-[#1B1510] text-[#FCD34D] border-2 border-t-[#5C3F1B] border-l-[#5C3F1B] border-r-[#0F0C08] border-b-[#0F0C08]",
-        slotBg:
-          "bg-[#1B1510] border-2 border-t-[#0F0C08] border-l-[#0F0C08] border-r-[#423120] border-b-[#423120]",
-        slotText: "text-[#FDE68A]",
-        descText: "text-[#E6DCCF]",
-        copyBtn:
-          "bg-[#382F25] hover:bg-[#483B2E] active:bg-[#2A231A] text-[#FDF5DE] border-3 border-t-[#63513C] border-l-[#63513C] border-r-[#17130D] border-b-[#17130D]",
-        composeBtn:
-          "bg-[#B45309] hover:bg-[#D97706] active:bg-[#78350F] text-[#FEF3C7] border-3 border-t-[#FBBF24] border-l-[#FBBF24] border-r-[#6B2807] border-b-[#6B2807]",
-        divider: "border-[#3D3125]",
+        cardBg: "bg-white",
+        borderBevel: "border-black",
+        hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+        titleColor: "text-black",
+        badgeStyle: "bg-[#FEF3C7] text-black border border-black",
+        slotBg: "bg-[#F1F5F9] border-2 border-black",
+        slotText: "text-slate-900",
+        descText: "text-slate-700",
+        copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+        composeBtn: "bg-[#FFAA00] hover:bg-[#FFC040] text-black border-2 border-black",
+        divider: "border-slate-200",
       };
     }
 
     if (inboxId === "email-arena-tech") {
-      // Arena & Systems -> Deep Slate Cyan Neutral
+      // Arena & Systems -> Sky Blue Accented
       return {
-        cardBg: "bg-[#1D252E]/95",
-        borderBevel:
-          "border-t-[#4E7E98] border-l-[#4E7E98] border-r-[#0D1318] border-b-[#0D1318]",
-        hoverStyle:
-          "hover:border-t-[#38BDF8] hover:border-l-[#38BDF8] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(56,189,248,0.25)]",
-        titleColor: "text-[#EEF5FA]",
-        badgeStyle:
-          "bg-[#121A20] text-[#7DD3FC] border-2 border-t-[#27485E] border-l-[#27485E] border-r-[#090E12] border-b-[#090E12]",
-        slotBg:
-          "bg-[#131B22] border-2 border-t-[#0A0E13] border-l-[#0A0E13] border-r-[#2A3E4E] border-b-[#2A3E4E]",
-        slotText: "text-[#BAE6FD]",
-        descText: "text-[#D9E4EC]",
-        copyBtn:
-          "bg-[#283542] hover:bg-[#344557] active:bg-[#1D2731] text-[#EEF5FA] border-3 border-t-[#475E74] border-l-[#475E74] border-r-[#10171D] border-b-[#10171D]",
-        composeBtn:
-          "bg-[#0284C7] hover:bg-[#0EA5E9] active:bg-[#0369A1] text-[#E0F2FE] border-3 border-t-[#38BDF8] border-l-[#38BDF8] border-r-[#075985] border-b-[#075985]",
-        divider: "border-[#2D3C4B]",
+        cardBg: "bg-white",
+        borderBevel: "border-black",
+        hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+        titleColor: "text-black",
+        badgeStyle: "bg-[#E0F2FE] text-[#0284C7] border border-black",
+        slotBg: "bg-[#F1F5F9] border-2 border-black",
+        slotText: "text-slate-900",
+        descText: "text-slate-700",
+        copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+        composeBtn: "bg-[#0284C7] hover:bg-[#0369A1] text-white border-2 border-black",
+        divider: "border-slate-200",
       };
     }
 
-    // Institutional & Club Desk -> Warm Walnut/Bronze Neutral
+    // Institutional & Club Desk -> Grass Green Accented
     return {
-      cardBg: "bg-[#252220]/95",
-      borderBevel:
-        "border-t-[#857367] border-l-[#857367] border-r-[#131110] border-b-[#131110]",
-      hoverStyle:
-        "hover:border-t-[#D6C7BC] hover:border-l-[#D6C7BC] hover:shadow-[6px_6px_0px_#000,0_0_24px_rgba(214,199,188,0.2)]",
-      titleColor: "text-[#F7F2EE]",
-      badgeStyle:
-        "bg-[#161413] text-[#E2D5CC] border-2 border-t-[#4D423B] border-l-[#4D423B] border-r-[#0E0C0B] border-b-[#0E0C0B]",
-      slotBg:
-        "bg-[#161413] border-2 border-t-[#0D0B0A] border-l-[#0D0B0A] border-r-[#38312C] border-b-[#38312C]",
-      slotText: "text-[#E8DDD5]",
-      descText: "text-[#DDD3CA]",
-      copyBtn:
-        "bg-[#35302D] hover:bg-[#443E3A] active:bg-[#25221F] text-[#F7F2EE] border-3 border-t-[#5E554F] border-l-[#5E554F] border-r-[#151312] border-b-[#151312]",
-      composeBtn:
-        "bg-[#4D6F39] hover:bg-[#5E8746] active:bg-[#3A542B] text-[#EEF7EB] border-3 border-t-[#78A85B] border-l-[#78A85B] border-r-[#24351B] border-b-[#24351B]",
-      divider: "border-[#3A3430]",
+      cardBg: "bg-white",
+      borderBevel: "border-black",
+      hoverStyle: "hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000]",
+      titleColor: "text-black",
+      badgeStyle: "bg-[#DCFCE7] text-[#16A34A] border border-black",
+      slotBg: "bg-[#F1F5F9] border-2 border-black",
+      slotText: "text-slate-900",
+      descText: "text-slate-700",
+      copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+      composeBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+      divider: "border-slate-200",
     };
   };
 
@@ -282,21 +235,18 @@ export function ContactContent() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen w-full max-w-full overflow-x-hidden bg-[#16141B] text-[#E5E7EB]">
-      {/* Ambient Minecraft Background Layer with Warm Neutral Tinting */}
+    <div className="relative flex flex-col min-h-screen w-full max-w-full overflow-x-hidden bg-[#F0F8FF] text-black">
+      {/* Ambient Minecraft Background Layer with Daylight Tinting */}
       <div className="fixed inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <Image
-          src="/minecraft/contactbg.webp"
+          src="/minecraft/minecraft_2.webp"
           alt="Robosprano Contact Background"
           fill
           priority
           unoptimized
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center opacity-30"
         />
-        {/* Soft atmospheric overlay preserving room illumination & wooden warmth */}
-        <div className="absolute inset-0 bg-[#121017]/55 backdrop-blur-[0.5px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#141219]/75 via-[#141219]/35 to-[#141219]/85" />
       </div>
 
       <motion.div
@@ -311,26 +261,26 @@ export function ContactContent() {
         <motion.div variants={itemVariants} className="w-full max-w-full flex justify-center">
           <div className="flex flex-col items-center text-center space-y-3.5 sm:space-y-4 max-w-3xl">
             {/* Top Dispatch Tag */}
-            <span className="inline-flex items-center gap-2 font-minecraft text-xs sm:text-sm uppercase px-3.5 py-1.5 bg-[#25222D]/95 text-[#7EE896] border-2 border-t-[#4D455D] border-l-[#4D455D] border-r-[#131118] border-b-[#131118] shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000]">
-              <Mail className="w-3.5 h-3.5 text-[#7EE896]" /> COMMUNICATION &amp; DISPATCH DESK
+            <span className="inline-flex items-center gap-2 font-minecraft text-xs sm:text-sm uppercase px-3.5 py-1.5 bg-[#5DB329] text-white border-2 border-black shadow-[3px_3px_0px_#000]">
+              <Mail className="w-3.5 h-3.5 text-white" /> COMMUNICATION &amp; DISPATCH DESK
             </span>
 
             {/* Main Title: GET IN TOUCH */}
-            <h1 className="font-minecraft text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-[#F5F2EB] uppercase tracking-wider leading-tight [text-shadow:_3px_3px_0_#000,_-1px_-1px_0_#000,_0_6px_0_#000]">
+            <h1 className="font-minecraft text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-black uppercase tracking-wider leading-tight">
               GET IN{" "}
-              <span className="inline-block bg-[#E08A1E] text-[#1E1202] px-3.5 py-0.5 border-4 border-t-[#FCD34D] border-l-[#FCD34D] border-r-[#8F4E02] border-b-[#8F4E02] shadow-[4px_4px_0px_#000] -rotate-1 [text-shadow:none]">
+              <span className="inline-block bg-[#FFAA00] text-black px-3.5 py-0.5 border-4 border-black shadow-[4px_4px_0px_#000] -rotate-1">
                 TOUCH
               </span>
             </h1>
 
-            {/* Subtitle Card (Neutral Stone Panel) */}
-            <div className="bg-[#24212C]/95 border-3 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] px-5 sm:px-7 py-3 shadow-[4px_4px_0px_#000]">
-              <p className="text-xs sm:text-sm font-minecraft text-[#D4CFDF] leading-relaxed [text-shadow:_1px_1px_0_#000]">
+            {/* Subtitle Card (Light Stone Panel) */}
+            <div className="bg-white border-3 border-black px-5 sm:px-7 py-3.5 shadow-[4px_4px_0px_#000]">
+              <p className="text-xs sm:text-sm font-minecraft text-slate-800 leading-relaxed">
                 Connect directly with our Chief Coordinator, Student Coordinators, and Technical Leads for Robosprano &apos;26 registrations, bot specifications, arena logistics, and sponsorships.
               </p>
             </div>
 
-            {/* Quick-Jump HUD (Neutral Minecraft Slate Buttons) */}
+            {/* Quick-Jump HUD (Light Minecraft Slate Buttons) */}
             <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
               {[
                 { label: "EMAIL INBOXES", href: "#inboxes", icon: Mail },
@@ -344,9 +294,9 @@ export function ContactContent() {
                     key={anchor.label}
                     href={anchor.href}
                     onClick={() => playButtonClickSound(0.25)}
-                    className="px-3 py-1.5 bg-[#2B2735] hover:bg-[#393447] active:bg-[#1E1B26] text-[#E8E5F0] border-2 border-t-[#4E4760] border-l-[#4E4760] border-r-[#131119] border-b-[#131119] shadow-[2px_2px_0_#000] active:translate-y-0.5 transition-all font-minecraft text-[10px] sm:text-[11px] uppercase tracking-wider flex items-center gap-1.5 cursor-pointer [text-shadow:_1px_1px_0_#000]"
+                    className="px-3 py-1.5 bg-white hover:bg-slate-100 active:bg-slate-200 text-black border-2 border-black shadow-[2px_2px_0_#000] active:translate-y-0.5 transition-all font-minecraft text-[10px] sm:text-[11px] uppercase tracking-wider flex items-center gap-1.5 cursor-pointer font-bold"
                   >
-                    <Icon className="w-3 h-3 text-[#7EE896]" />
+                    <Icon className="w-3.5 h-3.5 text-[#0284C7]" />
                     <span>{anchor.label}</span>
                   </a>
                 );
@@ -356,18 +306,18 @@ export function ContactContent() {
         </motion.div>
 
         {/* ========================================================================= */}
-        {/* SECTION 2: OFFICIAL EMAILS HUB (FEATURED NEUTRAL MINECRAFT CARDS)         */}
+        {/* SECTION 2: OFFICIAL EMAILS HUB (FEATURED LIGHT MINECRAFT CARDS)           */}
         {/* ========================================================================= */}
         <motion.div id="inboxes" variants={itemVariants} className="space-y-4 w-full max-w-full">
           {/* Section Header Bar */}
-          <div className="flex items-center justify-between bg-[#24212C]/95 px-4 py-2.5 border-3 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] shadow-[4px_4px_0px_#000]">
+          <div className="flex items-center justify-between bg-white px-4 py-3 border-3 border-black shadow-[4px_4px_0px_#000]">
             <div className="flex items-center gap-2.5">
-              <Mail className="w-5 h-5 stroke-[2.5px] text-[#FBBF24]" />
-              <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#F5F2EB] [text-shadow:_2px_2px_0_#000]">
+              <Mail className="w-5 h-5 stroke-[2.5px] text-[#FFAA00]" />
+              <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black">
                 OFFICIAL INBOXES &amp; MAIL DIRECTORY
               </h3>
             </div>
-            <span className="font-minecraft text-[10px] sm:text-xs text-[#7DD3FC] hidden sm:inline-block [text-shadow:_1px_1px_0_#000]">
+            <span className="font-minecraft text-[10px] sm:text-xs text-[#0284C7] bg-[#E0F2FE] px-2 py-0.5 border border-[#0284C7] hidden sm:inline-block font-bold">
               ● 24/7 ACTIVE DISPATCH
             </span>
           </div>
@@ -381,32 +331,31 @@ export function ContactContent() {
                   key={inbox.id}
                   className={clsx(
                     theme.cardBg,
-                    theme.borderBevel,
+                    "border-3 border-black p-5 sm:p-6 shadow-[5px_5px_0px_#000] transition-all flex flex-col justify-between space-y-4 select-none",
                     theme.hoverStyle,
-                    "border-4 p-5 sm:p-6 shadow-[6px_6px_0px_#000] transition-all flex flex-col justify-between space-y-4 select-none",
                     inbox.primary && "relative overflow-hidden"
                   )}
                 >
                   <div className="space-y-3">
                     {/* Top Badges */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className={clsx("font-minecraft text-[10px] uppercase px-2.5 py-1 shadow-[1px_1px_0px_#000] [text-shadow:_1px_1px_0_#000]", theme.badgeStyle)}>
+                      <span className={clsx("font-minecraft text-[10px] uppercase px-2.5 py-1 font-bold", theme.badgeStyle)}>
                         {inbox.badge}
                       </span>
                       {inbox.primary && (
-                        <span className="font-minecraft text-[10px] font-black uppercase px-2.5 py-1 bg-[#B45309] text-[#FEF3C7] border-2 border-t-[#FBBF24] border-l-[#FBBF24] border-r-[#6B2807] border-b-[#6B2807] shadow-[1px_1px_0px_#000]">
+                        <span className="font-minecraft text-[10px] font-black uppercase px-2.5 py-1 bg-[#FFAA00] text-black border-2 border-black shadow-[1px_1px_0px_#000]">
                           PRIMARY
                         </span>
                       )}
                     </div>
 
                     {/* Desk Title */}
-                    <h4 className={clsx("font-minecraft text-sm sm:text-base uppercase tracking-wider leading-snug [text-shadow:_1px_1px_0_#000]", theme.titleColor)}>
+                    <h4 className={clsx("font-minecraft text-sm sm:text-base uppercase tracking-wider leading-snug font-black", theme.titleColor)}>
                       {inbox.label}
                     </h4>
 
                     {/* Email Inset Slot (Minecraft Inventory Slot) */}
-                    <div className={clsx("p-2.5 font-mono text-xs font-bold break-all select-all flex items-center justify-between gap-2 shadow-[inset_2px_2px_4px_rgba(0,0,0,0.85)]", theme.slotBg, theme.slotText)}>
+                    <div className={clsx("p-2.5 font-mono text-xs font-bold break-all select-all flex items-center justify-between gap-2 shadow-[inset_1px_1px_3px_rgba(0,0,0,0.1)]", theme.slotBg, theme.slotText)}>
                       <span>{inbox.email}</span>
                     </div>
 
@@ -421,14 +370,14 @@ export function ContactContent() {
                       type="button"
                       onClick={() => handleCopyEmail(inbox.email)}
                       className={clsx(
-                        "flex-1 py-2.5 px-3 font-minecraft text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer [text-shadow:_1px_1px_0_#000]",
+                        "flex-1 py-2.5 px-3 font-minecraft text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer font-bold",
                         theme.copyBtn
                       )}
                     >
                       {isCopied ? (
                         <>
-                          <Check className="w-3.5 h-3.5 text-[#7DD3FC] stroke-[3px]" />
-                          <span className="text-[#7DD3FC]">COPIED!</span>
+                          <Check className="w-3.5 h-3.5 text-white stroke-[3px]" />
+                          <span className="text-white">COPIED!</span>
                         </>
                       ) : (
                         <>
@@ -442,7 +391,7 @@ export function ContactContent() {
                       href={`mailto:${inbox.email}?subject=${encodeURIComponent("Inquiry regarding ROBOSPRANO '26 - Kilobots GCEK")}`}
                       onClick={() => playButtonClickSound(0.3)}
                       className={clsx(
-                        "py-2.5 px-3.5 font-minecraft text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer [text-shadow:_1px_1px_0_#000]",
+                        "py-2.5 px-3.5 font-minecraft text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[2px_2px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer font-bold",
                         theme.composeBtn
                       )}
                     >
@@ -457,19 +406,19 @@ export function ContactContent() {
         </motion.div>
 
         {/* ========================================================================= */}
-        {/* SECTION 3: DIRECTORY OF TEAMS (ROLE-BASED NEUTRAL MINECRAFT THEMES)       */}
+        {/* SECTION 3: DIRECTORY OF TEAMS (ROLE-BASED LIGHT MINECRAFT THEMES)         */}
         {/* ========================================================================= */}
         <motion.div id="coordinators" variants={itemVariants} className="space-y-5">
           {/* Section Header Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#24212C]/95 px-4 py-2.5 border-3 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] shadow-[4px_4px_0px_#000]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white px-4 py-3 border-3 border-black shadow-[4px_4px_0px_#000]">
             <div className="flex items-center gap-2.5">
-              <Users className="w-5 h-5 stroke-[2.5px] text-[#7EE896]" />
-              <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#F5F2EB] [text-shadow:_2px_2px_0_#000]">
+              <Users className="w-5 h-5 stroke-[2.5px] text-[#5DB329]" />
+              <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black font-black">
                 LEADERSHIP &amp; COORDINATOR DIRECTORY
               </h3>
             </div>
 
-            {/* Category Filter Tabs (Neutral 3D Buttons) */}
+            {/* Category Filter Tabs (Light 3D Buttons) */}
             <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar w-full sm:w-auto select-none">
               {[
                 { id: "all", label: "ALL DESKS", count: ALL_CONTACTS.length },
@@ -486,19 +435,19 @@ export function ContactContent() {
                       setSelectedCategory(tab.id as ContactCategory);
                     }}
                     className={clsx(
-                      "px-3 py-1.5 border-3 font-minecraft text-xs uppercase tracking-wider whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 shrink-0 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000]",
+                      "px-3 py-1.5 border-2 border-black font-minecraft text-xs uppercase tracking-wider whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 shrink-0 shadow-[2px_2px_0px_#000] font-black",
                       isActive
-                        ? "bg-[#33592C] hover:bg-[#3D6B35] text-[#EEF8EC] border-t-[#59934B] border-l-[#59934B] border-r-[#162713] border-b-[#162713]"
-                        : "bg-[#2B2735] hover:bg-[#393447] text-[#D4CFDF] border-t-[#4E4760] border-l-[#4E4760] border-r-[#131119] border-b-[#131119]"
+                        ? "bg-[#5DB329] hover:bg-[#689B37] text-white"
+                        : "bg-white hover:bg-slate-100 text-black"
                     )}
                   >
                     <span>{tab.label}</span>
                     <span
                       className={clsx(
-                        "font-minecraft text-[10px] px-1.5 py-0.2 border",
+                        "font-minecraft text-[10px] px-1.5 py-0.2 border border-black",
                         isActive
-                          ? "bg-[#142312] text-[#7DD3FC] border-[#2A4822]"
-                          : "bg-[#18161E] text-[#FCD34D] border-[#393445]"
+                          ? "bg-black text-[#55FFFF]"
+                          : "bg-[#F1F5F9] text-black"
                       )}
                     >
                       {tab.count}
@@ -510,35 +459,35 @@ export function ContactContent() {
           </div>
 
           {/* Search Bar HUD */}
-          <div className="bg-[#24212C]/95 border-3 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] p-2.5 sm:p-3 shadow-[4px_4px_0px_#000] flex items-center gap-3">
-            <Search className="w-4 h-4 text-neutral-400 shrink-0 ml-1" />
+          <div className="bg-white border-3 border-black p-2.5 sm:p-3 shadow-[4px_4px_0px_#000] flex items-center gap-3">
+            <Search className="w-4 h-4 text-slate-500 shrink-0 ml-1" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="SEARCH BY COORDINATOR NAME, ROLE, OR ARENA..."
-              className="w-full bg-transparent font-minecraft text-xs uppercase text-[#F5F2EB] placeholder-[#9E9AA8] focus:outline-none tracking-wider"
+              className="w-full bg-transparent font-minecraft text-xs uppercase text-black placeholder-slate-400 focus:outline-none tracking-wider font-bold"
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => setSearchQuery("")}
-                className="text-[#D4CFDF] hover:text-white font-minecraft text-xs px-2 py-0.5 bg-[#1B1822] border border-[#484257] cursor-pointer"
+                className="text-black hover:bg-slate-100 font-minecraft text-xs px-2 py-0.5 bg-[#F1F5F9] border border-black cursor-pointer font-bold"
               >
                 CLEAR
               </button>
             )}
           </div>
 
-          {/* Contact Cards Grid (Neutral Role-Based Minecraft Palettes) */}
+          {/* Contact Cards Grid (Light Role-Based Minecraft Palettes) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {filteredContacts.length === 0 ? (
-              <div className="col-span-full bg-[#24212C]/95 border-4 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] p-8 text-center shadow-[6px_6px_0px_#000] space-y-3">
-                <HelpCircle className="w-10 h-10 mx-auto text-[#FBBF24] stroke-[2px]" />
-                <h4 className="font-minecraft text-base sm:text-lg uppercase text-[#F5F2EB] [text-shadow:_2px_2px_0_#000]">
+              <div className="col-span-full bg-white border-3 border-black p-8 text-center shadow-[5px_5px_0px_#000] space-y-3">
+                <HelpCircle className="w-10 h-10 mx-auto text-[#FFAA00] stroke-[2px]" />
+                <h4 className="font-minecraft text-base sm:text-lg uppercase text-black font-black">
                   NO TEAM MEMBERS MATCHED &quot;{searchQuery}&quot;
                 </h4>
-                <p className="font-minecraft text-xs text-[#D4CFDF] max-w-sm mx-auto">
+                <p className="font-minecraft text-xs text-slate-600 max-w-sm mx-auto">
                   Try searching by first name, domain keyword, or reset the search query.
                 </p>
                 <button
@@ -548,7 +497,7 @@ export function ContactContent() {
                     setSearchQuery("");
                     setSelectedCategory("all");
                   }}
-                  className="px-4 py-2 bg-[#2B2735] hover:bg-[#393447] text-[#F5F2EB] border-3 border-t-[#4E4760] border-l-[#4E4760] border-r-[#131119] border-b-[#131119] font-minecraft text-xs uppercase shadow-[2px_2px_0px_#000] cursor-pointer"
+                  className="px-4 py-2 bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black font-minecraft text-xs uppercase shadow-[2px_2px_0px_#000] cursor-pointer font-black"
                 >
                   RESET SEARCH
                 </button>
@@ -563,9 +512,8 @@ export function ContactContent() {
                     key={person.id}
                     className={clsx(
                       theme.cardBg,
-                      theme.borderBevel,
-                      theme.hoverStyle,
-                      "border-4 p-5 sm:p-6 shadow-[6px_6px_0px_#000] transition-all flex flex-col justify-between space-y-4 select-none"
+                      "border-3 border-black p-5 sm:p-6 shadow-[5px_5px_0px_#000] transition-all flex flex-col justify-between space-y-4 select-none",
+                      theme.hoverStyle
                     )}
                   >
                     <div className="space-y-3">
@@ -696,87 +644,87 @@ export function ContactContent() {
         </motion.div>
 
         {/* ========================================================================= */}
-        {/* SECTION 4: CAMPUS HEADQUARTERS, TRANSIT & FAQS ROW (NEUTRAL PALETTES)     */}
+        {/* SECTION 4: CAMPUS HEADQUARTERS, TRANSIT & FAQS ROW (LIGHT MINECRAFT THEME) */}
         {/* ========================================================================= */}
         <motion.div id="venue" variants={itemVariants} className="space-y-4">
-          <div className="flex items-center gap-2 bg-[#24212C]/95 px-4 py-2.5 border-3 border-t-[#464056] border-l-[#464056] border-r-[#13121A] border-b-[#13121A] shadow-[4px_4px_0px_#000]">
-            <MapPin className="w-5 h-5 stroke-[2.5px] text-[#FBBF24]" />
-            <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#F5F2EB] [text-shadow:_2px_2px_0_#000]">
+          <div className="flex items-center gap-2 bg-white px-4 py-3 border-3 border-black shadow-[4px_4px_0px_#000]">
+            <MapPin className="w-5 h-5 stroke-[2.5px] text-[#FFAA00]" />
+            <h3 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black font-black">
               CAMPUS HEADQUARTERS, TRANSIT &amp; SUPPORT
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* CARD 1: Campus Headquarters & Venue (Warm Earth Oak Neutral) */}
-            <div className="bg-[#29221B]/95 border-4 border-t-[#A5783A] border-l-[#A5783A] border-r-[#15110C] border-b-[#15110C] p-5 sm:p-6 shadow-[6px_6px_0px_#000] flex flex-col justify-between space-y-4">
+            {/* CARD 1: Campus Headquarters & Venue (Light Stone Card) */}
+            <div className="bg-white border-3 border-black p-5 sm:p-6 shadow-[5px_5px_0px_#000] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center gap-2 border-b-2 border-[#3D3125] pb-2.5">
-                  <MapPin className="w-5 h-5 text-[#FBBF24] stroke-[3px]" />
-                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#FDF5DE] [text-shadow:_1px_1px_0_#000]">
+                <div className="flex items-center gap-2 border-b-2 border-slate-200 pb-2.5">
+                  <MapPin className="w-5 h-5 text-[#FFAA00] stroke-[3px]" />
+                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black font-black">
                     CAMPUS HEADQUARTERS
                   </h4>
                 </div>
 
-                <div className="space-y-2 text-xs font-minecraft text-[#D2BEA0] leading-relaxed [text-shadow:_1px_1px_0_#000]">
-                  <div className="text-sm uppercase text-[#7DD3FC]">
+                <div className="space-y-2 text-xs font-minecraft text-slate-800 leading-relaxed">
+                  <div className="text-sm uppercase text-[#0284C7] font-black">
                     {VENUE_DETAILS.institution}
                   </div>
-                  <div className="text-[11px] text-[#FBBF24]">
+                  <div className="text-[11px] text-[#B45309] font-bold">
                     {VENUE_DETAILS.department}
                   </div>
-                  <p className="pt-1 text-[#E6DCCF] font-sans text-xs">
+                  <p className="pt-1 text-slate-700 font-sans text-xs">
                     {VENUE_DETAILS.campus}, {VENUE_DETAILS.address}, {VENUE_DETAILS.city}, {VENUE_DETAILS.state} - {VENUE_DETAILS.pincode}
                   </p>
                 </div>
               </div>
 
-                <a
-                  href={VENUE_DETAILS.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => playButtonClickSound(0.3)}
-                  className="w-full py-3 bg-[#33592C] hover:bg-[#3D6B35] active:bg-[#233D1E] text-[#EEF8EC] border-3 border-t-[#59934B] border-l-[#59934B] border-r-[#162713] border-b-[#162713] font-minecraft text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer"
-                >
-                  <MapPin className="w-4 h-4 stroke-[2.5px] text-[#7DD3FC]" />
-                  <span>OPEN IN GOOGLE MAPS</span>
-                </a>
+              <a
+                href={VENUE_DETAILS.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => playButtonClickSound(0.3)}
+                className="w-full py-3 bg-[#5DB329] hover:bg-[#689B37] active:bg-[#4C9421] text-white border-2 border-black font-minecraft text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[3px_3px_0px_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer font-black"
+              >
+                <MapPin className="w-4 h-4 stroke-[2.5px] text-white" />
+                <span>OPEN IN GOOGLE MAPS</span>
+              </a>
             </div>
 
-            {/* CARD 2: Transit & Connectivity (Cool Steel Railway Slate) */}
-            <div className="bg-[#1D252E]/95 border-4 border-t-[#4E7E98] border-l-[#4E7E98] border-r-[#0D1318] border-b-[#0D1318] p-5 sm:p-6 shadow-[6px_6px_0px_#000] flex flex-col justify-between space-y-4">
+            {/* CARD 2: Transit & Connectivity (Light Stone Card) */}
+            <div className="bg-white border-3 border-black p-5 sm:p-6 shadow-[5px_5px_0px_#000] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center gap-2 border-b-2 border-[#2D3C4B] pb-2.5">
-                  <Train className="w-5 h-5 text-[#7EE896] stroke-[2.5px]" />
-                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#EEF5FA] [text-shadow:_1px_1px_0_#000]">
+                <div className="flex items-center gap-2 border-b-2 border-slate-200 pb-2.5">
+                  <Train className="w-5 h-5 text-[#0284C7] stroke-[2.5px]" />
+                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black font-black">
                     TRANSIT &amp; TRAVEL
                   </h4>
                 </div>
 
                 <div className="space-y-3 text-xs font-minecraft">
                   <div>
-                    <div className="uppercase text-[#7EE896] flex items-center gap-1.5 mb-1.5 text-[11px] [text-shadow:_1px_1px_0_#000]">
+                    <div className="uppercase text-[#0284C7] flex items-center gap-1.5 mb-1.5 text-[11px] font-black">
                       <Train className="w-3.5 h-3.5 stroke-[2.5px]" />
                       <span>RAILWAY ACCESS:</span>
                     </div>
-                    <ul className="space-y-1.5 pl-1 text-[11px] text-[#D9E4EC] font-sans">
+                    <ul className="space-y-1.5 pl-1 text-[11px] text-slate-700 font-sans">
                       {VENUE_DETAILS.railwayStations.map((st, i) => (
                         <li key={i} className="flex items-start gap-1.5">
-                          <span className="text-[#7EE896] font-black">▸</span>
+                          <span className="text-[#5DB329] font-black">▸</span>
                           <span>{st}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="border-t-2 border-[#2D3C4B] pt-2.5">
-                    <div className="uppercase text-[#7DD3FC] flex items-center gap-1.5 mb-1.5 text-[11px] [text-shadow:_1px_1px_0_#000]">
+                  <div className="border-t-2 border-slate-200 pt-2.5">
+                    <div className="uppercase text-[#0284C7] flex items-center gap-1.5 mb-1.5 text-[11px] font-black">
                       <Plane className="w-3.5 h-3.5 stroke-[2.5px]" />
                       <span>AIRPORT ACCESS:</span>
                     </div>
-                    <ul className="space-y-1.5 pl-1 text-[11px] text-[#D9E4EC] font-sans">
+                    <ul className="space-y-1.5 pl-1 text-[11px] text-slate-700 font-sans">
                       {VENUE_DETAILS.airports.map((ap, i) => (
                         <li key={i} className="flex items-start gap-1.5">
-                          <span className="text-[#7DD3FC] font-black">▸</span>
+                          <span className="text-[#0284C7] font-black">▸</span>
                           <span>{ap}</span>
                         </li>
                       ))}
@@ -785,42 +733,42 @@ export function ContactContent() {
                 </div>
               </div>
 
-              <div className="p-2.5 bg-[#131B22] border-2 border-t-[#0A0E13] border-l-[#0A0E13] border-r-[#2A3E4E] border-b-[#2A3E4E] font-minecraft text-[10px] text-[#FCD34D] text-center [text-shadow:_1px_1px_0_#000] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
+              <div className="p-2.5 bg-[#FEF3C7] border-2 border-black font-minecraft text-[10px] text-black font-bold text-center shadow-[inset_1px_1px_2px_rgba(0,0,0,0.05)]">
                 COLLEGE SHUTTLES AVAILABLE AT KESINGA (KSNG)
               </div>
             </div>
 
-            {/* CARD 3: Common Questions & Community Hub (Moss Forest Neutral) */}
-            <div id="faqs" className="bg-[#1E2721]/95 border-4 border-t-[#4C7555] border-l-[#4C7555] border-r-[#0E1510] border-b-[#0E1510] p-5 sm:p-6 shadow-[6px_6px_0px_#000] flex flex-col justify-between space-y-4 md:col-span-2 lg:col-span-1">
+            {/* CARD 3: Common Questions & Community Hub (Light Stone Card) */}
+            <div id="faqs" className="bg-white border-3 border-black p-5 sm:p-6 shadow-[5px_5px_0px_#000] flex flex-col justify-between space-y-4 md:col-span-2 lg:col-span-1">
               <div className="space-y-3">
-                <div className="flex items-center gap-2 border-b-2 border-[#2B3B30] pb-2.5">
-                  <HelpCircle className="w-5 h-5 stroke-[2.5px] text-[#FBBF24]" />
-                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-[#EEF6F1] [text-shadow:_1px_1px_0_#000]">
+                <div className="flex items-center gap-2 border-b-2 border-slate-200 pb-2.5">
+                  <HelpCircle className="w-5 h-5 stroke-[2.5px] text-[#FFAA00]" />
+                  <h4 className="font-minecraft text-sm sm:text-base uppercase tracking-wider text-black font-black">
                     COMMUNITY &amp; FAQS
                   </h4>
                 </div>
 
-                <p className="font-sans text-xs text-[#D8E6DC] leading-relaxed">
+                <p className="font-sans text-xs text-slate-700 leading-relaxed">
                   Have questions about bot dimensions, voltage compliance, battle arena rules, food &amp; accommodation passes, or cash prizes? Check our live FAQ database.
                 </p>
 
                 <div className="space-y-2 pt-1 font-minecraft text-xs">
-                  <div className="flex items-center justify-between p-2.5 bg-[#131A15] border-2 border-t-[#090F0B] border-l-[#090F0B] border-r-[#263D2E] border-b-[#263D2E] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                    <span className="text-[#EEF6F1] [text-shadow:_1px_1px_0_#000]">COMMUNITY DISCORD</span>
+                  <div className="flex items-center justify-between p-2.5 bg-[#F1F5F9] border-2 border-black shadow-[inset_1px_1px_2px_rgba(0,0,0,0.05)]">
+                    <span className="text-black font-bold">COMMUNITY DISCORD</span>
                     <a
                       href={SOCIAL_CHANNELS.discord}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => playButtonClickSound(0.25)}
-                      className="text-[10px] uppercase text-[#7DD3FC] underline hover:text-[#7EE896] [text-shadow:_0_0_6px_rgba(125,211,252,0.4)]"
+                      className="text-[10px] uppercase text-[#0284C7] font-black underline hover:text-[#5DB329]"
                     >
                       JOIN SERVER ↗
                     </a>
                   </div>
 
-                  <div className="flex items-center justify-between p-2.5 bg-[#131A15] border-2 border-t-[#090F0B] border-l-[#090F0B] border-r-[#263D2E] border-b-[#263D2E] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]">
-                    <span className="text-[#EEF6F1] flex items-center gap-1.5 [text-shadow:_1px_1px_0_#000]">
-                      <WhatsappIcon className="w-3.5 h-3.5 text-[#7EE896]" />
+                  <div className="flex items-center justify-between p-2.5 bg-[#F1F5F9] border-2 border-black shadow-[inset_1px_1px_2px_rgba(0,0,0,0.05)]">
+                    <span className="text-black font-bold flex items-center gap-1.5">
+                      <WhatsappIcon className="w-3.5 h-3.5 text-[#16A34A]" />
                       <span>WHATSAPP DESK</span>
                     </span>
                     <a
@@ -828,7 +776,7 @@ export function ContactContent() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => playButtonClickSound(0.25)}
-                      className="text-[10px] uppercase text-[#7EE896] underline hover:text-[#7DD3FC] [text-shadow:_0_0_6px_rgba(126,232,150,0.4)]"
+                      className="text-[10px] uppercase text-[#16A34A] font-black underline hover:text-[#0284C7]"
                     >
                       CHAT GROUP ↗
                     </a>
@@ -839,7 +787,7 @@ export function ContactContent() {
               <Link
                 href="/faqs"
                 onClick={() => playButtonClickSound(0.3)}
-                className="w-full py-3 bg-[#33592C] hover:bg-[#3D6B35] active:bg-[#233D1E] text-[#EEF8EC] border-3 border-t-[#59934B] border-l-[#59934B] border-r-[#162713] border-b-[#162713] font-minecraft text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[3px_3px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer"
+                className="w-full py-3 bg-[#5DB329] hover:bg-[#689B37] active:bg-[#4C9421] text-white border-2 border-black font-minecraft text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[3px_3px_0px_#000] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer font-black"
               >
                 <span>EXPLORE ALL FAQS</span>
                 <ArrowRight className="w-4 h-4 stroke-[3px]" />
@@ -850,7 +798,7 @@ export function ContactContent() {
       </motion.div>
 
       {/* Marquee Banner */}
-      <div className="relative z-10 py-6 bg-[#16141B]/90 border-t-4 border-[#25222D]">
+      <div className="relative z-10 py-6 bg-white border-t-3 border-black">
         <MarqueeBanner
           items={[
             "ROBOSPRANO '26 BATTLEFIELD COMMS",
@@ -859,8 +807,8 @@ export function ContactContent() {
             "KILOBOTS@GCEKBPATNA.AC.IN",
             "BHAWANIPATNA, ODISHA",
           ]}
-          bg="black"
-          glass={true}
+          bg="orange"
+          glass={false}
           angle="rotate-[-1deg] sm:rotate-[-0.85deg]"
         />
       </div>

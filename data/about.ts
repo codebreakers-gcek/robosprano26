@@ -10,13 +10,18 @@ export interface AboutPillar {
 export const ABOUT_DATA = {
   hero: {
     badge: "10TH EDITION MILESTONE // EST. 2016 - 2026",
-    title: "ROBOSPRANO 2026",
+    title: "ROBOSPRANO 2K26",
     edition: "THE 10TH EDITION",
-    tagline: "A Decade of Innovation. A Legacy of Robotics. A Future Built by Innovators.",
+    tagline:
+      "A Decade of Innovation. A Legacy of Robotics. A Future Built by Innovators.",
     stats: [
       { label: "MILESTONE", value: "10TH", sub: "Anniversary Edition" },
       { label: "BATTLE ARENAS", value: "5", sub: "High-Voltage Tracks" },
-      { label: "PRIZE BOUNTY", value: "₹91,000", sub: "Cash & Championship Trophies" },
+      {
+        label: "PRIZE BOUNTY",
+        value: "₹91,000",
+        sub: "Cash & Championship Trophies",
+      },
       { label: "BUILDERS", value: "1,000+", sub: "Engineers & Bot Pilots" },
     ],
   },
@@ -26,7 +31,7 @@ export const ABOUT_DATA = {
     paragraphs: [
       "For ten incredible editions, ROBOSPRANO has been a celebration of engineering excellence, creativity, innovation, and the spirit of competition. It brings together passionate young innovators, aspiring engineers, robotics enthusiasts, and technology lovers on a common platform to transform bold ideas into real-world creations.",
       "Over the years, ROBOSPRANO has witnessed remarkable robotic designs, intense challenges, thrilling competitions, outstanding victories, and unforgettable moments that inspire the next generation of engineers. Every edition has pushed boundaries, encouraged teamwork, and turned imagination into innovation.",
-      "Now, as we proudly step into our 10th Edition, ROBOSPRANO 2026, we are ready to celebrate this milestone with greater challenges, stronger competition, fresh ideas, and an experience bigger and better than ever before.",
+      "Now, as we proudly step into our 10th Edition, ROBOSPRANO 2K26, we are ready to celebrate this milestone with greater challenges, stronger competition, fresh ideas, and an experience bigger and better than ever before.",
     ],
     highlights: [
       {
@@ -49,7 +54,7 @@ export const ABOUT_DATA = {
   whatsNew: {
     tag: "FEATURED DEBUT",
     title: "WHAT'S NEW THIS YEAR? // ROBO WAR DEBUT",
-    lead: "This year, get ready to experience robotics like never before! ROBOSPRANO 2026 introduces ROBO WAR, an exciting new addition that brings strategy, mechanical engineering, control systems, and robotic combat into one electrifying arena.",
+    lead: "This year, get ready to experience robotics like never before! ROBOSPRANO 2K26 introduces ROBO WAR, an exciting new addition that brings strategy, mechanical engineering, control systems, and robotic combat into one electrifying arena.",
     body: "Prepare for intense robotic battles, powerful machines, smart strategies, and action-packed moments where precision, design, and innovation will determine who dominates the battlefield. Alongside this thrilling new event, participants can look forward to challenging competitions that test their technical knowledge, creativity, problem-solving abilities, and engineering skills.",
     featuredEventSlug: "robo-war",
     featuredEventName: "ROBO WAR COMBAT ARENA",
@@ -64,11 +69,12 @@ export const ABOUT_DATA = {
     headline: "NOW IT'S YOUR TURN TO BE PART OF THE LEGACY!",
     paragraphs: [
       "The arena is ready. The challenges are waiting. The next chapter of robotics history is yours to create!",
-      "Bring your team, build your robot, sharpen your strategies, and prepare to compete with some of the brightest minds. Whether you are passionate about designing intelligent machines, solving complex engineering problems, experimenting with technology, or experiencing the thrill of competition, ROBOSPRANO 2026 is your opportunity to learn, innovate, compete, and make your mark.",
+      "Bring your team, build your robot, sharpen your strategies, and prepare to compete with some of the brightest minds. Whether you are passionate about designing intelligent machines, solving complex engineering problems, experimenting with technology, or experiencing the thrill of competition, ROBOSPRANO 2K26 is your opportunity to learn, innovate, compete, and make your mark.",
       "Be part of a decade-long legacy. Turn your ideas into machines, your creativity into engineering, and your determination into victory.",
     ],
     motto: "KEEP HUSTLING. KEEP BUILDING.",
-    subMotto: "ROBOSPRANO 2026 | The 10th Edition. One Legacy. Countless Possibilities.",
+    subMotto:
+      "ROBOSPRANO 2K26 | The 10th Edition. One Legacy. Countless Possibilities.",
   },
   pillars: [
     {

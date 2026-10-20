@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Meet the official patrons, core student council, faculty mentors, and technical arena leads behind ROBOSPRANO '26 at Government College of Engineering Kalahandi. Organized by Kilobots Robotics Society.",
   keywords: [
-    "ROBOSPRANO 2026 team",
+    "ROBOSPRANO 2K26 team",
     "Kilobots GCEK team",
     "Kilobots organizing committee",
     "GCEK robotics organizers",
@@ -66,12 +66,21 @@ export const metadata: Metadata = {
     description:
       "Meet the student builders, arena leads, and mentors making ROBOSPRANO '26 possible at GCEK Kalahandi.",
     url: "https://robosprano.gcekbpatna.ac.in/team",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, type: "image/png", alt: "ROBOSPRANO '26 Team" }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "ROBOSPRANO '26 Team",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Organizing Committee & Arena Leads // Kilobots GCEK",
-    description: "Meet the student engineers, faculty convenors, and bot builders powering ROBOSPRANO '26.",
+    description:
+      "Meet the student engineers, faculty convenors, and bot builders powering ROBOSPRANO '26.",
     images: ["/og-image.png"],
   },
 };

@@ -34,7 +34,7 @@ export default function HomePage() {
       </ScrollReveal>
 
       {/* Marquee Separator between Prize Pool and Kilobots // GCEK Information */}
-      <div className="relative bg-[#0A0710] overflow-hidden py-2 border-y-4 border-black z-20">
+      <div className="relative bg-[#E2E8F0] overflow-hidden py-2 border-y-4 border-black z-20">
         <MarqueeBanner
           items={[
             "PATRON GUILD",
@@ -62,9 +62,9 @@ export default function HomePage() {
 
       {/* 8. Final Call to Action with Minecraft Character Art */}
       <ScrollReveal>
-        <section className="py-20 bg-[#261727] border-b-4 border-black text-center relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-b from-[#EBF5FF] via-[#F0FDF4] to-[#DCFCE7] border-b-4 border-black text-center relative overflow-hidden text-black">
           {/* Left Side Minecraft Coder at Desk */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[48%] pointer-events-none select-none z-0 overflow-hidden">
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[48%] pointer-events-none select-none z-0 overflow-hidden opacity-30">
             <Image
               src="/minecraft/robo_desk.webp"
               alt="Minecraft Coder at Desk"
@@ -73,18 +73,18 @@ export default function HomePage() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-left sm:object-left-center"
             />
-            {/* Horizontal gradient fade: vibrant on left, seamlessly dissolving into desk room tones */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#261727]/60 to-[#261727] via-60%" />
+            {/* Horizontal gradient fade */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F0FDF4]/70 to-[#F0FDF4] via-60%" />
             {/* Subtle vertical fade for small mobile viewports */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#261727]/40 to-[#261727] sm:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F0FDF4]/60 to-[#F0FDF4] sm:hidden" />
           </div>
 
-          {/* Warm Ambient Lamp & Sunset Glow Accents */}
+          {/* Warm Ambient Accents */}
           <div className="absolute -top-16 right-1/4 w-72 h-72 bg-[#FFAA00]/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#FF6B6B]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-10 w-64 h-64 bg-[#3898EC]/15 rounded-full blur-3xl pointer-events-none" />
 
           {/* Desktop Right Side Squad Mascot (Full Side Height) */}
-          <div className="hidden lg:block absolute inset-y-0 right-0 w-[380px] xl:w-[480px] 2xl:w-[540px] pointer-events-none select-none z-10 drop-shadow-[12px_12px_0px_#000]">
+          <div className="hidden lg:block absolute inset-y-0 right-0 w-[380px] xl:w-[480px] 2xl:w-[540px] pointer-events-none select-none z-10 drop-shadow-[8px_8px_0px_rgba(0,0,0,0.15)]">
             <div className="relative w-full h-full">
               <Image
                 src="/minecraft/team_3.webp"
@@ -103,7 +103,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
             {/* Mobile Mascot Badge */}
             <div className="flex flex-col items-center gap-2 lg:hidden">
-              <div className="relative w-36 h-36 xs:w-44 xs:h-44 drop-shadow-[6px_6px_0px_#000]">
+              <div className="relative w-36 h-36 xs:w-44 xs:h-44 drop-shadow-[4px_4px_0px_rgba(0,0,0,0.2)]">
                 <Image
                   src="/minecraft/team_3.webp"
                   alt="Minecraft Squad Pass Mascot"
@@ -116,27 +116,27 @@ export default function HomePage() {
               </span>
             </div>
 
-            <span className="font-mono text-xs font-black uppercase px-3.5 py-1.5 bg-[#FFAA00] text-black border-2 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[2px_2px_0px_#000] inline-flex items-center gap-2 flex-wrap">
+            <span className="font-mono text-xs font-black uppercase px-3.5 py-1.5 bg-[#FFAA00] text-black border-2 border-black shadow-[2px_2px_0px_#000] inline-flex items-center gap-2 flex-wrap">
               <span>★ ROBOSPRANO &apos;26 REGISTRATION LIVE</span>
               <span>➔</span>
               <span>5 COMBAT ARENAS // ₹91,000 TOTAL BOUNTY POOL</span>
             </span>
 
-            <h2 className="font-black text-4xl sm:text-6xl text-white uppercase tracking-tight leading-tight [text-shadow:_3px_3px_0_#000]">
+            <h2 className="font-black text-4xl sm:text-6xl text-black uppercase tracking-tight leading-tight">
               FORGE YOUR MACHINE. <br />
-              <span className="bg-[#FFAA00] text-black px-3.5 py-1 border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] inline-block rotate-[-1deg] mt-2">
+              <span className="bg-[#FFAA00] text-black px-3.5 py-1 border-4 border-black shadow-[4px_4px_0px_#000] inline-block rotate-[-1deg] mt-2">
                 CLAIM THE ARENA GLORY
               </span>
             </h2>
 
-            <p className="text-base sm:text-xl font-bold text-[#EADCE9] max-w-2xl mx-auto leading-relaxed [text-shadow:_1px_1px_0_#000]">
+            <p className="text-base sm:text-xl font-bold text-slate-800 max-w-2xl mx-auto leading-relaxed">
               Odisha&apos;s premier robotics championship hosted by Kilobots GCEK. 5 high-voltage arenas: Robo War, Death Race, Robo Sumo, Robo Soccer, and Line Follower with ₹91,000 in cash prizes. Build, clash, and dominate the combat ground.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/events"
-                className="w-full sm:w-auto h-14 px-10 bg-[#5B8731] hover:bg-[#689B37] text-white font-mono font-black text-base uppercase tracking-wider border-4 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] shadow-[4px_4px_0px_#000] [text-shadow:_2px_2px_0_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto h-14 px-10 bg-[#5DB329] hover:bg-[#4EA022] text-white font-mono font-black text-base uppercase tracking-wider border-4 border-black shadow-[4px_4px_0px_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Swords className="w-5 h-5 shrink-0" />
                 <span>REGISTER YOUR BOT</span>
@@ -145,7 +145,7 @@ export default function HomePage() {
 
               <Link
                 href="/events"
-                className="w-full sm:w-auto h-14 px-8 bg-[#DBDBDB] hover:bg-[#EAEAEA] text-black font-mono font-black text-base uppercase tracking-wider border-4 border-t-[#FFFFFF] border-l-[#FFFFFF] border-r-[#555555] border-b-[#555555] shadow-[4px_4px_0px_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto h-14 px-8 bg-white hover:bg-slate-100 text-black font-mono font-black text-base uppercase tracking-wider border-4 border-black shadow-[4px_4px_0px_#000] hover:translate-y-[-2px] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Terminal className="w-5 h-5 stroke-[3px]" />
                 <span>EXPLORE ALL 5 ARENAS</span>
