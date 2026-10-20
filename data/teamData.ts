@@ -21,12 +21,12 @@ export const officialIncharges: OfficialIncharge[] = [
   },
   {
     id: "pic",
-    name: "Dr. Ashok Kumar Bhoi",
+    name: "Prof. Mihira Kumar Nath",
     designation: "Professor In-Charge (PIC)",
-    role: "Assistant Professor, Dept. of CSE",
-    image: "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1786979305/IMG_0701_t1nojn.jpg", // Fallback / Cloudinary asset
-    quote: "Guiding and mentoring students to master modern software engineering, competitive programming, and technological innovation.",
-    department: "Department of CSE, GCEK",
+    role: "Assistant Professor, Dept. of EE",
+    image: "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1792462317/mihir_ux4y1j.jpg", // Fallback / Cloudinary asset
+    quote: "Igniting the spark of innovation and guiding students to build technology that shapes tomorrow.",
+    department: "Department of EE, GCEK",
   },
 ];
 
@@ -35,72 +35,74 @@ export const coreLeads: TeamMember[] = [];
 export const clubLeads: TeamMember[] = [
   {
     image:
-      "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1786779293/IMG_0230_2_vmnw90.jpg",
-    title: "Gyanranjan Priyam",
-    subtitle: "Organising Head",
-    handle: "@gyanranjanpriyam",
+      "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1792462338/yash_xjyltu.jpg",
+    title: "Nukesh Kumar Sahu",
+    subtitle: "Cheif Coordinator",
+    handle: "@nukesh",
     borderColor: "#8B5CF6",
     gradient: "linear-gradient(225deg,#8B5CF6,#000)",
-    url: "https://priyam.tech",
-    email: "hello@priyam.tech",
-    socials: {
-      github: "https://github.com/gyanranjan-priyam",
-      instagram: "https://www.instagram.com/gyanranjanpriyam/",
-      linkedin: "https://www.linkedin.com/in/gyanranjan-priyam",
-      website: "https://priyam.tech/",
-    },
+    phone: "+91 9556192291",
+  },
+   {
+    image:
+      "/team/manish.png",
+    title: "Manish Sahu",
+    subtitle: "Student Coordinator",
+    handle: "@manish",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 93489 27516",
   },
   {
     image:
-      "https://res.cloudinary.com/dw47ib0sh/image/upload/v1764687111/dcamoaxh8imtoetrydzn.jpg",
-    title: "Smruti Ranjan Adhikari",
-    subtitle: "Management Head",
-    handle: "@Smrutiranjan8895",
-    borderColor: "#F59E0B",
-    gradient: "linear-gradient(145deg, #F59E0B, #000)",
-    url: "https://github.com/Smrutiranjan8895",
-    email: "smrutiranjanadhikari17@gmail.com",
-    socials: {
-      github: "https://github.com/Smrutiranjan8895",
-      instagram: "https://www.instagram.com/smrutiranjan_adhikari?igsh=Mjdrbmk0ZHQ3eDRm",
-      linkedin: "https://www.linkedin.com/in/smruti-ranjan-adhikari-b83751370",
-      website: "https://smrutiranjanadhikari.vercel.app/",
-    },
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dw47ib0sh/image/upload/v1764699535/iner68oti4yr5encnv1f.jpg",
-    title: "Chayakanta Maharana",
-    subtitle: "Management Co-Lead",
-    handle: "@chayakanta",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://www.linkedin.com/in/chhayakanta-maharana-a231a2298",
-    email: "chhayakantamaharan@gmail.com",
-    socials: {
-      github: "https://github.com/Chhayakanta-Maharana1",
-      instagram: "#",
-      linkedin: "https://www.linkedin.com/in/chhayakanta-maharana-a231a2298/",
-      website: "https://portfolio-chhaya.netlify.app/",
-    },
+      "/team/shivam.png",
+    title: "Shivam Dash",
+    subtitle: "Student Coordinator",
+    handle: "@shivam",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 84575810700",
   },
 
   {
     image:
-      "https://res.cloudinary.com/dw47ib0sh/image/upload/v1764686998/qqpuw8paqkzjx0iqv9vd.jpg",
-    title: "Deepankar Sahoo",
-    subtitle: "Teachnical Lead",
-    handle: "@codebydeepankar",
-    borderColor: "#06B6D4",
-    gradient: "linear-gradient(135deg, #06B6D4, #000)",
-    url: "https://github.com/codebydeepankar",
-    email: "deepankarsahoo68@gmail.com",
-    socials: {
-      github: "https://github.com/codebydeepankar",
-      instagram: "",
-      linkedin: "",
-      website: "https://deepankar.tech",
-    },
+      "/team/subrat.jpeg",
+    title: "Subrat Kumar Mahanta",
+    subtitle: "Student Coordinator",
+    handle: "@subrat",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 7008585565",
+  },
+    {
+    image:
+      "/team/sai.jpeg",
+    title: "Saijyoti Prakash Sahoo",
+    subtitle: "Student Coordinator",
+    handle: "@saijyoti",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 8018576414",
+  },
+    {
+    image:
+      "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1786779293/IMG_0230_2_vmnw90.jpg",
+    title: "Gyanranjan Priyam",
+    subtitle: "Technical Lead",
+    handle: "@gyanranjanpriyam",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 88952 20675",
+  },
+    {
+    image:
+      "https://res.cloudinary.com/dhyxx8qjf/image/upload/v1786816638/WhatsApp_Image_2026-08-15_at_11.25.32_PM_vqijmi.jpg",
+    title: "Omprakash Behera",
+    subtitle: "Technical Co-Lead",
+    handle: "@omprakash",
+    borderColor: "#8B5CF6",
+    gradient: "linear-gradient(225deg,#8B5CF6,#000)",
+    phone: "+91 88952 20675",
   },
 ];
 

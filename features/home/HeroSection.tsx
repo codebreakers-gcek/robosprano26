@@ -213,7 +213,7 @@ function EventInfoPopup({
             </Link>
 
             <Link
-              href="/events"
+              href="/register"
               onClick={() => {
                 playButtonClickSound();
                 onClose();
@@ -421,7 +421,7 @@ export function HeroSection() {
                 >
                   {/* Primary CTA: Register Your Bot */}
                   <Link
-                    href="/events"
+                    href="/register"
                     onClick={() => playButtonClickSound()}
                     className="h-12 sm:h-14 px-6 sm:px-8 rounded-lg bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7700] hover:brightness-110 text-white font-sans font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(255,85,0,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 cursor-pointer whitespace-nowrap border-t border-orange-300/40"
                   >
@@ -571,12 +571,19 @@ export function HeroSection() {
               "ROBOSPRANO '26",
               "HOSTED BY KILOBOTS GCEK",
               "₹91,000 TOTAL CASH POOL",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO WAR (₹25K)",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "DEATH RACE (₹18K)",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO SUMO (₹18K)",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO SOCCER (₹15K)",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "LINE FOLLOWER (₹15K)",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "STATE ROBOTICS CHAMPIONSHIP",
+                  "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "GCEK KALAHANDI",
               "CLAIM BOT REGISTRATION NOW",
             ]}

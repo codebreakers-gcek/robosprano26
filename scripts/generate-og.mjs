@@ -41,11 +41,11 @@ const svg = `
     <g transform="skewX(-13) scale(1.2, 1)">
       <!-- Drop Shadow -->
       <text x="5" y="5" fill="#000000" fill-opacity="0.25" stroke="#000000" stroke-width="4" stroke-opacity="0.25" font-family="Thuast Demo" font-size="88" letter-spacing="2" style="paint-order: stroke fill;">
-        HACKVERSE <tspan fill="#FF6B6B" stroke="#FF6B6B" stroke-width="4" fill-opacity="0.25" stroke-opacity="0.25">&apos;26</tspan>
+        ROBOSPRANO <tspan fill="#FF6B6B" stroke="#FF6B6B" stroke-width="4" fill-opacity="0.25" stroke-opacity="0.25">&apos;26</tspan>
       </text>
       <!-- Foreground -->
       <text x="0" y="0" fill="#000000" stroke="#000000" stroke-width="4" font-family="Thuast Demo" font-size="88" letter-spacing="2" style="paint-order: stroke fill;">
-        HACKVERSE <tspan fill="#FF6B6B" stroke="#FF6B6B" stroke-width="4">&apos;26</tspan>
+        ROBOSPRANO <tspan fill="#FF6B6B" stroke="#FF6B6B" stroke-width="4">&apos;26</tspan>
       </text>
     </g>
   </g>
@@ -53,58 +53,58 @@ const svg = `
   <!-- Subtitle -->
   <g transform="translate(60, 310)">
     <text x="0" y="0" fill="#1A1A1A" font-family="Arial, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.5">
-      Flagship State Tech Fest &amp; Hackathon • GCEK Bhawanipatna
+      State Robotics Championship &amp; Tech Fest • GCEK Bhawanipatna
     </text>
     <text x="0" y="38" fill="#222222" font-family="Arial, sans-serif" font-weight="700" font-size="20">
-      Innovation • Code • Web3 • AI/ML • Cloud • Cybersecurity
+      Robo War • Robo Race • Robo Sumo • Robo Soccer • Line Follower
     </text>
   </g>
 
   <!-- Divider Line -->
   <line x1="60" y1="415" x2="1140" y2="415" stroke="#000000" stroke-width="5" />
 
-  <!-- Bottom Tracks & Prize Matrix -->
+  <!-- Arenas -->
   <g transform="translate(60, 455)">
-    <!-- Track 1 -->
+    <!-- Arena 1 -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="125" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
-      <text x="62" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">AI / ML</text>
+      <rect x="0" y="0" width="140" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
+      <text x="70" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">ROBO WAR</text>
     </g>
 
-    <!-- Track 2 -->
-    <g transform="translate(140, 0)">
-      <rect x="0" y="0" width="115" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
-      <text x="57" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">WEB3</text>
+    <!-- Arena 2 -->
+    <g transform="translate(155, 0)">
+      <rect x="0" y="0" width="140" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
+      <text x="70" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">ROBO RACE</text>
     </g>
 
-    <!-- Track 3 -->
-    <g transform="translate(270, 0)">
+    <!-- Arena 3 -->
+    <g transform="translate(310, 0)">
+      <rect x="0" y="0" width="140" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
+      <text x="70" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">ROBO SUMO</text>
+    </g>
+
+    <!-- Arena 4 -->
+    <g transform="translate(465, 0)">
       <rect x="0" y="0" width="145" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
-      <text x="72" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">CYBER SEC</text>
-    </g>
-
-    <!-- Track 4 -->
-    <g transform="translate(430, 0)">
-      <rect x="0" y="0" width="160" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="4" />
-      <text x="80" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">CLOUD &amp; IOT</text>
+      <text x="72" y="30" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="17" text-anchor="middle">LINE FOLLOWER</text>
     </g>
   </g>
 
-  <!-- Prize Pool Badge (35K+) -->
+  <!-- Prize Pool Badge (91K+) -->
   <g transform="translate(760, 445)">
     <rect x="0" y="0" width="380" height="66" fill="#00E5FF" stroke="#000000" stroke-width="5" />
     <text x="190" y="44" fill="#000000" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="28" text-anchor="middle">
-      🏆 ₹35K+ PRIZE POOL
+      🏆 ₹91K+ PRIZE POOL
     </text>
   </g>
 
   <!-- Bottom Details Bar -->
   <g transform="translate(60, 565)">
     <text x="0" y="0" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="18" letter-spacing="1">
-      REGISTER: HACKVERSE.CODEBREAKERSGCEK.TECH
+      REGISTER: ROBOSPRANO.GCEKBPATNA.AC.IN
     </text>
     <text x="1080" y="0" fill="#000000" font-family="Arial, sans-serif" font-weight="900" font-size="18" text-anchor="end" letter-spacing="1">
-      SEP 18-26, 2026
+      NOV 05-06, 2026
     </text>
   </g>
 </svg>

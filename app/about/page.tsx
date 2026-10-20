@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     "Robo Soccer",
   ],
   alternates: {
-    canonical: "https://hackverse.codebreakersgcek.tech/about",
+    canonical: "https://robosprano.gcekbpatna.ac.in/about",
   },
   openGraph: {
     title: "About ROBOSPRANO 2026 | The 10th Edition",
     description:
       "A Decade of Innovation. A Legacy of Robotics. A Future Built by Innovators. Organized by KILOBOTS at GCEK Bhawanipatna.",
-    url: "https://hackverse.codebreakersgcek.tech/about",
+    url: "https://robosprano.gcekbpatna.ac.in/about",
     images: [{ url: "/og-image.png", width: 1200, height: 630, type: "image/png", alt: "About ROBOSPRANO 2026" }],
   },
   twitter: {
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <div className="fixed inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <Image
           src="/minecraft/aboutbg.webp"
-          alt="Hackverse About Background"
+          alt="Robosprano About Background"
           fill
           priority
           unoptimized

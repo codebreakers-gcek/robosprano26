@@ -41,7 +41,7 @@ export function Footer() {
               {/* Col 1: Club & Fest Branding */}
               <div className="space-y-4 sm:col-span-2 lg:col-span-5 xl:col-span-4 min-w-0">
                 <div className="space-y-3.5">
-                  {/* Row 1: Hackverse & Logo */}
+                  {/* Row 1: Robosprano & Logo */}
                   <Link
                     href="/"
                     className="flex items-center gap-3.5 group focus:outline-none"
@@ -123,6 +123,7 @@ export function Footer() {
                     { href: "/", label: "Home" },
                     { href: "/about", label: "About Robosprano" },
                     { href: "/events", label: "Robotics Events" },
+                    { href: "/register", label: "Arena Registration" },
                     { href: "/team", label: "Organizing Team" },
                     { href: "/contact", label: "Contact Desk" },
                   ].map((link, idx) => (
@@ -164,15 +165,6 @@ export function Footer() {
                     >
                       {ENV.CONTACT_EMAIL}
                     </a>
-                  </div>
-
-                  <div className="pt-1">
-                    <div className="font-mono text-[11px] font-bold text-neutral-400 uppercase">
-                      EMERGENCY HELPLINE:
-                    </div>
-                    <div className="font-mono text-xs font-bold text-white tracking-wider">
-                      +91 8895220675
-                    </div>
                   </div>
                 </div>
               </div>

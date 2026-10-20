@@ -129,7 +129,7 @@ export function SponsorsContent() {
               </span>
 
               <h2 className="font-black text-2xl sm:text-3xl text-black uppercase tracking-tight [text-shadow:_1px_1px_0_#FFF] leading-snug">
-                JOIN AS A PATRON FOR HACKVERSE &apos;26
+                JOIN AS A PATRON FOR ROBOSPRANO &apos;26
               </h2>
 
               <p className="font-mono text-xs sm:text-sm font-bold text-[#2A2A2A] leading-relaxed">
@@ -456,7 +456,7 @@ export function SponsorsContent() {
             </span>
 
             <h3 className="font-black text-2xl sm:text-4xl uppercase tracking-tight [text-shadow:_2px_2px_0_#000]">
-              INTERESTED IN SPONSORING HACKVERSE &apos;26?
+              INTERESTED IN SPONSORING ROBOSPRANO &apos;26?
             </h3>
 
             <p className="font-mono text-xs sm:text-sm md:text-base font-bold text-[#E2D4E2] leading-relaxed">
@@ -465,7 +465,7 @@ export function SponsorsContent() {
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
-                href={`mailto:${ENV.CONTACT_EMAIL}?subject=HACKVERSE%202026%20Sponsorship%20Inquiry`}
+                href={`mailto:${ENV.CONTACT_EMAIL}?subject=ROBOSPRANO%202026%20Sponsorship%20Inquiry`}
                 className="w-full sm:w-auto h-11 sm:h-12 px-5 sm:px-6 bg-[#5B8731] hover:bg-[#689B37] text-white font-mono font-black text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] active:border-t-[#2C4813] active:border-l-[#2C4813] active:border-r-[#85B745] active:border-b-[#85B745] shadow-[4px_4px_0px_#000] [text-shadow:_1px_1px_0_#000] flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
                 <Mail className="w-4 h-4 stroke-[2.5px]" />

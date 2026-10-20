@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { MinecraftNavbarMusicPlayer } from "@/components/ui/MinecraftNavbarMusicPlayer";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
 
 export function Navbar() {
@@ -229,14 +228,11 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Right Side Actions: Music Player + Register Button */}
+          {/* Right Side Actions: Register Button */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            {/* Music Player Button */}
-            <MinecraftNavbarMusicPlayer />
-
             {/* Register CTA Button */}
             <Link
-              href="/events"
+              href="/register"
               onClick={() => playButtonClickSound(0.4)}
               className="h-10 px-5 rounded-md sm:rounded-lg inline-flex items-center gap-2 bg-gradient-to-r from-[#FF5500] via-[#FF6600] to-[#FF7B00] hover:from-[#FF6600] hover:to-[#FF8800] text-white font-minecraftt font-black text-xs sm:text-sm uppercase tracking-wider shadow-[0_2px_10px_rgba(255,85,0,0.4)] hover:shadow-[0_0_20px_rgba(255,102,0,0.7)] active:scale-[0.98] transition-all cursor-pointer border-t border-orange-300/40"
             >
@@ -245,12 +241,10 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Right Controls: Music Player + Register + Hamburger */}
+          {/* Mobile Right Controls: Register + Hamburger */}
           <div className="flex lg:hidden items-center gap-2">
-            <MinecraftNavbarMusicPlayer />
-
             <Link
-              href="/events"
+              href="/register"
               onClick={() => playButtonClickSound(0.4)}
               className="h-9 px-3 rounded-md inline-flex items-center gap-1.5 bg-gradient-to-r from-[#FF5500] to-[#FF7700] text-white font-sans font-black text-xs uppercase tracking-wider shadow-[0_2px_8px_rgba(255,85,0,0.4)] border-t border-orange-300/40"
             >
@@ -326,7 +320,7 @@ export function Navbar() {
 
               <div className="pt-3 border-t border-zinc-800/80 mt-1">
                 <Link
-                  href="/events"
+                  href="/register"
                   onClick={() => {
                     playButtonClickSound(0.4);
                     setMobileMenuOpen(false);

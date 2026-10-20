@@ -22,7 +22,7 @@ export function GsapLoader() {
     // Check if loader has already run in this browser session
     if (
       typeof window !== "undefined" &&
-      sessionStorage.getItem("hackverse_loader_played")
+      sessionStorage.getItem("robosprano_loader_played")
     ) {
       setIsRendered(false);
       return;
@@ -37,7 +37,7 @@ export function GsapLoader() {
 
     const statusSteps = [
       "GENERATING TERRAIN CHUNKS...",
-      "LOADING HACKVERSE '26 PROTOCOLS...",
+      "LOADING ROBOSPRANO '26 PROTOCOLS...",
       "SUMMONING ARENAS (AI • WEB • CYBER • IOT)...",
       "SPAWNING ₹35,000 PRIZE POOL...",
       "SYNCING CODEBREAKERS GCEK SERVERS...",
@@ -57,7 +57,7 @@ export function GsapLoader() {
         onComplete: () => {
           document.body.style.overflow = originalOverflow;
           if (typeof window !== "undefined") {
-            sessionStorage.setItem("hackverse_loader_played", "true");
+            sessionStorage.setItem("robosprano_loader_played", "true");
           }
           setIsRendered(false);
         },
@@ -79,7 +79,7 @@ export function GsapLoader() {
         0,
       );
 
-      // 3. Central Hackverse 3D Logo Entrance (Pop & Settle)
+      // 3. Central Robosprano 3D Logo Entrance (Pop & Settle)
       tl.fromTo(
         logoRef.current,
         { opacity: 0, scale: 0.85, y: 25, filter: "brightness(0.6)" },
@@ -257,14 +257,14 @@ export function GsapLoader() {
         <div className="relative z-10 w-full pt-6" />
 
         {/* ========================================================================= */}
-        {/* 2. CENTERPIECE: CodeBreakers Presents + 3D Hackverse Logo + Progress Bar  */}
+        {/* 2. CENTERPIECE: Kilobots Presents + 3D Robosprano Logo + Progress Bar  */}
         {/* ========================================================================= */}
         <main className="relative z-10 flex-1 w-full max-w-5xl px-4 flex flex-col items-center justify-center">
           {/* Centered Presenter Stamp & 3D Logo */}
           <div className="relative flex flex-col items-center">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[120px] sm:h-[180px] bg-[#FFAA00]/25 rounded-full blur-3xl pointer-events-none -z-10" />
 
-            {/* Centered "CODEBREAKERS PRESENTS HACKVERSE" above Hackverse Logo (No bg, no border, not animated) */}
+            {/* Centered "KILOBOTS PRESENTS ROBOSPRANO" above Robosprano Logo (No bg, no border, not animated) */}
             <div className="flex items-center justify-center gap-2 sm:gap-2.5 mb-2 sm:mb-3 select-none">
               <div className="w-5 h-5 sm:w-6 sm:h-6 p-0.5 shrink-0 flex items-center justify-center">
                 <Image
@@ -291,7 +291,7 @@ export function GsapLoader() {
             >
               <Image
                 src="/minecraft_loader/robosprano.webp"
-                alt="HACKVERSE '26 - Flagship Hackathon"
+                alt="ROBOSPRANO '26 - State Robotics Championship"
                 width={900}
                 height={260}
                 priority

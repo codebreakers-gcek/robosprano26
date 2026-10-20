@@ -257,7 +257,7 @@ const DEFAULT_MINECRAFT_ITEMS: MinecraftMarqueeItem[] = [
     BlockComponent: RedstoneBlock,
   },
   {
-    text: "24-HOUR SURVIVAL SPRINT",
+    text: "UNBEATABLE WAR ",
     color: "#FFAA00",
     BlockComponent: TNTBlock,
   },
@@ -280,7 +280,7 @@ const DEFAULT_MINECRAFT_ITEMS: MinecraftMarqueeItem[] = [
     BlockComponent: GoldBlock,
   },
   {
-    text: "CODEBREAKERS GUILD",
+    text: "KILOBOTS GUILD",
     highlight: "ODISHA STATE STAGE",
     color: "#55FF55",
     BlockComponent: EmeraldBlock,

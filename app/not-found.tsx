@@ -91,7 +91,7 @@ export default function NotFound() {
               <p className="text-sm font-bold text-black/80 leading-relaxed">
                 The requested URL path does not exist in the{" "}
                 <span className="whitespace-nowrap inline-block font-mono font-black text-[#7E22CE] bg-[#F3E8FF] px-1.5 py-0.5 border border-[#7E22CE]">
-                  HACKVERSE&apos;26
+                  ROBOSPRANO&apos;26
                 </span>{" "}
                 world seed. Looks like this sector has not been generated or was consumed by the void.
               </p>

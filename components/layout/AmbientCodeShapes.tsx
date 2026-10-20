@@ -32,7 +32,7 @@ export function AmbientCodeShapes() {
       >
         <div className="font-mono text-xs bg-black/5 p-3 rounded-lg border border-black/15 shadow-sm text-neutral-800">
           <span className="text-emerald-700 font-bold">$</span> cargo run
-          --release --hackverse
+          --release --robosprano
         </div>
       </motion.div>
 

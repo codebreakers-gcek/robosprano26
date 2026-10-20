@@ -26,7 +26,9 @@ export interface TeamMember {
   gradient?: string;
   url?: string;
   email?: string;
-  socials: TeamSocials;
+  phone?: string;
+  mobile?: string;
+  socials?: TeamSocials;
 }
 
 export type TeamCategory = "all" | "officials" | "core" | "club";

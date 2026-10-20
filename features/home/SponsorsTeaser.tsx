@@ -58,7 +58,7 @@ export function SponsorsTeaser() {
 
           <div className="bg-[#1B1B1B]/90 backdrop-blur-sm border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] px-4 sm:px-6 py-2.5 shadow-[4px_4px_0px_#000] max-w-2xl mx-auto">
             <p className="text-xs sm:text-sm md:text-base font-bold text-[#EAEAEA] font-mono leading-relaxed">
-              Backed by visionary technology enterprises and developer ecosystems empowering <span className="text-[#55FF55] font-black">HACKVERSE &apos;26</span>. Click any partner logo to visit their website!
+              Backed by visionary technology enterprises and developer ecosystems empowering <span className="text-[#55FF55] font-black">ROBOSPRANO &apos;26</span>. Click any partner logo to visit their website!
             </p>
           </div>
         </div>

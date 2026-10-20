@@ -19,6 +19,7 @@ import {
   Crown,
   Code2,
   Mail,
+  Phone,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/common/SocialIcons";
 import clsx from "clsx";
@@ -82,7 +83,7 @@ export function TeamContent() {
       <div className="fixed inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <Image
           src="/minecraft/teambg.webp"
-          alt="Hackverse Team Background"
+          alt="Robosprano Team Background"
           fill
           priority
           unoptimized
@@ -118,7 +119,7 @@ export function TeamContent() {
 
             <div className="bg-[#1B1B1B]/90 backdrop-blur-sm border-3 border-t-[#4A4A4A] border-l-[#4A4A4A] border-r-[#0D0D0D] border-b-[#0D0D0D] px-4 sm:px-6 py-2.5 shadow-[4px_4px_0px_#000]">
               <p className="text-xs sm:text-sm md:text-base font-bold text-[#EAEAEA] font-mono leading-relaxed">
-                The visionary academic patrons, student leaders, and technical architects driving HACKVERSE &apos;26 and shaping the innovation culture at GCEK.
+                The visionary academic patrons, student leaders, and technical architects driving ROBOSPRANO &apos;26 and shaping the innovation culture at GCEK.
               </p>
             </div>
           </div>
@@ -329,7 +330,7 @@ export function TeamContent() {
                   WANT TO COLLABORATE WITH CODEBREAKERS?
                 </h3>
                 <p className="font-mono text-xs sm:text-sm font-bold text-[#CCCCCC] max-w-xl leading-relaxed">
-                  Whether you are looking to sponsor HACKVERSE &apos;26, deliver a technical workshop, or connect with our student developer community, reach out to our team desks.
+                  Whether you are looking to sponsor ROBOSPRANO &apos;26, deliver a technical workshop, or connect with our student robotics community, reach out to our team desks.
                 </p>
               </div>
 
@@ -345,7 +346,7 @@ export function TeamContent() {
                   href="/events"
                   className="px-5 sm:px-6 py-3 bg-[#FFAA00] hover:bg-[#FFC040] text-black font-mono font-black text-xs sm:text-sm uppercase tracking-wider border-4 border-t-[#FFE285] border-l-[#FFE285] border-r-[#8F5500] border-b-[#8F5500] shadow-[4px_4px_0px_#000] active:translate-y-1 transition-all flex items-center justify-center gap-2"
                 >
-                  <span>REGISTER FOR HACKVERSE</span>
+                  <span>REGISTER FOR ROBOSPRANO</span>
                   <ArrowRight className="w-4 h-4 stroke-[3px]" />
                 </Link>
               </div>
@@ -439,6 +440,37 @@ function MemberCard({
             {member.title}
           </h4>
 
+          {/* Mobile / Phone if available (Minecraft Inset Slot) */}
+          {(member.phone || member.mobile) && (
+            <div className="pt-1 flex items-center justify-between p-2 bg-[#8B8B8B] border-2 border-t-[#373737] border-l-[#373737] border-r-[#DBDBDB] border-b-[#DBDBDB] font-mono text-[11px] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.4)]">
+              <a
+                href={`tel:${(member.phone || member.mobile)?.replace(/\s+/g, "")}`}
+                className="font-bold text-white [text-shadow:_1px_1px_0_#000] truncate hover:text-[#55FFFF] transition-colors flex items-center gap-1.5"
+              >
+                <Phone className="w-3 h-3 text-[#55FFFF] shrink-0" />
+                <span>{member.phone || member.mobile}</span>
+              </a>
+              <button
+                type="button"
+                onClick={() => onCopyEmail((member.phone || member.mobile)!)}
+                className="text-[10px] font-black uppercase px-1.5 py-0.5 bg-[#5B8731] hover:bg-[#689B37] text-white border border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] cursor-pointer flex items-center gap-1 shadow-[1px_1px_0px_#000] ml-2 shrink-0 [text-shadow:_1px_1px_0_#000]"
+                title="Copy phone number"
+              >
+                {copiedEmail === (member.phone || member.mobile) ? (
+                  <>
+                    <Check className="w-3 h-3 text-[#55FFFF] stroke-[3px]" />
+                    <span className="text-[#55FFFF]">COPIED</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3 h-3 stroke-[2.5px]" />
+                    <span>COPY</span>
+                  </>
+                )}
+              </button>
+            </div>
+          )}
+
           {/* Email if available (Minecraft Inset Slot) */}
           {member.email && (
             <div className="pt-1 flex items-center justify-between p-2 bg-[#8B8B8B] border-2 border-t-[#373737] border-l-[#373737] border-r-[#DBDBDB] border-b-[#DBDBDB] font-mono text-[11px] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.4)]">
@@ -466,69 +498,75 @@ function MemberCard({
         </div>
       </div>
 
-      {/* Social Links & Action Row */}
-      <div className="pt-2 border-t-2 border-[#8B8B8B] flex items-center justify-between gap-2">
-        <div className="flex items-center gap-1.5">
-          {member.socials?.github && member.socials.github !== "#" && (
-            <a
-              href={member.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 bg-[#707070] hover:bg-[#808080] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
-              aria-label={`${member.title} GitHub`}
-            >
-              <GithubIcon className="w-3.5 h-3.5" />
-            </a>
-          )}
+      {/* Social Links & Action Row (Only rendered when at least one link is available) */}
+      {(member.socials?.github ||
+        member.socials?.linkedin ||
+        member.socials?.instagram ||
+        member.socials?.website ||
+        member.url) && (
+        <div className="pt-2 border-t-2 border-[#8B8B8B] flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5">
+            {member.socials?.github && member.socials.github !== "#" && (
+              <a
+                href={member.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-[#707070] hover:bg-[#808080] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
+                aria-label={`${member.title} GitHub`}
+              >
+                <GithubIcon className="w-3.5 h-3.5" />
+              </a>
+            )}
 
-          {member.socials?.linkedin && member.socials.linkedin !== "#" && (
-            <a
-              href={member.socials.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 bg-[#707070] hover:bg-[#0077b5] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
-              aria-label={`${member.title} LinkedIn`}
-            >
-              <LinkedinIcon className="w-3.5 h-3.5" />
-            </a>
-          )}
+            {member.socials?.linkedin && member.socials.linkedin !== "#" && (
+              <a
+                href={member.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-[#707070] hover:bg-[#0077b5] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
+                aria-label={`${member.title} LinkedIn`}
+              >
+                <LinkedinIcon className="w-3.5 h-3.5" />
+              </a>
+            )}
 
-          {member.socials?.instagram && member.socials.instagram !== "#" && (
+            {member.socials?.instagram && member.socials.instagram !== "#" && (
+              <a
+                href={member.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-[#707070] hover:bg-[#E1306C] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
+                aria-label={`${member.title} Instagram`}
+              >
+                <InstagramIcon className="w-3.5 h-3.5" />
+              </a>
+            )}
+          </div>
+
+          {/* Portfolio / Profile URL button (Minecraft 3D Button) */}
+          {member.socials?.website && member.socials.website.length > 0 ? (
             <a
-              href={member.socials.instagram}
+              href={member.socials.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 bg-[#707070] hover:bg-[#E1306C] text-white border-2 border-t-[#9E9E9E] border-l-[#9E9E9E] border-r-[#383838] border-b-[#383838] shadow-[2px_2px_0px_#000] transition-colors"
-              aria-label={`${member.title} Instagram`}
+              className="px-2.5 py-1 bg-[#5B8731] hover:bg-[#689B37] text-white border-2 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] font-mono text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] transition-all"
             >
-              <InstagramIcon className="w-3.5 h-3.5" />
+              <span>PORTFOLIO</span>
+              <Globe className="w-3 h-3 stroke-[2.5px]" />
             </a>
-          )}
+          ) : member.url && member.url.length > 0 ? (
+            <a
+              href={member.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2.5 py-1 bg-[#5B8731] hover:bg-[#689B37] text-white border-2 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] font-mono text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] transition-all"
+            >
+              <span>PROFILE</span>
+              <Globe className="w-3 h-3 stroke-[2.5px]" />
+            </a>
+          ) : null}
         </div>
-
-        {/* Portfolio / Profile URL button (Minecraft 3D Button) */}
-        {member.socials?.website && member.socials.website.length > 0 ? (
-          <a
-            href={member.socials.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-2.5 py-1 bg-[#5B8731] hover:bg-[#689B37] text-white border-2 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] font-mono text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] transition-all"
-          >
-            <span>PORTFOLIO</span>
-            <Globe className="w-3 h-3 stroke-[2.5px]" />
-          </a>
-        ) : member.url && member.url.length > 0 ? (
-          <a
-            href={member.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-2.5 py-1 bg-[#5B8731] hover:bg-[#689B37] text-white border-2 border-t-[#85B745] border-l-[#85B745] border-r-[#2C4813] border-b-[#2C4813] font-mono text-[10px] font-black uppercase tracking-wider flex items-center gap-1 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] transition-all"
-          >
-            <span>PROFILE</span>
-            <Globe className="w-3 h-3 stroke-[2.5px]" />
-          </a>
-        ) : null}
-      </div>
+      )}
     </div>
   );
 }

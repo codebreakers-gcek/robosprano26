@@ -102,7 +102,7 @@ export function RegistrationExtendedModal({
     if (disableAutoOpen || isControlled) return;
 
     try {
-      const dismissed = sessionStorage.getItem("hackverse_reg_extended_modal_seen");
+      const dismissed = sessionStorage.getItem("robosprano_reg_extended_modal_seen");
       if (dismissed === "true") {
         return;
       }
@@ -124,7 +124,7 @@ export function RegistrationExtendedModal({
     } else {
       setIsOpenState(false);
       try {
-        sessionStorage.setItem("hackverse_reg_extended_modal_seen", "true");
+        sessionStorage.setItem("robosprano_reg_extended_modal_seen", "true");
       } catch {
         // ignore
       }

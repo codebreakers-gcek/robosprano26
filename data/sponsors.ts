@@ -52,19 +52,19 @@ export const OFFICIAL_SPONSORS: OfficialSponsor[] = [
 
 export const SPONSORS_DATA = {
   header: {
-    tag: "SPONSORSHIP PACKET // HACKVERSE '26",
+    tag: "SPONSORSHIP PACKET // ROBOSPRANO '26",
     title: "SPONSORSHIP",
     highlight: "PACKET",
     subtitle:
-      "Partner with Odisha's premier 24-hour flagship hackathon at Government College of Engineering Kalahandi. Empowering tomorrow's tech leaders.",
-    organizedBy: "CodeBreakers | Government College Of Engineering Kalahandi, Bhawanipatna, Kalahandi, 766003",
+      "Partner with Odisha's premier annual technical and robotics fest at Government College of Engineering Kalahandi. Empowering tomorrow's tech leaders.",
+    organizedBy: "Kilobots Robotics Society | Government College Of Engineering Kalahandi, Bhawanipatna, Kalahandi, 766003",
   },
   whySponsor: {
     title: "WHY TO SPONSOR US ?",
     paragraph1:
-      "Partnering with HACKVERSE '26 gives your brand a direct connection with a community of passionate developers, innovators, and tech enthusiasts. Engage with talented participants, showcase your products, APIs, tools, and technologies, and create meaningful brand visibility throughout the hackathon.",
+      "Partnering with ROBOSPRANO '26 gives your brand a direct connection with a community of passionate developers, roboticists, innovators, and tech enthusiasts. Engage with talented participants, showcase your products, hardware, APIs, tools, and technologies, and create meaningful brand visibility throughout the technical fest.",
     paragraph2:
-      "Your sponsorship goes beyond branding. It helps us provide participants with better resources, workshops, prizes, mentorship, and an inspiring hackathon experience, while giving your organization the opportunity to discover emerging talent, encourage innovation, and build lasting connections with the next generation of technology leaders.",
+      "Your sponsorship goes beyond branding. It helps us provide participants with better resources, workshops, prizes, mentorship, and an inspiring tech fest experience, while giving your organization the opportunity to discover emerging talent, encourage innovation, and build lasting connections with the next generation of technology leaders.",
     tagline: "Empowering Tomorrow's Tech Leaders.",
   },
   benefitsTable: [
