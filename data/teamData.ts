@@ -102,7 +102,7 @@ export const clubLeads: TeamMember[] = [
     handle: "@omprakash",
     borderColor: "#8B5CF6",
     gradient: "linear-gradient(225deg,#8B5CF6,#000)",
-    phone: "+91 88952 20675",
+    phone: "+91 72052 52871",
   },
 ];
 

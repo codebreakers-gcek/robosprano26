@@ -109,7 +109,7 @@ export function ContactContent() {
         bioText: "text-slate-700",
         phoneIcon: "text-[#0284C7]",
         copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border border-black",
-        callBtn: "bg-[#0284C7] hover:bg-[#0369A1] text-white border-2 border-black",
+        callBtn: "bg-[#0284C7] hover:bg-[#0369A1] text-white border-2 border-black [text-shadow:_1px_1px_0_#000]",
         whatsappBtn: "bg-[#16A34A] hover:bg-[#15803D] text-white border-2 border-black",
         socialBtn: "bg-white hover:bg-slate-100 text-black border-2 border-black",
         divider: "border-slate-200",
@@ -131,7 +131,7 @@ export function ContactContent() {
       bioText: "text-slate-700",
       phoneIcon: "text-[#16A34A]",
       copyBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border border-black",
-      callBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black",
+      callBtn: "bg-[#5DB329] hover:bg-[#689B37] text-white border-2 border-black [text-shadow:_1px_1px_0_#000]",
       whatsappBtn: "bg-[#16A34A] hover:bg-[#15803D] text-white border-2 border-black",
       socialBtn: "bg-white hover:bg-slate-100 text-black border-2 border-black",
       divider: "border-slate-200",
@@ -533,10 +533,10 @@ export function ContactContent() {
 
                       {/* Header info */}
                       <div>
-                        <h4 className={clsx("font-minecraft text-lg sm:text-xl uppercase tracking-wider leading-tight [text-shadow:_2px_2px_0_#000]", theme.titleColor)}>
+                        <h4 className={clsx("font-minecraft text-lg sm:text-xl uppercase tracking-wider leading-tight font-black", theme.titleColor)}>
                           {person.name}
                         </h4>
-                        <div className={clsx("font-minecraft text-xs mt-1 [text-shadow:_1px_1px_0_#000]", theme.roleColor)}>
+                        <div className={clsx("font-minecraft text-xs mt-1 font-bold", theme.roleColor)}>
                           {person.role}
                         </div>
                         <div className={clsx("font-minecraft text-[11px] mt-0.5", theme.deptColor)}>
@@ -556,7 +556,7 @@ export function ContactContent() {
                         <div className={clsx("flex items-center justify-between p-2.5 shadow-[inset_1px_1px_2px_rgba(0,0,0,0.8)]", theme.slotBg)}>
                           <div className="flex items-center gap-2 truncate">
                             <Phone className={clsx("w-3.5 h-3.5 stroke-[2.5px] shrink-0", theme.phoneIcon)} />
-                            <span className={clsx("font-minecraft text-xs sm:text-sm [text-shadow:_0_0_6px_rgba(0,0,0,0.6)]", theme.slotText)}>
+                            <span className={clsx("font-minecraft text-xs sm:text-sm font-bold", theme.slotText)}>
                               {person.displayPhone}
                             </span>
                           </div>
@@ -580,7 +580,7 @@ export function ContactContent() {
                           href={`tel:${person.phone}`}
                           onClick={() => playButtonClickSound(0.3)}
                           className={clsx(
-                            "px-3.5 py-2 font-minecraft text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-[2px_2px_0px_#000] [text-shadow:_1px_1px_0_#000] active:translate-y-0.5 active:shadow-none transition-all",
+                            "px-3.5 py-2 font-minecraft text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-[2px_2px_0px_#000] active:translate-y-0.5 active:shadow-none transition-all",
                             theme.callBtn
                           )}
                         >

@@ -248,7 +248,7 @@ export function GsapLoader() {
           />
 
           {/* Deep Cinematic Vignette & Ambient Darkness */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/70" />
+
           <div className="absolute inset-0 bg-black/25 backdrop-blur-[1.5px]" />
           <div className="absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.75)_100%)]" />
         </div>

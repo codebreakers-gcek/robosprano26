@@ -237,11 +237,13 @@ main {
 .font-minecraft {
   font-family: 'Minecraft', 'IBM Plex Mono', 'Space Grotesk', monospace;
   text-rendering: optimizeLegibility;
+  font-synthesis: none;
 }
 
 .font-minecraftt {
   font-family: 'Minecraftt', 'Minecraft', 'Space Grotesk', monospace;
   text-rendering: optimizeLegibility;
+  font-synthesis: none;
 }
 
 @media (max-width: 640px) {
