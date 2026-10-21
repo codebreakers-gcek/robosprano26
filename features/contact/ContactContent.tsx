@@ -772,7 +772,7 @@ export function ContactContent() {
                       <span>WHATSAPP DESK</span>
                     </span>
                     <a
-                      href={SOCIAL_CHANNELS.whatsappGroup}
+                      href="https://chat.whatsapp.com/Bm0iJCw4F683n0D8jAX9U9"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => playButtonClickSound(0.25)}
