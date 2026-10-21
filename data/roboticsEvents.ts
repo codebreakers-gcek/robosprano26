@@ -338,7 +338,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       stageNote: "Qualifiers on Day 1; Top bots advance to Day 2 Finals",
     },
     teamSize: "2–4 participants",
-    fee: "Rs. 350 per team",
+    fee: "Rs. 300 per team",
     prizePool: "₹15,000",
     prizes: [
       "1st : ₹7,000 + Certificates",
