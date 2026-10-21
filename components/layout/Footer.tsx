@@ -102,12 +102,12 @@ export function Footer() {
 
                 <div>
                   <a
-                    href={ENV.OFFICIAL_CLUB_URL}
+                    href="https://chat.whatsapp.com/Bm0iJCw4F683n0D8jAX9U9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 font-mono text-xs font-black uppercase tracking-wider text-black hover:text-[#0284C7] underline underline-offset-4 decoration-black hover:decoration-[#0284C7] transition-colors"
                   >
-                    <span>VISIT OFFICIAL CLUB PORTAL</span>
+                    <span>JOIN OFFICIAL CLUB COMMUNITY</span>
                     <ExternalLink className="w-3.5 h-3.5 stroke-[2.5px]" />
                   </a>
                 </div>
