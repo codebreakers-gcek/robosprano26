@@ -110,7 +110,7 @@ export function HeroSection() {
                   &amp;
                 </span>
                 <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
-                  Kilobots the robotics society of GCEK presents
+                  Kilobots the robotics society of GCE Kalahandi
                 </span>
                 <div className="flex items-center justify-center gap-2.5 sm:gap-3 mt-1.5">
                   <div className="w-8 sm:w-16 h-[3px] bg-[#0084FF] shadow-[1px_1px_0px_#000]" />
