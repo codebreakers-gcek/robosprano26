@@ -156,9 +156,8 @@ export function HeroSection() {
                 variants={itemVariants}
                 className="mb-6 sm:mb-8 max-w-xl mx-auto"
               >
-                <p className="font-sans text-sm sm:text-base md:text-lg text-neutral-900 font-bold leading-relaxed">
-                  5 thrilling arenas. Build, compete, and prove your machine on
-                  the battlefield.
+                <p className="font-sans text-sm sm:text-base md:text-lg text-neutral-950 font-bold leading-relaxed">
+                  5 thrilling arenas. Build, compete, and <span className="bg-black text-yellow-500 px-1 py-0.5 selection:bg-amber-600">prove your machine</span> on the battlefield.
                 </p>
               </motion.div>
 
