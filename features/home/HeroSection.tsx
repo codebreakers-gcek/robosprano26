@@ -102,9 +102,15 @@ export function HeroSection() {
               className="w-full flex flex-col items-center text-center relative z-10"
             >
               {/* Club Presents Tag */}
-              <motion.div variants={itemVariants} className="mb-4 sm:mb-5 flex flex-col items-center">
-                <span className="font-minecraft text-[11px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-neutral-800 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
-                  KILOBOTS ROBOTICS CLUB / GCEK
+              <motion.div variants={itemVariants} className="mb-2 sm:mb-4 flex flex-col items-center">
+                <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
+                  Government College of Engineering Kalahandi
+                </span>
+                <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
+                  &amp;
+                </span>
+                <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
+                  Kilobots the robotics society of GCEK presents
                 </span>
                 <div className="flex items-center justify-center gap-2.5 sm:gap-3 mt-1.5">
                   <div className="w-8 sm:w-16 h-[3px] bg-[#0084FF] shadow-[1px_1px_0px_#000]" />
