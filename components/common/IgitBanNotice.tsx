@@ -12,6 +12,9 @@ export function IgitBanNotice({
   variant = "banner",
   className = "",
 }: IgitBanNoticeProps) {
+  // Disabled: IGIT ban notice commented / hidden
+  return null;
+
   if (variant === "compact") {
     return (
       <div

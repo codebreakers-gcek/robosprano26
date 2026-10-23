@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { ROBOTICS_EVENTS } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
-import { IgitBanNotice } from "@/components/common/IgitBanNotice";
+// import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 Crisp SVGs)                        */
@@ -254,7 +254,7 @@ export default function EventsPage() {
         {/* Main Content Area: Search & Filters */}
         <section className="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
           {/* Prominent IGIT Sarang Ban Notice */}
-          <IgitBanNotice variant="banner" />
+          {/* <IgitBanNotice variant="banner" /> */}
 
           {/* Tournament 2-Day Match Schedule & Official Venue Roster Guide */}
           <div className="bg-white border-4 border-black p-4 sm:p-6 shadow-[6px_6px_0px_#000]">

@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import type { RoboticsEvent } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
-import { IgitBanNotice } from "@/components/common/IgitBanNotice";
+// import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 Crisp SVGs)                        */
@@ -251,9 +251,9 @@ export function RegisterClient({ events }: RegisterClientProps) {
         </div>
 
         {/* Prominent IGIT Sarang Ban Notice */}
-        <div className="mb-6 sm:mb-8">
+        {/* <div className="mb-6 sm:mb-8">
           <IgitBanNotice variant="banner" />
-        </div>
+        </div> */}
 
         {/* Tournament 2-Day Match Schedule & Venue Briefing */}
         <div className="mb-8 bg-white border-3 border-black p-4 sm:p-5 shadow-[4px_4px_0px_#000]">
@@ -574,7 +574,7 @@ export function RegisterClient({ events }: RegisterClientProps) {
                 via WhatsApp.
               </div>
             </div>
-            <div className="flex items-start gap-2.5 bg-[#FEF2F2] border-2 border-[#DC2626] p-2.5">
+            {/* <div className="flex items-start gap-2.5 bg-[#FEF2F2] border-2 border-[#DC2626] p-2.5">
               <Ban className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
               <div>
                 <span className="font-black text-[#DC2626] block">
@@ -582,7 +582,7 @@ export function RegisterClient({ events }: RegisterClientProps) {
                 </span>
                 IGIT Sarang students &amp; teams are strictly NOT permitted to participate.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

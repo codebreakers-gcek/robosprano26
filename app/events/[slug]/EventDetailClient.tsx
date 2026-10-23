@@ -23,7 +23,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { RoboticsEvent } from "@/data/roboticsEvents";
 import { playButtonClickSound } from "@/components/ui/MinecraftSoundEffects";
-import { IgitBanNotice } from "@/components/common/IgitBanNotice";
+// import { IgitBanNotice } from "@/components/common/IgitBanNotice";
 
 /* ========================================================================= */
 /* CRISP MINECRAFT PIXEL ART ICONS (16x16 SVGs)                              */
@@ -429,7 +429,7 @@ View Details: ${window.location.href}`;
         {/* 2. MAIN CONTENT GRID: 2 COLUMNS LEFT, 1 COLUMN SIDEBAR RIGHT              */}
         {/* ========================================================================= */}
         {/* Prominent IGIT Sarang Ban Notice */}
-        <IgitBanNotice variant="banner" className="mb-6 sm:mb-8" />
+        {/* <IgitBanNotice variant="banner" className="mb-6 sm:mb-8" /> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
           {/* ----------------------------------------------------------------------- */}
@@ -788,7 +788,7 @@ View Details: ${window.location.href}`;
                 )}
 
                 {/* IGIT Sarang Ban Notice for Registration */}
-                <IgitBanNotice variant="sidebar" className="mt-4" />
+                {/* <IgitBanNotice variant="sidebar" className="mt-4" /> */}
               </div>
             </motion.div>
 
