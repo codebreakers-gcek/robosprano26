@@ -92,7 +92,7 @@ export function HeroSection() {
         </div>
 
         {/* ====== MAIN CONTENT AREA (CENTERED) ====== */}
-        <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full py-10 sm:py-16 lg:py-20">
+        <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full pt-2 sm:pt-4 lg:pt-6 pb-8 sm:pb-12 lg:pb-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center justify-center">
             {/* ====== CENTERED CONTENT ====== */}
             <motion.div
@@ -101,8 +101,24 @@ export function HeroSection() {
               animate="visible"
               className="w-full flex flex-col items-center text-center relative z-10"
             >
-              {/* Club Presents Tag */}
+              {/* Club Presents Tag & GCEK Logo */}
               <motion.div variants={itemVariants} className="mb-2 sm:mb-4 flex flex-col items-center">
+                {/* ========================================================================= */}
+                {/* GCEK COLLEGE LOGO                                                         */}
+                {/* RESIZE GUIDE: Modify the w-* and h-* classes below to adjust size anytime */}
+                {/* (e.g. w-16 h-16, w-20 h-20, w-24 h-24, w-28 h-28, etc.)                  */}
+                {/* ========================================================================= */}
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-3 drop-shadow-[0_4px_10px_rgba(0,0,0,0.4)]">
+                  <Image
+                    src="/gcek_logo.png"
+                    alt="Government College of Engineering Kalahandi Logo"
+                    fill
+                    sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+
                 <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
                   Government College of Engineering Kalahandi
                 </span>
@@ -110,7 +126,7 @@ export function HeroSection() {
                   &amp;
                 </span>
                 <span className="font-minecraft text-[11px] sm:text-sm md:text-base tracking-[0.25em] uppercase text-slate-950 font-extrabold [text-shadow:_1px_1px_0_#FFF]">
-                  Kilobots the robotics society of GCEK presents
+                  Kilobots the robotics society of GCE Kalahandi
                 </span>
                 <div className="flex items-center justify-center gap-2.5 sm:gap-3 mt-1.5">
                   <div className="w-8 sm:w-16 h-[3px] bg-[#0084FF] shadow-[1px_1px_0px_#000]" />
@@ -233,19 +249,19 @@ export function HeroSection() {
               "ROBOSPRANO '26",
               "HOSTED BY KILOBOTS GCEK",
               "₹91,000 TOTAL CASH POOL",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO WAR (₹25K)",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "DEATH RACE (₹18K)",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO SUMO (₹18K)",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBO SOCCER (₹15K)",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "LINE FOLLOWER (₹15K)",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "ROBOTICS CHAMPIONSHIP",
-              "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
+              // "IGIT SARANG TEAMS ARE NOT ALLOWED TO PARTICIPATE",
               "GCEK KALAHANDI",
               "CLAIM BOT REGISTRATION NOW",
             ]}
