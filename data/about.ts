@@ -60,7 +60,7 @@ export const ABOUT_DATA = {
     featuredEventName: "ROBO WAR COMBAT ARENA",
     specs: [
       "Weight Class: 8 kg Max (100g tolerance)",
-      "Dimensions: Within 40 × 40 × 40 cm",
+      "Dimensions: Within 50 × 50 × 50 cm",
       "Fixed, Non-Moving Passive Wedges Only",
       "₹25,000 Cash Prize Pool",
     ],

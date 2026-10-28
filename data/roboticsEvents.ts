@@ -147,10 +147,10 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
       "Witness the thrilling battle of power, precision, and strategy in Robo War – Wedge, where two teams compete head-to-head with their custom-built combat robots. Teams manually control their bots using a wireless method, aiming to outmaneuver their opponents and dominate the arena with their wedge-shaped designs. Each robot must demonstrate strength, stability, and effective tactics to gain an advantage over the opponent. The team that dominates the battle and meets the competition’s winning criteria will emerge victorious. Get ready for an action-packed robotic showdown!",
     botSpecifications: [
       "The robot must not weigh more than 8 kg, including the battery and all onboard components. A weight tolerance of up to 100 g is allowed.",
-      "The robot must fit within 40 cm × 40 cm × 40 cm (Length × Width × Height).",
+      "The robot must fit within 50 cm × 50 cm × 50 cm (Length × Width × Height).",
       "Only wedge-type robots with fixed, non-moving wedges are allowed. Active weapons or weapon systems are strictly prohibited.",
       "All robots must be operated wirelessly. Wired control systems are not allowed.",
-      "The maximum permitted battery voltage is 16.8 V, using a 4-cell battery configuration.",
+      "The maximum permitted battery voltage is 22.2 V, using a 6-cell battery configuration.",
       "All batteries and electrical components must be securely fitted inside the robot, with exposed connections properly insulated.",
       "Every robot must have a failsafe system that automatically stops the drive motors if the control signal is lost.",
       "Internal combustion engines, pyrotechnics, and hazardous materials are strictly prohibited.",
@@ -181,7 +181,7 @@ export const ROBOTICS_EVENTS: RoboticsEvent[] = [
     enrollLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSeoMUx4pcd93lkdYzxZfUvQ7IMjOYapdyvRS7ULAqjEr4y6Hg/viewform",
     rulebookLink:
-      "https://drive.google.com/file/d/1sWoyAjd07I1xehwY7btkiMenfIwPJLOQ/view?usp=drive_link",
+      "https://drive.google.com/file/d/1JPKQFRPVvP2GKNY_A3G3oFZ16MY6vp7x/view?usp=drivesdk",
     closed: false,
   },
   {
